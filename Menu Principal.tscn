@@ -1,28 +1,27 @@
 [gd_scene format=3 uid="uid://cjfgka576w8ti"]
 
-[ext_resource type="Script" uid="uid://2b75n2xx2xir" path="res://botonJugar.gd" id="1_0fbet"]
+[ext_resource type="Script" uid="uid://khg1acdcaob5" path="res://Publicacion.gd" id="1_l4ph7"]
 
 [node name="Control" type="Control" unique_id=1969640966]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 549.0
-offset_top = 328.0
-offset_right = 549.0
-offset_bottom = 328.0
+anchor_right = 1.4970001
+anchor_bottom = 1.7090001
+offset_left = 662.0
+offset_top = 324.0
+offset_right = -357.54407
+offset_bottom = -43.43213
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Button" type="Button" parent="." unique_id=818625310]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.011000001
-anchor_top = 0.097
-anchor_right = 0.053000003
-anchor_bottom = 0.15400001
-offset_left = 0.32799911
-offset_top = -289.85602
-offset_right = 382.944
-offset_bottom = 0.20799255
-script = ExtResource("1_0fbet")
+anchor_left = -0.91600007
+anchor_top = -0.43600002
+anchor_right = -0.91600007
+anchor_bottom = -0.43600002
+offset_left = 311.78003
+offset_top = 28.640015
+offset_right = 631.78
+offset_bottom = 204.64001
+script = ExtResource("1_l4ph7")
