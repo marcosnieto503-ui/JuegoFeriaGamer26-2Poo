@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dxtoq8wtk0v0w"]
+
+[ext_resource type="Script" uid="uid://ch4c05jbm5i05" path="res://button.gd" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=379127829]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1860232263]
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1138075862]
+offset_left = 79.0
+offset_top = 37.0
+offset_right = 510.0
+offset_bottom = 193.0
+text = "po"
+script = ExtResource("1_wtcfe")
