@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://dupdm0ounjf42"]
+
+[ext_resource type="Script" uid="uid://gnjspqfu8f71" path="res://Scripts/notificacion.gd" id="1_2j0yu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qekex"]
+bg_color = Color(0.15487596, 0.154876, 0.15487587, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcwtv"]
+content_margin_left = 20.0
+content_margin_right = 20.0
+bg_color = Color(0.24840015, 0.24840018, 0.24840015, 1)
+border_width_left = 5
+border_width_top = 4
+border_width_right = 5
+border_width_bottom = 3
+border_color = Color(0.44291073, 0.44291082, 0.4429105, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8a6s"]
+bg_color = Color(0.21437517, 0.30994302, 0.26578784, 1)
+border_width_left = 6
+border_width_top = 4
+border_width_right = 6
+border_width_bottom = 4
+border_color = Color(0.36860296, 0.56769425, 0.3682059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4cw3"]
+bg_color = Color(0.62727416, 0.22894585, 0.24313796, 1)
+border_width_left = 6
+border_width_top = 4
+border_width_right = 6
+border_width_bottom = 4
+border_color = Color(0.7796835, 0.34305486, 0.34992564, 1)
+
+[node name="Notificacion" type="PanelContainer" unique_id=887851630]
+propagate_maximum_size = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1640.0
+offset_bottom = -880.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_qekex")
+script = ExtResource("1_2j0yu")
+
+[node name="Container" type="VBoxContainer" parent="." unique_id=611493647]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TextoNotificacion" type="RichTextLabel" parent="Container" unique_id=626512928]
+custom_minimum_size = Vector2(0, 70)
+clip_contents = false
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxFlat_wcwtv")
+text = "Esto es una prueba de una solicitud de publicacion llegando al telefono"
+fit_content = true
+vertical_alignment = 1
+
+[node name="Botones" type="HBoxContainer" parent="Container" unique_id=1961889342]
+custom_minimum_size = Vector2(0, 40)
+custom_maximum_size = Vector2(-1, 40)
+propagate_maximum_size = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="aceptar" type="Button" parent="Container/Botones" unique_id=634303635]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 7
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_o8a6s")
+text = "ACEPTAR (check verde)"
+
+[node name="rechazar" type="Button" parent="Container/Botones" unique_id=86864260]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4cw3")
+text = "RECHAZAR (equis roja)"
+
+[connection signal="button_up" from="Container/Botones/aceptar" to="." method="_on_aceptar_button_up"]
+[connection signal="button_up" from="Container/Botones/rechazar" to="." method="_on_rechazar_button_up"]

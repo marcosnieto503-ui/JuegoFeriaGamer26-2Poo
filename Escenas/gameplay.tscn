@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://bna2gcijngbas"]
+
+[ext_resource type="Script" uid="uid://c4blyrcn58omj" path="res://Scripts/gameplay.gd" id="1_2slyb"]
+[ext_resource type="Texture2D" uid="uid://mnlvofvjl8jq" path="res://Assets/LAPTOP 0, CEL 0.png" id="2_lrkxc"]
+[ext_resource type="Texture2D" uid="uid://2heedgu16gvg" path="res://Assets/LAPTOP 1, CEL 0.png" id="3_1y50h"]
+[ext_resource type="Texture2D" uid="uid://bgcbm11bfqncx" path="res://Assets/LAPTOP 1, CEl 1 v2.png" id="4_2slyb"]
+[ext_resource type="Texture2D" uid="uid://bvbdns0ltr5r5" path="res://Assets/LAPTOP 0, CEL 1 v2.png" id="5_lrkxc"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8a6s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lrkxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1y50h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2slyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lrkxc")
+}],
+"loop": 1,
+"name": &"gameplay_anim",
+"speed": 2.0
+}]
+
+[node name="Gameplay" type="Node2D" unique_id=1380733400]
+script = ExtResource("1_2slyb")
+
+[node name="Camara" type="Camera2D" parent="." unique_id=1807535392]
+anchor_mode = 0
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
+limit_smoothed = true
+
+[node name="Visual" type="AnimatedSprite2D" parent="." unique_id=1100752342]
+z_index = -2
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_o8a6s")
+animation = &"gameplay_anim"
+frame = 2
+
+[node name="Celular" type="Control" parent="." unique_id=197617991]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1405.0
+offset_top = 279.0
+offset_right = 1709.0
+offset_bottom = 798.0
+
+[node name="ToLaptop" type="Button" parent="Celular" unique_id=1312275084]
+layout_mode = 0
+offset_left = -393.0
+offset_top = 333.0
+offset_right = -142.0
+offset_bottom = 502.0
+theme_override_font_sizes/font_size = 31
+text = "Pillar Laptop"
+
+[node name="ScrollNotificaciones" type="ScrollContainer" parent="Celular" unique_id=1411844302]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 12.0
+offset_right = 291.0
+offset_bottom = 513.0
+horizontal_scroll_mode = 0
+
+[node name="CajaNotificaciones" type="VBoxContainer" parent="Celular/ScrollNotificaciones" unique_id=161767046]
+propagate_maximum_size = false
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Laptop" type="Control" parent="." unique_id=1221425372]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 11.0
+offset_top = 5.0
+offset_right = 1912.0
+offset_bottom = 1076.0
+
+[node name="ToCelular" type="Button" parent="Laptop" unique_id=2092675695]
+layout_mode = 0
+offset_left = 1513.0
+offset_top = 739.0
+offset_right = 1771.0
+offset_bottom = 913.0
+theme_override_font_sizes/font_size = 31
+text = "Agarrar CElular"
+
+[connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
+[connection signal="button_down" from="Laptop/ToCelular" to="." method="_ToCelular_Pressed"]
