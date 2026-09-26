@@ -23,6 +23,8 @@ const NOTIFICACION = preload("res://Escenas/notificacion.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	fondo.frame = noFocus
+	pantalla.hide()
+	Utils.leer_archivo_publi(Utils.rutaPublis)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -32,7 +34,9 @@ func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("espacio")):
 		var notif = NOTIFICACION.instantiate()
 		notif.size_flags_horizontal = Control.SIZE_EXPAND_FILL 
+		var publiData = Utils.publis[0]
 		cajaNotif.add_child(notif)
+		notif.asignarTextoNoti(publiData.textoNoti)
 		print("pressed op")
 	
 
