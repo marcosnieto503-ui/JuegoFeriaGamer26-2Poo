@@ -28,20 +28,20 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	var p = Comentario.new("fuap",1,"2","2", "3")
 	#var pos_mundo = get_global_mouse_position()
 	#print(pos_mundo.x - 960, " , ", pos_mundo.y - 540) #coords en relacion a la camara(esta desfasada su origen es el centro)
 	
 	if (Input.is_action_just_pressed("espacio")):
-		var notif = NOTIFICACION.instantiate()
-		notif.size_flags_horizontal = Control.SIZE_EXPAND_FILL 
-		var publiData = Utils.publis[0]
-		cajaNotif.add_child(notif)
-		notif.asignarTextoNoti(publiData.textoNoti)
+		ingresarNoti()
 		print("pressed op")
 	
-
-func ToLaptop():
-	pass
+func ingresarNoti(): #fuap funcion pa meter notificacion a el telefono
+	var notif = NOTIFICACION.instantiate()
+	notif.size_flags_horizontal = Control.SIZE_EXPAND_FILL 
+	var publiData = Utils.publis[0]
+	cajaNotif.add_child(notif)
+	notif.asignarTextoNoti(publiData.get_textoNoti())
 	
 func _ToCelular_Pressed() -> void:
 	print("I celular: ", C_Celular.get_index()) # debug
