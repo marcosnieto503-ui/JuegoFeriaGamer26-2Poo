@@ -1,89 +1,51 @@
 [gd_scene format=3 uid="uid://dupdm0ounjf42"]
 
 [ext_resource type="Script" uid="uid://gnjspqfu8f71" path="res://Scripts/notificacion.gd" id="1_2j0yu"]
+[ext_resource type="Texture2D" uid="uid://l0a7nwm0iu8v" path="res://icon.svg" id="2_8gkj5"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qekex"]
-bg_color = Color(0.15487596, 0.154876, 0.15487587, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nyja"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.6955031, 0.6955032, 0.6955029, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcwtv"]
-content_margin_left = 20.0
-content_margin_right = 20.0
-bg_color = Color(0.24840015, 0.24840018, 0.24840015, 1)
-border_width_left = 5
-border_width_top = 4
-border_width_right = 5
-border_width_bottom = 3
-border_color = Color(0.44291073, 0.44291082, 0.4429105, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avguk"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8a6s"]
-bg_color = Color(0.21437517, 0.30994302, 0.26578784, 1)
-border_width_left = 6
-border_width_top = 4
-border_width_right = 6
-border_width_bottom = 4
-border_color = Color(0.36860296, 0.56769425, 0.3682059, 1)
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4oaxg"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4cw3"]
-bg_color = Color(0.62727416, 0.22894585, 0.24313796, 1)
-border_width_left = 6
-border_width_top = 4
-border_width_right = 6
-border_width_bottom = 4
-border_color = Color(0.7796835, 0.34305486, 0.34992564, 1)
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_md1ik"]
 
-[node name="Notificacion" type="PanelContainer" unique_id=887851630]
-propagate_maximum_size = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1640.0
-offset_bottom = -880.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_qekex")
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ixdr4"]
+noise = SubResource("FastNoiseLite_md1ik")
+
+[node name="Container" type="PanelContainer" unique_id=241702535]
+offset_right = 206.0
+offset_bottom = 47.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1nyja")
 script = ExtResource("1_2j0yu")
 
-[node name="Container" type="VBoxContainer" parent="." unique_id=611493647]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=55382657]
 layout_mode = 2
-theme_override_constants/separation = 10
 
-[node name="TextoNotificacion" type="RichTextLabel" parent="Container" unique_id=626512928]
-custom_minimum_size = Vector2(0, 70)
-clip_contents = false
+[node name="Texto" type="RichTextLabel" parent="VBoxContainer" unique_id=532685438]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 9
-theme_override_styles/normal = SubResource("StyleBoxFlat_wcwtv")
-text = "Esto es una prueba de una solicitud de publicacion llegando al telefono"
+theme_override_font_sizes/normal_font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_avguk")
+text = "[NO TEXT]"
 fit_content = true
+horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Botones" type="HBoxContainer" parent="Container" unique_id=1961889342]
-custom_minimum_size = Vector2(0, 40)
-custom_maximum_size = Vector2(-1, 40)
-propagate_maximum_size = false
+[node name="Boton Aceptar Noti" type="TextureButton" parent="VBoxContainer" unique_id=565228651]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
-size_flags_vertical = 3
+texture_normal = ExtResource("2_8gkj5")
+texture_pressed = SubResource("NoiseTexture2D_4oaxg")
+texture_hover = SubResource("NoiseTexture2D_ixdr4")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="aceptar" type="Button" parent="Container/Botones" unique_id=634303635]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/h_separation = 7
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_o8a6s")
-text = "ACEPTAR (check verde)"
-
-[node name="rechazar" type="Button" parent="Container/Botones" unique_id=86864260]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_g4cw3")
-text = "RECHAZAR (equis roja)"
-
-[connection signal="button_up" from="Container/Botones/aceptar" to="." method="_on_aceptar_button_up"]
-[connection signal="button_up" from="Container/Botones/rechazar" to="." method="_on_rechazar_button_up"]
+[connection signal="button_down" from="VBoxContainer/Boton Aceptar Noti" to="." method="_on_boton_aceptar_noti_button_down"]

@@ -24,44 +24,44 @@ const NOTIFICACION = preload("res://Escenas/notificacion.tscn")
 func _ready() -> void:
 	fondo.frame = noFocus
 	pantalla.hide()
-	Utils.leer_archivo_publi(Utils.rutaPublis)
+	Utils.leer_archivo_publi()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var p = Comentario.new("fuap",1,"2","2", "3")
 	#var pos_mundo = get_global_mouse_position()
 	#print(pos_mundo.x - 960, " , ", pos_mundo.y - 540) #coords en relacion a la camara(esta desfasada su origen es el centro)
-	
 	if (Input.is_action_just_pressed("espacio")):
-		ingresarNoti()
+		ingresarNotiRandom()
 		print("pressed op")
 	
-func ingresarNoti(): #fuap funcion pa meter notificacion a el telefono
+func ingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
 	var notif = NOTIFICACION.instantiate()
-	notif.size_flags_horizontal = Control.SIZE_EXPAND_FILL 
-	var publiData = Utils.publis[0]
+	#var publi_a_asignar = Utils.PUBLICACIONES.pick_random()
+	var publi_a_asignar = Utils.PUBLICACIONES[0]
 	cajaNotif.add_child(notif)
-	notif.asignarTextoNoti(publiData.get_textoNoti())
+	notif.asignarTextoNoti(publi_a_asignar.get_textoNoti())
+	
+	
 	
 func _ToCelular_Pressed() -> void:
-	print("I celular: ", C_Celular.get_index()) # debug
-	print("I laptop: ", C_Laptop.get_index())  # degub
-	print("switch") 			 # debuig
+	#print("I celular: ", C_Celular.get_index()) # debug
+	#print("I laptop: ", C_Laptop.get_index())  # degub
+	#print("switch") 			 # debuig
 	
 	switchFocus()
 	
-	print("I celular despue: ", C_Celular.get_index()) # debug
-	print("I laptop despue: ", C_Laptop.get_index())  # degub
+	#print("I celular despue: ", C_Celular.get_index()) # debug
+	#print("I laptop despue: ", C_Laptop.get_index())  # degub
 
 func _ToLaptop_Pressed() -> void:
-	print("I celular: ", C_Celular.get_index()) # debug
-	print("I laptop: ", C_Laptop.get_index())  # degub
-	print("switch") 			 # debuig
+	#print("I celular: ", C_Celular.get_index()) # debug
+	#print("I laptop: ", C_Laptop.get_index())  # degub
+	#print("switch") 			 # debuig
 	
 	switchFocus()
 	
-	print("I celular despue: ", C_Celular.get_index()) # debug
-	print("I laptop despue: ", C_Laptop.get_index())  # degub
+	#print("I celular despue: ", C_Celular.get_index()) # debug
+	#print("I laptop despue: ", C_Laptop.get_index())  # degub
 
 func switchFocus():
 	if (C_Laptop.get_index() > C_Celular.get_index()):

@@ -1,6 +1,28 @@
 extends Node
 
-var PUBLICACIONES = []
+@onready var cajaNotis = $/root/Gameplay/Celular/ScrollNotificaciones/CajaNotificaciones
+
+var NOTI_PRESIONABLE : bool = true
+
+func desactivar_press_notis():
+	for hijo in cajaNotis.get_children():
+		hijo.desactivarBoton()
+func activar_press_notis():
+	for hijo in cajaNotis.get_children():
+		hijo.activarBoton()
+
+#se hace con un  contador ya qwu puede haber mas d euna noti interactuiando con la variable
+var aceptaNotiEnProceso : int = 0
+
+func bloquear_press_noti():
+	aceptaNotiEnProceso += 1
+func desbloquear_press_noti():
+	aceptaNotiEnProceso -= 1
+	
+func noti_es_presionable() -> bool:
+	return aceptaNotiEnProceso <= 0
+
+var PUBLICACIONES :Array[Publicacion] = []
 
 const RUTAS_RECURSOS = {
 	1 :"ruta1",
@@ -9,9 +31,11 @@ const RUTAS_RECURSOS = {
 	4 :"ruta4"
 }
 #ee funciones utiles accesibnles desde todo el proyecto
-const rutaPublis = "res://Recursos/publicaciones.txt"
+const rutaPublis = "res://Recursos/DATA_PUBLICACIONES.txt"
 
-func leer_archivo_publi(ruta:String):
+
+func leer_archivo_publi():
+	var ruta = rutaPublis
 	if not FileAccess.file_exists(ruta):
 		push_error("Archivo no encontrado: " + ruta)
 		return
@@ -26,24 +50,31 @@ func leer_archivo_publi(ruta:String):
 	var tipo = "NULL"
 	var tpArray = []
 	
-	var estadoLectura = ""
+	var estadoLectura = "noLeyendo"
 	
 	while not archivo.eof_reached():
 		var linea = archivo.get_line()
 		
 		linea = linea.strip_edges()
-		if linea.begins_with("//") or linea.begins_with(""):
+		if linea.begins_with("//") or linea == "":
 			continue
-			
+		
 		if linea.begins_with("#i"):
 			estadoLectura = "textoNoti"
 			continue
 		elif linea.begins_with("#f"):
 			if len(tpArray) == 0:
 				tpArray.append("NULL")
-				#contnad
-				#nand
-				#,,,,
+				
+			var publiNueva = Publicacion.new(tnA,idA,tipo,"".join(tpArray))
+			PUBLICACIONES.append(publiNueva)
+			
+			tnA = "NULL"
+			idA = "NULL"
+			tipo = "NULL"
+			tpArray.clear()
+			
+			estadoLectura = "noLeyendo"
 		
 		match estadoLectura:
 			"textoNoti":
