@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dupdm0ounjf42"]
+
+[ext_resource type="Script" uid="uid://gnjspqfu8f71" path="res://Scripts/notificacion.gd" id="1_2j0yu"]
+[ext_resource type="Texture2D" uid="uid://l0a7nwm0iu8v" path="res://icon.svg" id="2_8gkj5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1nyja"]
+content_margin_left = 3.0
+content_margin_top = 3.0
+content_margin_right = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(0.6955031, 0.6955032, 0.6955029, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avguk"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_md1ik"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ixdr4"]
+noise = SubResource("FastNoiseLite_md1ik")
+
+[node name="Container" type="PanelContainer" unique_id=241702535]
+offset_right = 206.0
+offset_bottom = 47.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1nyja")
+script = ExtResource("1_2j0yu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=55382657]
+layout_mode = 2
+
+[node name="Texto" type="RichTextLabel" parent="VBoxContainer" unique_id=532685438]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxEmpty_avguk")
+text = "[NO TEXT]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Boton Aceptar Noti" type="TextureButton" parent="VBoxContainer" unique_id=565228651]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture_normal = ExtResource("2_8gkj5")
+texture_hover = SubResource("NoiseTexture2D_ixdr4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="button_down" from="VBoxContainer/Boton Aceptar Noti" to="." method="_on_boton_aceptar_noti_button_down"]

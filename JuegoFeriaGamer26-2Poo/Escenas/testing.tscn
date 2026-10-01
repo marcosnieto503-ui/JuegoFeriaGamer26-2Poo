@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://khrupxtgxwcw"]
+
+[ext_resource type="Script" uid="uid://00qr5juip4fp" path="res://Scripts/testing.gd" id="1_lfjk6"]
+[ext_resource type="Texture2D" uid="uid://l0a7nwm0iu8v" path="res://icon.svg" id="2_kqsca"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rh6sp"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.6363463, 0.84675723, 0.84933853, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kqsca"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kqsca"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_kqsca"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xgwxu"]
+noise = SubResource("FastNoiseLite_kqsca")
+
+[node name="Node2D" type="Node2D" unique_id=1934151037]
+script = ExtResource("1_lfjk6")
+TEST = 1
+
+[node name="Button" type="Button" parent="." unique_id=1978882125]
+offset_left = 362.0
+offset_top = 187.0
+offset_right = 775.0
+offset_bottom = 425.0
+text = "hacer algo"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2125112740]
+offset_left = 1043.0
+offset_top = 102.0
+offset_right = 1520.0
+offset_bottom = 149.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rh6sp")
+accessibility_region = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1983883191]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/VBoxContainer" unique_id=2094355735]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kqsca")
+text = "po a sdasdawdawlikdnaowihdlaiwdholaihwdliahbnwlkjidhbakljwhdklajiwhdlkaiwhdlkiahwldihalwkdhlawhdihaiwdhlahlwdhaa  auwshdoai whdol  awd oaihwdla ihdl iwhadoi ahw ldiahwd liahw dliah 
+"
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="PanelContainer/VBoxContainer" unique_id=2089717970]
+custom_maximum_size = Vector2(-1, 30)
+layout_mode = 2
+texture_normal = ExtResource("2_kqsca")
+texture_pressed = SubResource("NoiseTexture2D_kqsca")
+texture_hover = SubResource("NoiseTexture2D_xgwxu")
+stretch_mode = 0
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
