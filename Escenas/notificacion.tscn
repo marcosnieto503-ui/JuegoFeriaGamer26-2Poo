@@ -14,8 +14,6 @@ bg_color = Color(0.6955031, 0.6955032, 0.6955029, 1)
 content_margin_top = 5.0
 content_margin_bottom = 5.0
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_4oaxg"]
-
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_md1ik"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ixdr4"]
@@ -43,7 +41,6 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 texture_normal = ExtResource("2_8gkj5")
-texture_pressed = SubResource("NoiseTexture2D_4oaxg")
 texture_hover = SubResource("NoiseTexture2D_ixdr4")
 ignore_texture_size = true
 stretch_mode = 0

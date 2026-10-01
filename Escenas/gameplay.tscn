@@ -26,6 +26,23 @@ animations = [{
 "speed": 2.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2slyb"]
+bg_color = Color(0.90186185, 0.90186185, 0.90186185, 1)
+border_width_left = 4
+border_width_top = 2
+border_width_right = 4
+border_width_bottom = 2
+border_color = Color(0.4706686, 0.5094141, 0.5482363, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cowoy"]
+content_margin_left = 5.0
+content_margin_right = 5.0
+bg_color = Color(0.7380309, 0.73803085, 0.7380308, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dbtjn"]
+content_margin_left = 28.0
+content_margin_top = 28.0
+
 [node name="Gameplay" type="Node2D" unique_id=1380733400]
 script = ExtResource("1_2slyb")
 
@@ -93,6 +110,25 @@ offset_right = 1771.0
 offset_bottom = 913.0
 theme_override_font_sizes/font_size = 31
 text = "Agarrar CElular"
+
+[node name="Pestañas" type="TabContainer" parent="Laptop" unique_id=1293557002]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 177.0
+offset_right = 1126.0
+offset_bottom = 652.0
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_2slyb")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_cowoy")
+current_tab = 0
+
+[node name="Publicacion" type="RichTextLabel" parent="Laptop/Pestañas" unique_id=1907623100]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.009317499, 0.009317501, 0.009317499, 1)
+theme_override_constants/line_separation = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dbtjn")
+text = "[SIN PUBLICACIONES]"
+metadata/_tab_index = 0
 
 [connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
 [connection signal="button_down" from="Laptop/ToCelular" to="." method="_ToCelular_Pressed"]

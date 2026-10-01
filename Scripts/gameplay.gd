@@ -22,8 +22,10 @@ const NOTIFICACION = preload("res://Escenas/notificacion.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	fondo.frame = noFocus
-	pantalla.hide()
+	toLaptop()
+	BotonToLaptop.hide()
+	#fondo.frame = noFocus
+	#pantalla.hide()
 	Utils.leer_archivo_publi()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -36,11 +38,10 @@ func _process(delta: float) -> void:
 	
 func ingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
 	var notif = NOTIFICACION.instantiate()
-	#var publi_a_asignar = Utils.PUBLICACIONES.pick_random()
-	var publi_a_asignar = Utils.PUBLICACIONES[0]
+	var publi_a_asignar = Utils.PUBLICACIONES.pick_random()
+	#var publi_a_asignar = Utils.PUBLICACIONES[0]
 	cajaNotif.add_child(notif)
-	notif.asignarTextoNoti(publi_a_asignar.get_textoNoti())
-	
+	notif.asignarPubli(publi_a_asignar)
 	
 	
 func _ToCelular_Pressed() -> void:

@@ -19,6 +19,10 @@ func _init(textoNoti:String, id:int, tipo:String, textoPubli:String):
 	
 func get_textoNoti():
 	return self._textoNoti
+func get_textoPubli():
+	return self._textoPubli
+func get_tipo():
+	return self._tipo
 	
 func addComentario(comentario:Comentario):
 	_comentarios.append(comentario)
