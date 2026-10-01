@@ -1,18 +1,20 @@
 #i
--tn:Notificacion de prueba 1!
+-tn:¡Nueva zona de estudio!
 -id:1
 -tipo:IMAGEN
-pruebita publicacion 1 aawdwdasdawdwad
-adawdad as dawd aw dawawfa fawf
-awf afa wfasf awd awf awf 
+La universidad inauguró una nueva zona de estudio para estudiantes. El espacio cuenta con mesas, conexión a internet y áreas silenciosas para facilitar la concentración durante las jornadas académicas.
 #f
 
 #i
--tn:notificacion de prueiba 2, con texto mnas largo para ver si la caja se adapta (emoji de fueguito), tiene que hacerse mas largo todavia siuuuuuuuuuuuuuu  wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
+-tn:Semana cultural
 -id:2
 -tipo:TEXTO
-textoadwdawdk k awd awm dka wnd lajwdkajwn
-a wdawkj ajwdljanwdka  kajwdnkajw ajwndlkawdn w
-a wdawd awd
-awfawfakm
+Esta semana se llevará a cabo la Semana Cultural Universitaria. Los estudiantes podrán participar en actividades artísticas, concursos, exposiciones y presentaciones preparadas por diferentes facultades.
+#f
+
+#i
+-tn:Cambio en los horarios
+-id:3
+-tipo:VIDEO
+La universidad anunció algunos cambios en los horarios de varias asignaturas debido a trabajos de mantenimiento en diferentes edificios. Los estudiantes deberán revisar la plataforma institucional para conocer las modificaciones.
 #f
