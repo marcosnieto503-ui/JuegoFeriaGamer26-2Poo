@@ -1,8 +1,10 @@
 extends Node
 
 var NOTIFICACION_ACTIVA = false
+
 @onready var cajaNotis = $/root/Gameplay/Celular/ScrollNotificaciones/CajaNotificaciones
 @onready var tabPublicacion = $/root/Gameplay/Laptop/Pestañas/Publicacion
+
 
 func desactivar_press_notis():
 	for hijo in cajaNotis.get_children():
@@ -11,7 +13,7 @@ func activar_press_notis():
 	for hijo in cajaNotis.get_children():
 		hijo.activarBoton()
 
-var PUBLICACIONES :Array[Publicacion] = []
+var PUBLICACIONES :Array[Publicacion] = []  #////////////////////////////
 
 const RUTAS_RECURSOS = {
 	1 :"ruta1",
@@ -22,7 +24,7 @@ const RUTAS_RECURSOS = {
 #ee funciones utiles accesibnles desde todo el proyecto
 const rutaPublis = "res://Recursos/DATA_PUBLICACIONES.txt"
 
-func ingresarPublicacion(publi : Publicacion):
+func ingresarPublicacion(publi : Publicacion): #a cambiar esto siuuuuu
 	tabPublicacion.set_text(publi.get_textoPubli() + "\n\n" + "["+publi.get_tipo()+"]")
 	#NOTIFICACION_ACTIVA = true
 

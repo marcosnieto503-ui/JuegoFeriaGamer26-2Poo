@@ -2,12 +2,18 @@ extends Node2D
 
 enum test {
 	LECTURA_DE_ARCHIVO_PUBLIS,
-	TESTEO_CAJA_NOTIFICACION
+	TESTEO_CAJA_NOTIFICACION,
+	TESTEO_IMAGEN_TAB
 }
 
 @onready var textBox = $PanelContainer/VBoxContainer/RichTextLabel
 
 @export var TEST = test.LECTURA_DE_ARCHIVO_PUBLIS
+
+@onready var sprite2d = $TabContainer/PanelContainer/Control/Sprite2D
+@onready var label = $TabContainer/PanelContainer/Control/RichTextLabel
+var image = Image.load_from_file("res://NO BORRAR.jpg")
+var textura = ImageTexture.create_from_image(image)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -16,6 +22,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
 
 
 func _on_button_button_down() -> void:
@@ -27,7 +34,8 @@ func _on_button_button_down() -> void:
 			else:
 				textBox.set_text("fuiab segundo cambio de tama;o, sisisisiisisisim awdkmdpanmwdpo ap;wdmw")
 			
-		
+		test.TESTEO_IMAGEN_TAB:
+			pass
 		
 		test.LECTURA_DE_ARCHIVO_PUBLIS:
 			 #---------------testeando la lectura correcta del archivo

@@ -23,6 +23,8 @@ func get_textoPubli():
 	return self._textoPubli
 func get_tipo():
 	return self._tipo
+func get_id():
+	return self._id
 	
 func addComentario(comentario:Comentario):
 	_comentarios.append(comentario)

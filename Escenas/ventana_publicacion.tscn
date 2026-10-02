@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bvgsatc1wjt5q"]
+
+[ext_resource type="Texture2D" uid="uid://bb7d7lse2xs28" path="res://NO BORRAR.jpg" id="1_twpkc"]
+[ext_resource type="Script" uid="uid://b50xcutj57ggf" path="res://Scripts/ventana_publicacion.gd" id="1_u0uem"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8a6s"]
+content_margin_left = 10.0
+content_margin_top = 3.0
+content_margin_right = 10.0
+content_margin_bottom = 3.0
+bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcwtv"]
+bg_color = Color(0.24840015, 0.24840021, 0.24840006, 1)
+
+[node name="VentanaPublicacion" type="PanelContainer" unique_id=1207312424]
+offset_right = 780.0
+offset_bottom = 440.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_u0uem")
+metadata/_tab_index = 0
+
+[node name="Control" type="Control" parent="." unique_id=812791036]
+layout_mode = 2
+
+[node name="TextoPublicacion" type="RichTextLabel" parent="Control" unique_id=1223590045]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 35.0
+offset_right = 720.0
+offset_bottom = 215.0
+theme_override_font_sizes/normal_font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_o8a6s")
+text = "[NO TEXT]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="B_Publicar" type="Button" parent="Control" unique_id=1480995469]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 320.0
+offset_right = 743.0
+offset_bottom = 377.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wcwtv")
+text = "PUBLICAR"
+
+[node name="B_Descartar" type="Button" parent="Control" unique_id=1988598455]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 319.0
+offset_right = 491.0
+offset_bottom = 376.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_wcwtv")
+text = "DESCARTAR"
+
+[node name="RecursoMultimedia" type="TextureRect" parent="Control" unique_id=1965921488]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 37.0
+offset_right = 532.0
+offset_bottom = 501.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_twpkc")
+
+[node name="LabelTipoPubli" type="Label" parent="Control" unique_id=515649404]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 241.0
+offset_right = 243.0
+offset_bottom = 276.0
+text = "tipo de Publicacion: IMAGEN"

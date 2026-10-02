@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://2heedgu16gvg" path="res://Assets/LAPTOP 1, CEL 0.png" id="3_1y50h"]
 [ext_resource type="Texture2D" uid="uid://bgcbm11bfqncx" path="res://Assets/LAPTOP 1, CEl 1 v2.png" id="4_2slyb"]
 [ext_resource type="Texture2D" uid="uid://bvbdns0ltr5r5" path="res://Assets/LAPTOP 0, CEL 1 v2.png" id="5_lrkxc"]
+[ext_resource type="Script" uid="uid://ds4dtwidfvvoq" path="res://Scripts/BOTON_TESTING.gd" id="6_lrkxc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8a6s"]
 animations = [{
@@ -104,14 +105,15 @@ offset_bottom = 1076.0
 
 [node name="ToCelular" type="Button" parent="Laptop" unique_id=2092675695]
 layout_mode = 0
-offset_left = 1513.0
-offset_top = 739.0
-offset_right = 1771.0
-offset_bottom = 913.0
+offset_left = 1333.0
+offset_top = 683.0
+offset_right = 1591.0
+offset_bottom = 857.0
 theme_override_font_sizes/font_size = 31
 text = "Agarrar CElular"
 
 [node name="Pestañas" type="TabContainer" parent="Laptop" unique_id=1293557002]
+clip_contents = true
 layout_mode = 0
 offset_left = 339.0
 offset_top = 177.0
@@ -122,13 +124,22 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_2slyb")
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_cowoy")
 current_tab = 0
 
-[node name="Publicacion" type="RichTextLabel" parent="Laptop/Pestañas" unique_id=1907623100]
+[node name="PRINCIPAL" type="RichTextLabel" parent="Laptop/Pestañas" unique_id=1907623100]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.009317499, 0.009317501, 0.009317499, 1)
 theme_override_constants/line_separation = 0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_dbtjn")
-text = "[SIN PUBLICACIONES]"
+text = "[NADA POR AQUI]"
 metadata/_tab_index = 0
+
+[node name="BOTON TESTING" type="Button" parent="." unique_id=938050882]
+offset_left = 66.0
+offset_top = 54.0
+offset_right = 359.0
+offset_bottom = 185.0
+text = "HACER ALGO(DEBUG)"
+script = ExtResource("6_lrkxc")
 
 [connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
 [connection signal="button_down" from="Laptop/ToCelular" to="." method="_ToCelular_Pressed"]
+[connection signal="button_down" from="BOTON TESTING" to="BOTON TESTING" method="_on_button_down"]
