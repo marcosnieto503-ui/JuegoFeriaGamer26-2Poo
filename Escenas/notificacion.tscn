@@ -30,7 +30,7 @@ layout_mode = 2
 
 [node name="Texto" type="RichTextLabel" parent="VBoxContainer" unique_id=532685438]
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 14
+theme_override_font_sizes/normal_font_size = 11
 theme_override_styles/normal = SubResource("StyleBoxEmpty_avguk")
 text = "[NO TEXT]"
 fit_content = true
@@ -40,6 +40,7 @@ vertical_alignment = 1
 [node name="Boton Aceptar Noti" type="TextureButton" parent="VBoxContainer" unique_id=565228651]
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
+focus_mode = 0
 texture_normal = ExtResource("2_8gkj5")
 texture_hover = SubResource("NoiseTexture2D_ixdr4")
 ignore_texture_size = true

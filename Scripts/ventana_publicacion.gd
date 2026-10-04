@@ -4,6 +4,7 @@ extends PanelContainer
 @onready var recursoMultimedia = $Control/RecursoMultimedia
 @onready var labelTipoPubli = $Control/LabelTipoPubli
 
+
 var PUBLICACION_ASIGNADA : Publicacion = null
 var recurso : Texture2D = null
 
@@ -16,6 +17,8 @@ const size_SIN_IMAGEN = Vector2(660,180)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$ImagenDescartar.modulate = Color(0.712, 0.0, 0.188, 1.0)  # tinte rojizo
+	$ImagenPublicar.modulate = Color(0.0, 0.735, 0.0, 1.0)
 	pass # Replace with function body.
 
 func inicializar(publi : Publicacion):
@@ -23,7 +26,6 @@ func inicializar(publi : Publicacion):
 	
 	#recurso = load(Utils.RUTAS_RECURSOS[PUBLICACION_ASIGNADA.get_id()])
 	print(Utils.RUTAS_RECURSOS[PUBLICACION_ASIGNADA.get_id()])
-	
 	
 	cajaTextoPubli.set_text(PUBLICACION_ASIGNADA.get_textoPubli())
 	labelTipoPubli.set_text("Tipo de Publicacion: " + PUBLICACION_ASIGNADA.get_tipo())
@@ -34,3 +36,68 @@ func asignar_imagen():
 		recursoMultimedia.hide()
 		cajaTextoPubli.position = pos_SIN_IMAGEN
 		cajaTextoPubli.size = size_SIN_IMAGEN
+	else:
+		#recursoMultimedia.texture = recurso
+		pass
+		
+
+func _on_b_publicar_button_up() -> void:
+	publicar()
+func _on_b_descartar_button_up() -> void:
+	descartar()
+	
+func publicar():
+	Utils.PUBLIS_PUBLICADAS.append(PUBLICACION_ASIGNADA)
+	
+	Utils.bloquear_cambio_tabs()
+	await animacionRetirarTab("PUBLICAR")
+	Utils.bloquear_cambio_tabs()
+	
+	self.queue_free()
+	Utils.contador -= 1
+	print("PUBLICADAS: "+ str(len(Utils.PUBLIS_PUBLICADAS)))
+	
+func descartar():
+	Utils.PUBLIS_DESCARTADAS.append(PUBLICACION_ASIGNADA)
+	
+	Utils.bloquear_cambio_tabs()
+	await animacionRetirarTab("DESCARTAR")
+	Utils.bloquear_cambio_tabs()
+	
+	self.queue_free()
+	Utils.contador -= 1
+	print("DESCARTADAS: "+ str(len(Utils.PUBLIS_DESCARTADAS)))
+
+
+
+func animacionRetirarTab(direccion:String):
+	var dir
+	if direccion == "PUBLICAR":
+		dir = -1
+	elif direccion == "DESCARTAR":
+		dir = 1.006410256 # 780px a la derecha no sacan completamente a la ventana de la vista por alguna razon, asiq eu toca poner esto
+	else:
+		print("ARGUMENTO INVALIDO MOSTro")
+	
+	var tween_actual = create_tween()
+	
+	tween_actual.tween_property(self,"position:x",780*dir, 0.8).set_trans(Tween.TRANS_QUAD)
+	tween_actual.tween_interval(0.6)
+	await tween_actual.finished
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

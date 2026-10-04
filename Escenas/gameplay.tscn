@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bna2gcijngbas"]
 
 [ext_resource type="Script" uid="uid://c4blyrcn58omj" path="res://Scripts/gameplay.gd" id="1_2slyb"]
+[ext_resource type="Script" uid="uid://b2jw6ubats8c5" path="res://Scripts/camara.gd" id="2_1y50h"]
 [ext_resource type="Texture2D" uid="uid://mnlvofvjl8jq" path="res://Assets/LAPTOP 0, CEL 0.png" id="2_lrkxc"]
 [ext_resource type="Texture2D" uid="uid://2heedgu16gvg" path="res://Assets/LAPTOP 1, CEL 0.png" id="3_1y50h"]
 [ext_resource type="Texture2D" uid="uid://bgcbm11bfqncx" path="res://Assets/LAPTOP 1, CEl 1 v2.png" id="4_2slyb"]
@@ -54,6 +55,7 @@ limit_top = 0
 limit_right = 1920
 limit_bottom = 1080
 limit_smoothed = true
+script = ExtResource("2_1y50h")
 
 [node name="Visual" type="AnimatedSprite2D" parent="." unique_id=1100752342]
 z_index = -2
@@ -76,6 +78,7 @@ offset_left = -393.0
 offset_top = 333.0
 offset_right = -142.0
 offset_bottom = 502.0
+focus_mode = 0
 theme_override_font_sizes/font_size = 31
 text = "Pillar Laptop"
 
@@ -109,6 +112,7 @@ offset_left = 1333.0
 offset_top = 683.0
 offset_right = 1591.0
 offset_bottom = 857.0
+focus_mode = 0
 theme_override_font_sizes/font_size = 31
 text = "Agarrar CElular"
 
@@ -123,6 +127,7 @@ theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
 theme_override_styles/panel = SubResource("StyleBoxFlat_2slyb")
 theme_override_styles/tab_selected = SubResource("StyleBoxFlat_cowoy")
 current_tab = 0
+tab_focus_mode = 0
 
 [node name="PRINCIPAL" type="RichTextLabel" parent="Laptop/Pestañas" unique_id=1907623100]
 layout_mode = 2

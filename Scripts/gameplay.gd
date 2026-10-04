@@ -81,42 +81,20 @@ func toCelular():
 	if (fondo.frame == noFocus):
 		fondo.frame = celularOnly
 		pantalla.show()
-		reiniciar_camara()
-		await reiniciar_camara()
-		zoom_hacia(Vector2(900,200), 2) #coords en relacion a la camara si ests tuviera origfen en su centro
+		camara.reiniciar_camara()
+		await camara.reiniciar_camara()
+		camara.zoom_hacia(Vector2(900,200), 2) #coords en relacion a la camara si ests tuviera origfen en su centro
 	else: 
 		fondo.frame = celularFocus
 		pantalla.show()
-		reiniciar_camara()
-		await reiniciar_camara()
-		zoom_hacia(Vector2(900,200), 2) #coords en relacion a la camara si ests tuviera origen en su centro
+		camara.reiniciar_camara()
+		await camara.reiniciar_camara()
+		camara.zoom_hacia(Vector2(900,200), 2) #coords en relacion a la camara si ests tuviera origen en su centro
 	#720, 420
 func toLaptop():
 	fondo.frame = laptopFocus
 	pantalla.hide()
-	reiniciar_camara()
-	await reiniciar_camara()
-	zoom_hacia(Vector2(920-(1920/2), 430-(1080/2)), 1.2, 0.3)
+	camara.reiniciar_camara()
+	await camara.reiniciar_camara()
+	camara.zoom_hacia(Vector2(920-(1920/2), 430-(1080/2)), 1.2, 0.3)
 	
-var tween_actual: Tween
-
-func zoom_hacia(posicion_objetivo: Vector2, nivel_zoom: float, duracion: float = 0.4):
-	if tween_actual:
-		tween_actual.kill()
-	var zoom_clampeado = clamp(nivel_zoom, 0.3, 1.7)
-	
-	tween_actual = create_tween()
-	tween_actual.set_parallel(true)
-	tween_actual.tween_property(camara, "global_position", posicion_objetivo, duracion).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	tween_actual.tween_property(camara, "zoom", Vector2(zoom_clampeado, zoom_clampeado), duracion).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	await tween_actual.finished
-	
-func reiniciar_camara(duracion: float = 0.3):
-	if tween_actual:
-		tween_actual.kill()
-
-	tween_actual = create_tween()
-	tween_actual.set_parallel(true)
-	tween_actual.tween_property(camara, "global_position", Vector2.ZERO, duracion).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	tween_actual.tween_property(camara, "zoom", Vector2.ONE, duracion).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
-	await tween_actual.finished

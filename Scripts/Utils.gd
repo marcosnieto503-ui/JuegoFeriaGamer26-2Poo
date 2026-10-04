@@ -1,10 +1,22 @@
 extends Node
 
-var NOTIFICACION_ACTIVA = false
+var contador = 1 #------- PURA PRUEBITA BORRAR DESPYUEs
+#el contador empieza en uno para usarlo como indice en las pesta;as
 
 @onready var cajaNotis = $/root/Gameplay/Celular/ScrollNotificaciones/CajaNotificaciones
-@onready var tabPublicacion = $/root/Gameplay/Laptop/Pestañas/Publicacion
+@onready var tabsPublisContainer = $/root/Gameplay/Laptop/Pestañas
+@onready var tabPublicacion = preload("res://Escenas/ventana_publicacion.tscn")
 
+var TABS_BLOQUEADAS = false
+func bloquear_cambio_tabs():
+	if not TABS_BLOQUEADAS:
+		for i in tabsPublisContainer.get_tab_count():
+			tabsPublisContainer.set_tab_disabled(i, true)
+		TABS_BLOQUEADAS = true
+	else:
+		for i in tabsPublisContainer.get_tab_count():
+			tabsPublisContainer.set_tab_disabled(i, false)
+		TABS_BLOQUEADAS = false
 
 func desactivar_press_notis():
 	for hijo in cajaNotis.get_children():
@@ -14,19 +26,42 @@ func activar_press_notis():
 		hijo.activarBoton()
 
 var PUBLICACIONES :Array[Publicacion] = []  #////////////////////////////
+var PUBLIS_PUBLICADAS :Array[Publicacion] = []
+var PUBLIS_DESCARTADAS :Array[Publicacion] = []
 
 const RUTAS_RECURSOS = {
 	1 :"ruta1",
 	2 :"ruta2",
 	3 :"ruta3",
-	4 :"ruta4"
+	4 :"ruta4",
+	5 :"ruta1",
+	6 :"ruta2",
+	7 :"ruta3",
+	8 :"ruta4",
+	9 :"ruta1",
+	10 :"ruta2",
+	11 :"ruta3",
+	12 :"ruta4",
+	13 :"po"
 }
 #ee funciones utiles accesibnles desde todo el proyecto
 const rutaPublis = "res://Recursos/DATA_PUBLICACIONES.txt"
 
 func ingresarPublicacion(publi : Publicacion): #a cambiar esto siuuuuu
-	tabPublicacion.set_text(publi.get_textoPubli() + "\n\n" + "["+publi.get_tipo()+"]")
-	#NOTIFICACION_ACTIVA = true
+	if contador > 3: #a reemplaazr despues -----------------------
+		return
+	var tabNoti = tabPublicacion.instantiate() #tabPublicacion = ventana_publicacion
+	tabNoti.name = "Publicacion "+ str(contador)
+	
+	tabsPublisContainer.add_child(tabNoti)
+	tabsPublisContainer.set_current_tab(contador)
+	
+	contador += 1  #propenso a errores pulir lo antes posible
+	print("CONTADOR de TABS: " + str(contador))
+	
+	tabNoti.inicializar(publi)
+
+
 
 func leer_archivo_publi():
 	var ruta = rutaPublis

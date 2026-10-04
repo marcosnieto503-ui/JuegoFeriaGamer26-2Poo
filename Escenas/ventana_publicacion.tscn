@@ -2,6 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://bb7d7lse2xs28" path="res://NO BORRAR.jpg" id="1_twpkc"]
 [ext_resource type="Script" uid="uid://b50xcutj57ggf" path="res://Scripts/ventana_publicacion.gd" id="1_u0uem"]
+[ext_resource type="Texture2D" uid="uid://l0a7nwm0iu8v" path="res://icon.svg" id="2_wntv2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qekex"]
+bg_color = Color(0.35716107, 0.672007, 0.5376025, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4cw3"]
+bg_color = Color(0.6412469, 0.21360567, 0.22105739, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8a6s"]
 content_margin_left = 10.0
@@ -20,6 +27,42 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_u0uem")
 metadata/_tab_index = 0
+
+[node name="ImagenPublicar" type="TextureRect" parent="." unique_id=2079371493]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(780, 0)
+texture = ExtResource("2_wntv2")
+expand_mode = 1
+
+[node name="TEXTO PUBLICADO" type="Label" parent="ImagenPublicar" unique_id=978063757]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 176.0
+offset_right = 537.0
+offset_bottom = 231.0
+offset_transform_enabled = true
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_qekex")
+text = "PUBLICADO!"
+
+[node name="ImagenDescartar" type="TextureRect" parent="." unique_id=1934150151]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(-780, 0)
+texture = ExtResource("2_wntv2")
+expand_mode = 1
+
+[node name="TEXTO DESCARETADO" type="Label" parent="ImagenDescartar" unique_id=550496056]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 176.0
+offset_right = 537.0
+offset_bottom = 231.0
+offset_transform_enabled = true
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_g4cw3")
+text = "DESCARTADO"
 
 [node name="Control" type="Control" parent="." unique_id=812791036]
 layout_mode = 2
@@ -70,3 +113,6 @@ offset_top = 241.0
 offset_right = 243.0
 offset_bottom = 276.0
 text = "tipo de Publicacion: IMAGEN"
+
+[connection signal="button_up" from="Control/B_Publicar" to="." method="_on_b_publicar_button_up"]
+[connection signal="button_up" from="Control/B_Descartar" to="." method="_on_b_descartar_button_up"]
