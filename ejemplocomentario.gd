@@ -1,3 +1,5 @@
+# esto no debe quedar en la version final del juego, solo es un ejemplo para que se vea como se tiene que llamar la fncion de reaccioanr
+#
 extends Node
 
 @export var tipo : String = "reaccion1"
