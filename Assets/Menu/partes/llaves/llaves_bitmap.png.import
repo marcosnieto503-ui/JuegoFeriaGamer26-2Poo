@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bl3jfdaavwhua"
+path="res://.godot/imported/llaves_bitmap.png-0ce65a4cfa7f7c4677c3bd9289913f01.res"
+
+[deps]
+
+source_file="res://Assets/Menu/partes/llaves/llaves_bitmap.png"
+dest_files=["res://.godot/imported/llaves_bitmap.png-0ce65a4cfa7f7c4677c3bd9289913f01.res"]
+
+[params]
+
+create_from=1
+threshold=0.0

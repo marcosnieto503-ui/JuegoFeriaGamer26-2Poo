@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ba0123d53h6o0"
+path="res://.godot/imported/hojas_bitmap.png-77b7db8c50f9fb35024eaffafb1c054c.res"
+
+[deps]
+
+source_file="res://Assets/Menu/partes/hojas/hojas_bitmap.png"
+dest_files=["res://.godot/imported/hojas_bitmap.png-77b7db8c50f9fb35024eaffafb1c054c.res"]
+
+[params]
+
+create_from=1
+threshold=0.0

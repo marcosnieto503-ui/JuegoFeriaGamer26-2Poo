@@ -1,0 +1,383 @@
+[gd_scene format=3 uid="uid://c7cvvbol3wrd8"]
+
+[ext_resource type="Script" uid="uid://csi3rvjj4apn5" path="res://Scripts/Menu/menu.gd" id="1_xhjix"]
+[ext_resource type="Texture2D" uid="uid://bym8ce3fpwbo0" path="res://Assets/Menu/partes/fondo.png" id="2_o2l53"]
+[ext_resource type="Script" uid="uid://d4nph0a2ggrgo" path="res://Scripts/Menu/camera_2d.gd" id="3_o2l53"]
+[ext_resource type="Texture2D" uid="uid://chjstnupuyt41" path="res://Assets/Menu/partes/celular/celular.png" id="4_27k2t"]
+[ext_resource type="Texture2D" uid="uid://c7es2kg70xquo" path="res://Assets/Menu/partes/celular/celular-outline.png" id="5_5c8jm"]
+[ext_resource type="BitMap" uid="uid://b8mjwl0kum6t6" path="res://Assets/Menu/partes/laptop/laptop_bitmap.png" id="6_2a5i7"]
+[ext_resource type="BitMap" uid="uid://dgm3k8lsf2qcn" path="res://Assets/Menu/partes/celular/celular_bitmap.png" id="6_5c8jm"]
+[ext_resource type="Texture2D" uid="uid://31iyfb5t5sj8" path="res://Assets/Menu/partes/mouse/mouse-outline.png" id="7_27k2t"]
+[ext_resource type="BitMap" uid="uid://c5gvhvr6b6gdt" path="res://Assets/Menu/partes/mouse/mouse_bitmap.png" id="8_5c8jm"]
+[ext_resource type="Texture2D" uid="uid://ocoggagc5hco" path="res://Assets/Menu/partes/laptop/laptop.png" id="9_27k2t"]
+[ext_resource type="Texture2D" uid="uid://bk72ldv2xtbo" path="res://Assets/Menu/partes/laptop/laptop-outline.png" id="10_5c8jm"]
+[ext_resource type="Texture2D" uid="uid://dmy6ipbwk4hoi" path="res://Assets/Menu/partes/mouse/mouse.png" id="12_bcw8w"]
+[ext_resource type="Texture2D" uid="uid://unqoa28urmm" path="res://Assets/Menu/partes/hojas/hojas-outline.png" id="14_5c8jm"]
+[ext_resource type="Texture2D" uid="uid://2kw3e2pwxw26" path="res://Assets/Menu/partes/hojas/hojas.png" id="15_5c8jm"]
+[ext_resource type="BitMap" uid="uid://ba0123d53h6o0" path="res://Assets/Menu/partes/hojas/hojas_bitmap.png" id="15_bmckm"]
+[ext_resource type="Texture2D" uid="uid://bui8ipu7kyqgb" path="res://Assets/Menu/partes/fondo_brillos.png" id="16_bmckm"]
+[ext_resource type="Texture2D" uid="uid://b7qj48v3gcjpy" path="res://Assets/Menu/partes/llaves/llaves.png" id="16_q7uug"]
+[ext_resource type="Texture2D" uid="uid://dsndyqlgiw5d8" path="res://Assets/Menu/partes/llaves/llaves-outline.png" id="17_4fgvs"]
+[ext_resource type="BitMap" uid="uid://bl3jfdaavwhua" path="res://Assets/Menu/partes/llaves/llaves_bitmap.png" id="18_4fgvs"]
+
+[sub_resource type="Animation" id="Animation_4fgvs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Objetos/mouse:offset_transform_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Objetos/Laptop:offset_transform_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.6, 2.6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Objetos/celular:offset_transform_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.5, 2.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Objetos/hojas:offset_transform_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 3)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Objetos/llaves:offset_transform_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, 3)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ColorRect:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bskcp"]
+resource_name = "animh_celular"
+length = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Objetos/celular:offset_transform_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.5, 2.5), Vector2(2.52, 2.52)]
+}
+
+[sub_resource type="Animation" id="Animation_lcrll"]
+resource_name = "animh_hojas"
+length = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Objetos/hojas:offset_transform_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3, 3), Vector2(3.05, 3.05)]
+}
+
+[sub_resource type="Animation" id="Animation_f7sd3"]
+resource_name = "animh_laptop"
+length = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Objetos/Laptop:offset_transform_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(2.6, 2.6), Vector2(2.65, 2.65)]
+}
+
+[sub_resource type="Animation" id="Animation_g0ne7"]
+resource_name = "animh_llaves"
+length = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Objetos/llaves:offset_transform_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3, 3), Vector2(3.05, 3.05)]
+}
+
+[sub_resource type="Animation" id="Animation_p7plt"]
+resource_name = "animh_mouse"
+length = 0.12
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Objetos/mouse:offset_transform_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3, 3), Vector2(3.05, 3.05)]
+}
+
+[sub_resource type="Animation" id="Animation_bjust"]
+resource_name = "fade-out"
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bcw8w"]
+_data = {
+&"RESET": SubResource("Animation_4fgvs"),
+&"animh_celular": SubResource("Animation_bskcp"),
+&"animh_hojas": SubResource("Animation_lcrll"),
+&"animh_laptop": SubResource("Animation_f7sd3"),
+&"animh_llaves": SubResource("Animation_g0ne7"),
+&"animh_mouse": SubResource("Animation_p7plt"),
+&"fade-out": SubResource("Animation_bjust")
+}
+
+[node name="Menu" type="Control" unique_id=1575295246]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xhjix")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2026816162]
+modulate = Color(0, 0, 0, 1)
+z_index = 1000
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1129073673]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_o2l53")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=66151873]
+scale = Vector2(1.1, 1.1)
+offset = Vector2(80, 40)
+anchor_mode = 0
+zoom = Vector2(1.1, 1.1)
+limit_enabled = false
+limit_left = 0
+limit_top = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 9.35
+script = ExtResource("3_o2l53")
+
+[node name="AnimationObjetos" type="AnimationPlayer" parent="." unique_id=382239480]
+libraries/ = SubResource("AnimationLibrary_bcw8w")
+
+[node name="AnimationColorR" type="AnimationPlayer" parent="." unique_id=785105118]
+libraries/ = SubResource("AnimationLibrary_bcw8w")
+
+[node name="Objetos" type="Control" parent="." unique_id=1136005852]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+
+[node name="celular" type="TextureButton" parent="Objetos" unique_id=1495560526]
+z_index = 1
+texture_filter = 3
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 456.0
+offset_top = 164.0
+offset_right = 1096.0
+offset_bottom = 523.99994
+pivot_offset_ratio = Vector2(0.5, 0.5)
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2.5, 2.5)
+offset_transform_rotation = 0.26005405
+offset_transform_visual_only = false
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_27k2t")
+texture_hover = ExtResource("5_5c8jm")
+texture_click_mask = ExtResource("6_5c8jm")
+ignore_texture_size = true
+
+[node name="mouse" type="TextureButton" parent="Objetos" unique_id=1883046240]
+z_index = 1
+texture_filter = 3
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 552.0
+offset_top = 323.0
+offset_right = 1192.0
+offset_bottom = 683.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(3, 3)
+offset_transform_visual_only = false
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("12_bcw8w")
+texture_hover = ExtResource("7_27k2t")
+texture_click_mask = ExtResource("8_5c8jm")
+ignore_texture_size = true
+
+[node name="Laptop" type="TextureButton" parent="Objetos" unique_id=1288723118]
+z_index = 1
+texture_filter = 3
+layout_mode = 0
+offset_left = 483.0
+offset_top = 291.0
+offset_right = 1123.0
+offset_bottom = 651.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2.6, 2.6)
+offset_transform_visual_only = false
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_27k2t")
+texture_hover = ExtResource("10_5c8jm")
+texture_click_mask = ExtResource("6_2a5i7")
+
+[node name="hojas" type="TextureButton" parent="Objetos" unique_id=2049028594]
+z_index = 1
+texture_filter = 3
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 556.0
+offset_top = 345.0
+offset_right = 1196.0
+offset_bottom = 705.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(3, 3)
+offset_transform_visual_only = false
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("15_5c8jm")
+texture_hover = ExtResource("14_5c8jm")
+texture_click_mask = ExtResource("15_bmckm")
+
+[node name="llaves" type="TextureButton" parent="Objetos" unique_id=1181762998]
+z_index = 1
+texture_filter = 3
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 0
+offset_left = 1150.0001
+offset_top = 1308.0
+offset_right = 1790.0001
+offset_bottom = 1668.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(3, 3)
+offset_transform_rotation = 1.3805554
+offset_transform_visual_only = false
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("16_q7uug")
+texture_hover = ExtResource("17_4fgvs")
+texture_click_mask = ExtResource("18_4fgvs")
+
+[node name="Fondo-brillo" type="TextureRect" parent="." unique_id=377481191]
+z_index = 10
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -3.0
+offset_right = 603.0
+offset_bottom = 317.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("16_bmckm")
+
+[connection signal="mouse_entered" from="Objetos/celular" to="." method="_on_telefono_mouse_entered"]
+[connection signal="mouse_exited" from="Objetos/celular" to="." method="_on_telefono_mouse_exited"]
+[connection signal="pressed" from="Objetos/celular" to="." method="_on_telefono_pressed"]
+[connection signal="mouse_entered" from="Objetos/mouse" to="." method="_on_mouse_mouse_entered"]
+[connection signal="mouse_exited" from="Objetos/mouse" to="." method="_on_mouse_mouse_exited"]
+[connection signal="mouse_entered" from="Objetos/Laptop" to="." method="_on_laptop_mouse_entered"]
+[connection signal="mouse_exited" from="Objetos/Laptop" to="." method="_on_laptop_mouse_exited"]
+[connection signal="pressed" from="Objetos/Laptop" to="." method="_on_laptop_pressed"]
+[connection signal="mouse_entered" from="Objetos/hojas" to="." method="_on_hojas_mouse_entered"]
+[connection signal="mouse_exited" from="Objetos/hojas" to="." method="_on_hojas_mouse_exited"]
+[connection signal="mouse_entered" from="Objetos/llaves" to="." method="_on_llaves_mouse_entered"]
+[connection signal="mouse_exited" from="Objetos/llaves" to="." method="_on_llaves_mouse_exited"]
+[connection signal="pressed" from="Objetos/llaves" to="." method="_on_llaves_pressed"]

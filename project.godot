@@ -11,11 +11,15 @@ config_version=5
 [application]
 
 config/name="JuegoFeriaGamer26PO"
+run/main_scene="uid://ba3w67u3v1wx4"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

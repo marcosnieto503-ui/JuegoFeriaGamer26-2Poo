@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c5gvhvr6b6gdt"
+path="res://.godot/imported/mouse_bitmap.png-e4cc0c69557120ae45d8823d6b9af3dc.res"
+
+[deps]
+
+source_file="res://Assets/Menu/partes/mouse/mouse_bitmap.png"
+dest_files=["res://.godot/imported/mouse_bitmap.png-e4cc0c69557120ae45d8823d6b9af3dc.res"]
+
+[params]
+
+create_from=1
+threshold=0.0
