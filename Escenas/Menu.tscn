@@ -8,7 +8,7 @@
 [ext_resource type="BitMap" uid="uid://b8mjwl0kum6t6" path="res://Assets/Menu/partes/laptop/laptop_bitmap.png" id="6_2a5i7"]
 [ext_resource type="BitMap" uid="uid://dgm3k8lsf2qcn" path="res://Assets/Menu/partes/celular/celular_bitmap.png" id="6_5c8jm"]
 [ext_resource type="Texture2D" uid="uid://31iyfb5t5sj8" path="res://Assets/Menu/partes/mouse/mouse-outline.png" id="7_27k2t"]
-[ext_resource type="BitMap" uid="uid://c5gvhvr6b6gdt" path="res://Assets/Menu/partes/mouse/mouse_bitmap.png" id="8_5c8jm"]
+[ext_resource type="BitMap" uid="uid://bcg6bfot8abtm" path="res://Assets/Menu/partes/mouse/mouse_bitmap.png" id="8_5c8jm"]
 [ext_resource type="Texture2D" uid="uid://ocoggagc5hco" path="res://Assets/Menu/partes/laptop/laptop.png" id="9_27k2t"]
 [ext_resource type="Texture2D" uid="uid://bk72ldv2xtbo" path="res://Assets/Menu/partes/laptop/laptop-outline.png" id="10_5c8jm"]
 [ext_resource type="Texture2D" uid="uid://dmy6ipbwk4hoi" path="res://Assets/Menu/partes/mouse/mouse.png" id="12_bcw8w"]
@@ -212,6 +212,7 @@ grow_vertical = 2
 script = ExtResource("1_xhjix")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2026816162]
+visible = false
 modulate = Color(0, 0, 0, 1)
 z_index = 1000
 layout_mode = 1
@@ -268,14 +269,13 @@ z_index = 1
 texture_filter = 3
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 456.0
-offset_top = 164.0
-offset_right = 1096.0
-offset_bottom = 523.99994
+offset_left = 492.00003
+offset_top = 116.00002
+offset_right = 1132.0
+offset_bottom = 475.99997
 pivot_offset_ratio = Vector2(0.5, 0.5)
 offset_transform_enabled = true
 offset_transform_scale = Vector2(2.5, 2.5)
-offset_transform_rotation = 0.26005405
 offset_transform_visual_only = false
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_27k2t")
@@ -288,12 +288,13 @@ z_index = 1
 texture_filter = 3
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 552.0
-offset_top = 323.0
-offset_right = 1192.0
-offset_bottom = 683.0
+offset_left = 1866.0001
+offset_top = -392.00006
+offset_right = 2506.0
+offset_bottom = -32.00006
 offset_transform_enabled = true
 offset_transform_scale = Vector2(3, 3)
+offset_transform_rotation = -0.22165681
 offset_transform_visual_only = false
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("12_bcw8w")
@@ -305,10 +306,10 @@ ignore_texture_size = true
 z_index = 1
 texture_filter = 3
 layout_mode = 0
-offset_left = 483.0
-offset_top = 291.0
-offset_right = 1123.0
-offset_bottom = 651.0
+offset_left = 582.0
+offset_top = 398.0
+offset_right = 1222.0
+offset_bottom = 758.0
 offset_transform_enabled = true
 offset_transform_scale = Vector2(2.6, 2.6)
 offset_transform_visual_only = false
@@ -322,10 +323,10 @@ z_index = 1
 texture_filter = 3
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 556.0
-offset_top = 345.0
-offset_right = 1196.0
-offset_bottom = 705.0
+offset_left = -796.0
+offset_top = 810.0
+offset_right = -156.0
+offset_bottom = 1170.0
 offset_transform_enabled = true
 offset_transform_scale = Vector2(3, 3)
 offset_transform_visual_only = false
@@ -339,10 +340,10 @@ z_index = 1
 texture_filter = 3
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 1150.0001
-offset_top = 1308.0
-offset_right = 1790.0001
-offset_bottom = 1668.0
+offset_left = 1128.9999
+offset_top = 1285.0
+offset_right = 1768.9999
+offset_bottom = 1645.0
 offset_transform_enabled = true
 offset_transform_scale = Vector2(3, 3)
 offset_transform_rotation = 1.3805554
@@ -359,10 +360,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = -3.0
-offset_right = 603.0
-offset_bottom = 317.0
+offset_left = -1.0
+offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
