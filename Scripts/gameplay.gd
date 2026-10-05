@@ -42,6 +42,7 @@ func ingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
 	var publi_a_asignar = Utils.PUBLICACIONES.pick_random()
 	#var publi_a_asignar = Utils.PUBLICACIONES[0]
 	cajaNotif.add_child(notif)
+	print(notif.size)
 	notif.asignarPubli(publi_a_asignar)
 	
 	

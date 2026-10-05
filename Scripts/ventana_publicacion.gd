@@ -15,11 +15,19 @@ const size_CON_IMAGEN = Vector2(445,180)
 const size_SIN_IMAGEN = Vector2(660,180)
 
 
+@onready var botonInapropiado = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2/Inapropiado
+@onready var botonFormatoInvalido = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2/FormatoInvalido
+@onready var botonPubliNoRelacionada = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3/PubliNoRelacionada
+@onready var botonLenguajeNoProfesional = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3/LenguajeNoProfesional
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$ImagenDescartar.modulate = Color(0.712, 0.0, 0.188, 1.0)  # tinte rojizo
-	$ImagenPublicar.modulate = Color(0.0, 0.735, 0.0, 1.0)
-	pass # Replace with function body.
+	#botones del menu que aparece al descartar
+	$ControlOpsDescartar.set_visible(false)
+	botonInapropiado.pressed.connect(algunBotonDescartar_Pressed.bind("inapropiado"))
+	botonFormatoInvalido.button_up.connect(algunBotonDescartar_Pressed.bind("formato"))
+	botonPubliNoRelacionada.button_up.connect(algunBotonDescartar_Pressed.bind("no relacionada"))
+	botonLenguajeNoProfesional.button_up.connect(algunBotonDescartar_Pressed.bind("lenguaje"))
+
 
 func inicializar(publi : Publicacion):
 	PUBLICACION_ASIGNADA = publi
@@ -44,7 +52,19 @@ func asignar_imagen():
 func _on_b_publicar_button_up() -> void:
 	publicar()
 func _on_b_descartar_button_up() -> void:
+	$ControlOpsDescartar.grab_focus()
+
+func _on_controlOpsDescartar_focus_entered() -> void:
+	$ControlOpsDescartar.set_visible(true)
+func _on_controlOpsDescartar_focus_exited() -> void:
+	$ControlOpsDescartar.set_visible(false)
+	
+ #------funcion al presionar alguna opcion de descarte
+func algunBotonDescartar_Pressed(motivo: String):
+	print(motivo)
+	#hacer algo
 	descartar()
+	
 	
 func publicar():
 	Utils.PUBLIS_PUBLICADAS.append(PUBLICACION_ASIGNADA)
@@ -86,11 +106,15 @@ func animacionRetirarTab(direccion:String):
 	await tween_actual.finished
 	
 	
+
+
+func _on_hacer_algo_button_down() -> void:
+	print($ControlOpsDescartar.has_focus())
+	$ControlOpsDescartar.grab_focus()
+	print("po")
+	print($ControlOpsDescartar.has_focus())
 	
-	
-	
-	
-	
+
 	
 	
 	

@@ -86,7 +86,7 @@ text = "Pillar Laptop"
 layout_mode = 0
 offset_left = 7.0
 offset_top = 12.0
-offset_right = 291.0
+offset_right = 302.0
 offset_bottom = 513.0
 horizontal_scroll_mode = 0
 
@@ -138,12 +138,22 @@ text = "[NADA POR AQUI]"
 metadata/_tab_index = 0
 
 [node name="BOTON TESTING" type="Button" parent="." unique_id=938050882]
-offset_left = 66.0
-offset_top = 54.0
-offset_right = 359.0
-offset_bottom = 185.0
-text = "HACER ALGO(DEBUG)"
+offset_left = 36.0
+offset_top = 36.0
+offset_right = 329.0
+offset_bottom = 167.0
+text = "HACER ALGO(DEBUG)
+(NO USAR)"
 script = ExtResource("6_lrkxc")
+
+[node name="Label" type="Label" parent="BOTON TESTING" unique_id=1723358313]
+layout_mode = 0
+offset_left = 906.0
+offset_top = 42.0
+offset_right = 1393.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = ">>> ESPACIO PARA RECIBIR NOTIFICACION AL TELEGFONO <<<<"
 
 [connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
 [connection signal="button_down" from="Laptop/ToCelular" to="." method="_ToCelular_Pressed"]

@@ -20,6 +20,12 @@ bg_color = Color(0.18717611, 0.18717617, 0.18717602, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcwtv"]
 bg_color = Color(0.24840015, 0.24840021, 0.24840006, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kugx0"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+
 [node name="VentanaPublicacion" type="PanelContainer" unique_id=1207312424]
 offset_right = 780.0
 offset_bottom = 440.0
@@ -29,6 +35,7 @@ script = ExtResource("1_u0uem")
 metadata/_tab_index = 0
 
 [node name="ImagenPublicar" type="TextureRect" parent="." unique_id=2079371493]
+self_modulate = Color(0.15744793, 0.48524714, 0.2716639, 1)
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(780, 0)
@@ -47,6 +54,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_qekex")
 text = "PUBLICADO!"
 
 [node name="ImagenDescartar" type="TextureRect" parent="." unique_id=1934150151]
+self_modulate = Color(0.79595095, 0.20431468, 0.3496629, 1)
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_position = Vector2(-780, 0)
@@ -66,6 +74,15 @@ text = "DESCARTADO"
 
 [node name="Control" type="Control" parent="." unique_id=812791036]
 layout_mode = 2
+focus_mode = 1
+
+[node name="devbug button" type="Button" parent="Control" unique_id=1531121232]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 597.0
+offset_right = 1067.0
+offset_bottom = 740.0
+text = "hacer algo (debug)"
 
 [node name="TextoPublicacion" type="RichTextLabel" parent="Control" unique_id=1223590045]
 layout_mode = 0
@@ -114,5 +131,61 @@ offset_right = 243.0
 offset_bottom = 276.0
 text = "tipo de Publicacion: IMAGEN"
 
+[node name="ControlOpsDescartar" type="Control" parent="." unique_id=541326613]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 1
+
+[node name="OpcionesDescartar" type="PanelContainer" parent="ControlOpsDescartar" unique_id=1333567926]
+modulate = Color(1, 1, 1, 0.8117647)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 293.0
+offset_right = 497.0
+offset_bottom = 421.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kugx0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlOpsDescartar/OpcionesDescartar" unique_id=444917671]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer" unique_id=2064405137]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Inapropiado" type="Button" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2" unique_id=2031408935]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "INAPROPIADO"
+
+[node name="FormatoInvalido" type="Button" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2" unique_id=1481136723]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "Formato Invalido"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer" unique_id=1743228052]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="PubliNoRelacionada" type="Button" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3" unique_id=1539618419]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "Publicacion no relacionada"
+
+[node name="LenguajeNoProfesional" type="Button" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3" unique_id=1140329308]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+text = "Lenguaje poco profesional"
+
+[connection signal="button_down" from="Control/devbug button" to="." method="_on_hacer_algo_button_down"]
 [connection signal="button_up" from="Control/B_Publicar" to="." method="_on_b_publicar_button_up"]
 [connection signal="button_up" from="Control/B_Descartar" to="." method="_on_b_descartar_button_up"]
+[connection signal="focus_entered" from="ControlOpsDescartar" to="." method="_on_controlOpsDescartar_focus_entered"]
+[connection signal="focus_exited" from="ControlOpsDescartar" to="." method="_on_controlOpsDescartar_focus_exited"]

@@ -10,10 +10,12 @@ func _ready() -> void:
 
 
 
-func _on_boton_aceptar_noti_button_down() -> void:
+func _on_boton_aceptar_noti_button_up() -> void:
 	if Utils.contador > 3:
 		return
+	print(boton.size)
 	_procesarNoti()
+	
 	
 func desactivarBoton():
 	boton.set_disabled(true)
@@ -23,7 +25,6 @@ func activarBoton():
 func asignarPubli(publi : Publicacion):
 	PubliAsignada = publi
 	nodoTexto.set_text(publi.get_textoNoti())
-	
 	
 func _procesarNoti():
 	print("NOTIFICACION ACEPTADA")
