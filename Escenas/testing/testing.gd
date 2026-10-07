@@ -3,7 +3,8 @@ extends Node2D
 enum test {
 	LECTURA_DE_ARCHIVO_PUBLIS,
 	TESTEO_CAJA_NOTIFICACION,
-	TESTEO_IMAGEN_TAB
+	TESTEO_IMAGEN_TAB,
+	TESTEO_ESCENA2
 }
 
 @onready var textBox = $PanelContainer/VBoxContainer/RichTextLabel
@@ -15,18 +16,29 @@ enum test {
 var image = Image.load_from_file("res://NO BORRAR.jpg")
 var textura = ImageTexture.create_from_image(image)
 # Called when the node enters the scene tree for the first time.
+var inst
 func _ready() -> void:
+	var pop = po.instantiate()   #poiopodod ----------------------------
+	inst = pop.get_node(".")
+	$".".add_child(pop)
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	
 
+var po = preload("res://Escenas/testing/test_2.tscn")
+var d = false
 
 func _on_button_button_down() -> void:
 	match TEST:
+		
+		test.TESTEO_ESCENA2:
+			print("po sieve")
+			inst.position.x += 100
+			
+			
 		
 		test.TESTEO_CAJA_NOTIFICACION:
 			if textBox.text != "fujap[ cambio de tama;o]":

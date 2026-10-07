@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://khrupxtgxwcw"]
 
-[ext_resource type="Script" uid="uid://00qr5juip4fp" path="res://Scripts/testing.gd" id="1_lfjk6"]
+[ext_resource type="Script" uid="uid://00qr5juip4fp" path="res://Escenas/testing/testing.gd" id="1_lfjk6"]
 [ext_resource type="Texture2D" uid="uid://l0a7nwm0iu8v" path="res://icon.svg" id="2_kqsca"]
 [ext_resource type="Texture2D" uid="uid://bb7d7lse2xs28" path="res://NO BORRAR.jpg" id="3_xgwxu"]
 
@@ -30,7 +30,7 @@ bg_color = Color(0.24840015, 0.24840021, 0.24840006, 1)
 
 [node name="Node2D" type="Node2D" unique_id=1934151037]
 script = ExtResource("1_lfjk6")
-TEST = 2
+TEST = 3
 
 [node name="Button" type="Button" parent="." unique_id=1978882125]
 offset_left = 46.0
@@ -40,6 +40,7 @@ offset_bottom = 324.0
 text = "hacer algo"
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=2125112740]
+visible = false
 offset_left = 655.0
 offset_top = 45.0
 offset_right = 1132.0
@@ -69,6 +70,7 @@ texture_hover = SubResource("NoiseTexture2D_xgwxu")
 stretch_mode = 0
 
 [node name="TabContainer" type="TabContainer" parent="." unique_id=326855130]
+visible = false
 offset_left = 531.0
 offset_top = 294.0
 offset_right = 1550.0

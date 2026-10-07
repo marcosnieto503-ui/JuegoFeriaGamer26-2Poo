@@ -1,7 +1,7 @@
 extends Node
 
-var contador = 1 #------- PURA PRUEBITA BORRAR DESPYUEs
-#el contador empieza en uno para usarlo como indice en las pesta;as
+var tabsActivas = 1 
+#el tabsActivas empieza en uno para usarlo como indice en las pesta;as
 
 @onready var cajaNotis = $/root/Gameplay/Celular/ScrollNotificaciones/CajaNotificaciones
 @onready var tabsPublisContainer = $/root/Gameplay/Laptop/Pestañas
@@ -26,8 +26,7 @@ func activar_press_notis():
 		hijo.activarBoton()
 
 var PUBLICACIONES :Array[Publicacion] = []  #////////////////////////////
-var PUBLIS_PUBLICADAS :Array[Publicacion] = []
-var PUBLIS_DESCARTADAS :Array[Publicacion] = []
+
 
 const RUTAS_RECURSOS = {
 	1 :"ruta1",
@@ -47,21 +46,29 @@ const RUTAS_RECURSOS = {
 #ee funciones utiles accesibnles desde todo el proyecto
 const rutaPublis = "res://Recursos/DATA_PUBLICACIONES.txt"
 
-func ingresarPublicacion(publi : Publicacion): #a cambiar esto siuuuuu
-	if contador > 3: #a reemplaazr despues -----------------------
+func ingresarPublicacion(publi : Publicacion):
+	if tabsActivas > 3:
 		return
 	var tabNoti = tabPublicacion.instantiate() #tabPublicacion = ventana_publicacion
-	tabNoti.name = "Publicacion "+ str(contador)
+	tabNoti.name = "Publicacion "+ str(tabsActivas)
 	
 	tabsPublisContainer.add_child(tabNoti)
-	tabsPublisContainer.set_current_tab(contador)
+	tabsPublisContainer.set_current_tab(tabsActivas)
 	
-	contador += 1  #propenso a errores pulir lo antes posible
-	print("CONTADOR de TABS: " + str(contador))
+	tabsActivas += 1
+	print("CONTADOR de TABS: " + str(tabsActivas))
 	
 	tabNoti.inicializar(publi)
 
 
+
+const accionesPosibles = [
+	"PUBLICAR",
+	"INAPROPIADO",
+	"FORMATO",
+	"NO_RELACIONADA",
+	"INFORMACION_ERRONEA"
+]
 
 func leer_archivo_publi():
 	var ruta = rutaPublis
@@ -77,6 +84,7 @@ func leer_archivo_publi():
 	var tnA = "NULL"
 	var idA = "NULL"
 	var tipo = "NULL"
+	var accion = "NULL"
 	var tpArray = []
 	
 	var estadoLectura = "noLeyendo"
@@ -95,12 +103,13 @@ func leer_archivo_publi():
 			if len(tpArray) == 0:
 				tpArray.append("NULL")
 				
-			var publiNueva = Publicacion.new(tnA,idA,tipo,"".join(tpArray))
+			var publiNueva = Publicacion.new(tnA,idA,tipo,accion,"".join(tpArray))
 			PUBLICACIONES.append(publiNueva)
 			
 			tnA = "NULL"
 			idA = "NULL"
 			tipo = "NULL"
+			accion = "NULL"
 			tpArray.clear()
 			
 			estadoLectura = "noLeyendo"
@@ -117,6 +126,12 @@ func leer_archivo_publi():
 			"tipo":
 				if linea.begins_with("-tipo:"):
 					tipo = linea.trim_prefix("-tipo:")
+					estadoLectura = "accion"
+			"accion":
+				if linea.begins_with("-A:"):
+					accion = linea.trim_prefix("-A:")
+					if accion not in accionesPosibles:
+						accion = "invalido"
 					estadoLectura = "textoPubli"
 			"textoPubli":
 				tpArray.append(linea)

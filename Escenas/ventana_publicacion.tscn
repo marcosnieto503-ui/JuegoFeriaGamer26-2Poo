@@ -178,11 +178,11 @@ size_flags_vertical = 3
 focus_mode = 0
 text = "Publicacion no relacionada"
 
-[node name="LenguajeNoProfesional" type="Button" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3" unique_id=1140329308]
+[node name="InfoErronea" type="Button" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3" unique_id=1140329308]
 layout_mode = 2
 size_flags_vertical = 3
 focus_mode = 0
-text = "Lenguaje poco profesional"
+text = "Informacion Incorrecta"
 
 [connection signal="button_down" from="Control/devbug button" to="." method="_on_hacer_algo_button_down"]
 [connection signal="button_up" from="Control/B_Publicar" to="." method="_on_b_publicar_button_up"]

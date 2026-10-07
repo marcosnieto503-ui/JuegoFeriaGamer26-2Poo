@@ -8,14 +8,16 @@ var _tipo: String
 var _rutaRecurso: String
 var _textoPubli: String
 var _comentarios: Array
+var _accion: String
 
-func _init(textoNoti:String, id:int, tipo:String, textoPubli:String):
+func _init(textoNoti:String, id:int, tipo:String, accion:String,textoPubli:String):
 	self._textoNoti = textoNoti
 	self._id = id
 	self._tipo = tipo
 	self._rutaRecurso = Utils.RUTAS_RECURSOS[id]
 	self._textoPubli = textoPubli
 	self._comentarios = []
+	self._accion = accion
 	
 func get_textoNoti():
 	return self._textoNoti
@@ -25,6 +27,8 @@ func get_tipo():
 	return self._tipo
 func get_id():
 	return self._id
+func get_accion():
+	return self._accion
 	
 func addComentario(comentario:Comentario):
 	_comentarios.append(comentario)

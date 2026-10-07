@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Utils="*uid://cxs56wj4ls025"
+DataPartida="*uid://b4bgg2bpr16ap"
 
 [display]
 

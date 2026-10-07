@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bgcbm11bfqncx" path="res://Assets/LAPTOP 1, CEl 1 v2.png" id="4_2slyb"]
 [ext_resource type="Texture2D" uid="uid://bvbdns0ltr5r5" path="res://Assets/LAPTOP 0, CEL 1 v2.png" id="5_lrkxc"]
 [ext_resource type="Script" uid="uid://ds4dtwidfvvoq" path="res://Scripts/BOTON_TESTING.gd" id="6_lrkxc"]
+[ext_resource type="Script" uid="uid://b4bgg2bpr16ap" path="res://Scripts/data_partida.gd" id="8_aod76"]
+[ext_resource type="PackedScene" uid="uid://qdvfjwx5eo4r" path="res://Escenas/escena_reacciones.tscn" id="9_cowoy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8a6s"]
 animations = [{
@@ -154,6 +156,11 @@ offset_right = 1393.0
 offset_bottom = 65.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = ">>> ESPACIO PARA RECIBIR NOTIFICACION AL TELEGFONO <<<<"
+
+[node name="DataPartida" type="Node" parent="." unique_id=1795919323]
+script = ExtResource("8_aod76")
+
+[node name="EscenaReacciones" parent="." unique_id=1526037047 instance=ExtResource("9_cowoy")]
 
 [connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
 [connection signal="button_down" from="Laptop/ToCelular" to="." method="_ToCelular_Pressed"]

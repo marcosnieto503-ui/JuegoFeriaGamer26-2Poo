@@ -33,9 +33,16 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	#var pos_mundo = get_global_mouse_position()
 	#print(pos_mundo.x - 960, " , ", pos_mundo.y - 540) #coords en relacion a la camara(esta desfasada su origen es el centro)
-	if (Input.is_action_just_pressed("espacio")):
+	if (Input.is_action_just_pressed("espacio")): #-------------------debug
 		ingresarNotiRandom()
 		print("pressed op")
+		
+		print("-----------####")
+		for publi in Utils.PUBLICACIONES:
+			
+			print(publi.get_accion())
+		print("-----------####")
+		
 	
 func ingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
 	var notif = NOTIFICACION.instantiate()
@@ -82,20 +89,17 @@ func toCelular():
 	if (fondo.frame == noFocus):
 		fondo.frame = celularOnly
 		pantalla.show()
-		camara.reiniciar_camara()
 		await camara.reiniciar_camara()
 		camara.zoom_hacia(Vector2(900,200), 2) #coords en relacion a la camara si ests tuviera origfen en su centro
 	else: 
 		fondo.frame = celularFocus
 		pantalla.show()
-		camara.reiniciar_camara()
 		await camara.reiniciar_camara()
 		camara.zoom_hacia(Vector2(900,200), 2) #coords en relacion a la camara si ests tuviera origen en su centro
 	#720, 420
 func toLaptop():
 	fondo.frame = laptopFocus
 	pantalla.hide()
-	camara.reiniciar_camara()
 	await camara.reiniciar_camara()
 	camara.zoom_hacia(Vector2(920-(1920/2), 430-(1080/2)), 1.2, 0.3)
 	

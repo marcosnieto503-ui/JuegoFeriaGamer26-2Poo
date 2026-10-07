@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c6v3a46muuon"]
+
+[ext_resource type="Texture2D" uid="uid://bb7d7lse2xs28" path="res://MARTIN/NO BORRAR.jpg" id="1_0v8fl"]
+
+[node name="test2" type="Node2D" unique_id=1157704398]
+
+[node name="NoBorrar" type="Sprite2D" parent="." unique_id=1000488230]
+position = Vector2(70, 53)
+texture = ExtResource("1_0v8fl")
+centered = false

@@ -18,15 +18,15 @@ const size_SIN_IMAGEN = Vector2(660,180)
 @onready var botonInapropiado = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2/Inapropiado
 @onready var botonFormatoInvalido = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2/FormatoInvalido
 @onready var botonPubliNoRelacionada = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3/PubliNoRelacionada
-@onready var botonLenguajeNoProfesional = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3/LenguajeNoProfesional
+@onready var botonInfoErronea = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3/InfoErronea
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#botones del menu que aparece al descartar
 	$ControlOpsDescartar.set_visible(false)
-	botonInapropiado.pressed.connect(algunBotonDescartar_Pressed.bind("inapropiado"))
-	botonFormatoInvalido.button_up.connect(algunBotonDescartar_Pressed.bind("formato"))
-	botonPubliNoRelacionada.button_up.connect(algunBotonDescartar_Pressed.bind("no relacionada"))
-	botonLenguajeNoProfesional.button_up.connect(algunBotonDescartar_Pressed.bind("lenguaje"))
+	botonInapropiado.pressed.connect(procesarAccion.bind("INAPROPIADO"))
+	botonFormatoInvalido.button_up.connect(procesarAccion.bind("FORMATO"))
+	botonPubliNoRelacionada.button_up.connect(procesarAccion.bind("NO_RELACIONADA"))
+	botonInfoErronea.button_up.connect(procesarAccion.bind("INFORMACION_ERRONEA"))
 
 
 func inicializar(publi : Publicacion):
@@ -49,44 +49,46 @@ func asignar_imagen():
 		pass
 		
 
-func _on_b_publicar_button_up() -> void:
+func _on_b_publicar_button_up() -> void: #Publicar
+	procesarAccion("PUBLICAR")
 	publicar()
-func _on_b_descartar_button_up() -> void:
+func _on_b_descartar_button_up() -> void: #PASA EL FOCUS A EL PANEL DE OPCIONES DESCARTAR PARA QUE SE MUESTRE
 	$ControlOpsDescartar.grab_focus()
+
+
 
 func _on_controlOpsDescartar_focus_entered() -> void:
 	$ControlOpsDescartar.set_visible(true)
 func _on_controlOpsDescartar_focus_exited() -> void:
 	$ControlOpsDescartar.set_visible(false)
-	
- #------funcion al presionar alguna opcion de descarte
-func algunBotonDescartar_Pressed(motivo: String):
-	print(motivo)
-	#hacer algo
+
+
+func procesarAccion(accion: String): #------funcion al presionar alguna opcion de descarte---- EEEEEEEEEEEEEEE
+	DataPartida.procesarPubli(PUBLICACION_ASIGNADA, accion)
 	descartar()
 	
 	
 func publicar():
-	Utils.PUBLIS_PUBLICADAS.append(PUBLICACION_ASIGNADA)
+	DataPartida.PUBLIS_PUBLICADAS.append(PUBLICACION_ASIGNADA)
 	
 	Utils.bloquear_cambio_tabs()
 	await animacionRetirarTab("PUBLICAR")
 	Utils.bloquear_cambio_tabs()
 	
 	self.queue_free()
-	Utils.contador -= 1
-	print("PUBLICADAS: "+ str(len(Utils.PUBLIS_PUBLICADAS)))
+	Utils.tabsActivas -= 1
+	print("PUBLICADAS: "+ str(len(DataPartida.PUBLIS_PUBLICADAS)))
 	
 func descartar():
-	Utils.PUBLIS_DESCARTADAS.append(PUBLICACION_ASIGNADA)
+	DataPartida.PUBLIS_DESCARTADAS.append(PUBLICACION_ASIGNADA)
 	
 	Utils.bloquear_cambio_tabs()
 	await animacionRetirarTab("DESCARTAR")
 	Utils.bloquear_cambio_tabs()
 	
 	self.queue_free()
-	Utils.contador -= 1
-	print("DESCARTADAS: "+ str(len(Utils.PUBLIS_DESCARTADAS)))
+	Utils.tabsActivas -= 1
+	print("DESCARTADAS: "+ str(len(DataPartida.PUBLIS_DESCARTADAS)))
 
 
 
@@ -106,22 +108,6 @@ func animacionRetirarTab(direccion:String):
 	await tween_actual.finished
 	
 	
-
-
+	
 func _on_hacer_algo_button_down() -> void:
-	print($ControlOpsDescartar.has_focus())
-	$ControlOpsDescartar.grab_focus()
-	print("po")
-	print($ControlOpsDescartar.has_focus())
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	print("algo")
