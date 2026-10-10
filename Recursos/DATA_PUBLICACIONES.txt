@@ -1,0 +1,87 @@
+#i
+-tn:Hey, ¿podrías publicar esto? Empieza la temporada de deportes
+-id:1
+-tipo:IMAGEN
+-A:INAPROPIADO
+Comienza el torneo deportivo interfacultades, con disciplinas como fútbol, baloncesto y voleibol. Los equipos representarán a sus respectivas facultades en busca del título de campeón institucional.
+#f
+
+#i
+-tn:Oye, subí esto cuando puedas, es sobre la beca nueva
+-id:2
+-tipo:TEXTO
+-A:PUBLICAR
+La universidad abrió las postulaciones para la Beca de [color={clr}][url=n,dato_Beca]Excelencia Academica 2026[/url][/color]. Podrán postularse estudiantes con promedio superior a 4.5 que estén cursando al menos el tercer semestre de su carrera.
+#f
+
+#i
+-tn:Che, ¿lo publicás? Inauguraron el laboratorio nuevo
+-id:3
+-tipo:IMAGEN
+-A:PUBLICAR
+La Facultad de Ingeniería inauguró un laboratorio de robótica equipado con brazos mecánicos, impresoras 3D y estaciones de programación para proyectos de estudiantes e investigación aplicada.
+#f
+
+#i
+-tn:Necesito que subas esto antes del mediodía, es importante
+-id:4
+-tipo:VIDEO
+-A:FORMATO
+Reconocidos investigadores de distintas universidades del mundo participarán en la conferencia internacional sobre inteligencia artificial que se realizará en el auditorio principal la próxima semana.
+#f
+
+#i
+-tn:Avisale a todos de esto, se viene el cierre de la biblioteca
+-id:5
+-tipo:TEXTO
+-A:PUBLICAR
+La biblioteca central permanecerá cerrada el próximo fin de semana por labores de mantenimiento en su sistema de climatización. Se recomienda a los estudiantes planificar sus actividades de estudio con anticipación.
+#f
+
+#i
+-tn:¿Podés publicar esto hoy? Es sobre la charla de bienestar
+-id:6
+-tipo:TEXTO
+-A:NO_RELACIONADA
+El departamento de bienestar universitario organizará una charla abierta sobre manejo del estrés académico y salud mental, dirigida a todos los estudiantes interesados en asistir.
+#f
+
+#i
+-tn:Hey, actualizaron la plataforma, ¿lo subís?
+-id:7
+-tipo:VIDEO
+-A:FORMATO
+La plataforma virtual de la universidad fue actualizada con una nueva interfaz y mejoras en la velocidad de carga. Se recomienda revisar el tutorial disponible para conocer los cambios.
+#f
+
+#i
+-tn:Che, esto es para los que se gradúan pronto, subilo
+-id:8
+-tipo:IMAGEN
+-A:PUBLICAR
+Empresas aliadas de distintos sectores participarán en la Feria de Empleo Universitaria, donde los estudiantes de últimos semestres podrán conocer oportunidades laborales y de prácticas profesionales.
+#f
+
+#i
+-tn:Mirá esto que salió publicado, ¿lo compartís en la app?
+-id:9
+-tipo:TEXTO
+-A:INFORMACION_ERRONEA
+Un grupo de investigadores de la universidad publicó los resultados de un estudio sobre energías renovables en una revista científica internacional, destacando el trabajo realizado en los últimos dos años.
+#f
+
+#i
+-tn:Última, ¿subís esto? Es para las familias que vienen a la jornada
+-id:10
+-tipo:VIDEO
+-A:PUBLICAR
+La universidad invita a futuros estudiantes y sus familias a la Jornada de Puertas Abiertas, donde podrán recorrer las instalaciones, conocer las carreras ofrecidas y resolver sus dudas sobre el proceso de admisión.
+#f
+
+#i
+-tn:Che, ¿lo subís? Es lo del café, salió hoy
+-id:11
+-tipo:TEXTO
+-A:INFORMACION_ERRONEA
+Un estudio de la Universidad de Lund demostró que tomar cinco cafés al día reduce a la mitad el riesgo de enfermedades del corazón. Puedes leer [color={clr}][url=n,noticia_cafe]la noticia completa aquí[/url][/color].
+#f

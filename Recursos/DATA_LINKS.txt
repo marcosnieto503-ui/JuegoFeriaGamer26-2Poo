@@ -1,0 +1,8 @@
+
+#i
+-cat:Salud
+-t:Un estudio sueco relaciona el café con un menor riesgo cardiaco
+-c:Lund. Redacción Ciencia. Un estudio de la Universidad de Lund encontró que quienes toman entre dos y tres cafés al día tienen un 15% menos de riesgo de enfermedades del corazón que quienes no toman café.
+
+Los investigadores siguieron a 8.000 adultos durante cinco años. Aclararon que se trata de una asociación y que no prueban que el café sea la causa. Además, el beneficio desapareció en quienes tomaban más de cuatro tazas al día.
+#f
