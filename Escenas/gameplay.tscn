@@ -3,12 +3,15 @@
 [ext_resource type="Script" uid="uid://c4blyrcn58omj" path="res://Scripts/gameplay.gd" id="1_2slyb"]
 [ext_resource type="Script" uid="uid://b2jw6ubats8c5" path="res://Scripts/camara.gd" id="2_1y50h"]
 [ext_resource type="Texture2D" uid="uid://mnlvofvjl8jq" path="res://Assets/LAPTOP 0, CEL 0.png" id="2_lrkxc"]
+[ext_resource type="Texture2D" uid="uid://bpmv1qocklqkd" path="res://Assets/Publis/NoIMAGEN.png" id="2_y3e6i"]
 [ext_resource type="Texture2D" uid="uid://2heedgu16gvg" path="res://Assets/LAPTOP 1, CEL 0.png" id="3_1y50h"]
 [ext_resource type="Texture2D" uid="uid://bgcbm11bfqncx" path="res://Assets/LAPTOP 1, CEl 1 v2.png" id="4_2slyb"]
+[ext_resource type="Texture2D" uid="uid://bcb184m0mvudb" path="res://Assets/Publis/testImg2.png" id="4_wu1k5"]
 [ext_resource type="Texture2D" uid="uid://bvbdns0ltr5r5" path="res://Assets/LAPTOP 0, CEL 1 v2.png" id="5_lrkxc"]
 [ext_resource type="Script" uid="uid://ds4dtwidfvvoq" path="res://Scripts/BOTON_TESTING.gd" id="6_lrkxc"]
 [ext_resource type="Script" uid="uid://b4bgg2bpr16ap" path="res://Scripts/data_partida.gd" id="8_aod76"]
 [ext_resource type="PackedScene" uid="uid://qdvfjwx5eo4r" path="res://Escenas/escena_reacciones.tscn" id="9_cowoy"]
+[ext_resource type="Texture2D" uid="uid://bmmw7dkupv82i" path="res://Assets/Publis/testImg1.png" id="10_y3e6i"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8a6s"]
 animations = [{
@@ -49,6 +52,11 @@ content_margin_top = 28.0
 
 [node name="Gameplay" type="Node2D" unique_id=1380733400]
 script = ExtResource("1_2slyb")
+RECURSOS_PUBLIS = Dictionary[int, Texture2D]({
+0: ExtResource("2_y3e6i"),
+1: ExtResource("10_y3e6i"),
+3: ExtResource("4_wu1k5")
+})
 
 [node name="Camara" type="Camera2D" parent="." unique_id=1807535392]
 anchor_mode = 0
@@ -157,10 +165,10 @@ offset_bottom = 65.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = ">>> ESPACIO PARA RECIBIR NOTIFICACION AL TELEGFONO <<<<"
 
+[node name="EscenaReacciones" parent="." unique_id=1526037047 instance=ExtResource("9_cowoy")]
+
 [node name="DataPartida" type="Node" parent="." unique_id=1795919323]
 script = ExtResource("8_aod76")
-
-[node name="EscenaReacciones" parent="." unique_id=1526037047 instance=ExtResource("9_cowoy")]
 
 [connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
 [connection signal="button_down" from="Laptop/ToCelular" to="." method="_ToCelular_Pressed"]

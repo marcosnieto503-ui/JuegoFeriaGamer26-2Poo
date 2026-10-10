@@ -92,6 +92,7 @@ offset_right = 720.0
 offset_bottom = 215.0
 theme_override_font_sizes/normal_font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxFlat_o8a6s")
+bbcode_enabled = true
 text = "[NO TEXT]"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -116,12 +117,13 @@ text = "DESCARTAR"
 
 [node name="RecursoMultimedia" type="TextureRect" parent="Control" unique_id=1965921488]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 37.0
-offset_right = 532.0
-offset_bottom = 501.0
-scale = Vector2(0.3, 0.3)
+offset_left = 54.0
+offset_top = 35.0
+offset_right = 234.0
+offset_bottom = 215.0
 texture = ExtResource("1_twpkc")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="LabelTipoPubli" type="Label" parent="Control" unique_id=515649404]
 layout_mode = 0
@@ -185,6 +187,9 @@ focus_mode = 0
 text = "Informacion Incorrecta"
 
 [connection signal="button_down" from="Control/devbug button" to="." method="_on_hacer_algo_button_down"]
+[connection signal="meta_clicked" from="Control/TextoPublicacion" to="." method="_link_clickeado"]
+[connection signal="meta_hover_ended" from="Control/TextoPublicacion" to="." method="_mouse_fuera_del_link"]
+[connection signal="meta_hover_started" from="Control/TextoPublicacion" to="." method="_mouse_sobre_link"]
 [connection signal="button_up" from="Control/B_Publicar" to="." method="_on_b_publicar_button_up"]
 [connection signal="button_up" from="Control/B_Descartar" to="." method="_on_b_descartar_button_up"]
 [connection signal="focus_entered" from="ControlOpsDescartar" to="." method="_on_controlOpsDescartar_focus_entered"]

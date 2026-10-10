@@ -2,6 +2,8 @@ extends Node
 
 var tabsActivas = 1 
 #el tabsActivas empieza en uno para usarlo como indice en las pesta;as
+var PUBLICACIONES :Array[Publicacion] = []  #////////////////////////////
+var RECURSOS : Dictionary[int,Texture2D] = {}#------ las imagenes se ven y asignan desde el inspector del nodo gameplay
 
 @onready var cajaNotis = $/root/Gameplay/Celular/ScrollNotificaciones/CajaNotificaciones
 @onready var tabsPublisContainer = $/root/Gameplay/Laptop/Pestañas
@@ -25,24 +27,7 @@ func activar_press_notis():
 	for hijo in cajaNotis.get_children():
 		hijo.activarBoton()
 
-var PUBLICACIONES :Array[Publicacion] = []  #////////////////////////////
 
-
-const RUTAS_RECURSOS = {
-	1 :"ruta1",
-	2 :"ruta2",
-	3 :"ruta3",
-	4 :"ruta4",
-	5 :"ruta1",
-	6 :"ruta2",
-	7 :"ruta3",
-	8 :"ruta4",
-	9 :"ruta1",
-	10 :"ruta2",
-	11 :"ruta3",
-	12 :"ruta4",
-	13 :"po"
-}
 #ee funciones utiles accesibnles desde todo el proyecto
 const rutaPublis = "res://Recursos/DATA_PUBLICACIONES.txt"
 
@@ -59,7 +44,12 @@ func ingresarPublicacion(publi : Publicacion):
 	print("CONTADOR de TABS: " + str(tabsActivas))
 	
 	tabNoti.inicializar(publi)
+	
 
+func ingresarArticulo(data:String):
+	tabsPublisContainer.add_child(preload("res://Escenas/noticiero.tscn").instantiate())
+	tabsPublisContainer.set_current_tab(tabsActivas)
+	print("NOTICIA AGREGADA")
 
 
 const accionesPosibles = [

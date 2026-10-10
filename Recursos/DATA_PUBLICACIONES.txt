@@ -11,7 +11,7 @@ Comienza el torneo deportivo interfacultades, con disciplinas como fútbol, balo
 -id:2
 -tipo:TEXTO
 -A:PUBLICAR
-La universidad abrió las postulaciones para la Beca de Excelencia Académica 2026. Podrán postularse estudiantes con promedio superior a 4.5 que estén cursando al menos el tercer semestre de su carrera.
+La universidad abrió las postulaciones para la Beca de [color={clr}][url=n,dato_Beca]Excelencia Academica 2026[/url][/color]. Podrán postularse estudiantes con promedio superior a 4.5 que estén cursando al menos el tercer semestre de su carrera.
 #f
 
 #i
@@ -76,4 +76,12 @@ Un grupo de investigadores de la universidad publicó los resultados de un estud
 -tipo:VIDEO
 -A:PUBLICAR
 La universidad invita a futuros estudiantes y sus familias a la Jornada de Puertas Abiertas, donde podrán recorrer las instalaciones, conocer las carreras ofrecidas y resolver sus dudas sobre el proceso de admisión.
+#f
+
+#i
+-tn:Che, ¿lo subís? Es lo del café, salió hoy
+-id:11
+-tipo:TEXTO
+-A:INFORMACION_ERRONEA
+Un estudio de la Universidad de Lund demostró que tomar cinco cafés al día reduce a la mitad el riesgo de enfermedades del corazón. Puedes leer [color={clr}][url=n,noticia_cafe]la noticia completa aquí[/url][/color].
 #f

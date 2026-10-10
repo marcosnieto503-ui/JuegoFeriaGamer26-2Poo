@@ -21,8 +21,13 @@ enum { #estados de la imagen del gameplay
 @onready var cajaNotif = $"Celular/ScrollNotificaciones/CajaNotificaciones"
 const NOTIFICACION = preload("res://Escenas/notificacion.tscn")
 
+@export var RECURSOS_PUBLIS : Dictionary[int,Texture2D] = {
+	0: preload("res://Assets/Publis/NoIMAGEN.png")
+}#------ las imagenes se ven y asignan desde el inspector
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Utils.RECURSOS = RECURSOS_PUBLIS
+	
 	toLaptop()
 	BotonToLaptop.hide()
 	#fondo.frame = noFocus
@@ -31,17 +36,16 @@ func _ready() -> void:
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#var pos_mundo = get_global_mouse_position()
-	#print(pos_mundo.x - 960, " , ", pos_mundo.y - 540) #coords en relacion a la camara(esta desfasada su origen es el centro)
+	
 	if (Input.is_action_just_pressed("espacio")): #-------------------debug
 		ingresarNotiRandom()
-		print("pressed op")
+		print("pressed op NOTIFICAICON INGRESADA")
 		
-		print("-----------####")
-		for publi in Utils.PUBLICACIONES:
-			
-			print(publi.get_accion())
-		print("-----------####")
+		#print("-----------####")
+		#for publi in Utils.PUBLICACIONES:
+			#
+			#print(publi.get_accion())
+		#print("-----------####")
 		
 	
 func ingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
@@ -49,7 +53,6 @@ func ingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
 	var publi_a_asignar = Utils.PUBLICACIONES.pick_random()
 	#var publi_a_asignar = Utils.PUBLICACIONES[0]
 	cajaNotif.add_child(notif)
-	print(notif.size)
 	notif.asignarPubli(publi_a_asignar)
 	
 	
