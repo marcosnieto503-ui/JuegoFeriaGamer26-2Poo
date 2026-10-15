@@ -1,0 +1,30 @@
+
+#i
+-name:noticia_cafe
+-tipo:NOTICIA
+-id:11
+-cat:Salud
+-titular:Un estudio sueco relaciona el café con un menor riesgo cardiaco
+Lund. Redacción Ciencia. Un estudio de la Universidad de Lund encontró que quienes toman entre dos y tres cafés al día tienen un 15% menos de riesgo de enfermedades del corazón que quienes no toman café.
+[LINEAVACIA]
+//agrega [LINEAVACIA] para... agregare una linea varia bruh
+//agrega [br] en cualquier punto del texto para hacer un salto de linea
+Los investigadores siguieron a 8.000 adultos durante cinco años. Aclararon que se trata de una asociación y que no prueban que el café sea la causa. Además, el beneficio desapareció en quienes tomaban más de cuatro tazas al día.
+#f
+
+
+// -------- -PRUEBITAAAA
+#i
+-name:pruebita siu wiki
+-tipo:WIKI
+-id:12
+-cat:NO APLICAAAA 
+// para los de wiki la cat no sirve para nada, pero si debe incluirse la linea 
+
+-titular:TITULAR SERIO SERIO (se sale de la caja, arreglar eso) 
+El Instituto Global de Polinizadores (IGP) es una organización científica independiente fundada en 2011 y con sede en Lyon, Francia. Reúne a investigadores de más de 30 países y se dedica a estudiar las poblaciones de abejas y otros insectos polinizadores.
+[LINEAVACIA]
+Cada año publica el informe Estado de los polinizadores, que recoge datos de campo aportados por asociaciones de apicultores y universidades. El informe de 2025 abarcó nueve países europeos y fue el primero en separar los datos de colmenas gestionadas y de poblaciones silvestres.
+[LINEAVACIA]
+El IGP no regula ni legisla. Sus informes describen tendencias y no establecen relaciones de causa y efecto. Se financia con aportes de universidades, fundaciones y donaciones privadas.
+#f
