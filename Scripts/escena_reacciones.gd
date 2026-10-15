@@ -11,6 +11,6 @@ func displayAnimFeedback(anim:String,posicion:Vector2, duracion:float):
 	animFeedback.set_visible(true)
 	animFeedback.set_animation(anim)
 	animFeedback.play()
-	await get_tree().create_timer(duracion).timeout  # espera 1.5 segundos
+	await get_tree().create_timer(duracion).timeout 
 	animFeedback.visible = false
 	animFeedback.stop()

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c0qt4sr00odt7"]
 
 [ext_resource type="Texture2D" uid="uid://cw8c1uy0qa5wq" path="res://Assets/poopediaTest1.png" id="1_cji1u"]
+[ext_resource type="Script" uid="uid://cr7wicw4f5whd" path="res://Scripts/wiki.gd" id="1_t1ke5"]
 [ext_resource type="FontFile" uid="uid://c0yidekyi80p3" path="res://Recursos/FONTS/m6x11plus.ttf" id="2_en5cd"]
 
 [sub_resource type="FontVariation" id="FontVariation_o8a6s"]
@@ -29,6 +30,7 @@ offset_right = -1140.0
 offset_bottom = -640.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t1ke5")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=166092770]
 texture_filter = 1
@@ -42,13 +44,14 @@ layout_mode = 2
 layout_mode = 0
 offset_left = 174.0
 offset_top = 98.0
-offset_right = 374.0
+offset_right = 543.0
 offset_bottom = 122.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = SubResource("FontVariation_o8a6s")
 theme_override_font_sizes/normal_font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxEmpty_qekex")
-text = "ESTO ES UN TITULO SERIO"
+bbcode_enabled = true
+text = "NULL"
 vertical_alignment = 1
 
 [node name="Cuerpo" type="RichTextLabel" parent="Control" unique_id=2012427942]
@@ -61,5 +64,15 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = SubResource("FontVariation_cji1u")
 theme_override_font_sizes/normal_font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxEmpty_cji1u")
-text = "La Facultad de Ingeniería inauguró un laboratorio de robótica equipado con brazos mecánicos, impresoras 3D y estaciones de programación para proyectos de estudiantes e investigación aplicada.
-"
+bbcode_enabled = true
+text = "NULL"
+
+[node name="BotonCerrar" type="Button" parent="Control" unique_id=1448742756]
+layout_mode = 0
+offset_left = 701.0
+offset_top = 8.0
+offset_right = 770.0
+offset_bottom = 39.0
+text = "CERRAR"
+
+[connection signal="button_up" from="Control/BotonCerrar" to="." method="_on_boton_cerrar_button_up"]

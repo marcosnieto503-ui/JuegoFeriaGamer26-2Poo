@@ -10,3 +10,14 @@ func _ready() -> void:
 func _on_button_down() -> void:
 	Utils.ingresarPublicacion(Utils.PUBLICACIONES[10])
 	
+	return
+	print("cantidfad articulos: ",len(Utils.ARTICULOS))
+	var ar = Utils.ARTICULOS.get(0)
+	print(ar.get_nombre())
+	print(ar.get_tipo())
+	print(ar.get_id())
+	print(ar.get_categoria())
+	print("TITULAR: ",ar.get_titular())
+	print("")
+	print("TEXTO: ",ar.get_texto())
+	print(ar._img)

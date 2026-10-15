@@ -85,3 +85,11 @@ La universidad invita a futuros estudiantes y sus familias a la Jornada de Puert
 -A:INFORMACION_ERRONEA
 Un estudio de la Universidad de Lund demostró que tomar cinco cafés al día reduce a la mitad el riesgo de enfermedades del corazón. Puedes leer [color={clr}][url=n,noticia_cafe]la noticia completa aquí[/url][/color].
 #f
+
+#i
+-tn:ESTO ES UNA PUBLI DE PRUEBA DE LA WIKI
+-id:12
+-tipo:TEXTO
+-A:PUBLICAR
+En este textito de prueba pa la integracion de la wiki cliceka [color={clr}][url=n,pruebitawiki]este link[/url][/color] para lanzar la wiki fuap.
+#f

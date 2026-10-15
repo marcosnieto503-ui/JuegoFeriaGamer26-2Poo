@@ -11,7 +11,8 @@
 [ext_resource type="Script" uid="uid://ds4dtwidfvvoq" path="res://Scripts/BOTON_TESTING.gd" id="6_lrkxc"]
 [ext_resource type="Script" uid="uid://b4bgg2bpr16ap" path="res://Scripts/data_partida.gd" id="8_aod76"]
 [ext_resource type="PackedScene" uid="uid://qdvfjwx5eo4r" path="res://Escenas/escena_reacciones.tscn" id="9_cowoy"]
-[ext_resource type="Texture2D" uid="uid://bmmw7dkupv82i" path="res://Assets/Publis/testImg1.png" id="10_y3e6i"]
+[ext_resource type="Script" uid="uid://dx0bmb3dpd02x" path="res://Scripts/manejo_archivos_txt.gd" id="10_y3e6i"]
+[ext_resource type="Script" uid="uid://bt7nrje7mcm6f" path="res://Scripts/manejo_link_articulos.gd" id="13_m1bpj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8a6s"]
 animations = [{
@@ -52,11 +53,6 @@ content_margin_top = 28.0
 
 [node name="Gameplay" type="Node2D" unique_id=1380733400]
 script = ExtResource("1_2slyb")
-RECURSOS_PUBLIS = Dictionary[int, Texture2D]({
-0: ExtResource("2_y3e6i"),
-1: ExtResource("10_y3e6i"),
-3: ExtResource("4_wu1k5")
-})
 
 [node name="Camara" type="Camera2D" parent="." unique_id=1807535392]
 anchor_mode = 0
@@ -152,6 +148,7 @@ offset_left = 36.0
 offset_top = 36.0
 offset_right = 329.0
 offset_bottom = 167.0
+focus_mode = 0
 text = "HACER ALGO(DEBUG)
 (NO USAR)"
 script = ExtResource("6_lrkxc")
@@ -167,8 +164,19 @@ text = ">>> ESPACIO PARA RECIBIR NOTIFICACION AL TELEGFONO <<<<"
 
 [node name="EscenaReacciones" parent="." unique_id=1526037047 instance=ExtResource("9_cowoy")]
 
-[node name="DataPartida" type="Node" parent="." unique_id=1795919323]
+[node name="ManejoTXT publis-articulos" type="Node" parent="." unique_id=1006329781]
+script = ExtResource("10_y3e6i")
+RECURSOS_ARTICULOS = Dictionary[int, Texture2D]({
+0: ExtResource("2_y3e6i"),
+11: ExtResource("4_wu1k5")
+})
+
+[node name="ManejoLink-Articulos" type="Node" parent="." unique_id=398345246]
+script = ExtResource("13_m1bpj")
+
+[node name="DataPartida" type="Node" parent="." unique_id=348240332]
 script = ExtResource("8_aod76")
+DURACION_FEEDBACK_ANIMACION = 1.4
 
 [connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
 [connection signal="button_down" from="Laptop/ToCelular" to="." method="_ToCelular_Pressed"]

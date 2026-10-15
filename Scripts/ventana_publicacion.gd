@@ -15,7 +15,6 @@ const pos_SIN_IMAGEN =Vector2(60,35)
 const size_CON_IMAGEN = Vector2(445,180)
 const size_SIN_IMAGEN = Vector2(660,180)
 
-
 @onready var botonInapropiado = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2/Inapropiado
 @onready var botonFormatoInvalido = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2/FormatoInvalido
 @onready var botonPubliNoRelacionada = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3/PubliNoRelacionada
@@ -41,23 +40,34 @@ func inicializar(publi : Publicacion):
 	#cajaTextoPubli.set_text(textoPubli)
 	labelTipoPubli.set_text("Tipo de Publicacion: " + PUBLICACION_ASIGNADA.get_tipo())
 	asignar_imagen()
-	
+
+
+
+
+
 func _link_clickeado(meta :Variant): #funcion de click en el link
-	print("fuap cliekado po"+ meta)
-	Utils.ingresarArticulo("po pruebita")
-	
+	if Utils.ARTICULO_ACTIVO:
+		print("HAY UN ARTICULO YA ACTIVO, EJECUTANDO -> [No hacer nada]")
+		return
+	print("fuap cliekado po "+ meta)
+	Utils._link_Clickeado.emit(PUBLICACION_ASIGNADA.get_id()) # se;al emitidaaaa
+
+
+
+
+
 func _mouse_sobre_link(meta: Variant) -> void:
 	#comprobacion para evitar multiples ejecuciones de esta funcion cya que se llama varias veces al alterar el texto dellabel
 	Input.set_default_cursor_shape(2)
 	if (meta.begins_with("h,")):
 		return
-	print("entro")
+	#print("entro")
 	cambiarColorLink(true)
 func _mouse_fuera_del_link(meta: Variant):
 	Input.set_default_cursor_shape(0)
 	if (meta.begins_with("n,")):
 		return
-	print("salgo")
+	#print("salgo")
 	cambiarColorLink(false)
 
 func cambiarColorLink(hover:bool) -> void: #true para color cuando el mouse esta encima, false para color normal

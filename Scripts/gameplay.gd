@@ -21,18 +21,13 @@ enum { #estados de la imagen del gameplay
 @onready var cajaNotif = $"Celular/ScrollNotificaciones/CajaNotificaciones"
 const NOTIFICACION = preload("res://Escenas/notificacion.tscn")
 
-@export var RECURSOS_PUBLIS : Dictionary[int,Texture2D] = {
-	0: preload("res://Assets/Publis/NoIMAGEN.png")
-}#------ las imagenes se ven y asignan desde el inspector
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Utils.RECURSOS = RECURSOS_PUBLIS
-	
 	toLaptop()
 	BotonToLaptop.hide()
 	#fondo.frame = noFocus
 	#pantalla.hide()
-	Utils.leer_archivo_publi()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -40,13 +35,6 @@ func _process(delta: float) -> void:
 	if (Input.is_action_just_pressed("espacio")): #-------------------debug
 		ingresarNotiRandom()
 		print("pressed op NOTIFICAICON INGRESADA")
-		
-		#print("-----------####")
-		#for publi in Utils.PUBLICACIONES:
-			#
-			#print(publi.get_accion())
-		#print("-----------####")
-		
 	
 func ingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
 	var notif = NOTIFICACION.instantiate()
