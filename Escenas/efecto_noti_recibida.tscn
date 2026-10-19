@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cvf0tb8m6s2h0"]
+
+[ext_resource type="Script" uid="uid://cygou0d2wcpgk" path="res://Scripts/efecto_noti_recibida.gd" id="1_kne8n"]
+
+[sub_resource type="Gradient" id="Gradient_x02si"]
+colors = PackedColorArray(0, 0, 0, 1, 0.35906908, 0.35906908, 0.35906908, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_s4bje"]
+gradient = SubResource("Gradient_x02si")
+width = 150
+height = 20
+
+[sub_resource type="Gradient" id="Gradient_kne8n"]
+offsets = PackedFloat32Array(0, 0.9578313)
+colors = PackedColorArray(0, 0, 0, 1, 0.446777, 0.44677705, 0.44677705, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8v51i"]
+gradient = SubResource("Gradient_kne8n")
+width = 150
+height = 20
+
+[sub_resource type="Gradient" id="Gradient_xo1hu"]
+colors = PackedColorArray(0, 0, 0, 1, 0.3553136, 0.35531354, 0.35531357, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fm1up"]
+gradient = SubResource("Gradient_xo1hu")
+width = 150
+height = 20
+
+[node name="EfectoNotiRecibida" type="Node2D" unique_id=1193579616]
+modulate = Color(0.1254902, 0.28627452, 0.7921569, 0)
+script = ExtResource("1_kne8n")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1672835948]
+position = Vector2(-123, 5)
+texture = SubResource("GradientTexture2D_s4bje")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=468032164]
+position = Vector2(-88, -82)
+rotation = 0.67094064
+texture = SubResource("GradientTexture2D_8v51i")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=447334088]
+position = Vector2(-7.000001, -130)
+rotation = 1.4681226
+texture = SubResource("GradientTexture2D_fm1up")

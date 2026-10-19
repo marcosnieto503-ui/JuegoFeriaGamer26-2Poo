@@ -11,8 +11,11 @@
 [ext_resource type="Script" uid="uid://ds4dtwidfvvoq" path="res://Scripts/BOTON_TESTING.gd" id="6_lrkxc"]
 [ext_resource type="Script" uid="uid://b4bgg2bpr16ap" path="res://Scripts/data_partida.gd" id="8_aod76"]
 [ext_resource type="PackedScene" uid="uid://qdvfjwx5eo4r" path="res://Escenas/escena_reacciones.tscn" id="9_cowoy"]
+[ext_resource type="PackedScene" uid="uid://cvf0tb8m6s2h0" path="res://Escenas/efecto_noti_recibida.tscn" id="9_w15t4"]
 [ext_resource type="Script" uid="uid://dx0bmb3dpd02x" path="res://Scripts/manejo_archivos_txt.gd" id="10_y3e6i"]
 [ext_resource type="Script" uid="uid://bt7nrje7mcm6f" path="res://Scripts/manejo_link_articulos.gd" id="13_m1bpj"]
+[ext_resource type="Script" uid="uid://bf2ypnr80b0h0" path="res://Escenas/logica_jugable.gd" id="14_64m0a"]
+[ext_resource type="Script" uid="uid://2rbrftqv6ngb" path="res://Scripts/global_efectos.gd" id="16_m5mg2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8a6s"]
 animations = [{
@@ -68,7 +71,7 @@ z_index = -2
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_o8a6s")
 animation = &"gameplay_anim"
-frame = 2
+frame = 1
 
 [node name="Celular" type="Control" parent="." unique_id=197617991]
 layout_mode = 3
@@ -164,6 +167,8 @@ text = ">>> ESPACIO PARA RECIBIR NOTIFICACION AL TELEGFONO <<<<"
 
 [node name="EscenaReacciones" parent="." unique_id=1526037047 instance=ExtResource("9_cowoy")]
 
+[node name="EfectoNotiRecibida" parent="." unique_id=1193579616 instance=ExtResource("9_w15t4")]
+
 [node name="ManejoTXT publis-articulos" type="Node" parent="." unique_id=1006329781]
 script = ExtResource("10_y3e6i")
 RECURSOS_ARTICULOS = Dictionary[int, Texture2D]({
@@ -177,6 +182,15 @@ script = ExtResource("13_m1bpj")
 [node name="DataPartida" type="Node" parent="." unique_id=348240332]
 script = ExtResource("8_aod76")
 DURACION_FEEDBACK_ANIMACION = 1.4
+
+[node name="logicaJugable" type="Node" parent="." unique_id=2062534461]
+script = ExtResource("14_64m0a")
+
+[node name="Timer" type="Timer" parent="logicaJugable" unique_id=2106720971]
+
+[node name="GlobalEfectos" type="Node" parent="." unique_id=714558623 node_paths=PackedStringArray("nodoNotiRecibida")]
+script = ExtResource("16_m5mg2")
+nodoNotiRecibida = NodePath("../EfectoNotiRecibida")
 
 [connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
 [connection signal="button_down" from="Laptop/ToCelular" to="." method="_ToCelular_Pressed"]

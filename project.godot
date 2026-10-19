@@ -19,16 +19,18 @@ config/icon="res://icon.svg"
 
 Utils="*uid://cxs56wj4ls025"
 DataPartida="*uid://b4bgg2bpr16ap"
+GlobalEfectos="*uid://2rbrftqv6ngb"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=960
+window/size/viewport_height=560
 window/size/borderless=true
+window/stretch/scale=0.5
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GDTask/plugin.cfg")
+enabled=PackedStringArray("res://addons/GDTask/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg")
 
 [input]
 

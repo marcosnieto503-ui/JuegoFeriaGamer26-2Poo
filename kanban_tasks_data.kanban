@@ -1,0 +1,97 @@
+{
+	"categories": [
+		{
+			"uuid": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"title": "Task",
+			"color": "569eff"
+		},
+		{
+			"uuid": "7985276e-b845-4558-8a85-e7141e6cb8a6",
+			"title": "bug",
+			"color": "ee0fe0"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "f0c9f1fa-ae49-4c73-b85d-1483a3e86d02",
+			"title": "Todo",
+			"tasks": [
+				"fc592c03-26ee-4a45-bd04-276720806782",
+				"7e023cfc-57a9-4af4-bb79-565dc71cc2b1",
+				"fd306742-9866-483b-883e-db175aedd324",
+				"6944f600-59a8-4e8e-807d-8da70cda7ac8"
+			]
+		},
+		{
+			"uuid": "a47a7ca1-fe3c-4643-a38d-dd88aaefabce",
+			"title": "Doing",
+			"tasks": [
+				"e2e38c4c-47a3-4d02-a218-e1de484130aa"
+			]
+		},
+		{
+			"uuid": "16c390fd-1af8-430a-b76b-ad63373d53c4",
+			"title": "Done",
+			"tasks": [
+				"8dcced62-d2a6-4680-b559-ce9b31babca1"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "fc592c03-26ee-4a45-bd04-276720806782",
+			"title": "bug ventanas",
+			"description": "Bug numeracion de ventanas al ingresar noticieros o borrar ventanas intermedias",
+			"category": "7985276e-b845-4558-8a85-e7141e6cb8a6",
+			"steps": []
+		},
+		{
+			"uuid": "7e023cfc-57a9-4af4-bb79-565dc71cc2b1",
+			"title": "organizar codigo",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "6944f600-59a8-4e8e-807d-8da70cda7ac8",
+			"title": "agregar feedback",
+			"description": "feedbacj al clickear en un link y este no puede despleagr una pestaña nueva",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "fd306742-9866-483b-883e-db175aedd324",
+			"title": "mejorar como se quitan las pestañas de los articulos",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "8dcced62-d2a6-4680-b559-ce9b31babca1",
+			"title": "efecto al recibir notificacion (placeholder)",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "e2e38c4c-47a3-4d02-a218-e1de484130aa",
+			"title": "logica de bucle de juego",
+			"description": "programar la logica de recepcion automatica de notificaciones",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"f0c9f1fa-ae49-4c73-b85d-1483a3e86d02"
+			],
+			[
+				"a47a7ca1-fe3c-4643-a38d-dd88aaefabce"
+			],
+			[
+				"16c390fd-1af8-430a-b76b-ad63373d53c4"
+			]
+		]
+	}
+}

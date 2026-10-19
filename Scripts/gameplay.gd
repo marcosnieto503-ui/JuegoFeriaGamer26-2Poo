@@ -42,6 +42,7 @@ func ingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
 	#var publi_a_asignar = Utils.PUBLICACIONES[0]
 	cajaNotif.add_child(notif)
 	notif.asignarPubli(publi_a_asignar)
+	GlobalEfectos.efectoNotiRecibida(Vector2(1360,640),2)
 	
 	
 func _ToCelular_Pressed() -> void:
