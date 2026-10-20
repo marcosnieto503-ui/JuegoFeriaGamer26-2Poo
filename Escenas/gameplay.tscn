@@ -185,6 +185,8 @@ DURACION_FEEDBACK_ANIMACION = 1.4
 
 [node name="logicaJugable" type="Node" parent="." unique_id=2062534461]
 script = ExtResource("14_64m0a")
+ciclosDeTiempo = 2.0
+probabilidad = 7.0
 
 [node name="Timer" type="Timer" parent="logicaJugable" unique_id=2106720971]
 
@@ -195,3 +197,4 @@ nodoNotiRecibida = NodePath("../EfectoNotiRecibida")
 [connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
 [connection signal="button_down" from="Laptop/ToCelular" to="." method="_ToCelular_Pressed"]
 [connection signal="button_down" from="BOTON TESTING" to="BOTON TESTING" method="_on_button_down"]
+[connection signal="timeout" from="logicaJugable/Timer" to="logicaJugable" method="_on_timer_timeout"]
