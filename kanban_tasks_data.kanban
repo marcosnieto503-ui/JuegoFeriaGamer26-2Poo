@@ -26,14 +26,15 @@
 			"uuid": "a47a7ca1-fe3c-4643-a38d-dd88aaefabce",
 			"title": "Doing",
 			"tasks": [
-				"e2e38c4c-47a3-4d02-a218-e1de484130aa"
+				"6b6f26ca-b10d-44a2-a93f-793a5dcddcad"
 			]
 		},
 		{
 			"uuid": "16c390fd-1af8-430a-b76b-ad63373d53c4",
 			"title": "Done",
 			"tasks": [
-				"8dcced62-d2a6-4680-b559-ce9b31babca1"
+				"8dcced62-d2a6-4680-b559-ce9b31babca1",
+				"e2e38c4c-47a3-4d02-a218-e1de484130aa"
 			]
 		}
 	],
@@ -77,6 +78,13 @@
 			"uuid": "e2e38c4c-47a3-4d02-a218-e1de484130aa",
 			"title": "logica de bucle de juego",
 			"description": "programar la logica de recepcion automatica de notificaciones",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "6b6f26ca-b10d-44a2-a93f-793a5dcddcad",
+			"title": "Agregar efectos de sonido",
+			"description": " para que sea jugable",
 			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
 			"steps": []
 		}

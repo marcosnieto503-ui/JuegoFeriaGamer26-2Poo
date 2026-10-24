@@ -20,15 +20,17 @@ config/icon="res://icon.svg"
 Utils="*uid://cxs56wj4ls025"
 DataPartida="*uid://b4bgg2bpr16ap"
 GlobalEfectos="*uid://2rbrftqv6ngb"
+GlobalAudioSignals="*uid://b7x6e8xvjlx71"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/borderless=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GDTask/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg")
+enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg")
 
 [input]
 

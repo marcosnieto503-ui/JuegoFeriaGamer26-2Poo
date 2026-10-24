@@ -14,8 +14,13 @@
 [ext_resource type="PackedScene" uid="uid://cvf0tb8m6s2h0" path="res://Escenas/efecto_noti_recibida.tscn" id="9_w15t4"]
 [ext_resource type="Script" uid="uid://dx0bmb3dpd02x" path="res://Scripts/manejo_archivos_txt.gd" id="10_y3e6i"]
 [ext_resource type="Script" uid="uid://bt7nrje7mcm6f" path="res://Scripts/manejo_link_articulos.gd" id="13_m1bpj"]
-[ext_resource type="Script" uid="uid://bf2ypnr80b0h0" path="res://Escenas/logica_jugable.gd" id="14_64m0a"]
+[ext_resource type="Script" uid="uid://bf2ypnr80b0h0" path="res://Scripts/logica_jugable.gd" id="14_64m0a"]
 [ext_resource type="Script" uid="uid://2rbrftqv6ngb" path="res://Scripts/global_efectos.gd" id="16_m5mg2"]
+[ext_resource type="Script" uid="uid://6r46l1ad1la5" path="res://Scripts/audio.gd" id="17_1rnou"]
+[ext_resource type="Script" uid="uid://b7x6e8xvjlx71" path="res://Scripts/global_audio_signals.gd" id="18_360n6"]
+[ext_resource type="AudioStream" uid="uid://dcxiuuoekwr8y" path="res://SFX/noti_recibida_sfx.wav" id="18_coyme"]
+[ext_resource type="AudioStream" uid="uid://blj7gx8dewyuv" path="res://SFX/noti_recibida2_sfx.wav" id="19_coyme"]
+[ext_resource type="AudioStream" uid="uid://btohl28vb34dt" path="res://SFX/click_noti1_sfx.wav" id="21_j5mtr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8a6s"]
 animations = [{
@@ -71,7 +76,7 @@ z_index = -2
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_o8a6s")
 animation = &"gameplay_anim"
-frame = 1
+frame = 2
 
 [node name="Celular" type="Control" parent="." unique_id=197617991]
 layout_mode = 3
@@ -186,7 +191,7 @@ DURACION_FEEDBACK_ANIMACION = 1.4
 [node name="logicaJugable" type="Node" parent="." unique_id=2062534461]
 script = ExtResource("14_64m0a")
 ciclosDeTiempo = 2.0
-probabilidad = 7.0
+probabilidad = 6.0
 
 [node name="Timer" type="Timer" parent="logicaJugable" unique_id=2106720971]
 
@@ -194,7 +199,36 @@ probabilidad = 7.0
 script = ExtResource("16_m5mg2")
 nodoNotiRecibida = NodePath("../EfectoNotiRecibida")
 
+[node name="AUDIO" type="Node" parent="." unique_id=2113904616]
+script = ExtResource("17_1rnou")
+
+[node name="GlobalAudioSignals" type="Node" parent="AUDIO" unique_id=1607770998 node_paths=PackedStringArray("AUDIO")]
+script = ExtResource("18_360n6")
+AUDIO = NodePath("..")
+
+[node name="noti_recibida" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=25147320]
+position = Vector2(1560, 657)
+stream = ExtResource("18_coyme")
+pitch_scale = 0.97
+panning_strength = 1.91
+
+[node name="noti_recibida2" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=701783351]
+position = Vector2(1560, 656)
+stream = ExtResource("19_coyme")
+panning_strength = 2.6
+
+[node name="noti_click1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=1889878738]
+stream = ExtResource("21_j5mtr")
+volume_db = 3.649
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=378496717]
+position = Vector2(730, 430)
+current = true
+
+[connection signal="_movido_hacia_laptop" from="." to="AUDIO" method="_player_movido_hacia_laptop"]
+[connection signal="_movido_hacia_telefono" from="." to="AUDIO" method="_player_movido_hacia_telefono"]
 [connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
 [connection signal="button_down" from="Laptop/ToCelular" to="." method="_ToCelular_Pressed"]
 [connection signal="button_down" from="BOTON TESTING" to="BOTON TESTING" method="_on_button_down"]
+[connection signal="_noti_recibida" from="logicaJugable" to="AUDIO" method="_on_logica_jugable__noti_recibida"]
 [connection signal="timeout" from="logicaJugable/Timer" to="logicaJugable" method="_on_timer_timeout"]

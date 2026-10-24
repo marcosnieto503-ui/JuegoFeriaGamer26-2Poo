@@ -4,6 +4,7 @@ var tabsActivas = 1
 var ARTICULO_ACTIVO = false
 #el tabsActivas empieza en uno para usarlo como indice en las pesta;as
 var PUBLICACIONES :Array[Publicacion] = []  #////////////////////////////
+var PUBLIS_EXCLUIDAS : Array[Publicacion] = [] # Publicaciones que ya han llegado al telefono, no vuelven a aparecer
 var RECURSOS : Dictionary[int,Texture2D] = {}#------ las imagenes se ven y asignan desde el inspector del nodo gameplay
 
 var ARTICULOS : Array[Articulo] = []
@@ -16,6 +17,7 @@ var RECURSOS_ARTICULOS : Dictionary[int,Texture2D] = {}
 @onready var tabPublicacion = preload("res://Escenas/ventana_publicacion.tscn")
 
 signal _link_Clickeado(id :int)
+signal _publi_ingresada
 
 var TABS_BLOQUEADAS = false
 func bloquear_cambio_tabs():
@@ -50,8 +52,12 @@ func ingresarPublicacion(publi : Publicacion):
 	print("CONTADOR de TABS: " + str(tabsActivas))
 	
 	tabNoti.inicializar(publi)
-	
+	_publi_ingresada.emit()
 
+func excluiurPublicacion(publi: Publicacion):
+	PUBLICACIONES.erase(publi)
+	PUBLIS_EXCLUIDAS.append(publi)
+	print("-Publicacion excluida, no volvera a aparecer: ", publi.get_id())
 
 func ingresarArticulo(data:String):
 	tabsContainer.add_child(preload("res://Escenas/noticiero.tscn").instantiate())

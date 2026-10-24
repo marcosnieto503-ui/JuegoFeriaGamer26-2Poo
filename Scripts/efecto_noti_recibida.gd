@@ -2,19 +2,17 @@ extends Node2D
 
 
 
-
-
 func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("espacio"):
-		reproducirEfecto(Vector2(200,200),2)
+	pass
 
 var tween
 func reproducirEfecto(pos:Vector2,times:int):
+	print("REPRODUCIDO EN: ",pos)
 	#times es el numero de veces que se reproduce el efecto de parpadeo
-	if tween:
+	if tween and tween.has_tweeners():
 		tween.kill()
 	tween = create_tween()
 	

@@ -22,6 +22,8 @@ enum { #estados de la imagen del gameplay
 const NOTIFICACION = preload("res://Escenas/notificacion.tscn")
 
 
+signal _movido_hacia_telefono
+signal _movido_hacia_laptop
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	toLaptop()
@@ -33,10 +35,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	if (Input.is_action_just_pressed("espacio")): #-------------------debug
-		ingresarNotiRandom()
-		print("pressed op NOTIFICAICON INGRESADA")
-	
-func ingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
+		#DEBUGingresarNotiRandom()
+		pass
+
+
+func DEBUGingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
+	print("pressed espacio INGRESANDO NOTI RANDOM")
 	var notif = NOTIFICACION.instantiate()
 	var publi_a_asignar = Utils.PUBLICACIONES.pick_random()
 	#var publi_a_asignar = Utils.PUBLICACIONES[0]
@@ -83,15 +87,18 @@ func toCelular():
 		pantalla.show()
 		await camara.reiniciar_camara()
 		camara.zoom_hacia(Vector2(900,200), 2) #coords en relacion a la camara si ests tuviera origfen en su centro
+		_movido_hacia_telefono.emit()
 	else: 
 		fondo.frame = celularFocus
 		pantalla.show()
 		await camara.reiniciar_camara()
 		camara.zoom_hacia(Vector2(900,200), 2) #coords en relacion a la camara si ests tuviera origen en su centro
+		_movido_hacia_telefono.emit()
 	#720, 420
 func toLaptop():
 	fondo.frame = laptopFocus
 	pantalla.hide()
 	await camara.reiniciar_camara()
 	camara.zoom_hacia(Vector2(920-(1920/2), 430-(1080/2)), 1.2, 0.3)
+	_movido_hacia_laptop.emit()
 	
