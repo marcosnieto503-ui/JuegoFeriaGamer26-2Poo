@@ -42,8 +42,7 @@ func _process(delta: float) -> void:
 func DEBUGingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
 	print("pressed espacio INGRESANDO NOTI RANDOM")
 	var notif = NOTIFICACION.instantiate()
-	var publi_a_asignar = Utils.PUBLICACIONES.pick_random()
-	#var publi_a_asignar = Utils.PUBLICACIONES[0]
+	var publi_a_asignar = Utils.PUBLICACIONES[12]
 	cajaNotif.add_child(notif)
 	notif.asignarPubli(publi_a_asignar)
 	GlobalEfectos.efectoNotiRecibida(Vector2(1360,640),2)
@@ -102,3 +101,7 @@ func toLaptop():
 	camara.zoom_hacia(Vector2(920-(1920/2), 430-(1080/2)), 1.2, 0.3)
 	_movido_hacia_laptop.emit()
 	
+
+
+func _on_pestañas_tab_clicked(tab: int) -> void:
+	GlobalAudioSignals.playTabSwitch()

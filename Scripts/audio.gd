@@ -19,14 +19,19 @@ var SAMPLES :Dictionary[String,AudioStreamPlayer2D]
 
 func _ready() -> void:
 	for child in get_children():
+		if child is not AudioStreamPlayer2D:
+			continue
 		SAMPLES.set(child.name,child)
 	
 	Utils._publi_ingresada.connect(_publi_asignada_en_laptop)
-	DEBUG_seleccion_sonidoNoti() #DEBUG duiaov
 	pass
 
+@onready var MUSICAFONDO = $MusicaDeFondo
+func playMusicaFondo():
+	MUSICAFONDO.play()
+
 func _publi_asignada_en_laptop():
-	playSampleRPitch("noti_recibida")
+	playSampleRPitch("entra_publi")
 
 func _on_logica_jugable__noti_recibida() -> void:
 	playNotiRecibida()
@@ -43,7 +48,6 @@ func playNotiRecibida():
 		return
 	var sampl = SAMPLES.get(sonidoStr)
 	sampl.set_pitch_scale(1.15 + randf_range(-0.2,0.2))
-	print("PITCH PILLAO: ",sampl.get_pitch_scale())
 	if Efecto_de_noti_recibida == OPCIONES_NOTI_RECIBIDA.VIBRACION:
 		sampl.play()
 		await sampl.finished
@@ -58,23 +62,17 @@ func playSampleRPitch(sample:String):
 		push_error("Sample de audio no encontrado: ", sample)
 		return
 	var sampl = SAMPLES.get(sample)
-	sampl.set_pitch_scale(1.15 + randf_range(-0.2,0.2))
-	print("PITCH PILLAO: ",sampl.get_pitch_scale())
+	var P = sampl.get_pitch_scale()
+	sampl.set_pitch_scale(P + randf_range(-0.2,0.2))
 	sampl.play()
+	await sampl.finished
+	sampl.set_pitch_scale(P)
 
 #-------------------------------------------------
 #---- TODO LO QUE ESTE DEBAJO DE ESTO ES DEBUG
 #----------------------------------------------
 
-func DEBUG_seleccion_sonidoNoti():
-	match Efecto_de_noti_recibida:
-		OPCIONES_NOTI_RECIBIDA.VIBRACION:
-			sonidoAReproducir = "noti_recibida2"
-		OPCIONES_NOTI_RECIBIDA.SONIDO1:
-			sonidoAReproducir = "noti_recibida"
-
-var sonidoAReproducir:String = ""
-
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("espacio"):
-		playNotiRecibida()
+		#playNotiRecibida()
+		pass

@@ -51,6 +51,7 @@ func _link_clickeado(meta :Variant): #funcion de click en el link
 		return
 	print("fuap cliekado po "+ meta)
 	Utils._link_Clickeado.emit(PUBLICACION_ASIGNADA.get_id()) # se;al emitidaaaa
+	GlobalAudioSignals.playLinkOpened()
 
 
 
@@ -130,7 +131,7 @@ func descartar():
 	Utils.tabsActivas -= 1
 	print("descartado---")
 	print("DESCARTADAS: "+ str(len(DataPartida.PUBLIS_DESCARTADAS)))
-	
+
 
 
 func animacionRetirarTab(direccion:String):

@@ -66,7 +66,7 @@ func leer_archivo_publi():
 				tpArray.append("NULL")
 				
 			var publiNueva = Publicacion.new(tnA,idA,tipo,accion,"".join(tpArray))
-			Utils.PUBLICACIONES.append(publiNueva)
+			Utils.PUBLICACIONES.set(idA,publiNueva)
 			
 			tnA = "NULL"
 			idA = "NULL"

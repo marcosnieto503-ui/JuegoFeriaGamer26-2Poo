@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://834lon0tid8e"
+path="res://.godot/imported/hover hint3.wav-0d7f77cf55c73730cb05e78a1fc2cf66.sample"
+
+[deps]
+
+source_file="res://SFX/hover hint3.wav"
+dest_files=["res://.godot/imported/hover hint3.wav-0d7f77cf55c73730cb05e78a1fc2cf66.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -27,8 +27,8 @@ content_margin_right = 4.0
 content_margin_bottom = 2.0
 
 [node name="VentanaPublicacion" type="PanelContainer" unique_id=1207312424]
-offset_right = 780.0
-offset_bottom = 440.0
+offset_right = 850.0
+offset_bottom = 450.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_u0uem")
@@ -38,7 +38,7 @@ metadata/_tab_index = 0
 self_modulate = Color(0.15744793, 0.48524714, 0.2716639, 1)
 layout_mode = 2
 offset_transform_enabled = true
-offset_transform_position = Vector2(780, 0)
+offset_transform_position = Vector2(850, 0)
 texture = ExtResource("2_wntv2")
 expand_mode = 1
 
@@ -57,7 +57,7 @@ text = "PUBLICADO!"
 self_modulate = Color(0.79595095, 0.20431468, 0.3496629, 1)
 layout_mode = 2
 offset_transform_enabled = true
-offset_transform_position = Vector2(-780, 0)
+offset_transform_position = Vector2(-850, 0)
 texture = ExtResource("2_wntv2")
 expand_mode = 1
 

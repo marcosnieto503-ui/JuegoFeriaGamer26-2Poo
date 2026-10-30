@@ -23,4 +23,5 @@ func inicializar(articulo : Articulo):
 func _on_boton_cerrar_button_up() -> void:
 	queue_free()
 	Utils.ARTICULO_ACTIVO = false
+	GlobalAudioSignals.playNoticieroClosed()
 	print("-----NOTICIA CERRADA")

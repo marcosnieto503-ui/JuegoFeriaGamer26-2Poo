@@ -3,8 +3,8 @@ extends Node
 var tabsActivas = 1 
 var ARTICULO_ACTIVO = false
 #el tabsActivas empieza en uno para usarlo como indice en las pesta;as
-var PUBLICACIONES :Array[Publicacion] = []  #////////////////////////////
-var PUBLIS_EXCLUIDAS : Array[Publicacion] = [] # Publicaciones que ya han llegado al telefono, no vuelven a aparecer
+var PUBLICACIONES :Dictionary[int,Publicacion]  #////////////////////////////
+var PUBLIS_EXCLUIDAS : Dictionary[int,Publicacion]  # Publicaciones que ya han llegado al telefono, no vuelven a aparecer
 var RECURSOS : Dictionary[int,Texture2D] = {}#------ las imagenes se ven y asignan desde el inspector del nodo gameplay
 
 var ARTICULOS : Array[Articulo] = []
@@ -55,8 +55,8 @@ func ingresarPublicacion(publi : Publicacion):
 	_publi_ingresada.emit()
 
 func excluiurPublicacion(publi: Publicacion):
-	PUBLICACIONES.erase(publi)
-	PUBLIS_EXCLUIDAS.append(publi)
+	PUBLICACIONES.erase(publi.get_id())
+	PUBLIS_EXCLUIDAS.set(publi.get_id(),publi)
 	print("-Publicacion excluida, no volvera a aparecer: ", publi.get_id())
 
 func ingresarArticulo(data:String):

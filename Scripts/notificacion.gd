@@ -11,9 +11,10 @@ func _ready() -> void:
 
 
 func _on_boton_aceptar_noti_button_up() -> void:
-	GlobalAudioSignals.playNotiClickeada()
 	if Utils.tabsActivas > 3:
+		GlobalAudioSignals.playNoEntranPublis()
 		return
+	GlobalAudioSignals.playNotiClickeada()
 	_procesarNoti()
 	
 	

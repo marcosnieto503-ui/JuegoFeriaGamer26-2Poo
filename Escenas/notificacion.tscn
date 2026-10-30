@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://0phdxtrhmnl7" path="res://Assets/box noti 2.png" id="1_avguk"]
 [ext_resource type="Texture2D" uid="uid://bbdqm1ld6kqhq" path="res://Assets/boton noti sheet3.png" id="3_816wt"]
 [ext_resource type="FontFile" uid="uid://c0yidekyi80p3" path="res://Recursos/FONTS/m6x11plus.ttf" id="3_mglyo"]
+[ext_resource type="Script" uid="uid://dxte0aqwdwbr6" path="res://Scripts/boton_aceptar_noti.gd" id="5_mglyo"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wcwtv"]
 content_margin_left = 6.0
@@ -65,5 +66,7 @@ focus_mode = 0
 texture_normal = SubResource("AtlasTexture_f6nb0")
 texture_hover = SubResource("AtlasTexture_3uoiq")
 stretch_mode = 0
+script = ExtResource("5_mglyo")
 
 [connection signal="button_up" from="VBoxContainer/Boton Aceptar Noti" to="." method="_on_boton_aceptar_noti_button_up"]
+[connection signal="mouse_entered" from="VBoxContainer/Boton Aceptar Noti" to="VBoxContainer/Boton Aceptar Noti" method="_on_mouse_entered"]
