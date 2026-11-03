@@ -44,7 +44,7 @@ func leer_archivo_publi():
 		return
 	
 	var tnA = "NULL"
-	var idA = "NULL"
+	var idA = null
 	var tipo = "NULL"
 	var accion = "NULL"
 	var tpArray = []
@@ -69,7 +69,7 @@ func leer_archivo_publi():
 			Utils.PUBLICACIONES.set(idA,publiNueva)
 			
 			tnA = "NULL"
-			idA = "NULL"
+			idA = null
 			tipo = "NULL"
 			accion = "NULL"
 			tpArray.clear()

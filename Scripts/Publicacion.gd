@@ -7,7 +7,7 @@ var _id: int
 var _tipo: String
 var _recurso: Texture2D
 var _textoPubli: String
-var _comentarios: Array
+var _comentarios: Array[Comentario]
 var _accion: String
 
 func _init(textoNoti:String, id:int, tipo:String, accion:String,textoPubli:String):

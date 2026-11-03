@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://dnb6jodpl4e27"]
+
+[ext_resource type="Texture2D" uid="uid://l0a7nwm0iu8v" path="res://icon.svg" id="1_kxeu5"]
+[ext_resource type="Script" uid="uid://dmvfvpc2wjn5q" path="res://Scripts/escena_comentario.gd" id="1_sc6bt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdaly"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.18359044, 0.18359047, 0.18359032, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sc6bt"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.29954728, 0.29954752, 0.29954734, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f3445"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
+
+[node name="Comentario" type="PanelContainer" unique_id=1735260042]
+custom_minimum_size = Vector2(355, 100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1565.0
+offset_bottom = -980.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bdaly")
+script = ExtResource("1_sc6bt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1476101729]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer" unique_id=1206066051]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 9
+theme_override_styles/normal = SubResource("StyleBoxFlat_sc6bt")
+text = "AQUI VA PEDAAZO DE LA PUBLICACION"
+
+[node name="PanelContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=2000948527]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/PanelContainer" unique_id=1944592283]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_kxeu5")
+expand_mode = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VBoxContainer/PanelContainer" unique_id=473484095]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_f3445")
+text = "AQUI VA COMENTARIO"

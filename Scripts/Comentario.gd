@@ -15,3 +15,6 @@ func _init(texto:String,id:int,r1:String,r2:String,r3:String):
 	self._r1 = r1
 	self._r2 = r2
 	self._r3 = r3
+
+func get_texto() -> String:
+	return self._texto
