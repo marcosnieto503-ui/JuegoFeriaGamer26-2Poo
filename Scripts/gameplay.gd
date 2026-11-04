@@ -40,7 +40,6 @@ func _process(delta: float) -> void:
 
 
 func DEBUGingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
-	print("pressed espacio INGRESANDO NOTI RANDOM")
 	var notif = NOTIFICACION.instantiate()
 	var publi_a_asignar = Utils.PUBLICACIONES[12]
 	cajaNotif.add_child(notif)

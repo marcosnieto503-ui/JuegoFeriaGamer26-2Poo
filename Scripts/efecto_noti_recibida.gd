@@ -10,7 +10,7 @@ func _physics_process(delta: float) -> void:
 
 var tween
 func reproducirEfecto(pos:Vector2,times:int):
-	print("REPRODUCIDO EN: ",pos)
+	#print("REPRODUCIDO EN: ",pos)
 	#times es el numero de veces que se reproduce el efecto de parpadeo
 	if tween and tween.has_tweeners():
 		tween.kill()

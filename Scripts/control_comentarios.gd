@@ -15,7 +15,7 @@ func _get_comentario_random() -> Comentario:
 	if !_hay_publis_procesadas():
 		return null
 	var publi = Utils.PUBLIS_EXCLUIDAS.get(Utils.PUBLIS_EXCLUIDAS.keys().pick_random())
-	print("------PUBLI RANDOM ELEGIDA: ",publi)
+	print("------PUBLI RANDOM ELEGIDA: ",publi, " ID: ",publi.get_id())
 	var comment = publi.getComentarioRandom()
 	if !comment:
 		return null
@@ -71,7 +71,7 @@ func leerArchivoComentarios():
 				push_error("NO EXISTE PUBLICACION CON ESTE ID PARA SIGNARLE COMENTARIO: ",id)
 				continue
 			Utils.PUBLICACIONES.get(comentario._id).addComentario(comentario)
-			print("-------COMENTARIO LEIDO: ",comentario)
+			print("-------COMENTARIO LEIDO: ",comentario,"\n")
 		
 		if estadoLectura == "noLeyendo":
 			continue

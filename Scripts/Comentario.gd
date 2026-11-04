@@ -18,3 +18,13 @@ func _init(texto:String,id:int,r1:String,r2:String,r3:String):
 
 func get_texto() -> String:
 	return self._texto
+func get_id() -> int:
+	return self._id
+func get_r1() -> String:
+	return self._r1
+func get_r2() -> String:
+	return self._r2
+func get_r3() -> String:
+	return self._r3
+func get_rDefault() -> String:
+	return self._rDefault

@@ -49,7 +49,7 @@ func ingresarPublicacion(publi : Publicacion):
 	tabsContainer.set_current_tab(tabsActivas)
 	
 	tabsActivas += 1
-	print("CONTADOR de TABS: " + str(tabsActivas))
+	#print("CONTADOR de TABS: " + str(tabsActivas))
 	
 	tabNoti.inicializar(publi)
 	_publi_ingresada.emit()

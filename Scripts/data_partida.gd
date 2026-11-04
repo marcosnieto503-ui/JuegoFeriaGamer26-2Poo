@@ -16,7 +16,7 @@ var PUBLIS_DESCARTADAS :Array[Publicacion] = []
 func _ready() -> void:
 	# esta autoasignacion se hace porqu el script es un autoload y las variables enm el inspector no se aplican automatiacmente al autoload por alguna razon
 	DataPartida.DURACION_FEEDBACK_ANIMACION = DURACION_FEEDBACK_ANIMACION
-	print("podd, ",DataPartida.DURACION_FEEDBACK_ANIMACION)
+	#print("podd, ",DataPartida.DURACION_FEEDBACK_ANIMACION)
 	pass # Replace with function body.
 
 

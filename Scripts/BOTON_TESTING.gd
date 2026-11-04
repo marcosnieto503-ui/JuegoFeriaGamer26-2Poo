@@ -18,12 +18,23 @@ func _on_button_check_pressed() -> void:
 	print("-------HAY PUBLICS PROCESADAS: ",cComentarios._hay_publis_procesadas())
 	print(" ------ COM RANDOM: ", cComentarios._get_comentario_random())
 
+func _on_button_2_pressed() -> void:
+	#mete comentario
+	var c = cComentarios._get_comentario_random()
+	if !c:
+		push_error("- NO HAY COMENTARIO PA PILLAR")
+		return
+	var com = CommentScene.instantiate()
+	com.asignarComentario(c)
+	cajaComentarios.add_child(com)
+	print("-- -- 2 COMENTARIO PEGAO CORRECTAMENTE")
 
 func _on_button_down() -> void:
 	var p = Utils.PUBLICACIONES.get(1)
 	Utils.ingresarPublicacion(p)
-	print(p.get_textoNoti())
+	Utils.excluiurPublicacion(p)
 	
+	return
 	
 	if !cComentarios._hay_publis_procesadas():
 		return
