@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dor2n2g1r5g8j"
-path="res://.godot/imported/laptop_outline.png-deaa61acb7c27582ecfa671a4dc23118.ctex"
+uid="uid://lalwqgjrd5lg"
+path="res://.godot/imported/titulo.png-337f280359f32b640a2e98ba7bd59fe3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu/partes/laptop/laptop_outline.png"
-dest_files=["res://.godot/imported/laptop_outline.png-deaa61acb7c27582ecfa671a4dc23118.ctex"]
+source_file="res://Assets/Menu/titulo.png"
+dest_files=["res://.godot/imported/titulo.png-337f280359f32b640a2e98ba7bd59fe3.ctex"]
 
 [params]
 
