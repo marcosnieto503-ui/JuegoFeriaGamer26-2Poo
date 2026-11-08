@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dgm3k8lsf2qcn"
+path="res://.godot/imported/celular_bitmap.png-06c71caae46bc50ae8063988f95c59b5.res"
+
+[deps]
+
+source_file="res://Assets/Menu/partes/celular/celular_bitmap.png"
+dest_files=["res://.godot/imported/celular_bitmap.png-06c71caae46bc50ae8063988f95c59b5.res"]
+
+[params]
+
+create_from=1
+threshold=0.0
