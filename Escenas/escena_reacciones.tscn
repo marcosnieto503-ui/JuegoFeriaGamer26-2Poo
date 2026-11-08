@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://qdvfjwx5eo4r"]
+
+[ext_resource type="Script" uid="uid://c1tofmlc6wjuf" path="res://Scripts/escena_reacciones.gd" id="1_d7cnk"]
+[ext_resource type="Shader" uid="uid://dxu7quqy4gg2b" path="res://Recursos/escena_reacciones.gdshader" id="2_a3ooo"]
+[ext_resource type="Texture2D" uid="uid://bcy2730ssnl63" path="res://Assets/bienHecho y malHecho 1.png" id="2_ll7gf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d7cnk"]
+shader = ExtResource("2_a3ooo")
+shader_parameter/outline_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+shader_parameter/outline_width = 1.5770000749075002
+shader_parameter/outline_enabled = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3ooo"]
+atlas = ExtResource("2_ll7gf")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg18k"]
+atlas = ExtResource("2_ll7gf")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk45t"]
+atlas = ExtResource("2_ll7gf")
+region = Rect2(0, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1am7"]
+atlas = ExtResource("2_ll7gf")
+region = Rect2(80, 80, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbyrt"]
+atlas = ExtResource("2_ll7gf")
+region = Rect2(0, 160, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gho1"]
+atlas = ExtResource("2_ll7gf")
+region = Rect2(80, 160, 80, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sl0nw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3ooo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg18k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk45t")
+}],
+"loop": 1,
+"name": &"bien_hecho",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1am7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbyrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gho1")
+}],
+"loop": 1,
+"name": &"mal_hecho",
+"speed": 5.0
+}]
+
+[node name="EscenaReacciones" type="Node2D" unique_id=1526037047]
+script = ExtResource("1_d7cnk")
+
+[node name="Reacciones" type="AnimatedSprite2D" parent="." unique_id=712226432]
+
+[node name="Señales" type="AnimatedSprite2D" parent="." unique_id=504390233]
+texture_filter = 1
+material = SubResource("ShaderMaterial_d7cnk")
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_sl0nw")
+animation = &"bien_hecho"
+frame_progress = 0.59477055
