@@ -239,6 +239,7 @@ DURACION_FEEDBACK_ANIMACION = 1.4
 
 [node name="logicaJugable" type="Node" parent="." unique_id=2062534461]
 script = ExtResource("14_64m0a")
+NOTIS_MANUAL = false
 ciclosDeTiempo = 2.0
 probabilidad = 6.0
 
@@ -257,56 +258,56 @@ AUDIO = NodePath("..")
 
 [node name="MusicaDeFondo" type="AudioStreamPlayer" parent="AUDIO" unique_id=2072398419]
 stream = ExtResource("19_mu361")
-volume_db = -36.977
+volume_db = -2.188
 playback_type = 1
 
 [node name="entra_publi" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=25147320]
 position = Vector2(1560, 657)
 stream = ExtResource("18_coyme")
-volume_db = 3.136
+volume_db = 22.151
 pitch_scale = 1.37
 panning_strength = 1.91
 
 [node name="noti_recibida2" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=701783351]
 position = Vector2(1560, 656)
 stream = ExtResource("19_coyme")
-volume_db = -15.347
+volume_db = 16.473
 panning_strength = 2.6
 
 [node name="hover_hint1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=731005719]
 stream = ExtResource("27_lgj5j")
-volume_db = 2.233
+volume_db = 24.0
 pitch_scale = 1.29
 
 [node name="noti_click1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=1889878738]
 stream = ExtResource("27_swuf6")
-volume_db = 1.418
+volume_db = 21.597
 
 [node name="noti_cannot_click1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=589248788]
 stream = ExtResource("23_lgj5j")
-volume_db = 7.143
+volume_db = 24.0
 pitch_scale = 0.92
 
 [node name="correcto1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=1541533858]
 stream = ExtResource("22_urk4i")
-volume_db = -10.948
+volume_db = 8.067
 
 [node name="incorrecto1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=713765555]
 stream = ExtResource("23_md6v1")
-volume_db = -16.815
+volume_db = 13.454
 
 [node name="incorrecto2" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=1696857427]
 stream = SubResource("AudioStreamWAV_5ptdf")
-volume_db = -14.746
+volume_db = 10.866
 pitch_scale = 1.11
 
 [node name="ui_pop1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=754621253]
 stream = ExtResource("24_5ptdf")
-volume_db = -10.22
+volume_db = 20.86
 
 [node name="ui_pop2" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=768510353]
 stream = ExtResource("25_mu361")
-volume_db = -13.31
+volume_db = 2.635
 
 [node name="tab_switch1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=1884262840]
 stream = ExtResource("28_lgj5j")

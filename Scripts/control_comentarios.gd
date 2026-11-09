@@ -7,14 +7,14 @@ func _ready() -> void:
 	leerArchivoComentarios()
 
 func _hay_publis_procesadas() -> bool:
-	if Utils.PUBLIS_EXCLUIDAS.is_empty():
+	if DataPartida.PUBLIS_PUBLICADAS.is_empty():
 		return false
 	return true
 
 func _get_comentario_random() -> Comentario:
 	if !_hay_publis_procesadas():
 		return null
-	var publi = Utils.PUBLIS_EXCLUIDAS.get(Utils.PUBLIS_EXCLUIDAS.keys().pick_random())
+	var publi = DataPartida.PUBLIS_PUBLICADAS.pick_random()
 	print("------PUBLI RANDOM ELEGIDA: ",publi, " ID: ",publi.get_id())
 	var comment = publi.getComentarioRandom()
 	if !comment:

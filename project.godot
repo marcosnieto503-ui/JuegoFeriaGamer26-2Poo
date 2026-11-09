@@ -24,7 +24,10 @@ GlobalAudioSignals="*uid://b7x6e8xvjlx71"
 
 [display]
 
-window/stretch/scale=0.8
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/borderless=true
+window/stretch/scale=0.67
 
 [editor_plugins]
 
@@ -45,3 +48,4 @@ espacio={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method.mobile="gl_compatibility"

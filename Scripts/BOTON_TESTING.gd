@@ -25,12 +25,15 @@ func _on_button_2_pressed() -> void:
 		push_error("- NO HAY COMENTARIO PA PILLAR")
 		return
 	var com = CommentScene.instantiate()
-	com.asignarComentario(c)
+	print("SE ASIGNA O NO: ",com.asignarComentario(c))
 	cajaComentarios.add_child(com)
 	print("-- -- 2 COMENTARIO PEGAO CORRECTAMENTE")
 
 func _on_button_down() -> void:
-	var p = Utils.PUBLICACIONES.get(1)
+	if !Utils.PUBLICACIONES.has(11):
+		push_error("NO EXISTE PUBLICACION CON ID: 11 EN EL ARRAY PUBLICACIONES")
+		return
+	var p = Utils.PUBLICACIONES.get(11)
 	Utils.ingresarPublicacion(p)
 	Utils.excluiurPublicacion(p)
 	
