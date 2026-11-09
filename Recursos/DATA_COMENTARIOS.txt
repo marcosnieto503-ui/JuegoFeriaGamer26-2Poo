@@ -1,0 +1,7 @@
+#i
+-texto:Este es un comentario de prueba, el que lea esto e gei.
+-id:1
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
