@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://hl7fn82hj2q1"]
 
-[ext_resource type="Script" uid="uid://d4fx56fmhxgps" path="res://Scripts/noticiero.gd" id="1_qoknn"]
-[ext_resource type="Texture2D" uid="uid://bp8vxlehvasl8" path="res://Assets/elObservadorTest1.png" id="1_r07hn"]
-[ext_resource type="FontFile" uid="uid://c0yidekyi80p3" path="res://Recursos/FONTS/m6x11plus.ttf" id="2_egxpy"]
+[ext_resource type="Script" uid="uid://d4fx56fmhxgps" path="res://Escenas/Noticiero/noticiero.gd" id="1_4n6ka"]
+[ext_resource type="Texture2D" uid="uid://bp8vxlehvasl8" path="res://Assets/elObservadorTest1.png" id="2_r6tv5"]
+[ext_resource type="FontFile" uid="uid://c0yidekyi80p3" path="res://Recursos/FONTS/m6x11plus.ttf" id="3_v1mfx"]
 
 [sub_resource type="FontVariation" id="FontVariation_o8a6s"]
-base_font = ExtResource("2_egxpy")
+base_font = ExtResource("3_v1mfx")
 spacing_glyph = 1
 
 [sub_resource type="FontVariation" id="FontVariation_g4cw3"]
-base_font = ExtResource("2_egxpy")
+base_font = ExtResource("3_v1mfx")
 spacing_glyph = 1
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wcwtv"]
@@ -17,12 +17,12 @@ spacing_glyph = 1
 [node name="Noticiero" type="PanelContainer" unique_id=1130603485]
 offset_right = 780.0
 offset_bottom = 440.0
-script = ExtResource("1_qoknn")
+script = ExtResource("1_4n6ka")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1538367475]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("1_r07hn")
+texture = ExtResource("2_r6tv5")
 
 [node name="Control" type="Control" parent="." unique_id=2130016315]
 layout_mode = 2

@@ -1,6 +1,6 @@
 extends Node
 
-var tabsActivas = 1 
+var MaxTabsNum = 3 #po
 var ARTICULO_ACTIVO = false
 #el tabsActivas empieza en uno para usarlo como indice en las pesta;as
 var PUBLICACIONES :Dictionary[int,Publicacion]  #////////////////////////////
@@ -14,7 +14,7 @@ var RECURSOS_ARTICULOS : Dictionary[int,Texture2D] = {}
 
 @onready var cajaNotis = $/root/Gameplay/Celular/ScrollNotificaciones/CajaNotificaciones
 @onready var tabsContainer = $/root/Gameplay/Laptop/Pestañas
-@onready var tabPublicacion = preload("res://Escenas/ventana_publicacion.tscn")
+@onready var tabPublicacion = preload("res://Escenas/VentanaPublicacion/ventana_publicacion.tscn")
 
 signal _link_Clickeado(id :int)
 signal _publi_ingresada
@@ -37,21 +37,37 @@ func activar_press_notis():
 	for hijo in cajaNotis.get_children():
 		hijo.activarBoton()
 
-#ee funciones utiles accesibnles desde todo el proyecto
 
+#ee funciones utiles accesibnles desde todo el proyecto
+func puedeEntrarPubli() -> bool:
+	return tabsContainer.get_tab_count() < MaxTabsNum +1 #cuenta la tab princiapl
+
+func liberarTabIndex(i:int):
+	TabIndexes[i] = false
+var TabIndexes:Dictionary[int,bool] = {
+	1:false,
+	2:false,
+	3:false
+}
 func ingresarPublicacion(publi : Publicacion):
-	if tabsActivas > 3:
+	if !puedeEntrarPubli():
 		return
-	var tabNoti = tabPublicacion.instantiate() #tabPublicacion = ventana_publicacion
-	tabNoti.name = "Publicacion "+ str(tabsActivas)
+	var tabPubli = tabPublicacion.instantiate() #tabPublicacion = ventana_publicacion
+	var tabIndex:int
+	for i in TabIndexes.keys():
+		if TabIndexes[i] == false:
+			tabIndex = i
+			TabIndexes[i] = true
+			break
+	if !tabIndex:
+		push_error("NO HAY TAB INDICE LIBRE EN EL DICCIONARIO")
+		return
+	tabPubli.name = "Publicacion "+ str(tabIndex)
 	
-	tabsContainer.add_child(tabNoti)
-	tabsContainer.set_current_tab(tabsActivas)
+	tabsContainer.add_child(tabPubli)
+	tabsContainer.set_current_tab(tabsContainer.get_tab_count()-1)
 	
-	tabsActivas += 1
-	#print("CONTADOR de TABS: " + str(tabsActivas))
-	
-	tabNoti.inicializar(publi)
+	tabPubli.inicializar(publi,tabIndex)
 	_publi_ingresada.emit()
 
 #esto se llama cuando una publi llega al telefono, para que no vuelva a aparecer
@@ -59,8 +75,3 @@ func excluirPublicacion(publi: Publicacion):
 	PUBLICACIONES.erase(publi.get_id())
 	PUBLIS_EXCLUIDAS.set(publi.get_id(),publi)
 	print("-Publicacion excluida, no volvera a aparecer: ", publi.get_id())
-
-func ingresarArticulo(data:String):
-	tabsContainer.add_child(preload("res://Escenas/noticiero.tscn").instantiate())
-	tabsContainer.set_current_tab(tabsActivas)
-	print("NOTICIA AGREGADA")

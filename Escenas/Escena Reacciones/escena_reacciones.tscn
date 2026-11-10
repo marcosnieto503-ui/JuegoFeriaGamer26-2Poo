@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://qdvfjwx5eo4r"]
 
-[ext_resource type="Script" uid="uid://c1tofmlc6wjuf" path="res://Scripts/escena_reacciones.gd" id="1_d7cnk"]
+[ext_resource type="Script" uid="uid://c1tofmlc6wjuf" path="res://Escenas/Escena Reacciones/escena_reacciones.gd" id="1_d7cnk"]
 [ext_resource type="Shader" uid="uid://dxu7quqy4gg2b" path="res://Recursos/escena_reacciones.gdshader" id="2_a3ooo"]
 [ext_resource type="Texture2D" uid="uid://bcy2730ssnl63" path="res://Assets/bienHecho y malHecho 1.png" id="2_ll7gf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d7cnk"]
 shader = ExtResource("2_a3ooo")
 shader_parameter/outline_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
-shader_parameter/outline_width = 1.5770000749075002
+shader_parameter/outline_width = 2.2910001088225
 shader_parameter/outline_enabled = true
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a3ooo"]

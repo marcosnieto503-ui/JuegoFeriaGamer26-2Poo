@@ -38,6 +38,10 @@ func get_recurso():
 	
 func addComentario(comentario:Comentario):
 	_comentarios.append(comentario)
-	
 func getComentarioRandom():
 	return _comentarios.pick_random()
+func hayComentarios() -> bool:
+	if _comentarios.is_empty():
+		return false
+	else:
+		return true

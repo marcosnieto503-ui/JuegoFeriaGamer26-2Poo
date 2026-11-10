@@ -20,6 +20,9 @@ const size_SIN_IMAGEN = Vector2(660,180)
 @onready var botonPubliNoRelacionada = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3/PubliNoRelacionada
 @onready var botonInfoErronea = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3/InfoErronea
 # Called when the node enters the scene tree for the first time.
+
+var _tabIndex:int
+
 func _ready() -> void:
 	#botones del menu que aparece al descartar
 	$ControlOpsDescartar.set_visible(false)
@@ -31,7 +34,7 @@ func _ready() -> void:
 const colorLinkNoPressed := Color("2a96ffff")
 const colorLinkPressed:= Color("7ad2ffff")
 
-func inicializar(publi : Publicacion):
+func inicializar(publi : Publicacion,i:int):
 	PUBLICACION_ASIGNADA = publi
 	recurso = PUBLICACION_ASIGNADA.get_recurso()
 	textoPubli = PUBLICACION_ASIGNADA.get_textoPubli()
@@ -40,6 +43,8 @@ func inicializar(publi : Publicacion):
 	#cajaTextoPubli.set_text(textoPubli)
 	labelTipoPubli.set_text("Tipo de Publicacion: " + PUBLICACION_ASIGNADA.get_tipo())
 	asignar_imagen()
+	
+	_tabIndex = i
 
 
 
@@ -52,8 +57,6 @@ func _link_clickeado(meta :Variant): #funcion de click en el link
 	print("fuap cliekado po "+ meta)
 	Utils._link_Clickeado.emit(PUBLICACION_ASIGNADA.get_id()) # se;al emitidaaaa
 	GlobalAudioSignals.playLinkOpened()
-
-
 
 
 
@@ -118,7 +121,7 @@ func publicar():
 	Utils.bloquear_cambio_tabs()
 	
 	self.queue_free()
-	Utils.tabsActivas -= 1
+	Utils.liberarTabIndex(_tabIndex)
 	print("publicado--")
 	print("PUBLICADAS: "+ str(len(DataPartida.PUBLIS_PUBLICADAS)))
 	
@@ -128,7 +131,7 @@ func descartar():
 	Utils.bloquear_cambio_tabs()
 	
 	self.queue_free()
-	Utils.tabsActivas -= 1
+	Utils.liberarTabIndex(_tabIndex)
 	print("descartado---")
 	print("DESCARTADAS: "+ str(len(DataPartida.PUBLIS_DESCARTADAS)))
 

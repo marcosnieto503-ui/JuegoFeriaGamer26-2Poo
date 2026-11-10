@@ -8,7 +8,7 @@ extends Node
 @export var probabilidad :float
 
 @onready var cajaNotif = $"../Celular/ScrollNotificaciones/CajaNotificaciones"
-const NOTIFICACION = preload("res://Escenas/notificacion.tscn")
+const NOTIFICACION = preload("res://Escenas/NotificacionScene/notificacion.tscn")
 
 signal _noti_recibida
 

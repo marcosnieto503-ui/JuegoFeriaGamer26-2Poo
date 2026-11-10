@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cvf0tb8m6s2h0"]
 
-[ext_resource type="Script" uid="uid://cygou0d2wcpgk" path="res://Scripts/efecto_noti_recibida.gd" id="1_kne8n"]
+[ext_resource type="Script" uid="uid://cygou0d2wcpgk" path="res://Escenas/efectoNotiRecibida/efecto_noti_recibida.gd" id="1_kne8n"]
 
 [sub_resource type="Gradient" id="Gradient_x02si"]
 colors = PackedColorArray(0, 0, 0, 1, 0.35906908, 0.35906908, 0.35906908, 1)

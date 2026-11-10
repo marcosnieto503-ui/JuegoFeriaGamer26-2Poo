@@ -1,27 +1,33 @@
 extends Node
 
 var rutaComentarios = "res://Recursos/DATA_COMENTARIOS.txt"
-var escenaComentario = preload("res://Escenas/comentario.tscn")
+var escenaComentario = preload("res://Escenas/ComentarioScene/comentario.tscn")
 @onready var cajaComentarios = $"../../Laptop/Pestañas/PRINCIPAL/PanelContainer/ScrollContainer/CajaComentarios"
 
 func _ready() -> void:
 	await get_tree().process_frame
 	leerArchivoComentarios()
 
-func _hay_publis_procesadas() -> bool:
-	if DataPartida.PUBLIS_PUBLICADAS.is_empty():
+func _hay_publis_para_escoger() -> bool:
+	if DataPartida.PUBLIS_PARA_COMENTARIOS.is_empty():
 		return false
 	return true
 
-func _ingresar_comentario_random() -> Comentario:
-	if !_hay_publis_procesadas():
-		return null
-	var publi = DataPartida.PUBLIS_PUBLICADAS.pick_random()
+func _ingresar_comentario_random() -> void:
+	if !_hay_publis_para_escoger():
+		return
+	var publi = DataPartida.PUBLIS_PARA_COMENTARIOS.pick_random()
 	print("(control_comentarios)------PUBLI RANDOM ELEGIDA: ",publi, " ID: ",publi.get_id())
+	if !publi.hayComentarios():
+		print("(Logica_jugable_comentarios) LA PUBLI CON ID:",publi.get_id()," NO TIENE COMENTARIOS")
+		return
 	var comment = publi.getComentarioRandom()
-	if !comment:
-		return null
-	return comment
+	ingresar_comentario(comment)
+	#sssssssss
+	publi._comentarios.erase(comment)
+	if !publi.hayComentarios():
+		DataPartida.PUBLIS_PARA_COMENTARIOS.erase(publi)
+
 
 #sim importar si fue descartada o publicada
 func DEBUG_get_comment_from_publi(id:int) -> Comentario:

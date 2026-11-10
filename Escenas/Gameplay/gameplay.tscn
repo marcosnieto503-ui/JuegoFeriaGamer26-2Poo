@@ -1,56 +1,55 @@
 [gd_scene format=4 uid="uid://bna2gcijngbas"]
 
-[ext_resource type="Script" uid="uid://c4blyrcn58omj" path="res://Scripts/gameplay.gd" id="1_2slyb"]
-[ext_resource type="Script" uid="uid://b2jw6ubats8c5" path="res://Scripts/camara.gd" id="2_1y50h"]
-[ext_resource type="Texture2D" uid="uid://mnlvofvjl8jq" path="res://Assets/LAPTOP 0, CEL 0.png" id="2_lrkxc"]
-[ext_resource type="Texture2D" uid="uid://bpmv1qocklqkd" path="res://Assets/Publis/NoIMAGEN.png" id="2_y3e6i"]
-[ext_resource type="Texture2D" uid="uid://cneteo4qo1qcs" path="res://Assets/LAPTOP 1, CEL 0-ma grande.png" id="4_5ptdf"]
-[ext_resource type="Texture2D" uid="uid://bcb184m0mvudb" path="res://Assets/Publis/testImg2.png" id="4_wu1k5"]
-[ext_resource type="Texture2D" uid="uid://bvbdns0ltr5r5" path="res://Assets/LAPTOP 0, CEL 1 v2.png" id="5_lrkxc"]
-[ext_resource type="Texture2D" uid="uid://qww5iq2kdouj" path="res://Assets/LAPTOP 1, CEl 1  -ma grande.png" id="5_mu361"]
-[ext_resource type="Script" uid="uid://ds4dtwidfvvoq" path="res://Scripts/BOTON_TESTING.gd" id="6_lrkxc"]
-[ext_resource type="Texture2D" uid="uid://cq08yoki2e1lt" path="res://Assets/principalTab.png" id="7_4kpq3"]
-[ext_resource type="Script" uid="uid://b4bgg2bpr16ap" path="res://Scripts/Autoloads/data_partida.gd" id="8_aod76"]
-[ext_resource type="PackedScene" uid="uid://7obfqhwcbt7y" path="res://Escenas/comment_overlay.tscn" id="8_npatv"]
-[ext_resource type="PackedScene" uid="uid://qdvfjwx5eo4r" path="res://Escenas/escena_reacciones.tscn" id="9_cowoy"]
-[ext_resource type="PackedScene" uid="uid://cvf0tb8m6s2h0" path="res://Escenas/efecto_noti_recibida.tscn" id="9_w15t4"]
-[ext_resource type="Script" uid="uid://cxs56wj4ls025" path="res://Scripts/Autoloads/Utils.gd" id="10_dk0po"]
-[ext_resource type="Script" uid="uid://dx0bmb3dpd02x" path="res://Scripts/manejo_archivos_txt.gd" id="10_y3e6i"]
-[ext_resource type="Script" uid="uid://bt7nrje7mcm6f" path="res://Scripts/manejo_link_articulos.gd" id="13_m1bpj"]
-[ext_resource type="Script" uid="uid://bf2ypnr80b0h0" path="res://Scripts/logica_jugable.gd" id="14_64m0a"]
-[ext_resource type="Script" uid="uid://2rbrftqv6ngb" path="res://Scripts/Autoloads/global_efectos.gd" id="16_m5mg2"]
-[ext_resource type="Script" uid="uid://c28ajo8k0ifa2" path="res://Scripts/TOOLDEBUG.gd" id="16_owj1h"]
-[ext_resource type="Script" uid="uid://6r46l1ad1la5" path="res://Scripts/audio.gd" id="17_1rnou"]
-[ext_resource type="Script" uid="uid://b2cpmmq3843mu" path="res://Scripts/control_comentarios.gd" id="17_x4pmb"]
-[ext_resource type="Script" uid="uid://b7x6e8xvjlx71" path="res://Scripts/Autoloads/global_audio_signals.gd" id="18_360n6"]
-[ext_resource type="AudioStream" uid="uid://dcxiuuoekwr8y" path="res://SFX/noti_recibida_sfx.wav" id="18_coyme"]
-[ext_resource type="AudioStream" uid="uid://blj7gx8dewyuv" path="res://SFX/noti_recibida2_sfx.wav" id="19_coyme"]
-[ext_resource type="Script" uid="uid://ws0xqqk2cgk2" path="res://Scripts/progreso_puntuacion.gd" id="19_jd8mf"]
-[ext_resource type="AudioStream" uid="uid://i3euymyj4xw6" path="res://SFX/Tender Meal.wav" id="19_mu361"]
-[ext_resource type="Script" uid="uid://dpaqa0w2eiil" path="res://Scripts/logica_jugable_comentarios.gd" id="21_3tbjw"]
-[ext_resource type="AudioStream" uid="uid://c7e8dwqmhqal3" path="res://SFX/correcto1.wav" id="22_urk4i"]
-[ext_resource type="AudioStream" uid="uid://b38y3a643a8qc" path="res://SFX/hover hint2.wav" id="23_lgj5j"]
-[ext_resource type="AudioStream" uid="uid://bxg8i2l6un834" path="res://SFX/incorrecto1.wav" id="23_md6v1"]
-[ext_resource type="AudioStream" uid="uid://bvsytiku7mh3u" path="res://SFX/ui pop 1.wav" id="24_5ptdf"]
-[ext_resource type="AudioStream" uid="uid://dch74rvg12ldi" path="res://SFX/ui pop 2.wav" id="25_mu361"]
-[ext_resource type="AudioStream" uid="uid://oadpa45o5my8" path="res://SFX/hover hint4.wav" id="27_lgj5j"]
-[ext_resource type="AudioStream" uid="uid://c1d5kaboskc20" path="res://SFX/hover hint1.wav" id="27_swuf6"]
-[ext_resource type="AudioStream" uid="uid://834lon0tid8e" path="res://SFX/hover hint3.wav" id="28_lgj5j"]
+[ext_resource type="Script" uid="uid://c4blyrcn58omj" path="res://Escenas/Gameplay/gameplay.gd" id="1_1axsk"]
+[ext_resource type="Script" uid="uid://b2jw6ubats8c5" path="res://Escenas/Gameplay/camara.gd" id="2_41hg1"]
+[ext_resource type="Texture2D" uid="uid://mnlvofvjl8jq" path="res://Assets/LAPTOP 0, CEL 0.png" id="3_hnngx"]
+[ext_resource type="Texture2D" uid="uid://cneteo4qo1qcs" path="res://Assets/LAPTOP 1, CEL 0-ma grande.png" id="4_d8hpo"]
+[ext_resource type="Texture2D" uid="uid://qww5iq2kdouj" path="res://Assets/LAPTOP 1, CEl 1  -ma grande.png" id="5_vaqcd"]
+[ext_resource type="Texture2D" uid="uid://bvbdns0ltr5r5" path="res://Assets/LAPTOP 0, CEL 1 v2.png" id="6_34dn2"]
+[ext_resource type="Texture2D" uid="uid://cq08yoki2e1lt" path="res://Assets/principalTab.png" id="7_axf5d"]
+[ext_resource type="PackedScene" uid="uid://7obfqhwcbt7y" path="res://Escenas/CommentOverlayScene/comment_overlay.tscn" id="8_4rj03"]
+[ext_resource type="Script" uid="uid://ds4dtwidfvvoq" path="res://Scripts/BOTON_TESTING.gd" id="9_bmyfo"]
+[ext_resource type="PackedScene" uid="uid://qdvfjwx5eo4r" path="res://Escenas/Escena Reacciones/escena_reacciones.tscn" id="10_iuhs4"]
+[ext_resource type="PackedScene" uid="uid://cvf0tb8m6s2h0" path="res://Escenas/efectoNotiRecibida/efecto_noti_recibida.tscn" id="11_et4j1"]
+[ext_resource type="Script" uid="uid://cxs56wj4ls025" path="res://Scripts/Autoloads/Utils.gd" id="12_l1d1x"]
+[ext_resource type="Script" uid="uid://dx0bmb3dpd02x" path="res://Escenas/Gameplay/manejo_archivos_txt.gd" id="13_ikyia"]
+[ext_resource type="Texture2D" uid="uid://bpmv1qocklqkd" path="res://Assets/Publis/NoIMAGEN.png" id="14_snssx"]
+[ext_resource type="Texture2D" uid="uid://bcb184m0mvudb" path="res://Assets/Publis/testImg2.png" id="15_xgr08"]
+[ext_resource type="Script" uid="uid://bt7nrje7mcm6f" path="res://Escenas/Gameplay/manejo_link_articulos.gd" id="16_fvrgq"]
+[ext_resource type="Script" uid="uid://b2cpmmq3843mu" path="res://Escenas/Gameplay/control_comentarios.gd" id="17_h6dqy"]
+[ext_resource type="Script" uid="uid://b4bgg2bpr16ap" path="res://Scripts/Autoloads/data_partida.gd" id="18_0xetr"]
+[ext_resource type="Script" uid="uid://ws0xqqk2cgk2" path="res://Escenas/Gameplay/progreso_puntuacion.gd" id="19_t1fop"]
+[ext_resource type="Script" uid="uid://bf2ypnr80b0h0" path="res://Escenas/Gameplay/logica_jugable.gd" id="20_y72yj"]
+[ext_resource type="Script" uid="uid://dpaqa0w2eiil" path="res://Escenas/Gameplay/logica_jugable_comentarios.gd" id="21_mkab6"]
+[ext_resource type="Script" uid="uid://2rbrftqv6ngb" path="res://Scripts/Autoloads/global_efectos.gd" id="22_emyhf"]
+[ext_resource type="Script" uid="uid://6r46l1ad1la5" path="res://Escenas/Gameplay/audio.gd" id="23_ii64q"]
+[ext_resource type="Script" uid="uid://b7x6e8xvjlx71" path="res://Scripts/Autoloads/global_audio_signals.gd" id="24_y261h"]
+[ext_resource type="AudioStream" uid="uid://i3euymyj4xw6" path="res://SFX/Tender Meal.wav" id="25_dttl8"]
+[ext_resource type="AudioStream" uid="uid://dcxiuuoekwr8y" path="res://SFX/noti_recibida_sfx.wav" id="26_oe4qr"]
+[ext_resource type="AudioStream" uid="uid://blj7gx8dewyuv" path="res://SFX/noti_recibida2_sfx.wav" id="27_ifkcu"]
+[ext_resource type="AudioStream" uid="uid://oadpa45o5my8" path="res://SFX/hover hint4.wav" id="28_kh51r"]
+[ext_resource type="AudioStream" uid="uid://c1d5kaboskc20" path="res://SFX/hover hint1.wav" id="29_v5hjs"]
+[ext_resource type="AudioStream" uid="uid://b38y3a643a8qc" path="res://SFX/hover hint2.wav" id="30_8pah4"]
+[ext_resource type="AudioStream" uid="uid://c7e8dwqmhqal3" path="res://SFX/correcto1.wav" id="31_sl4if"]
+[ext_resource type="AudioStream" uid="uid://bxg8i2l6un834" path="res://SFX/incorrecto1.wav" id="32_gq0m8"]
+[ext_resource type="AudioStream" uid="uid://bvsytiku7mh3u" path="res://SFX/ui pop 1.wav" id="33_wltkd"]
+[ext_resource type="AudioStream" uid="uid://dch74rvg12ldi" path="res://SFX/ui pop 2.wav" id="34_2tpyu"]
+[ext_resource type="AudioStream" uid="uid://834lon0tid8e" path="res://SFX/hover hint3.wav" id="35_3hk8v"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8a6s"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_lrkxc")
+"texture": ExtResource("3_hnngx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_5ptdf")
+"texture": ExtResource("4_d8hpo")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_mu361")
+"texture": ExtResource("5_vaqcd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_lrkxc")
+"texture": ExtResource("6_34dn2")
 }],
 "loop": 1,
 "name": &"gameplay_anim",
@@ -80,7 +79,7 @@ format = 3
 mix_rate = 48000
 
 [node name="Gameplay" type="Node2D" unique_id=1380733400]
-script = ExtResource("1_2slyb")
+script = ExtResource("1_1axsk")
 
 [node name="Camara" type="Camera2D" parent="." unique_id=1807535392]
 anchor_mode = 0
@@ -89,7 +88,7 @@ limit_top = 0
 limit_right = 1920
 limit_bottom = 1080
 limit_smoothed = true
-script = ExtResource("2_1y50h")
+script = ExtResource("2_41hg1")
 
 [node name="Visual" type="AnimatedSprite2D" parent="." unique_id=1100752342]
 z_index = -2
@@ -172,7 +171,7 @@ texture_filter = 1
 layout_mode = 0
 offset_right = 864.0
 offset_bottom = 456.0
-texture = ExtResource("7_4kpq3")
+texture = ExtResource("7_axf5d")
 expand_mode = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="Laptop/Pestañas/PRINCIPAL" unique_id=922016375]
@@ -192,7 +191,7 @@ clip_contents = true
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="CommentOverlay" parent="Laptop/Pestañas/PRINCIPAL" unique_id=2058207381 instance=ExtResource("8_npatv")]
+[node name="CommentOverlay" parent="Laptop/Pestañas/PRINCIPAL" unique_id=2058207381 instance=ExtResource("8_4rj03")]
 visible = false
 layout_mode = 0
 offset_left = 0.0
@@ -207,7 +206,7 @@ offset_right = 329.0
 offset_bottom = 167.0
 focus_mode = 0
 text = "INGRESAR PUBLICACION !"
-script = ExtResource("6_lrkxc")
+script = ExtResource("9_bmyfo")
 
 [node name="Button" type="Button" parent="BOTON TESTING" unique_id=1180289113]
 layout_mode = 0
@@ -225,98 +224,95 @@ offset_right = 271.0
 offset_bottom = 484.0
 text = "METE COMENTARIO"
 
-[node name="EscenaReacciones" parent="." unique_id=1526037047 instance=ExtResource("9_cowoy")]
+[node name="EscenaReacciones" parent="." unique_id=1526037047 instance=ExtResource("10_iuhs4")]
 
-[node name="EfectoNotiRecibida" parent="." unique_id=1193579616 instance=ExtResource("9_w15t4")]
+[node name="EfectoNotiRecibida" parent="." unique_id=1193579616 instance=ExtResource("11_et4j1")]
 
 [node name="Utils" type="Node" parent="." unique_id=4120857]
-script = ExtResource("10_dk0po")
+script = ExtResource("12_l1d1x")
 
 [node name="ManejoTXT publis-articulos" type="Node" parent="Utils" unique_id=1006329781]
-script = ExtResource("10_y3e6i")
+script = ExtResource("13_ikyia")
 RECURSOS_ARTICULOS = Dictionary[int, Texture2D]({
-0: ExtResource("2_y3e6i"),
-11: ExtResource("4_wu1k5")
+0: ExtResource("14_snssx"),
+11: ExtResource("15_xgr08")
 })
 
 [node name="ManejoLink-Articulos" type="Node" parent="Utils" unique_id=398345246]
-script = ExtResource("13_m1bpj")
-
-[node name="TOOLDEBUG" type="Node" parent="Utils" unique_id=958214953]
-script = ExtResource("16_owj1h")
+script = ExtResource("16_fvrgq")
 
 [node name="ControlComentarios" type="Node" parent="Utils" unique_id=2037462674]
-script = ExtResource("17_x4pmb")
+script = ExtResource("17_h6dqy")
 
 [node name="DataPartida" type="Node" parent="." unique_id=348240332]
-script = ExtResource("8_aod76")
+script = ExtResource("18_0xetr")
 DURACION_FEEDBACK_ANIMACION = 1.4
 
 [node name="ProgresoPuntuacion" type="Node" parent="DataPartida" unique_id=472846233]
-script = ExtResource("19_jd8mf")
+script = ExtResource("19_t1fop")
 
 [node name="logicaJugable" type="Node" parent="." unique_id=2062534461]
-script = ExtResource("14_64m0a")
+script = ExtResource("20_y72yj")
 NOTIS_MANUAL = false
 ciclosDeTiempo = 2.0
 probabilidad = 6.0
 
 [node name="logicaJugableComentarios" type="Node" parent="logicaJugable" unique_id=480453090]
-script = ExtResource("21_3tbjw")
+script = ExtResource("21_mkab6")
 
 [node name="TimerComments" type="Timer" parent="logicaJugable/logicaJugableComentarios" unique_id=1530896800]
 
 [node name="TimerNotis" type="Timer" parent="logicaJugable" unique_id=2106720971]
 
 [node name="GlobalEfectos" type="Node" parent="." unique_id=714558623 node_paths=PackedStringArray("nodoNotiRecibida")]
-script = ExtResource("16_m5mg2")
+script = ExtResource("22_emyhf")
 nodoNotiRecibida = NodePath("../EfectoNotiRecibida")
 
 [node name="AUDIO" type="Node" parent="." unique_id=2113904616]
-script = ExtResource("17_1rnou")
+script = ExtResource("23_ii64q")
 
 [node name="GlobalAudioSignals" type="Node" parent="AUDIO" unique_id=1607770998 node_paths=PackedStringArray("AUDIO")]
-script = ExtResource("18_360n6")
+script = ExtResource("24_y261h")
 AUDIO = NodePath("..")
 
 [node name="MusicaDeFondo" type="AudioStreamPlayer" parent="AUDIO" unique_id=2072398419]
-stream = ExtResource("19_mu361")
+stream = ExtResource("25_dttl8")
 volume_db = -2.188
 playback_type = 1
 
 [node name="entra_publi" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=25147320]
 position = Vector2(1560, 657)
-stream = ExtResource("18_coyme")
-volume_db = 22.151
+stream = ExtResource("26_oe4qr")
+volume_db = 24.0
 pitch_scale = 1.37
 panning_strength = 1.91
 
 [node name="noti_recibida2" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=701783351]
 position = Vector2(1560, 656)
-stream = ExtResource("19_coyme")
+stream = ExtResource("27_ifkcu")
 volume_db = 16.473
 panning_strength = 2.6
 
 [node name="hover_hint1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=731005719]
-stream = ExtResource("27_lgj5j")
+stream = ExtResource("28_kh51r")
 volume_db = 24.0
 pitch_scale = 1.29
 
 [node name="noti_click1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=1889878738]
-stream = ExtResource("27_swuf6")
+stream = ExtResource("29_v5hjs")
 volume_db = 21.597
 
 [node name="noti_cannot_click1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=589248788]
-stream = ExtResource("23_lgj5j")
+stream = ExtResource("30_8pah4")
 volume_db = 24.0
 pitch_scale = 0.92
 
 [node name="correcto1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=1541533858]
-stream = ExtResource("22_urk4i")
+stream = ExtResource("31_sl4if")
 volume_db = 8.067
 
 [node name="incorrecto1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=713765555]
-stream = ExtResource("23_md6v1")
+stream = ExtResource("32_gq0m8")
 volume_db = 13.454
 
 [node name="incorrecto2" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=1696857427]
@@ -325,15 +321,15 @@ volume_db = 10.866
 pitch_scale = 1.11
 
 [node name="ui_pop1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=754621253]
-stream = ExtResource("24_5ptdf")
+stream = ExtResource("33_wltkd")
 volume_db = 20.86
 
 [node name="ui_pop2" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=768510353]
-stream = ExtResource("25_mu361")
+stream = ExtResource("34_2tpyu")
 volume_db = 2.635
 
 [node name="tab_switch1" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=1884262840]
-stream = ExtResource("28_lgj5j")
+stream = ExtResource("35_3hk8v")
 volume_db = 10.643
 pitch_scale = 3.81
 

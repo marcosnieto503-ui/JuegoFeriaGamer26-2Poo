@@ -18,14 +18,15 @@
 			"tasks": [
 				"7e023cfc-57a9-4af4-bb79-565dc71cc2b1",
 				"fd306742-9866-483b-883e-db175aedd324",
-				"6944f600-59a8-4e8e-807d-8da70cda7ac8"
+				"6944f600-59a8-4e8e-807d-8da70cda7ac8",
+				"ae18942a-c11f-47e1-842c-2ec0fdec2772"
 			]
 		},
 		{
 			"uuid": "a47a7ca1-fe3c-4643-a38d-dd88aaefabce",
 			"title": "Doing",
 			"tasks": [
-				"fc592c03-26ee-4a45-bd04-276720806782"
+				"ea43d325-b10a-486c-8150-e2f0e786bcd8"
 			]
 		},
 		{
@@ -34,7 +35,8 @@
 			"tasks": [
 				"8dcced62-d2a6-4680-b559-ce9b31babca1",
 				"e2e38c4c-47a3-4d02-a218-e1de484130aa",
-				"6b6f26ca-b10d-44a2-a93f-793a5dcddcad"
+				"6b6f26ca-b10d-44a2-a93f-793a5dcddcad",
+				"fc592c03-26ee-4a45-bd04-276720806782"
 			]
 		}
 	],
@@ -85,6 +87,20 @@
 			"uuid": "6b6f26ca-b10d-44a2-a93f-793a5dcddcad",
 			"title": "Agregar efectos de sonido",
 			"description": " para que sea jugable",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "ea43d325-b10a-486c-8150-e2f0e786bcd8",
+			"title": "Dibijar el fondo y los menuus",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "ae18942a-c11f-47e1-842c-2ec0fdec2772",
+			"title": "Hacer funcionar la selecciond e opciones de los comentarios",
+			"description": "",
 			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
 			"steps": []
 		}

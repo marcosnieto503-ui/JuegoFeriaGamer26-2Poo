@@ -2,13 +2,13 @@ extends Button
 
 
 @onready var tabs = $"../Laptop/Pestañas"
-@onready var testEscena = preload("res://Escenas/ventana_publicacion.tscn")
+@onready var testEscena = preload("res://Escenas/VentanaPublicacion/ventana_publicacion.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
 
 
-@onready var CommentScene = preload("res://Escenas/comentario.tscn")
+@onready var CommentScene = preload("res://Escenas/ComentarioScene/comentario.tscn")
 @onready var cajaComentarios = $"../Laptop/Pestañas/PRINCIPAL/PanelContainer/ScrollContainer/CajaComentarios"
 
 @onready var cComentarios = $"../Utils/ControlComentarios"

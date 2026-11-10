@@ -67,12 +67,3 @@ func playSampleRPitch(sample:String):
 	sampl.play()
 	await sampl.finished
 	sampl.set_pitch_scale(P)
-
-#-------------------------------------------------
-#---- TODO LO QUE ESTE DEBAJO DE ESTO ES DEBUG
-#----------------------------------------------
-
-func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("espacio"):
-		#playNotiRecibida()
-		pass

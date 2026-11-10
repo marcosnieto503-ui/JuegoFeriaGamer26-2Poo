@@ -19,7 +19,7 @@ enum { #estados de la imagen del gameplay
 }
 
 @onready var cajaNotif = $"Celular/ScrollNotificaciones/CajaNotificaciones"
-const NOTIFICACION = preload("res://Escenas/notificacion.tscn")
+const NOTIFICACION = preload("res://Escenas/NotificacionScene/notificacion.tscn")
 
 
 signal _movido_hacia_telefono
@@ -32,8 +32,7 @@ func _ready() -> void:
 	#pantalla.hide()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	
+func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("espacio")): #-------------------debug
 		#DEBUGingresarNotiRandom()
 		pass
@@ -102,5 +101,5 @@ func toLaptop():
 	
 
 
-func _on_pestañas_tab_clicked(tab: int) -> void:
+func _on_pestañas_tab_clicked(tab:int) -> void:
 	GlobalAudioSignals.playTabSwitch()

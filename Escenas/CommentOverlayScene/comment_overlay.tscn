@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7obfqhwcbt7y"]
 
-[ext_resource type="Script" uid="uid://ccloslvn24rt8" path="res://Scripts/comment_overlay.gd" id="1_oacvb"]
+[ext_resource type="Script" uid="uid://ccloslvn24rt8" path="res://Escenas/CommentOverlayScene/comment_overlay.gd" id="1_oacvb"]
 [ext_resource type="Texture2D" uid="uid://bkwlal6d6u748" path="res://Assets/iconPubli1.png" id="1_uoj4f"]
 [ext_resource type="Texture2D" uid="uid://1n3vclfhu8ap" path="res://Assets/flechaPubliACom1.png" id="2_oacvb"]
 [ext_resource type="Texture2D" uid="uid://byyy0u38jddmd" path="res://Assets/UserIcon1.png" id="3_smwy8"]
