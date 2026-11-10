@@ -27,10 +27,11 @@ func _on_timer_timeout() -> void:
 
 func saleNoti():
 	if randf_range(0,10) <= probabilidad:
-		print("SALE NOTI")
+		#print("SALE NOTI")
 		ingresarNotiRandom()
 	else:
-		print("NO SALE NOTI")
+		#print("NO SALE NOTI")
+		pass
 
 func ingresarNotiRandom():
 	var notif = NOTIFICACION.instantiate()
@@ -38,12 +39,12 @@ func ingresarNotiRandom():
 	if publi_a_asignar == null:
 		push_error("No hay mas publicaciones para mostrar, array vacio mostro.")
 		return
-	Utils.excluiurPublicacion(publi_a_asignar)
+	Utils.excluirPublicacion(publi_a_asignar)
 	cajaNotif.add_child(notif)
 	notif.asignarPubli(publi_a_asignar)
 	GlobalEfectos.efectoNotiRecibida(Vector2(1360,640),2)
 	_noti_recibida.emit()
-	print("NOTIFICACION ALEATORIA INGRESADA")
+	#print("NOTIFICACION ALEATORIA INGRESADA")
 
 
 func _unhandled_input(event: InputEvent) -> void:

@@ -21,8 +21,22 @@ func _get_comentario_random() -> Comentario:
 		return null
 	return comment
 
-
-
+#sim importar si fue descartada o publicada
+func DEBUG_get_comment_from_publi(id:int) -> Comentario:
+	if !_hay_publis_procesadas():
+		return null
+	var publi:Publicacion
+	if Utils.PUBLIS_EXCLUIDAS.has(id):
+		publi = Utils.PUBLIS_EXCLUIDAS[id]
+	else:
+		print("No existe la publbli : ",id," En publis excluidas")
+		return
+	var com = publi.getComentarioRandom()
+	if !com:
+		print("No hay comentarios en la public: ",id)
+		return
+	else:
+		return com
 
 #LECTURA DE ARCHIVO
 func leerArchivoComentarios():

@@ -24,6 +24,7 @@
 [ext_resource type="Script" uid="uid://b7x6e8xvjlx71" path="res://Scripts/global_audio_signals.gd" id="18_360n6"]
 [ext_resource type="AudioStream" uid="uid://dcxiuuoekwr8y" path="res://SFX/noti_recibida_sfx.wav" id="18_coyme"]
 [ext_resource type="AudioStream" uid="uid://blj7gx8dewyuv" path="res://SFX/noti_recibida2_sfx.wav" id="19_coyme"]
+[ext_resource type="Script" uid="uid://ws0xqqk2cgk2" path="res://Scripts/progreso_puntuacion.gd" id="19_jd8mf"]
 [ext_resource type="AudioStream" uid="uid://i3euymyj4xw6" path="res://SFX/Tender Meal.wav" id="19_mu361"]
 [ext_resource type="AudioStream" uid="uid://c7e8dwqmhqal3" path="res://SFX/correcto1.wav" id="22_urk4i"]
 [ext_resource type="AudioStream" uid="uid://b38y3a643a8qc" path="res://SFX/hover hint2.wav" id="23_lgj5j"]
@@ -236,6 +237,9 @@ script = ExtResource("17_x4pmb")
 [node name="DataPartida" type="Node" parent="." unique_id=348240332]
 script = ExtResource("8_aod76")
 DURACION_FEEDBACK_ANIMACION = 1.4
+
+[node name="ProgresoPuntuacion" type="Node" parent="DataPartida" unique_id=472846233]
+script = ExtResource("19_jd8mf")
 
 [node name="logicaJugable" type="Node" parent="." unique_id=2062534461]
 script = ExtResource("14_64m0a")

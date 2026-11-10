@@ -20,7 +20,7 @@ func _on_button_check_pressed() -> void:
 
 func _on_button_2_pressed() -> void:
 	#mete comentario
-	var c = cComentarios._get_comentario_random()
+	var c = cComentarios.DEBUG_get_comment_from_publi(11)
 	if !c:
 		push_error("- NO HAY COMENTARIO PA PILLAR")
 		return
@@ -35,7 +35,7 @@ func _on_button_down() -> void:
 		return
 	var p = Utils.PUBLICACIONES.get(11)
 	Utils.ingresarPublicacion(p)
-	Utils.excluiurPublicacion(p)
+	Utils.excluirPublicacion(p)
 	
 	return
 	

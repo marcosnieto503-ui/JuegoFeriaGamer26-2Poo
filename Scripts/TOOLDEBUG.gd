@@ -9,6 +9,7 @@ extends Node
 @onready var cajaComentarios = $"../../Laptop/Pestañas/PRINCIPAL/COMENTARIOS"
 
 func _meter_comentario():
+	return
 	var com = CommentScene.instantiate()
 	com.asignarComentario($"../ControlComentarios"._get_comentario_random())
 	cajaComentarios.add_child(com)

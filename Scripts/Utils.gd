@@ -54,7 +54,8 @@ func ingresarPublicacion(publi : Publicacion):
 	tabNoti.inicializar(publi)
 	_publi_ingresada.emit()
 
-func excluiurPublicacion(publi: Publicacion):
+#esto se llama cuando una publi llega al telefono, para que no vuelva a aparecer
+func excluirPublicacion(publi: Publicacion):
 	PUBLICACIONES.erase(publi.get_id())
 	PUBLIS_EXCLUIDAS.set(publi.get_id(),publi)
 	print("-Publicacion excluida, no volvera a aparecer: ", publi.get_id())
