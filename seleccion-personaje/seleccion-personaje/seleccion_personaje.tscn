@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://d2p5u0wa1yjv8"]
+
+[ext_resource type="Script" uid="uid://docr12bvnbs3v" path="res://seleccion_personaje.gd" id="1_jxhxg"]
+[ext_resource type="Texture2D" uid="uid://curdl1fxvkuru" path="res://imagenes/fondo.png" id="1_p54kw"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://fuentes/Redaction35-Bold.ttf" id="2_jxhxg"]
+[ext_resource type="AudioStream" uid="uid://6yr2btc86jmh" path="res://audio/musica_fondo.mp3" id="4_aoipj"]
+[ext_resource type="Script" uid="uid://bchrbp1gq0753" path="res://botonprueba.gd" id="5_ja68q"]
+
+[node name="SeleccionPersonaje" type="Control" unique_id=909038432]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jxhxg")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1939612832]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_p54kw")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Piel" type="TextureRect" parent="." unique_id=364926912]
+layout_mode = 1
+offset_left = 900.0
+offset_top = 200.0
+offset_right = 1800.0
+offset_bottom = 1100.0
+expand_mode = 1
+
+[node name="Accesorio" type="TextureRect" parent="." unique_id=97395063]
+layout_mode = 1
+offset_left = 900.0
+offset_top = 200.0
+offset_right = 1800.0
+offset_bottom = 1100.0
+expand_mode = 1
+
+[node name="Opcion1" type="Button" parent="." unique_id=2016104367]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 390.0
+offset_right = 650.0
+offset_bottom = 555.0
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0, 1)
+theme_override_fonts/font = ExtResource("2_jxhxg")
+theme_override_font_sizes/font_size = 64
+flat = true
+
+[node name="Opcion2" type="Button" parent="." unique_id=1757850490]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 594.0
+offset_right = 650.0
+offset_bottom = 759.0
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0, 1)
+theme_override_fonts/font = ExtResource("2_jxhxg")
+theme_override_font_sizes/font_size = 64
+flat = true
+
+[node name="Opcion3" type="Button" parent="." unique_id=604771817]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 804.0
+offset_right = 650.0
+offset_bottom = 969.0
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0, 1)
+theme_override_fonts/font = ExtResource("2_jxhxg")
+theme_override_font_sizes/font_size = 64
+flat = true
+
+[node name="Musica" type="AudioStreamPlayer" parent="." unique_id=1080781748]
+stream = ExtResource("4_aoipj")
+volume_db = -10.335
+autoplay = true
+
+[node name="Nota" type="Label" parent="." unique_id=742608807]
+layout_mode = 1
+offset_left = 870.0
+offset_top = 40.0
+offset_right = 1870.0
+offset_bottom = 140.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_jxhxg")
+theme_override_font_sizes/font_size = 36
+text = "Pasa el cursor sobre una opción para ver cómo luce, 
+y haz clic cuando quieras elegir."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Mensaje" type="Label" parent="." unique_id=845578384]
+visible = false
+layout_mode = 0
+offset_left = 870.0
+offset_top = 40.0
+offset_right = 1670.0
+offset_bottom = 190.0
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_jxhxg")
+theme_override_font_sizes/font_size = 96
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1742844514]
+layout_mode = 0
+offset_left = 1475.0
+offset_top = 679.0
+offset_right = 1915.0
+offset_bottom = 1080.0
+script = ExtResource("5_ja68q")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

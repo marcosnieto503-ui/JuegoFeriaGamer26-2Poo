@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cc4s1advfr6ig"]
+
+[ext_resource type="Script" uid="uid://d3mu42lboki3q" path="res://sprite_2d.gd" id="1_y0x00"]
+[ext_resource type="Script" uid="uid://xm6h3cvmv1tx" path="res://button.gd" id="2_0r0on"]
+[ext_resource type="Script" uid="uid://bqoda75y5ejyu" path="res://button_2.gd" id="3_1s5vy"]
+
+[node name="PruebitaPersistencia" type="Node2D" unique_id=2047230487]
+
+[node name="personaje" type="Sprite2D" parent="." unique_id=1181255324]
+position = Vector2(100, 100)
+script = ExtResource("1_y0x00")
+
+[node name="Button" type="Button" parent="." unique_id=1944730607 node_paths=PackedStringArray("sprite")]
+offset_left = 252.0
+offset_top = 42.0
+offset_right = 313.0
+offset_bottom = 91.0
+script = ExtResource("2_0r0on")
+sprite = NodePath("../personaje")
+
+[node name="Button2" type="Button" parent="." unique_id=1953307491]
+offset_left = 260.0
+offset_top = 167.0
+offset_right = 321.0
+offset_bottom = 216.0
+script = ExtResource("3_1s5vy")
+
+[node name="Button3" type="Button" parent="." unique_id=1933733906]
+offset_left = 334.0
+offset_top = 97.0
+offset_right = 395.0
+offset_bottom = 146.0
+
+[node name="Button4" type="Button" parent="." unique_id=1567632688]
+offset_left = 177.0
+offset_top = 107.0
+offset_right = 238.0
+offset_bottom = 156.0
