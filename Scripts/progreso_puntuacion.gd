@@ -15,10 +15,19 @@ func _ready() -> void:
 
 func Ingresar_Publi_Correcta(p:Publicacion):
 	PUBLIS_CORRECTAS.append(p)
-func Ingresar_Publi_Incoorrecta(p:Publicacion):
+func Ingresar_Publi_Incorrecta(p:Publicacion):
 	PUBLIS_INCORRECTAS.append(p)
 
 func Ingresar_Comentario_Correcto(c:Comentario):
 	COMENTARIOS_CORRECTOS.append(c)
 func Ingresar_Comentario_Incorrecto(c:Comentario):
 	COMENTARIOS_INCORRECTOS.append(c)
+	
+func Obtener_Comentarios_Correctos():
+	return COMENTARIOS_CORRECTOS.size()
+func Obtener_Comentarios_Incorrectos():
+	return COMENTARIOS_INCORRECTOS.size()
+func Obtener_Publicaciones_Correctos():
+	return PUBLIS_CORRECTAS.size()
+func Obtener_Publicaciones_Incorrectas():
+	return PUBLIS_INCORRECTAS.size()

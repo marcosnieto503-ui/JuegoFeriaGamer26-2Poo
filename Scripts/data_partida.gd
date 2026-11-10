@@ -34,9 +34,11 @@ func procesarPubli(publi:Publicacion, playerAccion :String):
 	if playerAccion == accionEsperada:
 		reacciones.displayAnimFeedback("bien_hecho",Vector2(1340,350),DURACION_FEEDBACK_ANIMACION)
 		GlobalAudioSignals.playCorrectAnswer()
+		ProgresoPuntuacion.Ingresar_Publi_Correcta(publi)
 	else:
 		reacciones.displayAnimFeedback("mal_hecho",Vector2(225,350),DURACION_FEEDBACK_ANIMACION)
 		GlobalAudioSignals.playWrongAnswer()
+		ProgresoPuntuacion.Ingresar_Publi_Incorrecta(publi)
 	
 	if playerAccion == "PUBLICAR":
 		PUBLIS_PUBLICADAS.append(publi)

@@ -22,6 +22,7 @@ DataPartida="*uid://b4bgg2bpr16ap"
 GlobalEfectos="*uid://2rbrftqv6ngb"
 GlobalAudioSignals="*uid://b7x6e8xvjlx71"
 ProgresoPuntuacion="*uid://ws0xqqk2cgk2"
+ManejoPuntuaciones="*uid://bebavonyk5usr"
 
 [display]
 

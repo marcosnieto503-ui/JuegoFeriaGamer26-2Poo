@@ -24,7 +24,7 @@
 [ext_resource type="Script" uid="uid://b7x6e8xvjlx71" path="res://Scripts/global_audio_signals.gd" id="18_360n6"]
 [ext_resource type="AudioStream" uid="uid://dcxiuuoekwr8y" path="res://SFX/noti_recibida_sfx.wav" id="18_coyme"]
 [ext_resource type="AudioStream" uid="uid://blj7gx8dewyuv" path="res://SFX/noti_recibida2_sfx.wav" id="19_coyme"]
-[ext_resource type="Script" uid="uid://ws0xqqk2cgk2" path="res://Scripts/progreso_puntuacion.gd" id="19_jd8mf"]
+[ext_resource type="Script" uid="uid://b1tihctkqfc8p" path="res://Scripts/progreso_puntuacion.gd" id="19_jd8mf"]
 [ext_resource type="AudioStream" uid="uid://i3euymyj4xw6" path="res://SFX/Tender Meal.wav" id="19_mu361"]
 [ext_resource type="AudioStream" uid="uid://c7e8dwqmhqal3" path="res://SFX/correcto1.wav" id="22_urk4i"]
 [ext_resource type="AudioStream" uid="uid://b38y3a643a8qc" path="res://SFX/hover hint2.wav" id="23_lgj5j"]
@@ -34,6 +34,7 @@
 [ext_resource type="AudioStream" uid="uid://oadpa45o5my8" path="res://SFX/hover hint4.wav" id="27_lgj5j"]
 [ext_resource type="AudioStream" uid="uid://c1d5kaboskc20" path="res://SFX/hover hint1.wav" id="27_swuf6"]
 [ext_resource type="AudioStream" uid="uid://834lon0tid8e" path="res://SFX/hover hint3.wav" id="28_lgj5j"]
+[ext_resource type="Script" uid="uid://fdgm3yy1n7o" path="res://Escenas/botonPuntuacion.gd" id="35_3tbjw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8a6s"]
 animations = [{
@@ -322,6 +323,14 @@ pitch_scale = 3.81
 position = Vector2(730, 430)
 current = true
 
+[node name="Button" type="Button" parent="." unique_id=805437603]
+offset_left = 1387.0
+offset_top = 90.0
+offset_right = 1675.0
+offset_bottom = 224.0
+text = "puntuacion"
+script = ExtResource("35_3tbjw")
+
 [connection signal="_movido_hacia_laptop" from="." to="AUDIO" method="_player_movido_hacia_laptop"]
 [connection signal="_movido_hacia_telefono" from="." to="AUDIO" method="_player_movido_hacia_telefono"]
 [connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
@@ -332,3 +341,4 @@ current = true
 [connection signal="pressed" from="BOTON TESTING/Button2" to="BOTON TESTING" method="_on_button_2_pressed"]
 [connection signal="_noti_recibida" from="logicaJugable" to="AUDIO" method="_on_logica_jugable__noti_recibida"]
 [connection signal="timeout" from="logicaJugable/Timer" to="logicaJugable" method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
