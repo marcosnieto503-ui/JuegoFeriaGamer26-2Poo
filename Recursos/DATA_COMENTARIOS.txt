@@ -1,6 +1,76 @@
 #i
--texto:Este es un comentario de prueba, el que lea esto e gei.
+-texto:1 Este es un comentario de prueba, texto de relleno fuap.
 -id:1
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
+#i
+-texto:2 Este es un comentario de prueba, texto de relleno fuap.
+-id:2
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
+#i
+-texto:3 Este es un comentario de prueba, texto de relleno fuap.
+-id:3
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
+#i
+-texto:4 Este es un comentario de prueba, texto de relleno fuap.
+-id:4
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
+#i
+-texto:5 Este es un comentario de prueba, texto de relleno fuap.
+-id:5
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
+#i
+-texto:6 Este es un comentario de prueba, texto de relleno fuap.
+-id:6
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
+#i
+-texto:7 Este es un comentario de prueba, texto de relleno fuap.
+-id:7
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
+#i
+-texto:8 Este es un comentario de prueba, texto de relleno fuap.
+-id:8
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
+#i
+-texto:9 Este es un comentario de prueba, texto de relleno fuap.
+-id:9
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
+#i
+-texto:10 Este es un comentario de prueba, texto de relleno fuap.
+-id:10
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
+#i
+-texto:11 Este es un comentario de prueba, texto de relleno fuap.
+-id:11
 -r1:Lo lamentamos mucho.
 -r2:Casi te pregunto.
 -r3:La cagada va en la taza.

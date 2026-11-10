@@ -10,22 +10,24 @@
 [ext_resource type="Texture2D" uid="uid://qww5iq2kdouj" path="res://Assets/LAPTOP 1, CEl 1  -ma grande.png" id="5_mu361"]
 [ext_resource type="Script" uid="uid://ds4dtwidfvvoq" path="res://Scripts/BOTON_TESTING.gd" id="6_lrkxc"]
 [ext_resource type="Texture2D" uid="uid://cq08yoki2e1lt" path="res://Assets/principalTab.png" id="7_4kpq3"]
-[ext_resource type="Script" uid="uid://b4bgg2bpr16ap" path="res://Scripts/data_partida.gd" id="8_aod76"]
+[ext_resource type="Script" uid="uid://b4bgg2bpr16ap" path="res://Scripts/Autoloads/data_partida.gd" id="8_aod76"]
+[ext_resource type="PackedScene" uid="uid://7obfqhwcbt7y" path="res://Escenas/comment_overlay.tscn" id="8_npatv"]
 [ext_resource type="PackedScene" uid="uid://qdvfjwx5eo4r" path="res://Escenas/escena_reacciones.tscn" id="9_cowoy"]
 [ext_resource type="PackedScene" uid="uid://cvf0tb8m6s2h0" path="res://Escenas/efecto_noti_recibida.tscn" id="9_w15t4"]
-[ext_resource type="Script" uid="uid://cxs56wj4ls025" path="res://Scripts/Utils.gd" id="10_dk0po"]
+[ext_resource type="Script" uid="uid://cxs56wj4ls025" path="res://Scripts/Autoloads/Utils.gd" id="10_dk0po"]
 [ext_resource type="Script" uid="uid://dx0bmb3dpd02x" path="res://Scripts/manejo_archivos_txt.gd" id="10_y3e6i"]
 [ext_resource type="Script" uid="uid://bt7nrje7mcm6f" path="res://Scripts/manejo_link_articulos.gd" id="13_m1bpj"]
 [ext_resource type="Script" uid="uid://bf2ypnr80b0h0" path="res://Scripts/logica_jugable.gd" id="14_64m0a"]
-[ext_resource type="Script" uid="uid://2rbrftqv6ngb" path="res://Scripts/global_efectos.gd" id="16_m5mg2"]
+[ext_resource type="Script" uid="uid://2rbrftqv6ngb" path="res://Scripts/Autoloads/global_efectos.gd" id="16_m5mg2"]
 [ext_resource type="Script" uid="uid://c28ajo8k0ifa2" path="res://Scripts/TOOLDEBUG.gd" id="16_owj1h"]
 [ext_resource type="Script" uid="uid://6r46l1ad1la5" path="res://Scripts/audio.gd" id="17_1rnou"]
 [ext_resource type="Script" uid="uid://b2cpmmq3843mu" path="res://Scripts/control_comentarios.gd" id="17_x4pmb"]
-[ext_resource type="Script" uid="uid://b7x6e8xvjlx71" path="res://Scripts/global_audio_signals.gd" id="18_360n6"]
+[ext_resource type="Script" uid="uid://b7x6e8xvjlx71" path="res://Scripts/Autoloads/global_audio_signals.gd" id="18_360n6"]
 [ext_resource type="AudioStream" uid="uid://dcxiuuoekwr8y" path="res://SFX/noti_recibida_sfx.wav" id="18_coyme"]
 [ext_resource type="AudioStream" uid="uid://blj7gx8dewyuv" path="res://SFX/noti_recibida2_sfx.wav" id="19_coyme"]
 [ext_resource type="Script" uid="uid://ws0xqqk2cgk2" path="res://Scripts/progreso_puntuacion.gd" id="19_jd8mf"]
 [ext_resource type="AudioStream" uid="uid://i3euymyj4xw6" path="res://SFX/Tender Meal.wav" id="19_mu361"]
+[ext_resource type="Script" uid="uid://dpaqa0w2eiil" path="res://Scripts/logica_jugable_comentarios.gd" id="21_3tbjw"]
 [ext_resource type="AudioStream" uid="uid://c7e8dwqmhqal3" path="res://SFX/correcto1.wav" id="22_urk4i"]
 [ext_resource type="AudioStream" uid="uid://b38y3a643a8qc" path="res://SFX/hover hint2.wav" id="23_lgj5j"]
 [ext_resource type="AudioStream" uid="uid://bxg8i2l6un834" path="res://SFX/incorrecto1.wav" id="23_md6v1"]
@@ -181,10 +183,22 @@ offset_right = 827.0
 offset_bottom = 428.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_xmlui")
 
-[node name="COMENTARIOS" type="VBoxContainer" parent="Laptop/Pestañas/PRINCIPAL/PanelContainer" unique_id=220431528]
+[node name="ScrollContainer" type="ScrollContainer" parent="Laptop/Pestañas/PRINCIPAL/PanelContainer" unique_id=2107879576]
+layout_mode = 2
+vertical_scroll_mode = 4
+
+[node name="CajaComentarios" type="VBoxContainer" parent="Laptop/Pestañas/PRINCIPAL/PanelContainer/ScrollContainer" unique_id=220431528]
 clip_contents = true
 layout_mode = 2
 theme_override_constants/separation = 5
+
+[node name="CommentOverlay" parent="Laptop/Pestañas/PRINCIPAL" unique_id=2058207381 instance=ExtResource("8_npatv")]
+visible = false
+layout_mode = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 832.0
+offset_bottom = 431.0
 
 [node name="BOTON TESTING" type="Button" parent="." unique_id=938050882]
 offset_left = 36.0
@@ -247,7 +261,12 @@ NOTIS_MANUAL = false
 ciclosDeTiempo = 2.0
 probabilidad = 6.0
 
-[node name="Timer" type="Timer" parent="logicaJugable" unique_id=2106720971]
+[node name="logicaJugableComentarios" type="Node" parent="logicaJugable" unique_id=480453090]
+script = ExtResource("21_3tbjw")
+
+[node name="TimerComments" type="Timer" parent="logicaJugable/logicaJugableComentarios" unique_id=1530896800]
+
+[node name="TimerNotis" type="Timer" parent="logicaJugable" unique_id=2106720971]
 
 [node name="GlobalEfectos" type="Node" parent="." unique_id=714558623 node_paths=PackedStringArray("nodoNotiRecibida")]
 script = ExtResource("16_m5mg2")
@@ -331,4 +350,5 @@ current = true
 [connection signal="pressed" from="BOTON TESTING/Button" to="BOTON TESTING" method="_on_button_check_pressed"]
 [connection signal="pressed" from="BOTON TESTING/Button2" to="BOTON TESTING" method="_on_button_2_pressed"]
 [connection signal="_noti_recibida" from="logicaJugable" to="AUDIO" method="_on_logica_jugable__noti_recibida"]
-[connection signal="timeout" from="logicaJugable/Timer" to="logicaJugable" method="_on_timer_timeout"]
+[connection signal="timeout" from="logicaJugable/logicaJugableComentarios/TimerComments" to="logicaJugable/logicaJugableComentarios" method="_on_timer_comments_timeout"]
+[connection signal="timeout" from="logicaJugable/TimerNotis" to="logicaJugable" method="_on_timer_timeout"]

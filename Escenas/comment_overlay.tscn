@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://7obfqhwcbt7y"]
+
+[ext_resource type="Script" uid="uid://ccloslvn24rt8" path="res://Scripts/comment_overlay.gd" id="1_oacvb"]
+[ext_resource type="Texture2D" uid="uid://bkwlal6d6u748" path="res://Assets/iconPubli1.png" id="1_uoj4f"]
+[ext_resource type="Texture2D" uid="uid://1n3vclfhu8ap" path="res://Assets/flechaPubliACom1.png" id="2_oacvb"]
+[ext_resource type="Texture2D" uid="uid://byyy0u38jddmd" path="res://Assets/UserIcon1.png" id="3_smwy8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4jjv"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.3106173, 0.31061706, 0.31061706, 0.78431374)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmlui"]
+bg_color = Color(0.29219002, 0.29219005, 0.29218993, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdaly"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.42745098, 0.42745098, 0.42745098, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f3445"]
+bg_color = Color(0.19076231, 0.19076234, 0.19076222, 1)
+
+[node name="CommentOverlay" type="Control" unique_id=2058207381]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 10.0
+offset_top = 12.0
+offset_right = 842.0
+offset_bottom = 443.0
+script = ExtResource("1_oacvb")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=641394383]
+layout_mode = 0
+offset_right = 830.0
+offset_bottom = 427.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x4jjv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=972030985]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="InfoContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer" unique_id=906831877]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/InfoContainer" unique_id=472557539]
+layout_mode = 2
+
+[node name="PubliInfo" type="Control" parent="PanelContainer/VBoxContainer/InfoContainer/HBoxContainer" unique_id=26280900]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/InfoContainer/HBoxContainer/PubliInfo" unique_id=1355380608]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 18.0
+offset_right = 314.0
+offset_bottom = 266.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xmlui")
+
+[node name="PubliIcon" type="TextureRect" parent="PanelContainer/VBoxContainer/InfoContainer/HBoxContainer/PubliInfo" unique_id=790048983]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 28.0
+offset_right = 78.0
+offset_bottom = 77.0
+texture = ExtResource("1_uoj4f")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="PanelContainer/VBoxContainer/InfoContainer/HBoxContainer/PubliInfo" unique_id=1169858820]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 29.0
+offset_right = 299.0
+offset_bottom = 78.0
+texture = ExtResource("2_oacvb")
+expand_mode = 1
+stretch_mode = 4
+flip_v = true
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/InfoContainer/HBoxContainer/PubliInfo" unique_id=616068259]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 84.0
+offset_right = 296.0
+offset_bottom = 250.0
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_bdaly")
+text = "[AQUI VA EL TEXTO DE LA PUBLI]"
+text_overrun_behavior = 5
+
+[node name="Comment" type="Control" parent="PanelContainer/VBoxContainer/InfoContainer/HBoxContainer" unique_id=94254445]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/InfoContainer/HBoxContainer/Comment" unique_id=1148936895]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 15.0
+offset_right = 490.0
+offset_bottom = 268.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_xmlui")
+
+[node name="UserIcon" type="TextureRect" parent="PanelContainer/VBoxContainer/InfoContainer/HBoxContainer/Comment" unique_id=1460561870]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 34.0
+offset_right = 95.0
+offset_bottom = 91.0
+texture = ExtResource("3_smwy8")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/InfoContainer/HBoxContainer/Comment" unique_id=2034552653]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 33.0
+offset_right = 463.0
+offset_bottom = 230.0
+theme_override_font_sizes/font_size = 14
+theme_override_styles/normal = SubResource("StyleBoxFlat_bdaly")
+text = "[AQUI VA EL TEXTO DEL COMENTARIO]"
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer" unique_id=927287341]
+layout_mode = 2
+offset_transform_position = Vector2(100, 0)
+
+[node name="BotonContainer" type="GridContainer" parent="PanelContainer/VBoxContainer/CenterContainer" unique_id=1254603652]
+clip_contents = true
+layout_mode = 2
+columns = 2
+
+[node name="Button1" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/BotonContainer" unique_id=557613932]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+focus_mode = 0
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/BotonContainer" unique_id=487178959]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+focus_mode = 0
+
+[node name="Button3" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/BotonContainer" unique_id=862397790]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+focus_mode = 0
+
+[node name="Button4" type="Button" parent="PanelContainer/VBoxContainer/CenterContainer/BotonContainer" unique_id=827141377]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+focus_mode = 0
+
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer/CenterContainer" unique_id=1844113131]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="PanelContainer/VBoxContainer/CenterContainer/Control" unique_id=2090161078]
+texture_filter = 1
+position = Vector2(255, -18)
+rotation = 1.5707964
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_oacvb")
+flip_h = true
+flip_v = true
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/CenterContainer/Control" unique_id=1151163849]
+layout_mode = 0
+offset_left = -494.0
+offset_top = -39.0
+offset_right = -217.0
+offset_bottom = 36.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_f3445")
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/CenterContainer/Control" unique_id=1222753231]
+layout_mode = 0
+offset_left = -477.0
+offset_top = -17.0
+offset_right = -231.0
+offset_bottom = 62.0
+text = "RESPONDER A EL COMENTARIO:"

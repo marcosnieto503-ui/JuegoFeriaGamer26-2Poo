@@ -6,7 +6,7 @@ extends Node
 @export_tool_button("VACIAR COMENTARIOS", "AnimationFilter") var pos = _vaciar_comentarios
 
 @onready var CommentScene = preload("res://Escenas/comentario.tscn")
-@onready var cajaComentarios = $"../../Laptop/Pestañas/PRINCIPAL/COMENTARIOS"
+@onready var cajaComentarios = $"../../Laptop/Pestañas/PRINCIPAL/PanelContainer/ScrollContainer/CajaComentarios"
 
 func _meter_comentario():
 	return

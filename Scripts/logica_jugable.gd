@@ -1,9 +1,10 @@
 extends Node
 
-@onready var timer = $Timer
+@onready var timer = $TimerNotis
 
 @export var NOTIS_MANUAL :bool = true
 @export var ciclosDeTiempo :float
+##Si el valor aleatorio elegido del 1 al 10 es menor o igual a este valor, se considera true
 @export var probabilidad :float
 
 @onready var cajaNotif = $"../Celular/ScrollNotificaciones/CajaNotificaciones"

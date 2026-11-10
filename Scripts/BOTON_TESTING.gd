@@ -9,7 +9,7 @@ func _ready() -> void:
 
 
 @onready var CommentScene = preload("res://Escenas/comentario.tscn")
-@onready var cajaComentarios = $"../Laptop/Pestañas/PRINCIPAL/PanelContainer/COMENTARIOS"
+@onready var cajaComentarios = $"../Laptop/Pestañas/PRINCIPAL/PanelContainer/ScrollContainer/CajaComentarios"
 
 @onready var cComentarios = $"../Utils/ControlComentarios"
 
@@ -24,10 +24,7 @@ func _on_button_2_pressed() -> void:
 	if !c:
 		push_error("- NO HAY COMENTARIO PA PILLAR")
 		return
-	var com = CommentScene.instantiate()
-	print("SE ASIGNA O NO: ",com.asignarComentario(c))
-	cajaComentarios.add_child(com)
-	print("-- -- 2 COMENTARIO PEGAO CORRECTAMENTE")
+	cComentarios.ingresar_comentario(c)
 
 func _on_button_down() -> void:
 	if !Utils.PUBLICACIONES.has(11):

@@ -1,6 +1,8 @@
 extends Node
 
 var rutaComentarios = "res://Recursos/DATA_COMENTARIOS.txt"
+var escenaComentario = preload("res://Escenas/comentario.tscn")
+@onready var cajaComentarios = $"../../Laptop/Pestañas/PRINCIPAL/PanelContainer/ScrollContainer/CajaComentarios"
 
 func _ready() -> void:
 	await get_tree().process_frame
@@ -11,11 +13,11 @@ func _hay_publis_procesadas() -> bool:
 		return false
 	return true
 
-func _get_comentario_random() -> Comentario:
+func _ingresar_comentario_random() -> Comentario:
 	if !_hay_publis_procesadas():
 		return null
 	var publi = DataPartida.PUBLIS_PUBLICADAS.pick_random()
-	print("------PUBLI RANDOM ELEGIDA: ",publi, " ID: ",publi.get_id())
+	print("(control_comentarios)------PUBLI RANDOM ELEGIDA: ",publi, " ID: ",publi.get_id())
 	var comment = publi.getComentarioRandom()
 	if !comment:
 		return null
@@ -23,8 +25,6 @@ func _get_comentario_random() -> Comentario:
 
 #sim importar si fue descartada o publicada
 func DEBUG_get_comment_from_publi(id:int) -> Comentario:
-	if !_hay_publis_procesadas():
-		return null
 	var publi:Publicacion
 	if Utils.PUBLIS_EXCLUIDAS.has(id):
 		publi = Utils.PUBLIS_EXCLUIDAS[id]
@@ -37,6 +37,14 @@ func DEBUG_get_comment_from_publi(id:int) -> Comentario:
 		return
 	else:
 		return com
+
+
+func ingresar_comentario(c:Comentario):
+	var com = escenaComentario.instantiate()
+	if !com.asignarComentario(c):
+		return
+	cajaComentarios.add_child(com)
+	print("(control_comentarios) COMENTARIO AGREGADO A LA ESCENA CORRECTAMENTE")
 
 #LECTURA DE ARCHIVO
 func leerArchivoComentarios():
