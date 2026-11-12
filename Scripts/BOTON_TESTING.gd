@@ -15,8 +15,7 @@ func _ready() -> void:
 
 
 func _on_button_check_pressed() -> void:
-	print("-------HAY PUBLICS PROCESADAS: ",cComentarios._hay_publis_procesadas())
-	print(" ------ COM RANDOM: ", cComentarios._get_comentario_random())
+	print("-------HAY PUBLICS PROCESADAS: ",cComentarios._hay_publis_para_escoger())
 
 func _on_button_2_pressed() -> void:
 	#mete comentario

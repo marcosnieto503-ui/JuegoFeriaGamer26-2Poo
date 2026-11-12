@@ -26,6 +26,7 @@
 			"uuid": "a47a7ca1-fe3c-4643-a38d-dd88aaefabce",
 			"title": "Doing",
 			"tasks": [
+				"dc05a01a-8ccd-4e85-9011-3d3c2929ebd7",
 				"ea43d325-b10a-486c-8150-e2f0e786bcd8"
 			]
 		},
@@ -100,6 +101,13 @@
 		{
 			"uuid": "ae18942a-c11f-47e1-842c-2ec0fdec2772",
 			"title": "Hacer funcionar la selecciond e opciones de los comentarios",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "dc05a01a-8ccd-4e85-9011-3d3c2929ebd7",
+			"title": "en proceso de agregar el factoryescenas y control notifiacion",
 			"description": "",
 			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
 			"steps": []

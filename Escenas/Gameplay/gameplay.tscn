@@ -18,10 +18,12 @@
 [ext_resource type="Script" uid="uid://bt7nrje7mcm6f" path="res://Escenas/Gameplay/manejo_link_articulos.gd" id="16_fvrgq"]
 [ext_resource type="Script" uid="uid://b2cpmmq3843mu" path="res://Escenas/Gameplay/control_comentarios.gd" id="17_h6dqy"]
 [ext_resource type="Script" uid="uid://b4bgg2bpr16ap" path="res://Scripts/Autoloads/data_partida.gd" id="18_0xetr"]
+[ext_resource type="Script" uid="uid://casf0e2bdda7q" path="res://Escenas/Gameplay/control_notificaciones.gd" id="18_hnngx"]
 [ext_resource type="Script" uid="uid://ws0xqqk2cgk2" path="res://Escenas/Gameplay/progreso_puntuacion.gd" id="19_t1fop"]
 [ext_resource type="Script" uid="uid://bf2ypnr80b0h0" path="res://Escenas/Gameplay/logica_jugable.gd" id="20_y72yj"]
 [ext_resource type="Script" uid="uid://dpaqa0w2eiil" path="res://Escenas/Gameplay/logica_jugable_comentarios.gd" id="21_mkab6"]
 [ext_resource type="Script" uid="uid://2rbrftqv6ngb" path="res://Scripts/Autoloads/global_efectos.gd" id="22_emyhf"]
+[ext_resource type="Script" uid="uid://0msxj0xopgw2" path="res://Escenas/Gameplay/factory_escenas.gd" id="23_d8hpo"]
 [ext_resource type="Script" uid="uid://6r46l1ad1la5" path="res://Escenas/Gameplay/audio.gd" id="23_ii64q"]
 [ext_resource type="Script" uid="uid://b7x6e8xvjlx71" path="res://Scripts/Autoloads/global_audio_signals.gd" id="24_y261h"]
 [ext_resource type="AudioStream" uid="uid://i3euymyj4xw6" path="res://SFX/Tender Meal.wav" id="25_dttl8"]
@@ -244,6 +246,9 @@ script = ExtResource("16_fvrgq")
 [node name="ControlComentarios" type="Node" parent="Utils" unique_id=2037462674]
 script = ExtResource("17_h6dqy")
 
+[node name="ControlNotificaciones" type="Node" parent="Utils" unique_id=995475110]
+script = ExtResource("18_hnngx")
+
 [node name="DataPartida" type="Node" parent="." unique_id=348240332]
 script = ExtResource("18_0xetr")
 DURACION_FEEDBACK_ANIMACION = 1.4
@@ -263,6 +268,9 @@ script = ExtResource("21_mkab6")
 [node name="TimerComments" type="Timer" parent="logicaJugable/logicaJugableComentarios" unique_id=1530896800]
 
 [node name="TimerNotis" type="Timer" parent="logicaJugable" unique_id=2106720971]
+
+[node name="FactoryEscenas" type="Node" parent="." unique_id=1902548727]
+script = ExtResource("23_d8hpo")
 
 [node name="GlobalEfectos" type="Node" parent="." unique_id=714558623 node_paths=PackedStringArray("nodoNotiRecibida")]
 script = ExtResource("22_emyhf")

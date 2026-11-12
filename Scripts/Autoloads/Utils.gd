@@ -52,7 +52,6 @@ var TabIndexes:Dictionary[int,bool] = {
 func ingresarPublicacion(publi : Publicacion):
 	if !puedeEntrarPubli():
 		return
-	var tabPubli = tabPublicacion.instantiate() #tabPublicacion = ventana_publicacion
 	var tabIndex:int
 	for i in TabIndexes.keys():
 		if TabIndexes[i] == false:
@@ -62,6 +61,7 @@ func ingresarPublicacion(publi : Publicacion):
 	if !tabIndex:
 		push_error("NO HAY TAB INDICE LIBRE EN EL DICCIONARIO")
 		return
+	var tabPubli = FactoryEscenas.crear_tab_publicacion() #tabPublicacion = ventana_publicacion
 	tabPubli.name = "Publicacion "+ str(tabIndex)
 	
 	tabsContainer.add_child(tabPubli)
