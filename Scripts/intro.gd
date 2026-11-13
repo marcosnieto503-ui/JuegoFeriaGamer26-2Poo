@@ -1,6 +1,6 @@
 extends Control
 
-#Animacion entrada del juego logo --> menu
+#Animacion entrada del juego logo --> menuS
 @onready var anim: AnimationPlayer = $AnimationPlayer
 func _ready() -> void:
 	anim.play("logo")

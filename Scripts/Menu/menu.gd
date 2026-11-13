@@ -1,5 +1,5 @@
 extends Control
-@onready var fade: AnimationPlayer = $AnimationPlayer
+@onready var fade: AnimationPlayer = $AnimationFadeIn
 
 func _ready() -> void:
 	fade.play("fade_in")

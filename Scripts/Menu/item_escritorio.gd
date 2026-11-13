@@ -1,6 +1,7 @@
 extends Control
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
+
 var presionado: bool = false
 
 func _on_mouse_entered() -> void:

@@ -1,7 +1,17 @@
-extends Camera2D
+extends TextureRect
 
-@onready var centro: Vector2 = get_viewport_rect().size / 2
+##Lo que hace este script es que la el fondo se mueve
+##conforme el puntero lo hace ,.,
 
-# Lo que hace esto es mover la camara de manera inmersiva con el mouse
-func _process(delta: float) -> void:
-	offset = (get_viewport().get_mouse_position() - centro) * 0.04
+@export var max_desplazamiento := Vector2(20, 12)
+@export var suavidad := 4.0
+
+var pos_inicial: Vector2
+
+func _ready():
+	pos_inicial = position
+
+func _process(delta):
+	var pantalla := get_viewport().get_visible_rect().size
+	var offset := (get_viewport().get_mouse_position() / pantalla) * 2.0 - Vector2.ONE
+	position = position.lerp(pos_inicial - offset * max_desplazamiento, suavidad * delta)

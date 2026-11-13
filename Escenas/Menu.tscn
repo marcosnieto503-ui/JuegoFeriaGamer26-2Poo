@@ -9,8 +9,7 @@
 [ext_resource type="Script" uid="uid://d2vkwl6ldihfi" path="res://Scripts/Menu/item_escritorio.gd" id="6_4fgvs"]
 [ext_resource type="BitMap" uid="uid://dgm3k8lsf2qcn" path="res://Assets/Menu/partes/celular/celular_bitmap.png" id="6_5c8jm"]
 [ext_resource type="Texture2D" uid="uid://ocoggagc5hco" path="res://Assets/Menu/partes/laptop/laptop.png" id="9_27k2t"]
-[ext_resource type="Texture2D" uid="uid://jds8lkbf0hw4" path="res://Assets/Menu/partes/laptop/outline.png" id="10_q7uug"]
-[ext_resource type="Texture2D" uid="uid://dktsw3l82noox" path="res://Assets/Menu/partes/laptop/letras.png" id="12_4fgvs"]
+[ext_resource type="Texture2D" uid="uid://bkj1m5tj2hgce" path="res://Assets/Menu/partes/laptop/laptop-outline.png" id="10_q7uug"]
 [ext_resource type="Texture2D" uid="uid://dmy6ipbwk4hoi" path="res://Assets/Menu/partes/mouse/mouse.png" id="12_bcw8w"]
 [ext_resource type="BitMap" uid="uid://bcxcyjhdbeyah" path="res://Assets/Menu/partes/hojas/hojas-bitmap.png" id="13_4550b"]
 [ext_resource type="Texture2D" uid="uid://unqoa28urmm" path="res://Assets/Menu/partes/hojas/hojas-outline.png" id="14_5c8jm"]
@@ -20,21 +19,23 @@
 [ext_resource type="Texture2D" uid="uid://lalwqgjrd5lg" path="res://Assets/Menu/titulo.png" id="17_q7uug"]
 [ext_resource type="BitMap" uid="uid://bl3jfdaavwhua" path="res://Assets/Menu/partes/llaves/llaves_bitmap.png" id="18_4fgvs"]
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4hj2e"]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lcrll"]
 light_mode = 1
 
-[sub_resource type="Gradient" id="Gradient_q7uug"]
-offsets = PackedFloat32Array(0.012048192, 0.13253012)
-colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_4fgvs"]
-gradient = SubResource("Gradient_q7uug")
-width = 256
-height = 256
-fill = 3
-fill_to = Vector2(0.5347826, 0.23913044)
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_lcrll"]
+[sub_resource type="Animation" id="Animation_vfnq7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../UI/Titulo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_bu7rm"]
 resource_name = "focus"
@@ -64,9 +65,86 @@ tracks/1/keys = {
 "values": [0, 1]
 }
 
+[sub_resource type="Animation" id="Animation_lcrll"]
+resource_name = "presionado"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(3.7, 3.7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(960, 540), Vector2(1500, 520)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:mouse_default_cursor_shape")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [2, 0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../../UI/OverlayEnfoque:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1.5691657),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../../../UI/Titulo:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a5pv3"]
 _data = {
-&"focus": SubResource("Animation_bu7rm")
+&"RESET": SubResource("Animation_vfnq7"),
+&"focus": SubResource("Animation_bu7rm"),
+&"presionado": SubResource("Animation_lcrll")
 }
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4fgvs"]
@@ -98,56 +176,18 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../../LuzVentana:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.12),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
 
 [sub_resource type="Animation" id="Animation_f7sd3"]
 resource_name = "presionado"
-tracks/0/type = "value"
+tracks/0/type = "animation"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../../Camera2D:zoom")
+tracks/0/path = NodePath("../../../AnimationPadreBotones")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1.1, 1.1), Vector2(2, 2)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../Transicion/ColorRect:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 0.25),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../../Transicion/ColorRect:mouse_filter")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
+"clips": PackedStringArray("in_pressed"),
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k25g8"]
@@ -185,29 +225,15 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1]
 }
-tracks/2/type = "value"
+tracks/2/type = "animation"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../../LuzVentana:visible")
+tracks/2/path = NodePath("../../../AnimationPadreBotones")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(-3.7252903e-09, 0.12),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../../LuzVentana:texture:fill_to")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.12),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0.5347826, 0.23913044), Vector2(0.14, 0.239)]
+"clips": PackedStringArray("in_focus"),
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="Animation" id="Animation_bskcp"]
@@ -215,50 +241,24 @@ resource_name = "presionado"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../../Camera2D:zoom")
+tracks/0/path = NodePath("../../../Camera2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1.1, 1.1), Vector2(2, 2)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../../Transicion/ColorRect:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.4),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../../Transicion/ColorRect:mouse_filter")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../../Camera2D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(960, 540), Vector2(680, 540)]
+}
+tracks/1/type = "animation"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../AnimationPadreBotones")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": PackedStringArray("in_pressed"),
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sik5w"]
@@ -268,6 +268,9 @@ _data = {
 }
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bskcp"]
+
+[sub_resource type="Animation" id="Animation_g0ne7"]
+resource_name = "RESET"
 
 [sub_resource type="Animation" id="Animation_rm5n3"]
 resource_name = "focus"
@@ -296,54 +299,109 @@ tracks/1/keys = {
 "update": 1,
 "values": [0, 1]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../../LuzVentana:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.12),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../../LuzVentana:color")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(-0.033333335, 0.12),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(0.87448305, 0, 0.12620047, 1)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1muap"]
 _data = {
+&"RESET": SubResource("Animation_g0ne7"),
 &"focus": SubResource("Animation_rm5n3")
 }
 
+[sub_resource type="Environment" id="Environment_qphp1"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 0.5
+glow_hdr_threshold = 0.0
+
 [sub_resource type="Animation" id="Animation_4fgvs"]
-length = 0.001
+resource_name = "RESET"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transicion/ColorRect:modulate")
+tracks/0/path = NodePath("../Camera2D:zoom")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 1)]
+"values": [Vector2(1.1, 1.1)]
+}
+
+[sub_resource type="Animation" id="Animation_dg3oq"]
+resource_name = "in_pressed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.1, 1.1), Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Transicion/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Transicion/ColorRect:mouse_filter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vfnq7"]
+_data = {
+&"RESET": SubResource("Animation_4fgvs"),
+&"in_pressed": SubResource("Animation_dg3oq")
+}
+
+[sub_resource type="Animation" id="Animation_bjust"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Transicion/ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transicion/ColorRect:mouse_filter")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
 }
 
 [sub_resource type="Animation" id="Animation_p7plt"]
 resource_name = "fade_in"
-length = 0.4
+length = 0.39999999999999997
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -356,18 +414,27 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Transicion/ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f7sd3"]
 _data = {
-&"RESET": SubResource("Animation_4fgvs"),
+&"RESET": SubResource("Animation_bjust"),
 &"fade_in": SubResource("Animation_p7plt")
 }
 
-[sub_resource type="Environment" id="Environment_qphp1"]
-background_mode = 3
-glow_enabled = true
-glow_strength = 1.3
-glow_hdr_threshold = 0.0
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4hj2e"]
+light_mode = 1
 
 [node name="Menu" type="Control" unique_id=1575295246]
 layout_mode = 3
@@ -378,25 +445,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xhjix")
 
-[node name="titulo" type="TextureRect" parent="." unique_id=1155382083]
-z_index = 10
-texture_filter = 3
-material = SubResource("CanvasItemMaterial_4hj2e")
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -334.0
-offset_top = 144.0
-offset_right = -81.0
-offset_bottom = 288.0
-grow_horizontal = 2
-offset_transform_enabled = true
-offset_transform_scale = Vector2(3.5, 3.5)
-texture = ExtResource("17_q7uug")
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1348553699]
+position = Vector2(960, 540)
+zoom = Vector2(1.1, 1.1)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1250845690]
-color = Color(0.5518756, 0.5461166, 0.5171609, 1)
+[node name="EfectoOscuro" type="CanvasModulate" parent="." unique_id=1250845690]
+color = Color(0.76155597, 0.7549586, 0.73513144, 1)
 
 [node name="Fondo" type="TextureRect" parent="." unique_id=1129073673]
 texture_filter = 3
@@ -404,43 +458,30 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 3.0
-offset_top = -3.0
-offset_right = 3.0
-offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("2_o2l53")
+script = ExtResource("3_o2l53")
 
-[node name="LuzVentana" type="PointLight2D" parent="." unique_id=1694033110]
-visible = false
-position = Vector2(-13418.999, -3989)
-scale = Vector2(7.4960938, 4.1875)
-energy = 1.9
-shadow_color = Color(1, 1, 1, 0)
-texture = SubResource("GradientTexture2D_4fgvs")
-offset = Vector2(1920, 1080)
-
-[node name="Objetos" type="Control" parent="." unique_id=1136005852]
+[node name="Botones" type="Control" parent="Fondo" unique_id=1136005852]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-mouse_filter = 2
 
-[node name="celular" type="TextureButton" parent="Objetos" unique_id=1495560526]
+[node name="celular" type="TextureButton" parent="Fondo/Botones" unique_id=1495560526]
 z_index = 1
 texture_filter = 3
 material = SubResource("CanvasItemMaterial_lcrll")
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 492.00003
-offset_top = 116.00002
-offset_right = 1132.0
-offset_bottom = 475.99997
+offset_left = 425.0
+offset_top = 40.0
+offset_right = 1065.0
+offset_bottom = 399.99994
 pivot_offset_ratio = Vector2(0.5, 0.5)
 offset_transform_enabled = true
-offset_transform_scale = Vector2(2.5, 2.5)
+offset_transform_scale = Vector2(2.53, 2.53)
 offset_transform_visual_only = false
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("4_27k2t")
@@ -449,10 +490,10 @@ texture_click_mask = ExtResource("6_5c8jm")
 ignore_texture_size = true
 script = ExtResource("6_4fgvs")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Objetos/celular" unique_id=356169595]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fondo/Botones/celular" unique_id=356169595]
 libraries/ = SubResource("AnimationLibrary_a5pv3")
 
-[node name="mouse" type="TextureRect" parent="Objetos" unique_id=49931325]
+[node name="mouse" type="TextureRect" parent="Fondo/Botones" unique_id=49931325]
 texture_filter = 3
 layout_mode = 0
 offset_left = 1997.0
@@ -464,15 +505,15 @@ offset_transform_scale = Vector2(3, 3)
 offset_transform_rotation = 0.13962634
 texture = ExtResource("12_bcw8w")
 
-[node name="Laptop" type="TextureButton" parent="Objetos" unique_id=1288723118]
+[node name="Laptop" type="TextureButton" parent="Fondo/Botones" unique_id=1288723118]
 z_index = 1
 texture_filter = 3
 material = SubResource("CanvasItemMaterial_4fgvs")
 layout_mode = 0
-offset_left = 626.0
-offset_top = 453.0
-offset_right = 1266.0
-offset_bottom = 813.0
+offset_left = 681.0
+offset_top = 475.0
+offset_right = 1321.0
+offset_bottom = 835.0
 offset_transform_enabled = true
 offset_transform_scale = Vector2(2, 2)
 offset_transform_visual_only = false
@@ -482,25 +523,19 @@ texture_hover = ExtResource("10_q7uug")
 texture_click_mask = ExtResource("6_2a5i7")
 script = ExtResource("6_4fgvs")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Objetos/Laptop" unique_id=1484610019]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fondo/Botones/Laptop" unique_id=1484610019]
 libraries/ = SubResource("AnimationLibrary_k25g8")
 
-[node name="texto" type="TextureRect" parent="Objetos/Laptop" unique_id=1899921010]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("12_4fgvs")
-
-[node name="hojas" type="TextureButton" parent="Objetos" unique_id=2049028594]
+[node name="hojas" type="TextureButton" parent="Fondo/Botones" unique_id=2049028594]
 z_index = 1
 texture_filter = 3
 material = SubResource("CanvasItemMaterial_f7sd3")
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 730.0
-offset_top = 259.0
-offset_right = 1370.0
-offset_bottom = 619.0
+offset_left = 750.0
+offset_top = 325.0
+offset_right = 1390.0
+offset_bottom = 685.0
 offset_transform_enabled = true
 offset_transform_scale = Vector2(3, 3)
 offset_transform_visual_only = false
@@ -510,19 +545,19 @@ texture_hover = ExtResource("14_5c8jm")
 texture_click_mask = ExtResource("13_4550b")
 script = ExtResource("6_4fgvs")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Objetos/hojas" unique_id=1994569659]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fondo/Botones/hojas" unique_id=1994569659]
 libraries/ = SubResource("AnimationLibrary_sik5w")
 
-[node name="llaves" type="TextureButton" parent="Objetos" unique_id=1181762998]
+[node name="llaves" type="TextureButton" parent="Fondo/Botones" unique_id=1181762998]
 z_index = 1
 texture_filter = 3
 material = SubResource("CanvasItemMaterial_bskcp")
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 0
-offset_left = 1074.9999
-offset_top = 1383.0001
-offset_right = 1714.9999
-offset_bottom = 1743.0001
+offset_left = 1158.9998
+offset_top = 1306.0001
+offset_right = 1798.9998
+offset_bottom = 1666.0001
 offset_transform_enabled = true
 offset_transform_scale = Vector2(3, 3)
 offset_transform_rotation = 1.3805554
@@ -533,44 +568,71 @@ texture_hover = ExtResource("17_4fgvs")
 texture_click_mask = ExtResource("18_4fgvs")
 script = ExtResource("6_4fgvs")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Objetos/llaves" unique_id=760683896]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fondo/Botones/llaves" unique_id=760683896]
 libraries/ = SubResource("AnimationLibrary_1muap")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=66151873]
-position = Vector2(960, 540)
-zoom = Vector2(1.1, 1.1)
-limit_enabled = false
-limit_left = 0
-limit_top = 0
-limit_smoothed = true
-position_smoothing_speed = 6.0
-script = ExtResource("3_o2l53")
+[node name="EfectoBloom" type="WorldEnvironment" parent="." unique_id=396111930]
+environment = SubResource("Environment_qphp1")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1189710439]
+[node name="AnimationPadreBotones" type="AnimationPlayer" parent="." unique_id=71278432]
+root_node = NodePath("../AnimationFadeIn")
+libraries/ = SubResource("AnimationLibrary_vfnq7")
+
+[node name="AnimationFadeIn" type="AnimationPlayer" parent="." unique_id=1189710439]
 libraries/ = SubResource("AnimationLibrary_f7sd3")
 
-[node name="Transicion" type="CanvasLayer" parent="." unique_id=343254912]
+[node name="UI" type="CanvasLayer" parent="." unique_id=82277253]
 
-[node name="ColorRect" type="ColorRect" parent="Transicion" unique_id=1317012240]
+[node name="Titulo" type="TextureRect" parent="UI" unique_id=1155382083]
+z_index = 10
+texture_filter = 3
+material = SubResource("CanvasItemMaterial_4hj2e")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -407.0
+offset_top = 112.0
+offset_right = -154.0
+offset_bottom = 256.0
+grow_horizontal = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(3.5, 3.5)
+texture = ExtResource("17_q7uug")
+
+[node name="OverlayEnfoque" type="ColorRect" parent="UI" unique_id=626253224]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0, 0, 0, 0.776)
+
+[node name="Transicion" type="CanvasLayer" parent="." unique_id=343254912]
+layer = 10
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Transicion" unique_id=1317012240]
+visible = false
+light_mask = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=396111930]
-environment = SubResource("Environment_qphp1")
-
-[connection signal="mouse_entered" from="Objetos/celular" to="Objetos/celular" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Objetos/celular" to="Objetos/celular" method="_on_mouse_exited"]
-[connection signal="button_down" from="Objetos/Laptop" to="Objetos/Laptop" method="_on_button_down"]
-[connection signal="mouse_entered" from="Objetos/Laptop" to="Objetos/Laptop" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Objetos/Laptop" to="Objetos/Laptop" method="_on_mouse_exited"]
-[connection signal="button_down" from="Objetos/hojas" to="Objetos/hojas" method="_on_button_down"]
-[connection signal="mouse_entered" from="Objetos/hojas" to="Objetos/hojas" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Objetos/hojas" to="Objetos/hojas" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="Objetos/llaves" to="Objetos/llaves" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Objetos/llaves" to="Objetos/llaves" method="_on_mouse_exited"]
-[connection signal="pressed" from="Objetos/llaves" to="." method="_on_llaves_pressed"]
+[connection signal="button_down" from="Fondo/Botones/celular" to="Fondo/Botones/celular" method="_on_button_down"]
+[connection signal="mouse_entered" from="Fondo/Botones/celular" to="Fondo/Botones/celular" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Fondo/Botones/celular" to="Fondo/Botones/celular" method="_on_mouse_exited"]
+[connection signal="button_down" from="Fondo/Botones/Laptop" to="Fondo/Botones/Laptop" method="_on_button_down"]
+[connection signal="mouse_entered" from="Fondo/Botones/Laptop" to="Fondo/Botones/Laptop" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Fondo/Botones/Laptop" to="Fondo/Botones/Laptop" method="_on_mouse_exited"]
+[connection signal="button_down" from="Fondo/Botones/hojas" to="Fondo/Botones/hojas" method="_on_button_down"]
+[connection signal="mouse_entered" from="Fondo/Botones/hojas" to="Fondo/Botones/hojas" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Fondo/Botones/hojas" to="Fondo/Botones/hojas" method="_on_mouse_exited"]
+[connection signal="button_down" from="Fondo/Botones/llaves" to="Fondo/Botones/llaves" method="_on_button_down"]
+[connection signal="mouse_entered" from="Fondo/Botones/llaves" to="Fondo/Botones/llaves" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Fondo/Botones/llaves" to="Fondo/Botones/llaves" method="_on_mouse_exited"]
+[connection signal="pressed" from="Fondo/Botones/llaves" to="." method="_on_llaves_pressed"]
