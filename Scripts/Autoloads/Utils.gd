@@ -1,5 +1,6 @@
 extends Node
 
+
 var MaxTabsNum = 3 #po
 var ARTICULO_ACTIVO = false
 #el tabsActivas empieza en uno para usarlo como indice en las pesta;as

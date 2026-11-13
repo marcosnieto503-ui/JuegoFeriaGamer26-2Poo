@@ -353,6 +353,5 @@ current = true
 [connection signal="button_down" from="BOTON TESTING" to="BOTON TESTING" method="_on_button_down"]
 [connection signal="pressed" from="BOTON TESTING/Button" to="BOTON TESTING" method="_on_button_check_pressed"]
 [connection signal="pressed" from="BOTON TESTING/Button2" to="BOTON TESTING" method="_on_button_2_pressed"]
-[connection signal="_noti_recibida" from="logicaJugable" to="AUDIO" method="_on_logica_jugable__noti_recibida"]
 [connection signal="timeout" from="logicaJugable/logicaJugableComentarios/TimerComments" to="logicaJugable/logicaJugableComentarios" method="_on_timer_comments_timeout"]
 [connection signal="timeout" from="logicaJugable/TimerNotis" to="logicaJugable" method="_on_timer_timeout"]

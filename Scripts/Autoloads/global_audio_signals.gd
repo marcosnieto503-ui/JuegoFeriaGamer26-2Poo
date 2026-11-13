@@ -8,6 +8,8 @@ func _ready() -> void:
 	await get_tree().process_frame
 	AUDIO.playMusicaFondo()
 
+func playNotiRecibida():
+	AUDIO.playNotiRecibida()
 
 func playHoverNoti():
 	AUDIO.playSampleRPitch("hover_hint1")

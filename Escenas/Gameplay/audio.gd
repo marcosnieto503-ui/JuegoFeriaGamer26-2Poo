@@ -33,9 +33,6 @@ func playMusicaFondo():
 func _publi_asignada_en_laptop():
 	playSampleRPitch("entra_publi")
 
-func _on_logica_jugable__noti_recibida() -> void:
-	playNotiRecibida()
-
 func _player_movido_hacia_telefono():
 	listener.set_position(Vector2(posTel))
 func _player_movido_hacia_laptop():

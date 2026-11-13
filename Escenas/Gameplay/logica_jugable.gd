@@ -9,7 +9,6 @@ extends Node
 
 @onready var cajaNotif = $"../Celular/ScrollNotificaciones/CajaNotificaciones"
 
-signal _noti_recibida
 
 func _ready() -> void:
 	if NOTIS_MANUAL:
@@ -35,10 +34,3 @@ func saleNoti():
 
 func ingresarNotiRandom():
 	ControlNotificaciones.ingresar_notificacion_random()
-
-
-func _unhandled_input(event: InputEvent) -> void:
-	if !NOTIS_MANUAL:
-		return
-	if event.is_action_pressed("espacio"):
-		ingresarNotiRandom()
