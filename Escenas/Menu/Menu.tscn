@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://c7cvvbol3wrd8"]
+
+[ext_resource type="Script" uid="uid://csi3rvjj4apn5" path="res://Scripts/Menu/menu.gd" id="1_mtxq6"]
+[ext_resource type="Script" uid="uid://d4nph0a2ggrgo" path="res://Scripts/Menu/camera_2d.gd" id="2_31pwh"]
+[ext_resource type="Texture2D" uid="uid://bym8ce3fpwbo0" path="res://Assets/Menu/partes/fondo.png" id="3_kp2x1"]
+[ext_resource type="Texture2D" uid="uid://dmy6ipbwk4hoi" path="res://Assets/Menu/partes/mouse/mouse.png" id="4_rffgm"]
+[ext_resource type="Texture2D" uid="uid://cdxotwoc84map" path="res://Assets/Menu/partes/clips.png" id="5_hmem7"]
+[ext_resource type="Texture2D" uid="uid://chjstnupuyt41" path="res://Assets/Menu/partes/celular/celular.png" id="5_nyrvb"]
+[ext_resource type="Texture2D" uid="uid://c7es2kg70xquo" path="res://Assets/Menu/partes/celular/celular-outline.png" id="6_whfip"]
+[ext_resource type="BitMap" uid="uid://dgm3k8lsf2qcn" path="res://Assets/Menu/partes/celular/celular_bitmap.png" id="7_upics"]
+[ext_resource type="Texture2D" uid="uid://2kw3e2pwxw26" path="res://Assets/Menu/partes/hojas/hojas.png" id="12_f1xpc"]
+[ext_resource type="Texture2D" uid="uid://unqoa28urmm" path="res://Assets/Menu/partes/hojas/hojas-outline.png" id="13_uoexe"]
+[ext_resource type="BitMap" uid="uid://bcxcyjhdbeyah" path="res://Assets/Menu/partes/hojas/hojas-bitmap.png" id="14_ggxna"]
+[ext_resource type="BitMap" uid="uid://dfb0k2veduxxj" path="res://Assets/Menu/partes/llaves/llaves-bitmap.png" id="14_rdxvi"]
+[ext_resource type="Texture2D" uid="uid://b7qj48v3gcjpy" path="res://Assets/Menu/partes/llaves/llaves.png" id="15_qhlqc"]
+[ext_resource type="Texture2D" uid="uid://dsndyqlgiw5d8" path="res://Assets/Menu/partes/llaves/llaves-outline.png" id="16_f1ohs"]
+[ext_resource type="Texture2D" uid="uid://lalwqgjrd5lg" path="res://Assets/Menu/titulo.png" id="18_r6grw"]
+[ext_resource type="PackedScene" uid="uid://gnopc0s56py2" path="res://Escenas/Menu/BotonEscritorio.tscn" id="19_31pwh"]
+
+[sub_resource type="Environment" id="Environment_qphp1"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 0.5
+glow_strength = 0.8
+glow_hdr_threshold = 0.0
+
+[sub_resource type="Gradient" id="Gradient_q7uug"]
+offsets = PackedFloat32Array(0.5301205, 1)
+colors = PackedColorArray(0.5019608, 0.5019608, 0.5019608, 0, 0, 0, 0, 0.69411767)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5v0uk"]
+gradient = SubResource("Gradient_q7uug")
+fill = 1
+
+[node name="Menu" type="Control" unique_id=1575295246]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mtxq6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1348553699]
+position = Vector2(960, 540)
+zoom = Vector2(1.1, 1.1)
+
+[node name="EfectoBloom" type="WorldEnvironment" parent="." unique_id=396111930]
+environment = SubResource("Environment_qphp1")
+
+[node name="Escritorio" type="Control" parent="." unique_id=922004124]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_31pwh")
+
+[node name="Fondo" type="TextureRect" parent="Escritorio" unique_id=1129073673]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_kp2x1")
+
+[node name="Decoracion" type="Control" parent="Escritorio/Fondo" unique_id=344415831]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mouse" type="TextureRect" parent="Escritorio/Fondo/Decoracion" unique_id=49931325]
+texture_filter = 3
+layout_mode = 0
+offset_left = 1997.0
+offset_top = -183.0
+offset_right = 2637.0
+offset_bottom = 177.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(3, 3)
+offset_transform_rotation = 0.13962634
+mouse_filter = 2
+texture = ExtResource("4_rffgm")
+
+[node name="Sombra" type="TextureRect" parent="Escritorio/Fondo/Decoracion/mouse" unique_id=182365221]
+modulate = Color(0, 0, 0, 0.6627451)
+show_behind_parent = true
+layout_mode = 0
+offset_left = 10.0
+offset_right = 650.0
+offset_bottom = 360.0
+mouse_filter = 2
+texture = ExtResource("4_rffgm")
+
+[node name="Clips" type="TextureRect" parent="Escritorio/Fondo/Decoracion" unique_id=1102372781]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("5_hmem7")
+
+[node name="Botones" type="Control" parent="Escritorio" unique_id=1136005852]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Laptop" parent="Escritorio/Botones" unique_id=473791498 instance=ExtResource("19_31pwh")]
+layout_mode = 0
+offset_left = 677.0
+offset_top = 506.0
+offset_right = 1317.0
+offset_bottom = 866.0
+scale = Vector2(2.2, 2.2)
+pivot_offset = Vector2(294.5, 238)
+offset_transform_visual_only = false
+
+[node name="Celular" parent="Escritorio/Botones" unique_id=633973929 instance=ExtResource("19_31pwh")]
+layout_mode = 0
+offset_left = 849.0
+offset_top = 177.00002
+offset_right = 1489.0
+offset_bottom = 537.0
+scale = Vector2(2.2, 2.2)
+pivot_offset = Vector2(590.5, 265.5)
+texture_normal = ExtResource("5_nyrvb")
+texture_hover = ExtResource("6_whfip")
+texture_click_mask = ExtResource("7_upics")
+
+[node name="Hojas" parent="Escritorio/Botones" unique_id=521496719 instance=ExtResource("19_31pwh")]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 454.0
+offset_right = 983.0
+offset_bottom = 814.0
+scale = Vector2(3, 3)
+pivot_offset = Vector2(80, 257)
+texture_normal = ExtResource("12_f1xpc")
+texture_hover = ExtResource("13_uoexe")
+texture_click_mask = ExtResource("14_ggxna")
+
+[node name="Llaves" parent="Escritorio/Botones" unique_id=1943371472 instance=ExtResource("19_31pwh")]
+layout_mode = 0
+offset_left = 1102.0
+offset_top = 466.0
+offset_right = 1742.0
+offset_bottom = 826.0
+scale = Vector2(2.2, 2.2)
+pivot_offset = Vector2(567.8182, 241.81818)
+texture_normal = ExtResource("15_qhlqc")
+texture_hover = ExtResource("16_f1ohs")
+texture_click_mask = ExtResource("14_rdxvi")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=82277253]
+
+[node name="Titulo" type="TextureRect" parent="UI" unique_id=1155382083]
+modulate = Color(1.3, 1.3, 1.3, 1)
+z_index = 10
+texture_filter = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -407.0
+offset_top = 112.0
+offset_right = -154.0
+offset_bottom = 256.0
+grow_horizontal = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(3.5, 3.5)
+texture = ExtResource("18_r6grw")
+
+[node name="Viñeta" type="TextureRect" parent="UI" unique_id=2043035028]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("GradientTexture2D_5v0uk")
+
+[node name="OverlayEnfoque" type="ColorRect" parent="UI" unique_id=626253224]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.776)
+
+[connection signal="pressed" from="Escritorio/Botones/Llaves" to="." method="_on_llaves_pressed"]

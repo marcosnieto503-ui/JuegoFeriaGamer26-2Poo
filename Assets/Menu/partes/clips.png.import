@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://31iyfb5t5sj8"
-path="res://.godot/imported/mouse-outline.png-bc5087f31e5cf8c4e18a0539b9968644.ctex"
+uid="uid://cdxotwoc84map"
+path="res://.godot/imported/clips.png-426762194662c89d024f3491d7095064.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu/partes/mouse/mouse-outline.png"
-dest_files=["res://.godot/imported/mouse-outline.png-bc5087f31e5cf8c4e18a0539b9968644.ctex"]
+source_file="res://Assets/Menu/partes/clips.png"
+dest_files=["res://.godot/imported/clips.png-426762194662c89d024f3491d7095064.ctex"]
 
 [params]
 

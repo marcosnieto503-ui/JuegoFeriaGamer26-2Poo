@@ -1,4 +1,4 @@
-extends TextureRect
+extends Control
 
 ##Lo que hace este script es que la el fondo se mueve
 ##conforme el puntero lo hace ,.,
