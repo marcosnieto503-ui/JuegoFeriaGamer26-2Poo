@@ -8,7 +8,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transicion/ColorRect:visible")
+tracks/0/path = NodePath("Transicion/FondoNegro:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -20,7 +20,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Transicion/ColorRect:modulate")
+tracks/1/path = NodePath("Transicion/FondoNegro:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -36,7 +36,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Transicion/ColorRect:visible")
+tracks/0/path = NodePath("Transicion/FondoNegro:visible")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -48,7 +48,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Transicion/ColorRect:modulate")
+tracks/1/path = NodePath("Transicion/FondoNegro:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -68,14 +68,13 @@ _data = {
 layer = 100
 script = ExtResource("1_2xu7j")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1165286025]
+[node name="FondoNegro" type="ColorRect" parent="." unique_id=1165286025]
 light_mask = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=294528869]

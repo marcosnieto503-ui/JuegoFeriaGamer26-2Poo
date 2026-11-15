@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7es2kg70xquo"
-path="res://.godot/imported/celular-outline.png-9e88ae5321c96b01d8e58302f9cd9629.ctex"
+uid="uid://c6d6t4e84nmfg"
+path="res://.godot/imported/flecha.png-c627b7c94b6f3b8086affc0d19ad5aad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu/partes/celular/celular-outline.png"
-dest_files=["res://.godot/imported/celular-outline.png-9e88ae5321c96b01d8e58302f9cd9629.ctex"]
+source_file="res://Assets/UI/flecha/flecha.png"
+dest_files=["res://.godot/imported/flecha.png-c627b7c94b6f3b8086affc0d19ad5aad.ctex"]
 
 [params]
 

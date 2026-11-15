@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://unqoa28urmm"
-path="res://.godot/imported/hojas-outline.png-4c739c3861f601c91b9b4c98fb7f2e09.ctex"
+uid="uid://cy7hjd1xr0oe"
+path="res://.godot/imported/hojas-hover.png-785b0e68270494ca7a7d9a1764b0e796.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu/partes/hojas/hojas-outline.png"
-dest_files=["res://.godot/imported/hojas-outline.png-4c739c3861f601c91b9b4c98fb7f2e09.ctex"]
+source_file="res://Assets/Menu/partes/hojas/hojas-hover.png"
+dest_files=["res://.godot/imported/hojas-hover.png-785b0e68270494ca7a7d9a1764b0e796.ctex"]
 
 [params]
 

@@ -2,16 +2,12 @@ extends Control
 
 ##Lo que hace este script es que la el fondo se mueve
 ##conforme el puntero lo hace ,.,
+@onready var inicio := position
 
-@export var max_desplazamiento := Vector2(20, 12)
-@export var suavidad := 4.0
-
-var pos_inicial: Vector2
-
-func _ready():
-	pos_inicial = position
+var desplazamiento := 0.035
+var suavidad := 4.0
 
 func _process(delta):
-	var pantalla := get_viewport().get_visible_rect().size
-	var offset := (get_viewport().get_mouse_position() / pantalla) * 2.0 - Vector2.ONE
-	position = position.lerp(pos_inicial - offset * max_desplazamiento, suavidad * delta)
+	var centro := get_viewport_rect().size / 2.0
+	var destino := inicio - (get_viewport().get_mouse_position() - centro) * desplazamiento
+	position = position.lerp(destino, suavidad * delta)

@@ -1,11 +1,8 @@
 extends TextureButton
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
-@onready var sombra: TextureRect = $Sombra
 
-func _ready() -> void:
-	sombra.texture = texture_normal
-
+#todos los botones van a hacer esto
 func _on_mouse_entered() -> void:
 	anim.play("mouse_entered")
 
