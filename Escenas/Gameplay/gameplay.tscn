@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://c4blyrcn58omj" path="res://Escenas/Gameplay/gameplay.gd" id="1_1axsk"]
 [ext_resource type="Script" uid="uid://b2jw6ubats8c5" path="res://Escenas/Gameplay/camara.gd" id="2_41hg1"]
 [ext_resource type="Texture2D" uid="uid://mnlvofvjl8jq" path="res://Assets/LAPTOP 0, CEL 0.png" id="3_hnngx"]
-[ext_resource type="Texture2D" uid="uid://cneteo4qo1qcs" path="res://Assets/LAPTOP 1, CEL 0-ma grande.png" id="4_d8hpo"]
-[ext_resource type="Texture2D" uid="uid://qww5iq2kdouj" path="res://Assets/LAPTOP 1, CEl 1  -ma grande.png" id="5_vaqcd"]
+[ext_resource type="Texture2D" uid="uid://bcv433irupk50" path="res://Assets/FondoGameplay/GameplayFondo1 laptop 1 cel 0 preview 1.png" id="4_hnngx"]
+[ext_resource type="Texture2D" uid="uid://d3t7ieb5swwb7" path="res://Assets/FondoGameplay/GameplayFondo1 laptop 1 cel 1 preview 1.png" id="5_d8hpo"]
 [ext_resource type="Texture2D" uid="uid://bvbdns0ltr5r5" path="res://Assets/LAPTOP 0, CEL 1 v2.png" id="6_34dn2"]
 [ext_resource type="Texture2D" uid="uid://cq08yoki2e1lt" path="res://Assets/principalTab.png" id="7_axf5d"]
 [ext_resource type="PackedScene" uid="uid://7obfqhwcbt7y" path="res://Escenas/CommentOverlayScene/comment_overlay.tscn" id="8_4rj03"]
@@ -45,10 +45,10 @@ animations = [{
 "texture": ExtResource("3_hnngx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_d8hpo")
+"texture": ExtResource("4_hnngx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_vaqcd")
+"texture": ExtResource("5_d8hpo")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_34dn2")
@@ -97,7 +97,7 @@ z_index = -2
 position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_o8a6s")
 animation = &"gameplay_anim"
-frame = 2
+frame = 1
 
 [node name="Celular" type="Control" parent="." unique_id=197617991]
 layout_mode = 3
