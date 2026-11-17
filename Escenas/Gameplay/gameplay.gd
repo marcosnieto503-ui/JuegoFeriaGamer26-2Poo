@@ -7,8 +7,10 @@ extends Node2D
 @onready var C_Laptop = $"Laptop"
 @onready var C_Celular = $"Celular"
 
-@onready var fondo = $"Visual"
 @onready var camara = $"Camara"
+
+@export var Gameplay_Visuals:AnimatedSprite2D 
+#este nodo se encarga de todo lo relacionado a los sprites del gameplay
 
 
 enum { #estados de la imagen del gameplay
@@ -79,26 +81,18 @@ func switchFocus():
 		toLaptop()
 		
 func toCelular():
-	if (fondo.frame == noFocus):
-		fondo.frame = celularOnly
-		pantalla.show()
-		await camara.reiniciar_camara()
-		camara.zoom_hacia(Vector2(900,200), 2) #coords en relacion a la camara si ests tuviera origfen en su centro
-		_movido_hacia_telefono.emit()
-	else: 
-		fondo.frame = celularFocus
-		pantalla.show()
-		await camara.reiniciar_camara()
-		camara.zoom_hacia(Vector2(900,200), 2) #coords en relacion a la camara si ests tuviera origen en su centro
-		_movido_hacia_telefono.emit()
+	Gameplay_Visuals.select_frame_telefono_arriba()
+	pantalla.show()
+	await camara.reiniciar_camara()
+	camara.zoom_hacia(Vector2(900,200), 2) #coords en relacion a la camara si ests tuviera origen en su centro
+	_movido_hacia_telefono.emit()
 	#720, 420
 func toLaptop():
-	fondo.frame = laptopFocus
+	Gameplay_Visuals.select_frame_telefono_abajo()
 	pantalla.hide()
 	await camara.reiniciar_camara()
 	camara.zoom_hacia(Vector2(920-(1920/2), 430-(1080/2)), 1.2, 0.3)
 	_movido_hacia_laptop.emit()
-	
 
 
 func _on_pestañas_tab_clicked(tab:int) -> void:

@@ -19,7 +19,10 @@
 				"7e023cfc-57a9-4af4-bb79-565dc71cc2b1",
 				"fd306742-9866-483b-883e-db175aedd324",
 				"6944f600-59a8-4e8e-807d-8da70cda7ac8",
-				"ae18942a-c11f-47e1-842c-2ec0fdec2772"
+				"ae18942a-c11f-47e1-842c-2ec0fdec2772",
+				"b134e8f0-ec6a-4f44-81e7-c5cba3288f01",
+				"36b60b4d-b39a-4596-9f62-ada43327850d",
+				"40526363-6a4d-418e-9477-24d3f843fd71"
 			]
 		},
 		{
@@ -27,7 +30,7 @@
 			"title": "Doing",
 			"tasks": [
 				"dc05a01a-8ccd-4e85-9011-3d3c2929ebd7",
-				"ea43d325-b10a-486c-8150-e2f0e786bcd8"
+				"790527ac-cc54-4cf4-a85c-20a438f572bd"
 			]
 		},
 		{
@@ -37,7 +40,8 @@
 				"8dcced62-d2a6-4680-b559-ce9b31babca1",
 				"e2e38c4c-47a3-4d02-a218-e1de484130aa",
 				"6b6f26ca-b10d-44a2-a93f-793a5dcddcad",
-				"fc592c03-26ee-4a45-bd04-276720806782"
+				"fc592c03-26ee-4a45-bd04-276720806782",
+				"ea43d325-b10a-486c-8150-e2f0e786bcd8"
 			]
 		}
 	],
@@ -108,6 +112,34 @@
 		{
 			"uuid": "dc05a01a-8ccd-4e85-9011-3d3c2929ebd7",
 			"title": "en proceso de agregar el factoryescenas y control notifiacion",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "40526363-6a4d-418e-9477-24d3f843fd71",
+			"title": "Dibujar las interfaces del pc",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "36b60b4d-b39a-4596-9f62-ada43327850d",
+			"title": "corregir los colores del sprite de la pantalla de los disposaitivpos",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "b134e8f0-ec6a-4f44-81e7-c5cba3288f01",
+			"title": "INTERFACEEEEES",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "790527ac-cc54-4cf4-a85c-20a438f572bd",
+			"title": "terminar de oimp[lomentar comentarios;",
 			"description": "",
 			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
 			"steps": []
