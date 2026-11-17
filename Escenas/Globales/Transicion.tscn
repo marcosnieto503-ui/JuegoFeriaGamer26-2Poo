@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://sa8gjllfomkh"]
 
-[ext_resource type="Script" uid="uid://drlyf3do46lti" path="res://Scripts/transicion.gd" id="1_2xu7j"]
+[ext_resource type="Script" uid="uid://drlyf3do46lti" path="res://Scripts/Globales/transicion.gd" id="1_2xu7j"]
 
 [sub_resource type="Animation" id="Animation_p7plt"]
 resource_name = "fade_in"

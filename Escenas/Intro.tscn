@@ -12,7 +12,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f2b3h")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=532078194]
+[node name="DemoraInicio" type="Timer" parent="." unique_id=157565244]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="FondoNegro" type="ColorRect" parent="." unique_id=532078194]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +26,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="logo" type="TextureRect" parent="." unique_id=1567577415]
+[node name="LogoTeamMandarina" type="TextureRect" parent="." unique_id=1567577415]
 texture_filter = 3
 layout_mode = 1
 anchors_preset = 8
@@ -38,3 +43,5 @@ grow_vertical = 2
 scale = Vector2(6, 6)
 pivot_offset = Vector2(79, 21.5)
 texture = ExtResource("2_w8r5c")
+
+[connection signal="timeout" from="DemoraInicio" to="." method="_on_timer_timeout"]

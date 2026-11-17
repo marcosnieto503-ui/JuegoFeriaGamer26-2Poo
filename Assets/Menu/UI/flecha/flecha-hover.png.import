@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lalwqgjrd5lg"
-path="res://.godot/imported/titulo.png-337f280359f32b640a2e98ba7bd59fe3.ctex"
+uid="uid://bpqp0vy718ern"
+path="res://.godot/imported/flecha-hover.png-38bb3750b866e1d6b6a319adda0fdb4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu/titulo.png"
-dest_files=["res://.godot/imported/titulo.png-337f280359f32b640a2e98ba7bd59fe3.ctex"]
+source_file="res://Assets/Menu/UI/flecha/flecha-hover.png"
+dest_files=["res://.godot/imported/flecha-hover.png-38bb3750b866e1d6b6a319adda0fdb4e.ctex"]
 
 [params]
 

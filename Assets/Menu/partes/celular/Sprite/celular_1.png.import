@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsndyqlgiw5d8"
-path="res://.godot/imported/llaves-outline.png-b5a28e2991bd8ca0d3c53d48a0f53d13.ctex"
+uid="uid://b8kiiqg8bsfnl"
+path="res://.godot/imported/celular_1.png-138f1ad763b638c3e0e8250a5d1052c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Menu/partes/llaves/llaves-outline.png"
-dest_files=["res://.godot/imported/llaves-outline.png-b5a28e2991bd8ca0d3c53d48a0f53d13.ctex"]
+source_file="res://Assets/Menu/partes/celular/Sprite/celular_1.png"
+dest_files=["res://.godot/imported/celular_1.png-138f1ad763b638c3e0e8250a5d1052c4.ctex"]
 
 [params]
 

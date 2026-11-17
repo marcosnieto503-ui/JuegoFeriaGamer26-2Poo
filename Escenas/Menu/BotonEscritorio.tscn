@@ -1,9 +1,8 @@
 [gd_scene format=3 uid="uid://gnopc0s56py2"]
 
 [ext_resource type="Texture2D" uid="uid://ocoggagc5hco" path="res://Assets/Menu/partes/laptop/laptop.png" id="1_patew"]
-[ext_resource type="Texture2D" uid="uid://bkj1m5tj2hgce" path="res://Assets/Menu/partes/laptop/laptop-outline.png" id="2_1444l"]
-[ext_resource type="BitMap" uid="uid://b8mjwl0kum6t6" path="res://Assets/Menu/partes/laptop/laptop_bitmap.png" id="3_5e36t"]
-[ext_resource type="Script" uid="uid://cvymdnraoi3tn" path="res://Scripts/Menu/BotonEscritorio.gd" id="4_ai5os"]
+[ext_resource type="Texture2D" uid="uid://doc7fd7e1qaim" path="res://Assets/Menu/partes/laptop/laptop-hover.png" id="2_lo2yn"]
+[ext_resource type="BitMap" uid="uid://de5brwbh1vbrq" path="res://Assets/Menu/partes/laptop/laptop-bitmap.png" id="3_4p4ik"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_4p4ik"]
 light_mode = 1
@@ -73,17 +72,31 @@ _data = {
 light_mask = 2
 texture_filter = 3
 material = SubResource("CanvasItemMaterial_4p4ik")
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 314.0
+offset_bottom = 281.0
 offset_transform_enabled = true
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("1_patew")
-texture_hover = ExtResource("2_1444l")
-texture_click_mask = ExtResource("3_5e36t")
-script = ExtResource("4_ai5os")
+texture_hover = ExtResource("2_lo2yn")
+texture_click_mask = ExtResource("3_4p4ik")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1630501889]
 libraries/ = SubResource("AnimationLibrary_4wi3u")
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="PuntoCamara" type="Control" parent="." unique_id=247039056]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[connection signal="mouse_entered" from="." to="AnimationPlayer" method="play" binds= ["mouse_entered"]]
+[connection signal="mouse_exited" from="." to="AnimationPlayer" method="play_backwards" binds= ["mouse_entered"]]
