@@ -18,13 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 Transicion="*uid://sa8gjllfomkh"
+PersistenciaPersonaje="*uid://dqhosc6vv74so"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=2
-window/stretch/mode="canvas_items"
 
 [physics]
 
@@ -32,5 +31,6 @@ window/stretch/mode="canvas_items"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=3
 rendering_device/driver.windows="d3d12"
 viewport/hdr_2d=true
