@@ -10,12 +10,19 @@ config_version=5
 
 [application]
 
-config/name="JuegoFeriaGamer26PO"
-config/features=PackedStringArray("4.7", "Forward Plus")
+config/name="SeleccionPersonaje"
+run/main_scene="uid://dutiirkwckxoc"
+config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+PersistenciaPersonaje="*uid://dqhosc6vv74so"
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -25,4 +32,6 @@ window/stretch/aspect="expand"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
