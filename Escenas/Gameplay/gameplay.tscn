@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://cxs56wj4ls025" path="res://Scripts/Autoloads/Utils.gd" id="12_l1d1x"]
 [ext_resource type="Script" uid="uid://dx0bmb3dpd02x" path="res://Escenas/Gameplay/manejo_archivos_txt.gd" id="13_ikyia"]
 [ext_resource type="Texture2D" uid="uid://bpmv1qocklqkd" path="res://Assets/Publis/NoIMAGEN.png" id="14_snssx"]
+[ext_resource type="Script" uid="uid://ddr3cl3kqbmsx" path="res://Scripts/Autoloads/utils_comentarios.gd" id="15_1axsk"]
 [ext_resource type="Texture2D" uid="uid://bcb184m0mvudb" path="res://Assets/Publis/testImg2.png" id="15_xgr08"]
 [ext_resource type="Script" uid="uid://bt7nrje7mcm6f" path="res://Escenas/Gameplay/manejo_link_articulos.gd" id="16_fvrgq"]
 [ext_resource type="Script" uid="uid://b2cpmmq3843mu" path="res://Escenas/Gameplay/control_comentarios.gd" id="17_h6dqy"]
@@ -168,7 +169,6 @@ layout_mode = 2
 theme_override_constants/separation = 5
 
 [node name="CommentOverlay" parent="Laptop/Pestañas/PRINCIPAL" unique_id=2058207381 instance=ExtResource("8_4rj03")]
-visible = false
 layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0
@@ -219,6 +219,9 @@ script = ExtResource("16_fvrgq")
 
 [node name="ControlComentarios" type="Node" parent="Utils" unique_id=2037462674]
 script = ExtResource("17_h6dqy")
+
+[node name="UtilsComentarios" type="Node" parent="Utils/ControlComentarios" unique_id=1339077224]
+script = ExtResource("15_1axsk")
 
 [node name="ControlNotificaciones" type="Node" parent="Utils" unique_id=995475110]
 script = ExtResource("18_hnngx")

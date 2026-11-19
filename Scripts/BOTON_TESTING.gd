@@ -23,7 +23,7 @@ func _on_button_2_pressed() -> void:
 	if !c:
 		push_error("- NO HAY COMENTARIO PA PILLAR")
 		return
-	cComentarios.ingresar_comentario(c)
+	cComentarios.ingresar_comentario(c,Utils.PUBLICACIONES.get(11))
 
 func _on_button_down() -> void:
 	if !Utils.PUBLICACIONES.has(11):

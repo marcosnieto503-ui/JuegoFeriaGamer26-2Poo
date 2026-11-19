@@ -1,88 +1,75 @@
 [gd_scene format=3 uid="uid://dnb6jodpl4e27"]
 
+[ext_resource type="Texture2D" uid="uid://6d4ypl61ufxr" path="res://Assets/Ui sprites/containers 6 small.png" id="1_0hxku"]
 [ext_resource type="Script" uid="uid://dmvfvpc2wjn5q" path="res://Escenas/ComentarioScene/escena_comentario.gd" id="1_sc6bt"]
-[ext_resource type="Texture2D" uid="uid://bkwlal6d6u748" path="res://Assets/iconPubli1.png" id="2_eaydl"]
-[ext_resource type="Texture2D" uid="uid://1n3vclfhu8ap" path="res://Assets/flechaPubliACom1.png" id="3_ojedu"]
-[ext_resource type="Texture2D" uid="uid://byyy0u38jddmd" path="res://Assets/UserIcon1.png" id="3_pt78h"]
+[ext_resource type="Texture2D" uid="uid://bxo7k2fnbfx0r" path="res://Assets/Ui sprites/User-Icon 1.png" id="3_7aq1q"]
+[ext_resource type="Texture2D" uid="uid://bp7ql88q6n7gp" path="res://Assets/Ui sprites/containers 5 small.png" id="4_nd5kq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdaly"]
-content_margin_left = 4.0
-content_margin_top = 4.0
-content_margin_right = 4.0
-content_margin_bottom = 4.0
-bg_color = Color(0.18359044, 0.18359047, 0.18359032, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7a7ai"]
+texture = ExtResource("1_0hxku")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojedu"]
-content_margin_left = 6.0
-content_margin_top = 2.0
-content_margin_right = 6.0
-content_margin_bottom = 4.0
-bg_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f3445"]
-content_margin_left = 5.0
-content_margin_top = 2.0
-content_margin_right = 4.0
-content_margin_bottom = 2.0
-bg_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8a6s"]
+texture = ExtResource("4_nd5kq")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
 
 [node name="Comentario" type="PanelContainer" unique_id=1735260042]
-custom_minimum_size = Vector2(355, 100)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -887.0
-offset_bottom = -620.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_bdaly")
+texture_filter = 1
+custom_minimum_size = Vector2(355, 80)
+propagate_maximum_size = false
+offset_right = 355.0
+offset_bottom = 80.0
+focus_mode = 1
+theme_override_styles/panel = SubResource("StyleBoxTexture_7a7ai")
 script = ExtResource("1_sc6bt")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1476101729]
+[node name="Control" type="Control" parent="." unique_id=383733322]
 layout_mode = 2
-theme_override_constants/separation = 4
 
-[node name="PubliCOntainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1581766988]
-layout_mode = 2
-size_flags_vertical = 3
+[node name="ButtonC" type="Button" parent="Control" unique_id=1836484106]
+modulate = Color(1, 1, 1, 0.101960786)
+z_index = 3
+z_as_relative = false
+layout_mode = 0
+offset_left = -19.0
+offset_top = -19.0
+offset_right = 335.0
+offset_bottom = 59.0
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/PubliCOntainer" unique_id=1272738945]
-custom_maximum_size = Vector2(35, 35)
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("2_eaydl")
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1099603067]
+layout_mode = 0
+offset_left = -7.0
+offset_top = -1.0
+offset_right = 35.0
+offset_bottom = 40.0
+texture = ExtResource("3_7aq1q")
 expand_mode = 1
+stretch_mode = 4
 
-[node name="PubliCaja" type="RichTextLabel" parent="VBoxContainer/PubliCOntainer" unique_id=1482916410]
-custom_minimum_size = Vector2(295, 0)
-custom_maximum_size = Vector2(-1, 36)
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/normal_font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxFlat_ojedu")
-text = "AQUI VA PEDAZO DE PUBLIIIII TELLENO TENER AQUI PA VER CUANTO TEXTO CABE....."
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=2059495391]
+layout_mode = 0
+offset_left = 45.0
+offset_top = -7.0
+offset_right = 319.0
+offset_bottom = 43.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_o8a6s")
 
-[node name="CommentContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=2000948527]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-size_flags_vertical = 3
+[node name="CommentCaja" type="Label" parent="Control" unique_id=1967027660]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 6.0
+offset_right = 320.0
+offset_bottom = 43.0
+theme_override_colors/font_color = Color(0.3665946, 0.3665946, 0.36659458, 1)
+theme_override_font_sizes/font_size = 16
+text = "[COMMENT TEXT]"
+text_overrun_behavior = 3
 
-[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/CommentContainer" unique_id=1676359865]
-layout_mode = 2
-texture = ExtResource("3_ojedu")
-expand_mode = 3
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/CommentContainer" unique_id=1944592283]
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("3_pt78h")
-expand_mode = 1
-
-[node name="CommentCaja" type="RichTextLabel" parent="VBoxContainer/CommentContainer" unique_id=473484095]
-custom_minimum_size = Vector2(243, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 11
-theme_override_styles/normal = SubResource("StyleBoxFlat_f3445")
-text = "AQUI VA COMENTARIO"
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="pressed" from="Control/ButtonC" to="." method="_on_button_c_pressed"]

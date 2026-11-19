@@ -22,7 +22,7 @@ func _ingresar_comentario_random() -> void:
 		print("(Logica_jugable_comentarios) LA PUBLI CON ID:",publi.get_id()," NO TIENE COMENTARIOS")
 		return
 	var comment = publi.getComentarioRandom()
-	ingresar_comentario(comment)
+	ingresar_comentario(comment,publi)
 	#sssssssss
 	publi._comentarios.erase(comment)
 	if !publi.hayComentarios():
@@ -45,9 +45,9 @@ func DEBUG_get_comment_from_publi(id:int) -> Comentario:
 		return com
 
 
-func ingresar_comentario(c:Comentario):
+func ingresar_comentario(c:Comentario,p:Publicacion):
 	var com = escenaComentario.instantiate()
-	if !com.asignarComentario(c):
+	if !com.asignarComentario(c,p):
 		return
 	cajaComentarios.add_child(com)
 	print("(control_comentarios) COMENTARIO AGREGADO A LA ESCENA CORRECTAMENTE")

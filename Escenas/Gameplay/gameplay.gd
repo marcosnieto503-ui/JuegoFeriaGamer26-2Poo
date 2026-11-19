@@ -30,10 +30,9 @@ signal _movido_hacia_laptop
 func _ready() -> void:
 	toLaptop()
 	BotonToLaptop.hide()
-	#fondo.frame = noFocus
-	#pantalla.hide()
+	UtilsComentarios.ComOverlay = $"Laptop/Pestañas/PRINCIPAL/CommentOverlay"
 	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("espacio")): #-------------------debug
 		#DEBUGingresarNotiRandom()
