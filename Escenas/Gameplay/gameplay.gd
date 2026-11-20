@@ -30,7 +30,6 @@ signal _movido_hacia_laptop
 func _ready() -> void:
 	toLaptop()
 	BotonToLaptop.hide()
-	UtilsComentarios.ComOverlay = $"Laptop/Pestañas/PRINCIPAL/CommentOverlay"
 	
 
 func _process(_delta: float) -> void:

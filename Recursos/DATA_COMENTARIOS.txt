@@ -6,6 +6,13 @@
 -r3:La cagada va en la taza.
 #f
 #i
+-texto:1-1 segundito coment Este es un comentario de prueba, texto de relleno fuap.
+-id:1
+-r1:Lo lamentamos mucho.
+-r2:Casi te pregunto.
+-r3:La cagada va en la taza.
+#f
+#i
 -texto:2 Este es un comentario de prueba, texto de relleno fuap.
 -id:2
 -r1:Lo lamentamos mucho.

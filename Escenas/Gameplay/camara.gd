@@ -1,14 +1,19 @@
 extends Camera2D
 
+var zoomPermitido:bool = true
 
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 var tween_actual: Tween
 
 func zoom_hacia(posicion_objetivo: Vector2, nivel_zoom: float, duracion: float = 0.4):
+	if !zoomPermitido:
+		return
+	
+	
 	if tween_actual:
 		tween_actual.kill()
 	var zoom_clampeado = clamp(nivel_zoom, 0.3, 1.7)
@@ -20,6 +25,10 @@ func zoom_hacia(posicion_objetivo: Vector2, nivel_zoom: float, duracion: float =
 	await tween_actual.finished
 	
 func reiniciar_camara(duracion: float = 0.3):
+	if !zoomPermitido:
+		return
+	
+	
 	if tween_actual:
 		tween_actual.kill()
 	tween_actual = create_tween()

@@ -5,6 +5,7 @@ var escenaComentario = preload("res://Escenas/ComentarioScene/comentario.tscn")
 @onready var cajaComentarios = $"../../Laptop/Pestañas/PRINCIPAL/PanelContainer/ScrollContainer/CajaComentarios"
 
 func _ready() -> void:
+	UtilsComentarios.ComOverlay = $"../../Laptop/Pestañas/PRINCIPAL/CommentOverlay"
 	await get_tree().process_frame
 	leerArchivoComentarios()
 
@@ -23,10 +24,6 @@ func _ingresar_comentario_random() -> void:
 		return
 	var comment = publi.getComentarioRandom()
 	ingresar_comentario(comment,publi)
-	#sssssssss
-	publi._comentarios.erase(comment)
-	if !publi.hayComentarios():
-		DataPartida.PUBLIS_PARA_COMENTARIOS.erase(publi)
 
 
 #sim importar si fue descartada o publicada
@@ -48,9 +45,18 @@ func DEBUG_get_comment_from_publi(id:int) -> Comentario:
 func ingresar_comentario(c:Comentario,p:Publicacion):
 	var com = escenaComentario.instantiate()
 	if !com.asignarComentario(c,p):
+		print("(Control_comentarios) no se pdo asignar el comentario a la scene Comentario")
 		return
 	cajaComentarios.add_child(com)
+	descartarComentarioNoApareceMas(c,p)
 	print("(control_comentarios) COMENTARIO AGREGADO A LA ESCENA CORRECTAMENTE")
+
+func descartarComentarioNoApareceMas(c:Comentario,p:Publicacion):
+	p._comentarios.erase(c)
+	if !p.hayComentarios():
+		DataPartida.PUBLIS_PARA_COMENTARIOS.erase(p)
+	print("(Control_Comentario) comentario con id: %s no aparece mas (puedes haber mas con el mismo id)" % c.get_id())
+
 
 #LECTURA DE ARCHIVO
 func leerArchivoComentarios():
@@ -99,7 +105,7 @@ func leerArchivoComentarios():
 				push_error("NO EXISTE PUBLICACION CON ESTE ID PARA SIGNARLE COMENTARIO: ",id)
 				continue
 			Utils.PUBLICACIONES.get(comentario._id).addComentario(comentario)
-			print("-------COMENTARIO LEIDO: ",comentario,"\n")
+			print("-------COMENTARIO LEIDO: ",comentario.get_id(),"\n")
 		
 		if estadoLectura == "noLeyendo":
 			continue

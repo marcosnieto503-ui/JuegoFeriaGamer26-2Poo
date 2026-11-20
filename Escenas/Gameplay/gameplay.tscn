@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c4blyrcn58omj" path="res://Escenas/Gameplay/gameplay.gd" id="1_1axsk"]
 [ext_resource type="Script" uid="uid://b2jw6ubats8c5" path="res://Escenas/Gameplay/camara.gd" id="2_41hg1"]
 [ext_resource type="PackedScene" uid="uid://ws2tfnh4dtuc" path="res://Escenas/Visuales/Visuales.tscn" id="3_7a7ai"]
-[ext_resource type="Texture2D" uid="uid://cq08yoki2e1lt" path="res://Assets/principalTab.png" id="7_axf5d"]
+[ext_resource type="Texture2D" uid="uid://kptnfdn5y6po" path="res://Assets/Ui sprites/Principal tab.png" id="4_41hg1"]
 [ext_resource type="PackedScene" uid="uid://7obfqhwcbt7y" path="res://Escenas/CommentOverlayScene/comment_overlay.tscn" id="8_4rj03"]
 [ext_resource type="Script" uid="uid://ds4dtwidfvvoq" path="res://Scripts/BOTON_TESTING.gd" id="9_bmyfo"]
 [ext_resource type="PackedScene" uid="uid://qdvfjwx5eo4r" path="res://Escenas/Escena Reacciones/escena_reacciones.tscn" id="10_iuhs4"]
@@ -35,6 +35,7 @@
 [ext_resource type="AudioStream" uid="uid://bvsytiku7mh3u" path="res://SFX/ui pop 1.wav" id="33_wltkd"]
 [ext_resource type="AudioStream" uid="uid://dch74rvg12ldi" path="res://SFX/ui pop 2.wav" id="34_2tpyu"]
 [ext_resource type="AudioStream" uid="uid://834lon0tid8e" path="res://SFX/hover hint3.wav" id="35_3hk8v"]
+[ext_resource type="Script" uid="uid://lrqao6xva38c" path="res://Escenas/Gameplay/camarazoom.gd" id="36_41hg1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2slyb"]
 bg_color = Color(0.90186185, 0.90186185, 0.90186185, 1)
@@ -58,6 +59,15 @@ data = PackedByteArray("cW9hZgAAudYBALuAFAAIGAAAAAAAAAAAAAAAAOAAQAAQSSy2aWGAUiAW
 format = 3
 mix_rate = 48000
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8a6s"]
+content_margin_left = 4.0
+content_margin_right = 4.0
+bg_color = Color(0.29803923, 0.29803923, 0.29803923, 0.64705884)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="Gameplay" type="Node2D" unique_id=1380733400 node_paths=PackedStringArray("Gameplay_Visuals")]
 script = ExtResource("1_1axsk")
 Gameplay_Visuals = NodePath("Visuales")
@@ -73,6 +83,7 @@ script = ExtResource("2_41hg1")
 
 [node name="Visuales" parent="." unique_id=422829186 instance=ExtResource("3_7a7ai")]
 position = Vector2(960, 540)
+duracionHastaAtardecer = 15.0
 
 [node name="Celular" type="Control" parent="." unique_id=197617991]
 layout_mode = 3
@@ -143,20 +154,20 @@ tab_focus_mode = 0
 layout_mode = 2
 metadata/_tab_index = 0
 
-[node name="TextureRect" type="TextureRect" parent="Laptop/Pestañas/PRINCIPAL" unique_id=60708242]
+[node name="FondoTabPrincipal" type="TextureRect" parent="Laptop/Pestañas/PRINCIPAL" unique_id=60708242]
 texture_filter = 1
 layout_mode = 0
-offset_right = 864.0
-offset_bottom = 456.0
-texture = ExtResource("7_axf5d")
+offset_right = 850.0
+offset_bottom = 450.0
+texture = ExtResource("4_41hg1")
 expand_mode = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="Laptop/Pestañas/PRINCIPAL" unique_id=922016375]
 layout_mode = 0
-offset_left = 469.0
-offset_top = 57.0
-offset_right = 827.0
-offset_bottom = 428.0
+offset_left = 465.0
+offset_top = 75.0
+offset_right = 823.0
+offset_bottom = 424.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_xmlui")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Laptop/Pestañas/PRINCIPAL/PanelContainer" unique_id=2107879576]
@@ -169,36 +180,12 @@ layout_mode = 2
 theme_override_constants/separation = 5
 
 [node name="CommentOverlay" parent="Laptop/Pestañas/PRINCIPAL" unique_id=2058207381 instance=ExtResource("8_4rj03")]
+visible = false
 layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 832.0
 offset_bottom = 431.0
-
-[node name="BOTON TESTING" type="Button" parent="." unique_id=938050882]
-offset_left = 36.0
-offset_top = 36.0
-offset_right = 329.0
-offset_bottom = 167.0
-focus_mode = 0
-text = "INGRESAR PUBLICACION !"
-script = ExtResource("9_bmyfo")
-
-[node name="Button" type="Button" parent="BOTON TESTING" unique_id=1180289113]
-layout_mode = 0
-offset_left = 78.0
-offset_top = 254.0
-offset_right = 240.0
-offset_bottom = 326.0
-text = "check hay publis excluidas"
-
-[node name="Button2" type="Button" parent="BOTON TESTING" unique_id=269116645]
-layout_mode = 0
-offset_left = 83.0
-offset_top = 396.0
-offset_right = 271.0
-offset_bottom = 484.0
-text = "METE COMENTARIO"
 
 [node name="EscenaReacciones" parent="." unique_id=1526037047 instance=ExtResource("10_iuhs4")]
 
@@ -322,13 +309,61 @@ pitch_scale = 3.81
 position = Vector2(730, 430)
 current = true
 
+[node name="BOTONES DEBUG" type="CanvasLayer" parent="." unique_id=766556016]
+
+[node name="BOTON TESTING" type="Button" parent="BOTONES DEBUG" unique_id=938050882]
+offset_left = 36.0
+offset_top = 36.0
+offset_right = 329.0
+offset_bottom = 167.0
+focus_mode = 0
+text = "INGRESAR PUBLICACION !"
+script = ExtResource("9_bmyfo")
+
+[node name="CheckHayPublisExcluidas" type="Button" parent="BOTONES DEBUG/BOTON TESTING" unique_id=1180289113]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 254.0
+offset_right = 240.0
+offset_bottom = 326.0
+text = "check hay publis excluidas"
+
+[node name="Mete comentario 11" type="Button" parent="BOTONES DEBUG/BOTON TESTING" unique_id=269116645]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 396.0
+offset_right = 271.0
+offset_bottom = 484.0
+text = "METE COMENTARIO 11"
+
+[node name="MeteComRandom" type="Button" parent="BOTONES DEBUG/BOTON TESTING" unique_id=1120163556]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 532.0
+offset_right = 340.0
+offset_bottom = 623.0
+text = "METE COMENTARIO RANDOM"
+
+[node name="CAMARAZOOM" type="CheckButton" parent="BOTONES DEBUG" unique_id=1780159070 node_paths=PackedStringArray("camaraNode")]
+offset_left = 395.0
+offset_top = 29.0
+offset_right = 655.0
+offset_bottom = 92.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_o8a6s")
+text = "ZOOM SWITCH"
+script = ExtResource("36_41hg1")
+camaraNode = NodePath("../../Camara")
+
 [connection signal="_movido_hacia_laptop" from="." to="AUDIO" method="_player_movido_hacia_laptop"]
 [connection signal="_movido_hacia_telefono" from="." to="AUDIO" method="_player_movido_hacia_telefono"]
 [connection signal="button_down" from="Celular/ToLaptop" to="." method="_ToLaptop_Pressed"]
 [connection signal="button_down" from="Laptop/ToCelular" to="." method="_ToCelular_Pressed"]
 [connection signal="tab_clicked" from="Laptop/Pestañas" to="." method="_on_pestañas_tab_clicked"]
-[connection signal="button_down" from="BOTON TESTING" to="BOTON TESTING" method="_on_button_down"]
-[connection signal="pressed" from="BOTON TESTING/Button" to="BOTON TESTING" method="_on_button_check_pressed"]
-[connection signal="pressed" from="BOTON TESTING/Button2" to="BOTON TESTING" method="_on_button_2_pressed"]
 [connection signal="timeout" from="logicaJugable/logicaJugableComentarios/TimerComments" to="logicaJugable/logicaJugableComentarios" method="_on_timer_comments_timeout"]
 [connection signal="timeout" from="logicaJugable/TimerNotis" to="logicaJugable" method="_on_timer_timeout"]
+[connection signal="button_down" from="BOTONES DEBUG/BOTON TESTING" to="BOTONES DEBUG/BOTON TESTING" method="_on_button_down"]
+[connection signal="pressed" from="BOTONES DEBUG/BOTON TESTING/CheckHayPublisExcluidas" to="BOTONES DEBUG/BOTON TESTING" method="_on_check_hay_publis_excluidas_pressed"]
+[connection signal="pressed" from="BOTONES DEBUG/BOTON TESTING/Mete comentario 11" to="BOTONES DEBUG/BOTON TESTING" method="_on_mete_comentario_11_pressed"]
+[connection signal="pressed" from="BOTONES DEBUG/BOTON TESTING/MeteComRandom" to="BOTONES DEBUG/BOTON TESTING" method="_on_mete_com_random_pressed"]
+[connection signal="toggled" from="BOTONES DEBUG/CAMARAZOOM" to="BOTONES DEBUG/CAMARAZOOM" method="_on_toggled"]

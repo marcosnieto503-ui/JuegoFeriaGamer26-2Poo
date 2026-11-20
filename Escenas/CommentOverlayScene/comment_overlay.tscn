@@ -10,6 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cl4x806wc4w0e" path="res://Assets/Ui sprites/Icono flecha 1.png" id="8_526rk"]
 [ext_resource type="Texture2D" uid="uid://b0mmuefb4y5yx" path="res://Assets/Ui sprites/containers 4 small.png" id="9_g1opm"]
 [ext_resource type="Texture2D" uid="uid://6d4ypl61ufxr" path="res://Assets/Ui sprites/containers 6 small.png" id="10_537yg"]
+[ext_resource type="Texture2D" uid="uid://4bp0erv2dbr7" path="res://Assets/Ui sprites/loading anim 2-Sheet 1.png" id="11_537yg"]
+[ext_resource type="Texture2D" uid="uid://cv6fkcxrubu7o" path="res://Assets/Ui sprites/green check 2.png" id="12_537yg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m3jo5"]
 texture = ExtResource("2_85wlj")
@@ -55,6 +57,13 @@ texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_537yg"]
+bg_color = Color(0.9882353, 0.9882353, 0.9882353, 0.5294118)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kugx0"]
 texture = ExtResource("10_537yg")
 texture_margin_left = 20.0
@@ -62,7 +71,85 @@ texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
 
-[node name="CommentOverlay" type="Control" unique_id=2058207381]
+[sub_resource type="AtlasTexture" id="AtlasTexture_htq6i"]
+atlas = ExtResource("11_537yg")
+region = Rect2(0, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76qrl"]
+atlas = ExtResource("11_537yg")
+region = Rect2(120, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0b31"]
+atlas = ExtResource("11_537yg")
+region = Rect2(240, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djajs"]
+atlas = ExtResource("11_537yg")
+region = Rect2(360, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrnqv"]
+atlas = ExtResource("11_537yg")
+region = Rect2(480, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuw8i"]
+atlas = ExtResource("11_537yg")
+region = Rect2(600, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhrmn"]
+atlas = ExtResource("11_537yg")
+region = Rect2(720, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thxoa"]
+atlas = ExtResource("11_537yg")
+region = Rect2(840, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbvq8"]
+atlas = ExtResource("11_537yg")
+region = Rect2(960, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33aif"]
+atlas = ExtResource("11_537yg")
+region = Rect2(1080, 0, 120, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8a6s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htq6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76qrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0b31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djajs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrnqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuw8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhrmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thxoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbvq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33aif")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="CommentOverlay" type="Control" unique_id=2058207381 node_paths=PackedStringArray("loadBackground", "LoadingAnim", "checkImg", "timer")]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 10.0
@@ -71,6 +158,10 @@ offset_right = 842.0
 offset_bottom = 443.0
 focus_mode = 1
 script = ExtResource("1_oacvb")
+loadBackground = NodePath("BackgroundProcessAnim")
+LoadingAnim = NodePath("BackgroundProcessAnim/LoadingAnim")
+checkImg = NodePath("BackgroundProcessAnim/Check")
+timer = NodePath("BackgroundProcessAnim/Timer")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=641394383]
 texture_filter = 1
@@ -135,20 +226,21 @@ theme_override_font_sizes/font_size = 25
 text = "Universidad del Norte"
 
 [node name="PubliText" type="Label" parent="PanelContainer/HBoxContainer/LadoPubli/Control" unique_id=1808832819]
+custom_minimum_size = Vector2(330, 0)
 layout_mode = 0
 offset_left = 26.0
 offset_top = 86.0
-offset_right = 357.0
+offset_right = 356.0
 offset_bottom = 238.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_526rk")
-theme_override_font_sizes/font_size = 17
-text = "[Publi Text Box]
-"
+theme_override_font_sizes/font_size = 20
+text = "[Publi Text ]"
+autowrap_mode = 3
 text_overrun_behavior = 3
 
 [node name="LadoResponder" type="PanelContainer" parent="PanelContainer/HBoxContainer" unique_id=587595810]
-modulate = Color(1, 1, 1, 0.70980394)
+modulate = Color(1, 1, 1, 0.5921569)
 custom_minimum_size = Vector2(420, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -190,6 +282,7 @@ expand_mode = 1
 stretch_mode = 4
 
 [node name="Com text fondo" type="PanelContainer" parent="PanelContainer/HBoxContainer/LadoResponder/Control" unique_id=1496504470]
+modulate = Color(1.6197081, 1.6197081, 1.6197081, 0.44313726)
 layout_mode = 0
 offset_left = 59.0
 offset_top = 23.0
@@ -198,17 +291,19 @@ offset_bottom = 111.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_wcwtv")
 
 [node name="ComentarioText" type="Label" parent="PanelContainer/HBoxContainer/LadoResponder/Control" unique_id=275747980]
+custom_minimum_size = Vector2(320, 0)
 layout_mode = 0
-offset_left = 63.0
-offset_top = 26.0
-offset_right = 390.0
-offset_bottom = 106.0
+offset_left = 68.0
+offset_top = 32.0
+offset_right = 388.0
+offset_bottom = 100.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_526rk")
-theme_override_font_sizes/font_size = 17
+theme_override_font_sizes/font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o8a6s")
 text = "[Comment Box]
 "
+autowrap_mode = 3
 
 [node name="Com box2" type="PanelContainer" parent="PanelContainer/HBoxContainer/LadoResponder/Control" unique_id=703659557]
 layout_mode = 0
@@ -259,6 +354,7 @@ offset_top = 201.0
 offset_right = 380.0
 offset_bottom = 241.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_g4cw3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_537yg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_kugx0")
 
 [node name="Respuesta1" type="Label" parent="PanelContainer/HBoxContainer/LadoResponder/Control/OPCION1" unique_id=427586093]
@@ -269,7 +365,7 @@ offset_right = 329.0
 offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_526rk")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o8a6s")
 text = "[respuesta 1]"
 horizontal_alignment = 1
@@ -281,6 +377,7 @@ offset_top = 249.0
 offset_right = 380.0
 offset_bottom = 289.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_g4cw3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_537yg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_kugx0")
 
 [node name="Respuesta2" type="Label" parent="PanelContainer/HBoxContainer/LadoResponder/Control/OPCION2" unique_id=1504435635]
@@ -291,7 +388,7 @@ offset_right = 329.0
 offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_526rk")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o8a6s")
 text = "[respuesta 2]"
 horizontal_alignment = 1
@@ -303,6 +400,7 @@ offset_top = 298.0
 offset_right = 380.0
 offset_bottom = 338.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_g4cw3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_537yg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_kugx0")
 
 [node name="Respuesta3" type="Label" parent="PanelContainer/HBoxContainer/LadoResponder/Control/OPCION3" unique_id=223904827]
@@ -313,7 +411,7 @@ offset_right = 329.0
 offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_526rk")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 19
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o8a6s")
 text = "[respuesta 3]"
 horizontal_alignment = 1
@@ -326,6 +424,7 @@ offset_top = 363.0
 offset_right = 387.0
 offset_bottom = 403.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_g4cw3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_537yg")
 theme_override_styles/hover = SubResource("StyleBoxTexture_kugx0")
 
 [node name="No responder" type="Label" parent="PanelContainer/HBoxContainer/LadoResponder/Control/NoResponder" unique_id=219491481]
@@ -334,12 +433,61 @@ offset_left = 27.0
 offset_top = 8.0
 offset_right = 141.0
 offset_bottom = 33.0
-theme_override_colors/font_color = Color(0.24115604, 0.24115604, 0.24115604, 1)
+theme_override_colors/font_color = Color(0.1584723, 0.15847233, 0.15847224, 1)
 theme_override_fonts/font = ExtResource("6_526rk")
 theme_override_font_sizes/font_size = 23
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o8a6s")
 text = "No Responder"
 horizontal_alignment = 1
 
+[node name="BackgroundProcessAnim" type="NinePatchRect" parent="." unique_id=1331090477]
+visible = false
+modulate = Color(1, 1, 1, 0.9411765)
+z_index = 1
+texture_filter = 1
+layout_mode = 0
+offset_left = 11.0
+offset_top = 8.0
+offset_right = 825.0
+offset_bottom = 418.0
+texture = ExtResource("10_537yg")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="LoadingAnim" type="AnimatedSprite2D" parent="BackgroundProcessAnim" unique_id=143281642]
+modulate = Color(0.8901961, 0.91764706, 0.9411765, 0.5254902)
+position = Vector2(409, 195.00002)
+scale = Vector2(1.1833333, 1.1833333)
+sprite_frames = SubResource("SpriteFrames_o8a6s")
+frame_progress = 0.4103262
+
+[node name="Label" type="Label" parent="BackgroundProcessAnim/LoadingAnim" unique_id=122067034]
+offset_left = -38.87324
+offset_top = -95.49297
+offset_right = 56.61971
+offset_bottom = -52.3944
+theme_override_fonts/font = ExtResource("6_526rk")
+theme_override_font_sizes/font_size = 24
+text = "ENVIANDO..."
+
+[node name="Check" type="TextureRect" parent="BackgroundProcessAnim" unique_id=1745591666]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 101.0
+offset_right = 567.2753
+offset_bottom = 295.0
+texture = ExtResource("12_537yg")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Timer" type="Timer" parent="BackgroundProcessAnim" unique_id=1006759271]
+one_shot = true
+
 [connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="mouse_entered" from="PanelContainer/HBoxContainer/LadoResponder/Control/OPCION1" to="." method="mouseEnterButtons"]
+[connection signal="mouse_entered" from="PanelContainer/HBoxContainer/LadoResponder/Control/OPCION2" to="." method="mouseEnterButtons"]
+[connection signal="mouse_entered" from="PanelContainer/HBoxContainer/LadoResponder/Control/OPCION3" to="." method="mouseEnterButtons"]
+[connection signal="mouse_entered" from="PanelContainer/HBoxContainer/LadoResponder/Control/NoResponder" to="." method="mouseEnterButtons"]

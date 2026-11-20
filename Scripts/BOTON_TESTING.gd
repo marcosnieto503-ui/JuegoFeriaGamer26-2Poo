@@ -1,7 +1,7 @@
 extends Button
 
 
-@onready var tabs = $"../Laptop/Pestañas"
+@onready var tabs = $"../../Laptop/Pestañas"
 @onready var testEscena = preload("res://Escenas/VentanaPublicacion/ventana_publicacion.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,21 +9,47 @@ func _ready() -> void:
 
 
 @onready var CommentScene = preload("res://Escenas/ComentarioScene/comentario.tscn")
-@onready var cajaComentarios = $"../Laptop/Pestañas/PRINCIPAL/PanelContainer/ScrollContainer/CajaComentarios"
+@onready var cajaComentarios = $"../../Laptop/Pestañas/PRINCIPAL/PanelContainer/ScrollContainer/CajaComentarios"
 
-@onready var cComentarios = $"../Utils/ControlComentarios"
+@onready var cComentarios = $"../../Utils/ControlComentarios"
 
 
-func _on_button_check_pressed() -> void:
+func _on_check_hay_publis_excluidas_pressed() -> void:
 	print("-------HAY PUBLICS PROCESADAS: ",cComentarios._hay_publis_para_escoger())
 
-func _on_button_2_pressed() -> void:
-	#mete comentario
+
+
+func _on_mete_comentario_11_pressed() -> void:
+	if !Utils.PUBLICACIONES.has(11):
+		print("(BOTON METER COMENTARIO) La publi 11 no essta en el array pulicaciones")
+		return
+	var publi = Utils.PUBLICACIONES.get(11)
+	Utils.excluirPublicacion(publi)
+	
 	var c = cComentarios.DEBUG_get_comment_from_publi(11)
 	if !c:
 		push_error("- NO HAY COMENTARIO PA PILLAR")
 		return
-	cComentarios.ingresar_comentario(c,Utils.PUBLICACIONES.get(11))
+	print("(BOTON METER COMENTARIO) metiendo comentario")
+	cComentarios.ingresar_comentario(c,publi)
+
+var soloPublisConComments = false
+func _on_mete_com_random_pressed() -> void:
+	if !soloPublisConComments:
+		for p:Publicacion in Utils.PUBLICACIONES.values():
+			if p.hayComentarios():
+				DataPartida.PUBLIS_PARA_COMENTARIOS.append(p)
+		soloPublisConComments = true
+	
+	if DataPartida.PUBLIS_PARA_COMENTARIOS.is_empty():
+		push_error("No hay publis disponibles")
+		return
+	var p = DataPartida.PUBLIS_PARA_COMENTARIOS.pick_random()
+	var c = p.getComentarioRandom()
+	cComentarios.ingresar_comentario(c,p)
+	print("(BOTON TESTIN) comentario random ingresado")
+
+
 
 func _on_button_down() -> void:
 	if !Utils.PUBLICACIONES.has(11):

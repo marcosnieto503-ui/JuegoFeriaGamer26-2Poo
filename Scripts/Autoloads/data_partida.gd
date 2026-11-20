@@ -36,7 +36,8 @@ func procesarPubli(publi:Publicacion, playerAccion :String):
 	
 	if playerAccion == "PUBLICAR":
 		PUBLIS_PUBLICADAS.append(publi)
-		PUBLIS_PARA_COMENTARIOS.append(publi)
+		if publi.hayComentarios():
+			PUBLIS_PARA_COMENTARIOS.append(publi)
 	else:
 		PUBLIS_DESCARTADAS.append(publi)
 

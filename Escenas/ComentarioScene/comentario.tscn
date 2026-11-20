@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dmvfvpc2wjn5q" path="res://Escenas/ComentarioScene/escena_comentario.gd" id="1_sc6bt"]
 [ext_resource type="Texture2D" uid="uid://bxo7k2fnbfx0r" path="res://Assets/Ui sprites/User-Icon 1.png" id="3_7aq1q"]
 [ext_resource type="Texture2D" uid="uid://bp7ql88q6n7gp" path="res://Assets/Ui sprites/containers 5 small.png" id="4_nd5kq"]
+[ext_resource type="FontFile" uid="uid://c0yidekyi80p3" path="res://Recursos/FONTS/m6x11plus.ttf" id="5_7aq1q"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7a7ai"]
 texture = ExtResource("1_0hxku")
@@ -19,12 +20,25 @@ texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hxku"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nd5kq"]
+bg_color = Color(0.9882353, 0.9882353, 0.9882353, 0.43529412)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7aq1q"]
+bg_color = Color(1, 1, 1, 0.05490196)
+
 [node name="Comentario" type="PanelContainer" unique_id=1735260042]
 texture_filter = 1
-custom_minimum_size = Vector2(355, 80)
+custom_minimum_size = Vector2(355, 70)
 propagate_maximum_size = false
 offset_right = 355.0
-offset_bottom = 80.0
+offset_bottom = 70.0
 focus_mode = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_7a7ai")
 script = ExtResource("1_sc6bt")
@@ -32,44 +46,48 @@ script = ExtResource("1_sc6bt")
 [node name="Control" type="Control" parent="." unique_id=383733322]
 layout_mode = 2
 
+[node name="UserIcon" type="TextureRect" parent="Control" unique_id=1099603067]
+layout_mode = 0
+offset_left = -9.0
+offset_top = -6.0
+offset_right = 33.0
+offset_bottom = 35.0
+texture = ExtResource("3_7aq1q")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=2059495391]
+modulate = Color(1, 1, 1, 0.7764706)
+layout_mode = 0
+offset_left = 43.0
+offset_top = -8.0
+offset_right = 317.0
+offset_bottom = 38.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_o8a6s")
+
+[node name="CommentCaja" type="Label" parent="Control" unique_id=1967027660]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 4.0
+offset_right = 307.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.19434926, 0.19434929, 0.1943492, 1)
+theme_override_fonts/font = ExtResource("5_7aq1q")
+theme_override_font_sizes/font_size = 20
+text = "[COMMENT TEXT]"
+text_overrun_behavior = 3
+
 [node name="ButtonC" type="Button" parent="Control" unique_id=1836484106]
-modulate = Color(1, 1, 1, 0.101960786)
 z_index = 3
 z_as_relative = false
 layout_mode = 0
 offset_left = -19.0
 offset_top = -19.0
 offset_right = 335.0
-offset_bottom = 59.0
-
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1099603067]
-layout_mode = 0
-offset_left = -7.0
-offset_top = -1.0
-offset_right = 35.0
-offset_bottom = 40.0
-texture = ExtResource("3_7aq1q")
-expand_mode = 1
-stretch_mode = 4
-
-[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=2059495391]
-layout_mode = 0
-offset_left = 45.0
-offset_top = -7.0
-offset_right = 319.0
-offset_bottom = 43.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_o8a6s")
-
-[node name="CommentCaja" type="Label" parent="Control" unique_id=1967027660]
-layout_mode = 0
-offset_left = 54.0
-offset_top = 6.0
-offset_right = 320.0
-offset_bottom = 43.0
-theme_override_colors/font_color = Color(0.3665946, 0.3665946, 0.36659458, 1)
-theme_override_font_sizes/font_size = 16
-text = "[COMMENT TEXT]"
-text_overrun_behavior = 3
+offset_bottom = 48.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0hxku")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nd5kq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7aq1q")
 
 [connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="pressed" from="Control/ButtonC" to="." method="_on_button_c_pressed"]
