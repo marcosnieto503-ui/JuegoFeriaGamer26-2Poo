@@ -10,10 +10,10 @@ var recurso : Texture2D = null
 var textoPubli : String
 
 const pos_CON_IMAGEN =Vector2(275,35)
-const pos_SIN_IMAGEN =Vector2(60,35)
+const pos_SIN_IMAGEN =Vector2(70,35)
 
-const size_CON_IMAGEN = Vector2(445,180)
-const size_SIN_IMAGEN = Vector2(660,180)
+const size_CON_IMAGEN = Vector2(495,180)
+const size_SIN_IMAGEN = Vector2(690,180)
 
 @onready var botonInapropiado = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2/Inapropiado
 @onready var botonFormatoInvalido = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2/FormatoInvalido
@@ -45,8 +45,6 @@ func inicializar(publi : Publicacion,i:int):
 	asignar_imagen()
 	
 	_tabIndex = i
-
-
 
 
 
@@ -136,23 +134,7 @@ func descartar():
 	print("DESCARTADAS: "+ str(len(DataPartida.PUBLIS_DESCARTADAS)))
 
 
-
-func animacionRetirarTab(direccion:String):
-	var dir
-	if direccion == "PUBLICAR":
-		dir = -1
-	elif direccion == "DESCARTAR":
-		dir = 1.006410256 # 780px a la derecha no sacan completamente a la ventana de la vista por alguna razon, asiq eu toca poner esto
-	else:
-		print("ARGUMENTO INVALIDO MOSTro")
+@export var processAnimator:Control
+func animacionRetirarTab(opcionElegida:String):
+	await processAnimator.reproducirSecuencia(opcionElegida)
 	
-	var tween_actual = create_tween()
-	
-	tween_actual.tween_property(self,"position:x",780*dir, 0.8).set_trans(Tween.TRANS_QUAD)
-	tween_actual.tween_interval(0.6)
-	await tween_actual.finished
-	
-	
-	
-func _on_hacer_algo_button_down() -> void:
-	print("algo")

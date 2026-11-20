@@ -17,8 +17,8 @@ func _ready() -> void:
 	leer_archivo_articulos()
 
 
-const rutaPublis = "res://Recursos/DATA_PUBLICACIONES.txt"
-const rutaArticulos = "res://Recursos/DATA_ARTICULOS.txt"
+const rutaPublis = "res://Recursos/RecursosFuenteTXT/DATA_PUBLICACIONES.txt"
+const rutaArticulos = "res://Recursos/RecursosFuenteTXT/DATA_ARTICULOS.txt"
 
 const accionesPosibles = [
 	"PUBLICAR",

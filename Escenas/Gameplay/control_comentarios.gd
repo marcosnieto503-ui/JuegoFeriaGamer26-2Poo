@@ -1,6 +1,6 @@
 extends Node
 
-var rutaComentarios = "res://Recursos/DATA_COMENTARIOS.txt"
+var rutaComentarios = "res://Recursos/RecursosFuenteTXT/DATA_COMENTARIOS.txt"
 var escenaComentario = preload("res://Escenas/ComentarioScene/comentario.tscn")
 @onready var cajaComentarios = $"../../Laptop/Pestañas/PRINCIPAL/PanelContainer/ScrollContainer/CajaComentarios"
 

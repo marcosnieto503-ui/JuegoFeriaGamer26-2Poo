@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cbhmm60d6gt1d" path="res://Assets/FondoGameplay/Capa nubes delgadas.png" id="6_m544s"]
 [ext_resource type="Texture2D" uid="uid://bq8jx36sdnin" path="res://Assets/FondoGameplay/Capa edificios 2 100opacity.png" id="6_p5k6d"]
 [ext_resource type="Texture2D" uid="uid://mmupnjhnrlsf" path="res://Assets/FondoGameplay/Capa nubes grandes.png" id="7_tqssm"]
-[ext_resource type="Texture2D" uid="uid://djdhblmfthgbt" path="res://Assets/FondoGameplay/Capa sol 7.png" id="8_m3jo5"]
+[ext_resource type="Texture2D" uid="uid://jjrj00r52hix" path="res://Assets/FondoGameplay/Capa sol 6.png" id="8_m3jo5"]
 [ext_resource type="Texture2D" uid="uid://7w3803kt8mns" path="res://Assets/FondoGameplay/AMANECER 2 pared oscura GameplayFondo1 laptop 1 cel 0 NO VENTANAt.png" id="10_m3jo5"]
 [ext_resource type="Shader" uid="uid://m1xda1djw7b6" path="res://Escenas/Visuales/AmanecerShader.gdshader" id="10_n2hin"]
 [ext_resource type="Texture2D" uid="uid://c3oiihhn7blwa" path="res://Assets/FondoGameplay/AMANECER 2 pared oscura GameplayFondo1 laptop 1 cel 1 NO VENTANA -export.png" id="11_y83e2"]

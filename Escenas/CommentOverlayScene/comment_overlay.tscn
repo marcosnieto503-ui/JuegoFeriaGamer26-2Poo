@@ -30,6 +30,10 @@ texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
+modulate_color = Color(1.2742168, 1.2742168, 1.2742168, 0.9490196)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m3jo5"]
+bg_color = Color(0.5448016, 0.5887222, 0.78259057, 0.7882353)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wcwtv"]
 texture = ExtResource("5_jje4w")
@@ -56,6 +60,7 @@ texture_margin_left = 20.0
 texture_margin_top = 20.0
 texture_margin_right = 20.0
 texture_margin_bottom = 20.0
+modulate_color = Color(1.1759251, 1.1759251, 1.1759251, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_537yg"]
 bg_color = Color(0.9882353, 0.9882353, 0.9882353, 0.5294118)
@@ -240,10 +245,10 @@ autowrap_mode = 3
 text_overrun_behavior = 3
 
 [node name="LadoResponder" type="PanelContainer" parent="PanelContainer/HBoxContainer" unique_id=587595810]
-modulate = Color(1, 1, 1, 0.5921569)
 custom_minimum_size = Vector2(420, 0)
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_m3jo5")
 
 [node name="Control" type="Control" parent="PanelContainer/HBoxContainer/LadoResponder" unique_id=1539332068]
 layout_mode = 2
@@ -417,7 +422,7 @@ text = "[respuesta 3]"
 horizontal_alignment = 1
 
 [node name="NoResponder" type="Button" parent="PanelContainer/HBoxContainer/LadoResponder/Control" unique_id=1336952786]
-modulate = Color(0.76240367, 0.76240367, 0.76240367, 1)
+modulate = Color(0.96024394, 0.96024394, 0.96024394, 1)
 layout_mode = 0
 offset_left = 225.0
 offset_top = 363.0
@@ -441,7 +446,6 @@ text = "No Responder"
 horizontal_alignment = 1
 
 [node name="BackgroundProcessAnim" type="NinePatchRect" parent="." unique_id=1331090477]
-visible = false
 modulate = Color(1, 1, 1, 0.9411765)
 z_index = 1
 texture_filter = 1
@@ -461,7 +465,7 @@ modulate = Color(0.8901961, 0.91764706, 0.9411765, 0.5254902)
 position = Vector2(409, 195.00002)
 scale = Vector2(1.1833333, 1.1833333)
 sprite_frames = SubResource("SpriteFrames_o8a6s")
-frame_progress = 0.4103262
+frame_progress = 0.5549264
 
 [node name="Label" type="Label" parent="BackgroundProcessAnim/LoadingAnim" unique_id=122067034]
 offset_left = -38.87324
