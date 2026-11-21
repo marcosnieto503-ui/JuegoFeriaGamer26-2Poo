@@ -12,6 +12,6 @@ func enfocar(punto: CanvasItem, nombre_anim := "zoom_normal") -> void:
 	anim.play(nombre_anim)
 
 func volver() -> void:
-	global_position = pos_inicial
 	if ultima_anim != "":
 		anim.play_backwards(ultima_anim)
+	global_position = pos_inicial

@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://3ftf3bnax30w"]
+
+[ext_resource type="Texture2D" uid="uid://bym8ce3fpwbo0" path="res://Assets/Menu/partes/fondo.png" id="1_csv8v"]
+[ext_resource type="Script" uid="uid://bxbap1le5gaps" path="res://Scripts/Final/final.gd" id="1_pkc5l"]
+[ext_resource type="Texture2D" uid="uid://c7qupoypfl56s" path="res://Assets/Final/Hoja.png" id="2_csv8v"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://Assets/selPersonaje/Fuentes/Redaction35-Bold.ttf" id="3_vm64g"]
+[ext_resource type="Texture2D" uid="uid://0sk384aojqag" path="res://Assets/Final/marco.png" id="5_i5n1f"]
+
+[node name="Final" type="Node2D" unique_id=679332291]
+script = ExtResource("1_pkc5l")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=749823734]
+self_modulate = Color(0.641934, 0.641934, 0.641934, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -189.00005
+offset_top = -2282.9998
+offset_right = 450.99994
+offset_bottom = -1922.9998
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10, 10)
+texture = ExtResource("1_csv8v")
+
+[node name="Hojas" type="TextureRect" parent="." unique_id=55214198]
+texture_filter = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 339.0
+offset_top = -156.0
+offset_right = 1539.0
+offset_bottom = 1344.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_csv8v")
+
+[node name="ContenidoHoja" type="MarginContainer" parent="Hojas" unique_id=1579710992]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -16.5
+offset_right = 16.5
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 300
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="Divisiones" type="VBoxContainer" parent="Hojas/ContenidoHoja" unique_id=912574674]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Titulo" type="Label" parent="Hojas/ContenidoHoja/Divisiones" unique_id=205692295]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vm64g")
+theme_override_font_sizes/font_size = 100
+text = "RESULTADO"
+
+[node name="Perfil" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones" unique_id=859361534]
+layout_mode = 2
+
+[node name="Retrato" type="TextureRect" parent="Hojas/ContenidoHoja/Divisiones/Perfil" unique_id=567534439]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("5_i5n1f")
+
+[node name="Personaje" type="Sprite2D" parent="Hojas/ContenidoHoja/Divisiones/Perfil/Retrato" unique_id=269105357]
+scale = Vector2(2, 2)
+offset = Vector2(50, 58)
+
+[node name="Texto" type="Label" parent="Hojas/ContenidoHoja/Divisiones/Perfil" unique_id=688264760]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vm64g")
+theme_override_font_sizes/font_size = 80
+text = "basurinha"
+
+[node name="Publicadas" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones" unique_id=762029452]
+layout_mode = 2
+
+[node name="IconPublicadas" type="TextureRect" parent="Hojas/ContenidoHoja/Divisiones/Publicadas" unique_id=1480380]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Contenido" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones/Publicadas" unique_id=1956290481]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Texto1" type="Label" parent="Hojas/ContenidoHoja/Divisiones/Publicadas/Contenido" unique_id=259307922]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vm64g")
+theme_override_font_sizes/font_size = 40
+text = "Publicadas"
+
+[node name="Texto2" type="Label" parent="Hojas/ContenidoHoja/Divisiones/Publicadas/Contenido" unique_id=1918733649]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vm64g")
+theme_override_font_sizes/font_size = 30
+text = "#"
+horizontal_alignment = 1
+
+[node name="Descartadas" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones" unique_id=2072676769]
+layout_mode = 2
+
+[node name="IconDescartadas" type="TextureRect" parent="Hojas/ContenidoHoja/Divisiones/Descartadas" unique_id=1270887222]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Contenido" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones/Descartadas" unique_id=1051581547]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Texto1" type="Label" parent="Hojas/ContenidoHoja/Divisiones/Descartadas/Contenido" unique_id=1544094371]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vm64g")
+theme_override_font_sizes/font_size = 40
+text = "Descartadas"
+
+[node name="Texto2" type="Label" parent="Hojas/ContenidoHoja/Divisiones/Descartadas/Contenido" unique_id=1884294935]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vm64g")
+theme_override_font_sizes/font_size = 30
+text = "#"
+horizontal_alignment = 1
+
+[node name="ComentarioResp" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones" unique_id=700439461]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="IconRespondidos" type="TextureRect" parent="Hojas/ContenidoHoja/Divisiones/ComentarioResp" unique_id=568662377]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="Content" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones/ComentarioResp" unique_id=162933595]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Texto1" type="Label" parent="Hojas/ContenidoHoja/Divisiones/ComentarioResp/Content" unique_id=1930439027]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vm64g")
+theme_override_font_sizes/font_size = 40
+text = "Comentarios Respondidos"
+
+[node name="Texto2" type="Label" parent="Hojas/ContenidoHoja/Divisiones/ComentarioResp/Content" unique_id=238266902]
+texture_filter = 3
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vm64g")
+theme_override_font_sizes/font_size = 50
+text = "#"
+horizontal_alignment = 1
+
+[node name="PuntuacionFinal" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones" unique_id=1528282802]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Content" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones/PuntuacionFinal" unique_id=1362766885]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Texto1" type="Label" parent="Hojas/ContenidoHoja/Divisiones/PuntuacionFinal/Content" unique_id=1130790409]
+texture_filter = 3
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98274976, 6.08854e-06, 1.540184e-06, 1)
+theme_override_fonts/font = ExtResource("3_vm64g")
+theme_override_font_sizes/font_size = 80
+text = "Puntuacion Final"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Texto2" type="Label" parent="Hojas/ContenidoHoja/Divisiones/PuntuacionFinal/Content" unique_id=1463140885]
+texture_filter = 3
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_vm64g")
+theme_override_font_sizes/font_size = 90
+text = "#"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://qowk0smgi7wu"
-path="res://.godot/imported/acc_mujer_trenzas.png-252b0b752f67dbc97299465b8b94f6df.ctex"
+path="res://.godot/imported/acc_mujer_trenzas.png-961b27957b1dfb7256fc96215cca0627.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/personajes/acc_mujer_trenzas.png"
-dest_files=["res://.godot/imported/acc_mujer_trenzas.png-252b0b752f67dbc97299465b8b94f6df.ctex"]
+source_file="res://Assets/selPersonaje/Personajes/acc_mujer_trenzas.png"
+dest_files=["res://.godot/imported/acc_mujer_trenzas.png-961b27957b1dfb7256fc96215cca0627.ctex"]
 
 [params]
 

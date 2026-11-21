@@ -19,11 +19,16 @@ config/icon="res://icon.svg"
 
 Transicion="*uid://sa8gjllfomkh"
 PersistenciaPersonaje="*uid://dqhosc6vv74so"
+SonidoUi="*uid://c4bx0n551lmj6"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+
+[global_group]
+
+sonido_menu="Sonido utilizado para interfaz"
 
 [physics]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://csi3rvjj4apn5" path="res://Scripts/Menu/menu.gd" id="1_mtxq6"]
 [ext_resource type="PackedScene" uid="uid://csxj6i22qy1cn" path="res://Escenas/Globales/CameraEnfoque.tscn" id="2_6lob0"]
-[ext_resource type="Script" uid="uid://d4nph0a2ggrgo" path="res://Scripts/Menu/movMouse.gd" id="2_31pwh"]
+[ext_resource type="Script" uid="uid://d4nph0a2ggrgo" path="res://Scripts/Menu/movimiento_mouse.gd" id="2_31pwh"]
 [ext_resource type="Texture2D" uid="uid://bym8ce3fpwbo0" path="res://Assets/Menu/partes/fondo.png" id="3_kp2x1"]
 [ext_resource type="Texture2D" uid="uid://dmy6ipbwk4hoi" path="res://Assets/Menu/partes/mouse/mouse.png" id="4_rffgm"]
 [ext_resource type="Texture2D" uid="uid://cdxotwoc84map" path="res://Assets/Menu/partes/clips.png" id="5_hmem7"]
@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://b7diumooa44km" path="res://Assets/Menu/partes/celular/Sprite/celular_8.png" id="17_f1ohs"]
 [ext_resource type="Texture2D" uid="uid://cub4as0lrwpes" path="res://Assets/Menu/partes/celular/Sprite/celular_9.png" id="18_elans"]
 [ext_resource type="Texture2D" uid="uid://lalwqgjrd5lg" path="res://Assets/Menu/UI/titulo.png" id="18_r6grw"]
-[ext_resource type="PackedScene" uid="uid://gnopc0s56py2" path="res://Escenas/Menu/BotonEscritorio.tscn" id="19_31pwh"]
+[ext_resource type="PackedScene" uid="uid://gnopc0s56py2" path="res://Escenas/Menu/UI/BotonEscritorio.tscn" id="19_31pwh"]
 [ext_resource type="BitMap" uid="uid://cm52wbna32vsc" path="res://Assets/Menu/partes/hojas/hojas-bitmap.png" id="22_bsrxh"]
 [ext_resource type="Texture2D" uid="uid://dnvdanlcmodyh" path="res://Assets/Menu/partes/llaves/llaves-hover.png" id="24_bsrxh"]
 
@@ -63,7 +63,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../../Titulo:modulate")
+tracks/0/path = NodePath("../../../UI/Titulo:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -151,7 +151,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../../Titulo:modulate")
+tracks/0/path = NodePath("../../../UI/Titulo:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -228,7 +228,7 @@ _data = {
 }
 
 [sub_resource type="Gradient" id="Gradient_hmem7"]
-offsets = PackedFloat32Array(0.5301205, 1)
+offsets = PackedFloat32Array(0.48214287, 1)
 colors = PackedColorArray(0.5019608, 0.5019608, 0.5019608, 0, 0, 0, 0, 0.69411767)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_5v0uk"]
@@ -243,6 +243,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mtxq6")
+escena_creditos = "uid://bv0aki5s32cgu"
+escena_juego = "uid://dutiirkwckxoc"
 
 [node name="CameraEnfoque" parent="." unique_id=1611027167 instance=ExtResource("2_6lob0")]
 position = Vector2(960, 540)
@@ -263,27 +265,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.06, 1.06)
+scale = Vector2(1.1, 1.1)
 pivot_offset = Vector2(960, 540)
 mouse_filter = 2
 script = ExtResource("2_31pwh")
-
-[node name="Titulo" type="TextureRect" parent="Escritorio" unique_id=1155382083]
-modulate = Color(1.3, 1.3, 1.3, 1)
-z_index = 10
-texture_filter = 3
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -395.0
-offset_top = 142.0
-offset_right = -142.0
-offset_bottom = 286.0
-grow_horizontal = 2
-offset_transform_enabled = true
-offset_transform_scale = Vector2(3.5, 3.5)
-texture = ExtResource("18_r6grw")
 
 [node name="Fondo" type="TextureRect" parent="Escritorio" unique_id=1129073673]
 texture_filter = 3
@@ -347,10 +332,10 @@ offset_bottom = 40.0
 
 [node name="Laptop" parent="Escritorio/Botones" unique_id=473791498 instance=ExtResource("19_31pwh")]
 layout_mode = 0
-offset_left = 618.0
-offset_top = 440.0
-offset_right = 932.0
-offset_bottom = 721.0
+offset_left = 619.9999
+offset_top = 401.81815
+offset_right = 933.9999
+offset_bottom = 682.8181
 scale = Vector2(2.2, 2.2)
 offset_transform_visual_only = false
 
@@ -393,6 +378,22 @@ texture_click_mask = ExtResource("14_rdxvi")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=82277253]
 
+[node name="Titulo" type="TextureRect" parent="UI" unique_id=1155382083]
+modulate = Color(1.3, 1.3, 1.3, 1)
+z_index = 10
+texture_filter = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -434.5
+offset_top = 102.2
+offset_right = -181.5
+offset_bottom = 246.2
+grow_horizontal = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(3.5, 3.5)
+texture = ExtResource("18_r6grw")
+
 [node name="Viñeta" type="TextureRect" parent="UI" unique_id=2043035028]
 anchors_preset = 15
 anchor_right = 1.0
@@ -401,6 +402,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = SubResource("GradientTexture2D_5v0uk")
+flip_h = true
 
 [node name="Atras" parent="UI" unique_id=1347624788 instance=ExtResource("19_31pwh")]
 self_modulate = Color(1, 1, 1, 0)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bqnkma7nt6364"
-path="res://.godot/imported/acc_otro_corbata.png-c01085e0978c1d806ff0857323666513.ctex"
+path="res://.godot/imported/acc_otro_corbata.png-df488edcf20325ad444fefc96e784d3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/personajes/acc_otro_corbata.png"
-dest_files=["res://.godot/imported/acc_otro_corbata.png-c01085e0978c1d806ff0857323666513.ctex"]
+source_file="res://Assets/selPersonaje/Personajes/acc_otro_corbata.png"
+dest_files=["res://.godot/imported/acc_otro_corbata.png-df488edcf20325ad444fefc96e784d3e.ctex"]
 
 [params]
 

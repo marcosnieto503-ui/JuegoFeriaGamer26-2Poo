@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bigvdua5g7ow0"
-path="res://.godot/imported/feliz_otro_blanco_mono.png-fa3b1cf979eeec373e9c1f12621d47b0.ctex"
+path="res://.godot/imported/feliz_otro_blanco_mono.png-173b142b9abf4ce7c259e0d498b3a906.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/personajes/feliz_otro_blanco_mono.png"
-dest_files=["res://.godot/imported/feliz_otro_blanco_mono.png-fa3b1cf979eeec373e9c1f12621d47b0.ctex"]
+source_file="res://Assets/selPersonaje/Personajes/feliz_otro_blanco_mono.png"
+dest_files=["res://.godot/imported/feliz_otro_blanco_mono.png-173b142b9abf4ce7c259e0d498b3a906.ctex"]
 
 [params]
 

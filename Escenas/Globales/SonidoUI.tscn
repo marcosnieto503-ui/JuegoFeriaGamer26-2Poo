@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c4bx0n551lmj6"]
+
+[ext_resource type="Script" uid="uid://bbqatl6j5b1vr" path="res://Scripts/Globales/sonido_ui.gd" id="1_banug"]
+[ext_resource type="AudioStream" uid="uid://cjnb55jeg016h" path="res://Audio/Globales/floraphonic-arcade-ui-6-229503.mp3" id="2_gdudf"]
+[ext_resource type="AudioStream" uid="uid://brinbvfwhib3j" path="res://Audio/Globales/floraphonic-arcade-ui-7-229506.mp3" id="3_73jw2"]
+
+[node name="SonidoUi" type="Node" unique_id=971570135]
+script = ExtResource("1_banug")
+
+[node name="Hover" type="AudioStreamPlayer" parent="." unique_id=1618187051]
+stream = ExtResource("2_gdudf")
+volume_db = -8.0
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1931003570]
+stream = ExtResource("3_73jw2")
+volume_db = -4.0

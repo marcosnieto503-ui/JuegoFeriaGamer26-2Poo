@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://w4m0m1bocgpl"
-path="res://.godot/imported/piel_mujer_negro.png-43a03a962d8d75352a140e92c1c4b4b8.ctex"
+path="res://.godot/imported/piel_mujer_negro.png-41cd2b8f97cda6a717a0c3ff81404715.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/personajes/piel_mujer_negro.png"
-dest_files=["res://.godot/imported/piel_mujer_negro.png-43a03a962d8d75352a140e92c1c4b4b8.ctex"]
+source_file="res://Assets/selPersonaje/Personajes/piel_mujer_negro.png"
+dest_files=["res://.godot/imported/piel_mujer_negro.png-41cd2b8f97cda6a717a0c3ff81404715.ctex"]
 
 [params]
 
