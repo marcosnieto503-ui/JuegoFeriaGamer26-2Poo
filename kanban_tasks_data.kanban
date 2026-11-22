@@ -19,8 +19,8 @@
 				"7e023cfc-57a9-4af4-bb79-565dc71cc2b1",
 				"fd306742-9866-483b-883e-db175aedd324",
 				"6944f600-59a8-4e8e-807d-8da70cda7ac8",
-				"63aea18c-086a-4854-b56f-0ebaf8f75710",
-				"ea345cca-538b-4eb4-8724-3e4571b45ca1"
+				"ea345cca-538b-4eb4-8724-3e4571b45ca1",
+				"c40b8c52-6403-4bea-aab4-99c6b0808b07"
 			]
 		},
 		{
@@ -28,9 +28,7 @@
 			"title": "Doing",
 			"tasks": [
 				"dc05a01a-8ccd-4e85-9011-3d3c2929ebd7",
-				"ea43d325-b10a-486c-8150-e2f0e786bcd8",
-				"40526363-6a4d-418e-9477-24d3f843fd71",
-				"b134e8f0-ec6a-4f44-81e7-c5cba3288f01"
+				"745327ef-67a9-4dce-9c0e-7a548901c668"
 			]
 		},
 		{
@@ -43,7 +41,12 @@
 				"fc592c03-26ee-4a45-bd04-276720806782",
 				"790527ac-cc54-4cf4-a85c-20a438f572bd",
 				"36b60b4d-b39a-4596-9f62-ada43327850d",
-				"ae18942a-c11f-47e1-842c-2ec0fdec2772"
+				"ae18942a-c11f-47e1-842c-2ec0fdec2772",
+				"ea43d325-b10a-486c-8150-e2f0e786bcd8",
+				"40526363-6a4d-418e-9477-24d3f843fd71",
+				"b134e8f0-ec6a-4f44-81e7-c5cba3288f01",
+				"63aea18c-086a-4854-b56f-0ebaf8f75710",
+				"2d82ca74-1741-46f8-a39f-bf0ad3c0fe52"
 			]
 		}
 	],
@@ -156,6 +159,27 @@
 		{
 			"uuid": "ea345cca-538b-4eb4-8724-3e4571b45ca1",
 			"title": "dise;'ar imagenes para las publicaciones",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "2d82ca74-1741-46f8-a39f-bf0ad3c0fe52",
+			"title": "Agreggar mas efectos de sonidop",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "c40b8c52-6403-4bea-aab4-99c6b0808b07",
+			"title": "crear sprte del efecto visual noti recibida",
+			"description": "",
+			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
+			"steps": []
+		},
+		{
+			"uuid": "745327ef-67a9-4dce-9c0e-7a548901c668",
+			"title": "game manager y cambio de escenas",
 			"description": "",
 			"category": "e405070c-3cff-4b6a-b08e-76311dd4737b",
 			"steps": []

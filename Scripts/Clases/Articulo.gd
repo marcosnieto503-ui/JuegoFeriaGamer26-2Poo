@@ -17,11 +17,11 @@ func _init(nombre,tipo,id,cat,titular,texto):
 	self._categoria = cat
 	self._titular = titular
 	self._texto = texto
-	if Utils.RECURSOS_ARTICULOS.has(self._id):
-		self._img = Utils.RECURSOS_ARTICULOS[self._id]
+	if ControlArticulos.RECURSOS_ARTICULOS.has(self._id):
+		self._img = ControlArticulos.RECURSOS_ARTICULOS[self._id]
 		print("----- colocado articulo img")
 	else:
-		self._img = Utils.RECURSOS_ARTICULOS.get(0)
+		self._img = ControlArticulos.RECURSOS_ARTICULOS.get(0)
 
 func get_tipo():
 	return self._tipo

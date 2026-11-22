@@ -9,18 +9,44 @@ extends Node
 
 @onready var cajaNotif = $"../Celular/ScrollNotificaciones/CajaNotificaciones"
 
+@onready var logicaComments = $logicaJugableComentarios
 
 func _ready() -> void:
 	if NOTIS_MANUAL:
 		print("---MODO DEBUG NOTIS NO LLEGASN EN AUTOMATICO")
 		return
+	#iniciarTimer()
+
+
+func iniciarCicloGameplay():
 	iniciarTimer()
+	logicaComments.iniciarTimer()
+func terminarCicloGameplay():
+	timer.stop()
+	logicaComments.timer.stop()
+
+func pausarCicloGameplay():
+	if timer.is_paused():
+		return
+	timer.set_paused(true)
+	if logicaComments.timer.is_paused():
+		return
+	logicaComments.timer.set_paused(true)
+	print("Logica_jugable) timer pausado")
+func reanudarCicloGameplay():
+	if !timer.is_paused():
+		return
+	timer.set_paused(false)
+	if !logicaComments.timer.is_paused():
+		return
+	logicaComments.timer.set_paused(false)
+	print("Logica_jugable) timer reanudado")
+
 
 func iniciarTimer():
 	timer.start(ciclosDeTiempo)
 
 func _on_timer_timeout() -> void:
-	#prints("CICLO HECHO")
 	saleNoti()
 	iniciarTimer()
 

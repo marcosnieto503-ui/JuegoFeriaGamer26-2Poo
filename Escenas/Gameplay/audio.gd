@@ -9,6 +9,8 @@ var effects_notis = {
 	OPCIONES_NOTI_RECIBIDA.VIBRACION:"noti_recibida2",
 	OPCIONES_NOTI_RECIBIDA.SONIDO1:"noti_recibida"
 }
+
+
 @export var Efecto_de_noti_recibida : OPCIONES_NOTI_RECIBIDA 
 
 @onready var listener = $"../AudioListener2D"
@@ -16,6 +18,9 @@ const posLaptop = Vector2(730,430)
 const posTel = Vector2(1560,510)
 
 var SAMPLES :Dictionary[String,AudioStreamPlayer2D]
+
+
+
 
 func _ready() -> void:
 	for child in get_children():
@@ -38,6 +43,7 @@ func _player_movido_hacia_telefono():
 func _player_movido_hacia_laptop():
 	listener.set_position(Vector2(posLaptop))
 
+
 func playNotiRecibida():
 	var sonidoStr = effects_notis.get(Efecto_de_noti_recibida)
 	if !SAMPLES.has(sonidoStr):
@@ -52,6 +58,28 @@ func playNotiRecibida():
 		return
 	
 	sampl.play()
+
+
+
+func pausarSonidos():
+	if MUSICAFONDO.stream_paused:
+		return
+	MUSICAFONDO.stream_paused = true
+	for samp:AudioStreamPlayer2D in SAMPLES.values():
+		if samp.stream_paused:
+			continue
+		samp.stream_paused = true
+
+func reanudarSonidos():
+	if !MUSICAFONDO.stream_paused:
+		return
+	MUSICAFONDO.stream_paused = false
+	for samp:AudioStreamPlayer2D in SAMPLES.values():
+		if !samp.stream_paused:
+			continue
+		samp.stream_paused = false
+
+
 
 
 func playSampleRPitch(sample:String):

@@ -5,9 +5,8 @@ var escenaComentario = preload("res://Escenas/ComentarioScene/comentario.tscn")
 @onready var cajaComentarios = $"../../Laptop/Pestañas/PRINCIPAL/PanelContainer/ScrollContainer/CajaComentarios"
 
 func _ready() -> void:
-	UtilsComentarios.ComOverlay = $"../../Laptop/Pestañas/PRINCIPAL/CommentOverlay"
-	await get_tree().process_frame
-	leerArchivoComentarios()
+	UtilsComentarios.ComOverlay = $"../../Laptop/Pestañas/PRINCIPAL/CommentOverlay" 
+
 
 func _hay_publis_para_escoger() -> bool:
 	if DataPartida.PUBLIS_PARA_COMENTARIOS.is_empty():

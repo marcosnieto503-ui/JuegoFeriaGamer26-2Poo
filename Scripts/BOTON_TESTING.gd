@@ -18,7 +18,7 @@ func _on_check_hay_publis_excluidas_pressed() -> void:
 	print("-------HAY PUBLICS PROCESADAS: ",cComentarios._hay_publis_para_escoger())
 
 
-
+@export var IDpubliAMeter:int
 func _on_mete_comentario_11_pressed() -> void:
 	if !Utils.PUBLICACIONES.has(11):
 		print("(BOTON METER COMENTARIO) La publi 11 no essta en el array pulicaciones")
@@ -52,10 +52,10 @@ func _on_mete_com_random_pressed() -> void:
 
 
 func _on_button_down() -> void:
-	if !Utils.PUBLICACIONES.has(11):
+	if !Utils.PUBLICACIONES.has(IDpubliAMeter):
 		push_error("NO EXISTE PUBLICACION CON ID: 11 EN EL ARRAY PUBLICACIONES")
 		return
-	var p = Utils.PUBLICACIONES.get(11)
+	var p = Utils.PUBLICACIONES.get(IDpubliAMeter)
 	Utils.ingresarPublicacion(p)
 	Utils.excluirPublicacion(p)
 	

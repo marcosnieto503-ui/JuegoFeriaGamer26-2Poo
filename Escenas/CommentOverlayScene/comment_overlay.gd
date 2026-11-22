@@ -59,11 +59,11 @@ func _opcionElegida():
 
 
 func mouseEnterButtons():
-	GlobalAudioSignals.playHoverNoti()
+	GlobalAudioSignals.playUiHint1()
 func mouseExitButtons():
 	pass
 func buttonsClick():
-	GlobalAudioSignals.playNoticieroClosed()
+	GlobalAudioSignals.playMouseClick1()
 
 
 

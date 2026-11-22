@@ -424,6 +424,7 @@ script = ExtResource("8_r081i")
 LoadingAnim = NodePath("LoadingAnim")
 simbolImg = NodePath("Simbol")
 optionLabel = NodePath("OpcionLabel")
+processDuracion = 1.0
 timer = NodePath("Timer")
 checkTexture = ExtResource("10_pnjfu")
 crossTexture = ExtResource("10_j750j")

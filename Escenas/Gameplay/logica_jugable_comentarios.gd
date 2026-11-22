@@ -10,7 +10,7 @@ extends Node
 
 
 func _ready() -> void:
-	iniciarTimer()
+	pass
 
 
 func iniciarTimer():

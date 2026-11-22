@@ -59,25 +59,25 @@ func _link_clickeado(meta :Variant): #funcion de click en el link
 
 
 func _mouse_sobre_link(meta: Variant) -> void:
-	#comprobacion para evitar multiples ejecuciones de esta funcion cya que se llama varias veces al alterar el texto dellabel
 	Input.set_default_cursor_shape(2)
-	if (meta.begins_with("h,")):
+	#comprobacion para evitar multiples ejecuciones de esta funcion cya que se llama varias veces al alterar el texto dellabel
+	if (meta.begins_with("h")):
 		return
 	#print("entro")
 	cambiarColorLink(true)
 func _mouse_fuera_del_link(meta: Variant):
 	Input.set_default_cursor_shape(0)
-	if (meta.begins_with("n,")):
+	if (meta.begins_with("n")):
 		return
 	#print("salgo")
 	cambiarColorLink(false)
 
 func cambiarColorLink(hover:bool) -> void: #true para color cuando el mouse esta encima, false para color normal
 	if (hover):
-		textoPubli = textoPubli.replace("[url=n,", "[url=h,")
+		textoPubli = textoPubli.replace("[url=n", "[url=h")
 		cajaTextoPubli.text = (textoPubli.format({"clr": "#" + colorLinkPressed.to_html(false)}))
 	else:
-		textoPubli = textoPubli.replace("[url=h,", "[url=n,")
+		textoPubli = textoPubli.replace("[url=h", "[url=n")
 		cajaTextoPubli.text = (textoPubli.format({"clr": "#" + colorLinkNoPressed.to_html(false)}))
 	
 

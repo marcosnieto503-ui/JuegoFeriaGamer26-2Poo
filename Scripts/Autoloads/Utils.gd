@@ -8,14 +8,12 @@ var PUBLICACIONES :Dictionary[int,Publicacion]  #////////////////////////////
 var PUBLIS_EXCLUIDAS : Dictionary[int,Publicacion]  # Publicaciones que ya han llegado al telefono, no vuelven a aparecer
 var RECURSOS : Dictionary[int,Texture2D] = {}#------ las imagenes se ven y asignan desde el inspector del nodo gameplay
 
-var ARTICULOS : Array[Articulo] = []
-#a este diccionario de imagenes se le asignan desde el scirp del gameplay, desde el inmspector
-var RECURSOS_ARTICULOS : Dictionary[int,Texture2D] = {} 
 
 
-@onready var cajaNotis = $/root/Gameplay/Celular/ScrollNotificaciones/CajaNotificaciones
-@onready var tabsContainer = $/root/Gameplay/Laptop/Pestañas
-@onready var tabPublicacion = preload("res://Escenas/VentanaPublicacion/ventana_publicacion.tscn")
+
+var cajaNotis:Control
+var tabsContainer:Control
+var tabPublicacion = preload("res://Escenas/VentanaPublicacion/ventana_publicacion.tscn")
 
 signal _link_Clickeado(id :int)
 signal _publi_ingresada
@@ -41,7 +39,9 @@ func activar_press_notis():
 
 #ee funciones utiles accesibnles desde todo el proyecto
 func puedeEntrarPubli() -> bool:
-	return tabsContainer.get_tab_count() < MaxTabsNum +1 #cuenta la tab princiapl
+	if ARTICULO_ACTIVO:
+		return tabsContainer.get_tab_count() < MaxTabsNum +2
+	return tabsContainer.get_tab_count() < MaxTabsNum +1
 
 func liberarTabIndex(i:int):
 	TabIndexes[i] = false

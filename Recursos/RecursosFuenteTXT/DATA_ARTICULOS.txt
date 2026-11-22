@@ -11,3 +11,16 @@ Lund. Redacción Ciencia. Un estudio de la Universidad de Lund encontró que qui
 //agrega [br] en cualquier punto del texto para hacer un salto de linea
 Los investigadores siguieron a 8.000 adultos durante cinco años. Aclararon que se trata de una asociación y que no prueban que el café sea la causa. Además, el beneficio desapareció en quienes tomaban más de cuatro tazas al día.
 #f
+
+#i
+-name:noticia_test1
+-tipo:NOTICIA
+-id:2
+-cat:ACADEMICO
+-titular:Beca nueva test de articulo fuap
+TEXTO D ERELLLEONOO ADS KL N ALWSD NLANMWDOI ALOIKFNLAIK GLPAINWGIL:NLaindflas oilansflina sldfnal lainfglakn alsiknfla sflkanslf alsfiknalskfnlaisnf l;asknmf
+[LINEAVACIA]
+//agrega [LINEAVACIA] para... agregare una linea varia bruh
+//agrega [br] en cualquier punto del texto para hacer un salto de linea
+Los investigadores siguieron a 8.000 adultos durante cinco años. Aclararon que se trata de una asociación y que no prueban que el café sea la causa. Además, el beneficio desapareció en quienes tomaban más de cuatro tazas al día.
+#f

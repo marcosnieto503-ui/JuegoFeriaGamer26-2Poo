@@ -454,6 +454,7 @@ offset_left = 11.0
 offset_top = 8.0
 offset_right = 825.0
 offset_bottom = 418.0
+mouse_filter = 0
 texture = ExtResource("10_537yg")
 patch_margin_left = 10
 patch_margin_top = 10

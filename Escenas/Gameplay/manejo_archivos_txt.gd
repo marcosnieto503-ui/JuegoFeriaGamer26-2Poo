@@ -12,10 +12,7 @@ extends Node
 
 func _ready() -> void:
 	Utils.RECURSOS = RECURSOS_PUBLIS
-	Utils.RECURSOS_ARTICULOS = RECURSOS_ARTICULOS
-	leer_archivo_publi()
-	leer_archivo_articulos()
-
+	ControlArticulos.RECURSOS_ARTICULOS = RECURSOS_ARTICULOS
 
 const rutaPublis = "res://Recursos/RecursosFuenteTXT/DATA_PUBLICACIONES.txt"
 const rutaArticulos = "res://Recursos/RecursosFuenteTXT/DATA_ARTICULOS.txt"
@@ -28,7 +25,6 @@ const accionesPosibles = [
 	"INFORMACION_ERRONEA"
 ]
 const tiposArticulosPosibles = [
-	"WIKI",
 	"NOTICIA"
 ]
 
@@ -137,7 +133,7 @@ func leer_archivo_articulos():
 				push_error("Id null en el articulo : ",nombre)
 			
 			var articulo = Articulo.new(nombre,tipo,id,cat,titular,"".join(textoArray))
-			Utils.ARTICULOS.append(articulo)
+			ControlArticulos.ARTICULOS.set(id,articulo)
 			
 			nombre = "NULL" 
 			tipo = "NULL"

@@ -42,7 +42,7 @@ func reproducirSecuencia(opcionElegida:String):
 
 
 func animarCheck():
-	GlobalAudioSignals.playNotiClickeada()
+	GlobalAudioSignals.playUiHint3Strong()
 	var pos_original = simbolImg.position
 	var tween = create_tween()
 	

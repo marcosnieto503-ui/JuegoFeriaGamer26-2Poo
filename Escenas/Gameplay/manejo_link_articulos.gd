@@ -1,6 +1,6 @@
 extends Node
 
-@onready var tabsContainer = $/root/Gameplay/Laptop/Pestañas
+@onready var tabsContainer:= $"../../Laptop/Pestañas"
 @onready var tabNoticiero = preload("res://Escenas/Noticiero/noticiero.tscn")
  
 # Called when the node enters the scene tree for the first time.
@@ -25,14 +25,8 @@ func ingresarArticulo(id_articulo:int):
 	Utils.ARTICULO_ACTIVO = true
 
 func buscarArticulo(id:int) -> Articulo:
-	
-	var artic :Articulo = null
-	
-	for ar in Utils.ARTICULOS:
-		if ar.get_id() == id:
-			artic = ar
-	
-	if artic == null:
-		return null
+	if ControlArticulos.ARTICULOS.has(id):
+		return ControlArticulos.ARTICULOS[id]
 	else:
-		return artic
+		push_error("No existe articulo con el id : %s" % id)
+		return null

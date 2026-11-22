@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hl7fn82hj2q1"]
 
 [ext_resource type="Script" uid="uid://d4fx56fmhxgps" path="res://Escenas/Noticiero/noticiero.gd" id="1_4n6ka"]
-[ext_resource type="Texture2D" uid="uid://bp8vxlehvasl8" path="res://Assets/elObservadorTest1.png" id="2_r6tv5"]
+[ext_resource type="Texture2D" uid="uid://dv3kqvux16xa2" path="res://Assets/Ui sprites/noticiero Tab 1.png" id="2_4n6ka"]
 [ext_resource type="FontFile" uid="uid://c0yidekyi80p3" path="res://Recursos/FONTS/m6x11plus.ttf" id="3_v1mfx"]
 
 [sub_resource type="FontVariation" id="FontVariation_o8a6s"]
@@ -14,71 +14,97 @@ spacing_glyph = 1
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wcwtv"]
 
-[node name="Noticiero" type="PanelContainer" unique_id=1130603485]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o8a6s"]
+bg_color = Color(0.7088389, 0, 0.19395493, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r6tv5"]
+bg_color = Color(0.2587612, 0, 0.04568538, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1mfx"]
+bg_color = Color(0.4079218, 0, 0.09587823, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Periodico digital" type="PanelContainer" unique_id=1130603485]
 offset_right = 780.0
 offset_bottom = 440.0
 script = ExtResource("1_4n6ka")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1538367475]
+[node name="Textura" type="TextureRect" parent="." unique_id=1538367475]
 texture_filter = 1
 layout_mode = 2
-texture = ExtResource("2_r6tv5")
+texture = ExtResource("2_4n6ka")
 
 [node name="Control" type="Control" parent="." unique_id=2130016315]
 layout_mode = 2
 
 [node name="TipoNoticia" type="RichTextLabel" parent="Control" unique_id=717592311]
 layout_mode = 0
-offset_left = 287.0
-offset_top = 142.0
-offset_right = 344.0
-offset_bottom = 155.0
+offset_left = 190.0
+offset_top = 137.0
+offset_right = 345.0
+offset_bottom = 158.0
 theme_override_colors/default_color = Color(1, 0, 0, 1)
 theme_override_fonts/normal_font = SubResource("FontVariation_o8a6s")
-theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/normal_font_size = 20
 text = "NULL"
 
 [node name="Titular" type="RichTextLabel" parent="Control" unique_id=1641876961]
 layout_mode = 0
-offset_left = 287.0
-offset_top = 155.0
-offset_right = 417.0
-offset_bottom = 230.0
+offset_left = 190.0
+offset_top = 159.0
+offset_right = 482.0
+offset_bottom = 212.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = SubResource("FontVariation_g4cw3")
-theme_override_font_sizes/normal_font_size = 14
+theme_override_font_sizes/normal_font_size = 18
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wcwtv")
 bbcode_enabled = true
-text = "VACIO"
+text = "[TITULAR]"
 
 [node name="Cuerpo" type="RichTextLabel" parent="Control" unique_id=1893914009]
 layout_mode = 0
-offset_left = 171.0
-offset_top = 253.0
-offset_right = 415.0
-offset_bottom = 396.0
+offset_left = 189.0
+offset_top = 225.0
+offset_right = 486.0
+offset_bottom = 408.0
 theme_override_colors/default_color = Color(0.24840015, 0.24840018, 0.24840015, 1)
 theme_override_fonts/normal_font = SubResource("FontVariation_g4cw3")
-theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/normal_font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxEmpty_wcwtv")
 bbcode_enabled = true
-text = "VACIO"
+text = "[CUERPO DE NOTICIA O ARTICULO]"
 
 [node name="Imagen" type="TextureRect" parent="Control" unique_id=1122303144]
+visible = false
 layout_mode = 0
-offset_left = 172.0
-offset_top = 142.0
-offset_right = 282.0
-offset_bottom = 246.0
+offset_left = 72.0
+offset_top = 138.0
+offset_right = 178.0
+offset_bottom = 236.0
 expand_mode = 1
 stretch_mode = 5
 
 [node name="BotonCerrar" type="Button" parent="Control" unique_id=247553693]
 layout_mode = 0
-offset_left = 701.0
-offset_top = 8.0
-offset_right = 770.0
-offset_bottom = 39.0
+offset_left = 740.0
+offset_top = 6.0
+offset_right = 825.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("3_v1mfx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_o8a6s")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r6tv5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v1mfx")
 text = "CERRAR"
 
 [connection signal="button_up" from="Control/BotonCerrar" to="." method="_on_boton_cerrar_button_up"]

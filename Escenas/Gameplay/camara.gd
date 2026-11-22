@@ -9,6 +9,13 @@ func _ready() -> void:
 
 var tween_actual: Tween
 
+func pausarCamara():
+	if tween_actual and tween_actual.is_valid():
+		tween_actual.pause()
+func reanudarCamara():
+	if tween_actual and tween_actual.is_valid():
+		tween_actual.play()
+
 func zoom_hacia(posicion_objetivo: Vector2, nivel_zoom: float, duracion: float = 0.4):
 	if !zoomPermitido:
 		return

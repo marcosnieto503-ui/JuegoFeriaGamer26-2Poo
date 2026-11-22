@@ -10,8 +10,10 @@ extends Node2D
 @onready var camara = $"Camara"
 
 @export var Gameplay_Visuals:AnimatedSprite2D 
+@export var logicaJugable:Node
 #este nodo se encarga de todo lo relacionado a los sprites del gameplay
 
+var SceneID = GameManager.ENUMESCENAS.GAMEPLAY
 
 enum { #estados de la imagen del gameplay
 	noFocus,
@@ -28,14 +30,29 @@ signal _movido_hacia_telefono
 signal _movido_hacia_laptop
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	toLaptop()
 	BotonToLaptop.hide()
-	
+	BotonToCelular.hide()
 
-func _process(_delta: float) -> void:
-	if (Input.is_action_just_pressed("espacio")): #-------------------debug
-		#DEBUGingresarNotiRandom()
-		pass
+var ESCENA_CORRIENDO:bool = false
+
+func INICIALIZAR_ESCENA():
+	#empieza gameplay
+	if ESCENA_CORRIENDO:
+		return
+	await leer_recursos_txt()
+	BotonToCelular.show()
+	Gameplay_Visuals.iniciar_transicion_atardecer()
+	GlobalAudioSignals.play_musica_fondo()
+	logicaJugable.iniciarCicloGameplay()
+	toLaptop()
+	ESCENA_CORRIENDO = true
+
+@export var recursosTxtManager:Node
+func leer_recursos_txt():
+	recursosTxtManager.leer_recursos_txt()
+
+func SALIR_DE_ESCENA():
+	pass
 
 
 func DEBUGingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono

@@ -1,9 +1,8 @@
 extends Node
-class_name ControlNotificaciones
 
-const cajaNotifRUTA = "../../Celular/ScrollNotificaciones/CajaNotificaciones"
+var cajaNotif:Control
 
-static func ingresar_notificacion_random():
+func ingresar_notificacion_random():
 	if Utils.PUBLICACIONES.is_empty():
 		push_warning("(control notificaciones) El dict Utils.Publicaciones esta vacio, no hay noti que meter")
 		return
@@ -14,9 +13,6 @@ static func ingresar_notificacion_random():
 		return
 	Utils.excluirPublicacion(publi_a_asignar)
 	
-	var arbol = Engine.get_main_loop() as SceneTree
-	var control = arbol.root.get_node("Gameplay/Utils/ControlNotificaciones")
-	var cajaNotif = control.get_node(cajaNotifRUTA)
 	cajaNotif.add_child(notif)
 	
 	notif.asignarPubli(publi_a_asignar)

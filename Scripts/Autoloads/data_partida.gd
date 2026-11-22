@@ -6,7 +6,7 @@ extends Node
 
 @export var DURACION_FEEDBACK_ANIMACION :float
 
-@onready var reacciones = $/root/Gameplay/EscenaReacciones
+@onready var reacciones:Node
 
 var PUBLIS_PUBLICADAS :Array[Publicacion] = []
 var PUBLIS_DESCARTADAS :Array[Publicacion] = []

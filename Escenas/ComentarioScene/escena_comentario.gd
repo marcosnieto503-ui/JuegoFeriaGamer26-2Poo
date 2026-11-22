@@ -19,6 +19,7 @@ func _ready():
 func inicializar():
 	cajaComment.set_text(comentario.get_texto())
 	aplicarModulateRandomUserIcon()
+	GlobalAudioSignals.playUiRetroEffect1()
 
 func aplicarModulateRandomUserIcon():
 	$Control/UserIcon.modulate = Color.from_hsv(randf(), 0.9, 1)

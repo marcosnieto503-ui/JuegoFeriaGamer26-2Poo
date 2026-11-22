@@ -1,12 +1,17 @@
 extends Node
 
 
-@export var AUDIO :Node
+var AUDIO:Node
 
 func _ready() -> void:
-	GlobalAudioSignals.AUDIO = AUDIO
-	await get_tree().process_frame
+	pass
+	
+
+func play_musica_fondo():
+	# global_audio_signals.gd, al inicio de play_musica_fondo()
+	print("play_musica_fondo, AUDIO = ", AUDIO, " | instancia: ", get_path())
 	AUDIO.playMusicaFondo()
+
 
 func playNotiRecibida():
 	AUDIO.playNotiRecibida()
@@ -30,3 +35,14 @@ func playNoticieroClosed():
 
 func playTabSwitch():
 	AUDIO.playSampleRPitch("tab_switch1")
+
+func playMouseClick1():
+	AUDIO.playSampleRPitch("mouse_click1")
+func playUiHint3Strong():
+	AUDIO.playSampleRPitch("ui_hint3_strong")
+func playUiRetroEffect1():
+	AUDIO.playSampleRPitch("ui_retro_effect1")
+func playUiHint1():
+	AUDIO.playSampleRPitch("ui_hint1")
+func playUiHint2():
+	AUDIO.playSampleRPitch("ui_hint2")
