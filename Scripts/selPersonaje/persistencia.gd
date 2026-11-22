@@ -3,7 +3,6 @@ extends Node2D
 @onready var personaje: Sprite2D = $Avatar
 
 func _ready() -> void:
-	PersistenciaPersonaje.guardar("Mujer", "Negro", "Trenzas")
 	cambiar_emocion("triste")
 
 func cambiar_emocion(reaccion: String) -> void:

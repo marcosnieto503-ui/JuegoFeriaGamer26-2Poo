@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dd4e42g5jqako"
-path="res://.godot/imported/acc_hombre_largo.png-a8e6806f1b8463d074c72fa58437ea4e.ctex"
+path="res://.godot/imported/acc_hombre_largo.png-373d5ea66ad01533fcc1eeb96e308153.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/Personajes/acc_hombre_largo.png"
-dest_files=["res://.godot/imported/acc_hombre_largo.png-a8e6806f1b8463d074c72fa58437ea4e.ctex"]
+source_file="res://Assets/selPersonaje/personajes/acc_hombre_largo.png"
+dest_files=["res://.godot/imported/acc_hombre_largo.png-373d5ea66ad01533fcc1eeb96e308153.ctex"]
 
 [params]
 

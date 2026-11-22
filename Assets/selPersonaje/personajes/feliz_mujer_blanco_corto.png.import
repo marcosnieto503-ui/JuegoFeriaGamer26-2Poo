@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy8kej0jo6jrs"
-path="res://.godot/imported/feliz_mujer_blanco_corto.png-628653091e3f514702b5f63db548a9a6.ctex"
+path="res://.godot/imported/feliz_mujer_blanco_corto.png-c7818e643bff1135be46a8f8fc779581.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/Personajes/feliz_mujer_blanco_corto.png"
-dest_files=["res://.godot/imported/feliz_mujer_blanco_corto.png-628653091e3f514702b5f63db548a9a6.ctex"]
+source_file="res://Assets/selPersonaje/personajes/feliz_mujer_blanco_corto.png"
+dest_files=["res://.godot/imported/feliz_mujer_blanco_corto.png-c7818e643bff1135be46a8f8fc779581.ctex"]
 
 [params]
 

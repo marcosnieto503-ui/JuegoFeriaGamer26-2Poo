@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpxe08vl5f8cy"
-path="res://.godot/imported/feliz_hombre_blanco_trenzas.png-0148c6becaf32902be652712704350aa.ctex"
+path="res://.godot/imported/feliz_hombre_blanco_trenzas.png-793bd06c225b2e939d0e0e5db6b55f09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/Personajes/feliz_hombre_blanco_trenzas.png"
-dest_files=["res://.godot/imported/feliz_hombre_blanco_trenzas.png-0148c6becaf32902be652712704350aa.ctex"]
+source_file="res://Assets/selPersonaje/personajes/feliz_hombre_blanco_trenzas.png"
+dest_files=["res://.godot/imported/feliz_hombre_blanco_trenzas.png-793bd06c225b2e939d0e0e5db6b55f09.ctex"]
 
 [params]
 
