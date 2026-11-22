@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cow0kgkhbxklk"
-path="res://.godot/imported/acc_hombre_trenzas.png-6cfa3b3d64729d58b79f9db6484c014e.ctex"
+path="res://.godot/imported/acc_hombre_trenzas.png-d4ed8a96cc39b2ec040c98dd56145474.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/personajes/acc_hombre_trenzas.png"
-dest_files=["res://.godot/imported/acc_hombre_trenzas.png-6cfa3b3d64729d58b79f9db6484c014e.ctex"]
+source_file="res://Assets/selPersonaje/Personajes/acc_hombre_trenzas.png"
+dest_files=["res://.godot/imported/acc_hombre_trenzas.png-d4ed8a96cc39b2ec040c98dd56145474.ctex"]
 
 [params]
 

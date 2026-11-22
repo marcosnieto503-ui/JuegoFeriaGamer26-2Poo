@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2ij8j5bnbr7a"
-path="res://.godot/imported/feliz_otro_negro_sombrero.png-0edc235aac9e61c3a619ef611c1f7b06.ctex"
+path="res://.godot/imported/feliz_otro_negro_sombrero.png-96eabc19dd86ed5cee82978a0ddc0aa8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/personajes/feliz_otro_negro_sombrero.png"
-dest_files=["res://.godot/imported/feliz_otro_negro_sombrero.png-0edc235aac9e61c3a619ef611c1f7b06.ctex"]
+source_file="res://Assets/selPersonaje/Personajes/feliz_otro_negro_sombrero.png"
+dest_files=["res://.godot/imported/feliz_otro_negro_sombrero.png-96eabc19dd86ed5cee82978a0ddc0aa8.ctex"]
 
 [params]
 

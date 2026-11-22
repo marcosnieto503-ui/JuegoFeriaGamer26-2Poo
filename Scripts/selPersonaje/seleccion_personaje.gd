@@ -2,7 +2,7 @@ extends Control
 
 @export_file("*.tscn") var siguiente_escena: String = ""
 
-const CARPETA := "res://Assets/selPersonaje/Personajes/"
+const CARPETA := "res://Assets/SelPersonaje/Personajes/"
 const CLAVES_PASOS := ["genero", "piel", "accesorio"]
 const LISTA_GENEROS := ["Hombre", "Mujer", "Otro"]
 const LISTA_PIELES := ["Blanco", "Negro"]

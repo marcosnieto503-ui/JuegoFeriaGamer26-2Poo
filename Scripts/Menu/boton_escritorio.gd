@@ -11,3 +11,9 @@ func _on_mouse_entered() -> void:
 
 func _on_mouse_exited() -> void:
 	anim.play_backwards("mouse_entered")
+
+func _on_musica_pressed() -> void:
+	pass # Replace with function body.
+
+func _on_general_pressed() -> void:
+	pass # Replace with function body.

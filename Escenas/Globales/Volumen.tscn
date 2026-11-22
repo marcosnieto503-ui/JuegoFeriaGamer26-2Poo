@@ -32,14 +32,14 @@ custom_minimum_size = Vector2(10, 10)
 layout_mode = 2
 texture = ExtResource("1_ilcfs")
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="MusicaColumna/IconoMusica" unique_id=1153070112]
-layout_mode = 0
-offset_left = 25.0
-offset_right = 57.0
-offset_bottom = 19.0
+[node name="Barras" type="TextureProgressBar" parent="MusicaColumna" unique_id=1153070112]
+layout_mode = 2
 max_value = 4.0
+value = 4.0
 texture_under = ExtResource("2_6qmnk")
 texture_progress = ExtResource("3_fsjsb")
 
 [node name="Click" type="AudioStreamPlayer" parent="." unique_id=1296768026]
 stream = ExtResource("5_fsjsb")
+
+[connection signal="value_changed" from="MusicaColumna/Barras" to="." method="_on_barras_value_changed"]

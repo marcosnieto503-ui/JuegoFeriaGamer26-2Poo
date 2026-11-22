@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://hr7dqge8p5rt"]
 
 [ext_resource type="Script" uid="uid://bjreak26gb7bq" path="res://Scripts/ComoJugar/ComoJugar.gd" id="1_sh8ee"]
-[ext_resource type="Shader" uid="uid://4r8kk61m3sje" path="res://Escenas/ComoJugar/Controles.gdshader" id="2_e0rdr"]
-[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="3_5xnvg"]
+[ext_resource type="Shader" uid="uid://4r8kk61m3sje" path="res://Escenas/Menu/ComoJugar/Controles.gdshader" id="2_e0rdr"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://Assets/selPersonaje/Fuentes/Redaction35-Bold.ttf" id="3_5xnvg"]
 [ext_resource type="PackedScene" uid="uid://gnopc0s56py2" path="res://Escenas/Menu/UI/BotonEscritorio.tscn" id="4_gnsv2"]
 [ext_resource type="Texture2D" uid="uid://c6d6t4e84nmfg" path="res://Assets/Menu/UI/flecha/flecha.png" id="5_hah77"]
 [ext_resource type="Texture2D" uid="uid://bpqp0vy718ern" path="res://Assets/Menu/UI/flecha/flecha-hover.png" id="6_jbs4o"]

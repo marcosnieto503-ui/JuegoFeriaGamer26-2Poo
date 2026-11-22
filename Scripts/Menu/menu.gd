@@ -6,7 +6,7 @@ extends Control
 @export_file("*.tscn") var escena_juego: String = "res://Escenas/selPersonaje/introduccion.tscn"
 
 @onready var camara: Camera2D = $CameraEnfoque
-@onready var musica: AudioStreamPlayer = $AudioStreamPlayer
+@onready var musica: AudioStreamPlayer = $Musica
 @onready var escritorio: Control = $Escritorio
 @onready var anim: AnimationPlayer = $Escritorio/Botones/Celular/AnimationCelular
 

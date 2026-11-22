@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bfv3kqrvw1shw"
-path="res://.godot/imported/Redaction35-Bold.ttf-3d22ee9a89469bbfabf4dd6b73fa6057.fontdata"
+path="res://.godot/imported/Redaction35-Bold.ttf-39eeb03c1517c266394ada81a317b49e.fontdata"
 
 [deps]
 
-source_file="res://Assets/selPersonaje/fuentes/Redaction35-Bold.ttf"
-dest_files=["res://.godot/imported/Redaction35-Bold.ttf-3d22ee9a89469bbfabf4dd6b73fa6057.fontdata"]
+source_file="res://Assets/selPersonaje/Fuentes/Redaction35-Bold.ttf"
+dest_files=["res://.godot/imported/Redaction35-Bold.ttf-39eeb03c1517c266394ada81a317b49e.fontdata"]
 
 [params]
 

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://docr12bvnbs3v" path="res://Scripts/selPersonaje/seleccion_personaje.gd" id="1_jxhxg"]
 [ext_resource type="Texture2D" uid="uid://curdl1fxvkuru" path="res://Assets/selPersonaje/Fondo/fondo.png" id="1_p54kw"]
 [ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://Assets/selPersonaje/Fuentes/Redaction35-Bold.ttf" id="2_jxhxg"]
-[ext_resource type="PackedScene" uid="uid://bscbfb76kruqv" path="res://Escenas/selPersonaje/UI/opciones_selp.tscn" id="3_xlygr"]
+[ext_resource type="PackedScene" uid="uid://bscbfb76kruqv" path="res://Escenas/SelPersonaje/UI/opciones_selp.tscn" id="3_xlygr"]
 [ext_resource type="AudioStream" uid="uid://6yr2btc86jmh" path="res://Audio/sel_personaje/musica_fondo.mp3" id="4_aoipj"]
 [ext_resource type="Script" uid="uid://bchrbp1gq0753" path="res://Scripts/selPersonaje/botonprueba.gd" id="5_ja68q"]
 [ext_resource type="AudioStream" uid="uid://dr7kc8d4in2es" path="res://Audio/sel_personaje/floraphonic-arcade-ui-18-229517.mp3" id="6_34gqj"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://j62fdq7cws4w"
-path="res://.godot/imported/feliz_hombre_blanco_corto.png-e27700b312ba1b29857700d0f7797fa2.ctex"
+path="res://.godot/imported/feliz_hombre_blanco_corto.png-df87c342c4ac07f7bde9c002550c702f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/personajes/feliz_hombre_blanco_corto.png"
-dest_files=["res://.godot/imported/feliz_hombre_blanco_corto.png-e27700b312ba1b29857700d0f7797fa2.ctex"]
+source_file="res://Assets/selPersonaje/Personajes/feliz_hombre_blanco_corto.png"
+dest_files=["res://.godot/imported/feliz_hombre_blanco_corto.png-df87c342c4ac07f7bde9c002550c702f.ctex"]
 
 [params]
 
