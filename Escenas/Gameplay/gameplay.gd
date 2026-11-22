@@ -6,6 +6,8 @@ extends Node2D
 
 @onready var C_Laptop = $"Laptop"
 @onready var C_Celular = $"Celular"
+@onready var bloqueaMousePc = $Laptop/BloqueaMousePc
+@onready var bloqueaMouseCel = $Celular/BloqueaMouseCel
 
 @onready var camara = $"Camara"
 
@@ -34,6 +36,8 @@ signal _movido_hacia_laptop
 func _ready() -> void:
 	BotonToLaptop.hide()
 	BotonToCelular.hide()
+	bloqueaMouseCel.hide()
+	bloqueaMousePc.hide()
 
 var ESCENA_CORRIENDO:bool = false
 
@@ -119,6 +123,8 @@ func switchFocus():
 		toLaptop()
 		
 func toCelular():
+	bloqueaMouseCel.hide()
+	bloqueaMousePc.show()
 	Gameplay_Visuals.select_frame_telefono_arriba()
 	pantalla.show()
 	await camara.reiniciar_camara()
@@ -126,6 +132,8 @@ func toCelular():
 	_movido_hacia_telefono.emit()
 	#720, 420
 func toLaptop():
+	bloqueaMouseCel.show()
+	bloqueaMousePc.hide()
 	Gameplay_Visuals.select_frame_telefono_abajo()
 	pantalla.hide()
 	await camara.reiniciar_camara()

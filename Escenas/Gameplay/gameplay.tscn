@@ -243,6 +243,14 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 5
 
+[node name="BloqueaMouseCel" type="ColorRect" parent="Celular" unique_id=407961313]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 300.0
+offset_bottom = 513.0
+color = Color(1, 1, 1, 0)
+
 [node name="Laptop" type="Control" parent="." unique_id=1221425372]
 layout_mode = 3
 anchors_preset = 0
@@ -306,13 +314,21 @@ clip_contents = true
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="CommentOverlay" parent="Laptop/Pestañas/PRINCIPAL" unique_id=2058207381 instance=ExtResource("8_4rj03")]
-visible = false
+[node name="CommentOverlay" parent="Laptop/Pestañas/PRINCIPAL" unique_id=2058207381 node_paths=PackedStringArray("escenaReaccion") instance=ExtResource("8_4rj03")]
 layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 832.0
 offset_bottom = 431.0
+escenaReaccion = NodePath("../../../../EscenaReacciones")
+
+[node name="BloqueaMousePc" type="ColorRect" parent="Laptop" unique_id=689330419]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 154.0
+offset_right = 1210.0
+offset_bottom = 635.0
+color = Color(1, 1, 1, 0)
 
 [node name="EscenaReacciones" parent="." unique_id=1526037047 instance=ExtResource("10_iuhs4")]
 

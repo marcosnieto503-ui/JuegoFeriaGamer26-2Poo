@@ -33,3 +33,5 @@ func get_r3() -> String:
 	return self._r3
 func get_rDefault() -> String:
 	return self._rDefault
+func get_reaccion() -> String:
+	return self._react

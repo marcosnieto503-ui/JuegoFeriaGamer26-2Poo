@@ -163,9 +163,11 @@ offset_right = 842.0
 offset_bottom = 443.0
 focus_mode = 1
 script = ExtResource("1_oacvb")
+duracionRetrasoReaccion = 0.6
 loadBackground = NodePath("BackgroundProcessAnim")
 LoadingAnim = NodePath("BackgroundProcessAnim/LoadingAnim")
 checkImg = NodePath("BackgroundProcessAnim/Check")
+processDuracion = 1.0
 timer = NodePath("BackgroundProcessAnim/Timer")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=641394383]

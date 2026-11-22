@@ -109,7 +109,7 @@
 #i
 -texto:¿El 5 de noviembre de qué año? Falta información básica, y encima dicen "para más información" sin dar un horario del CREE.
 -id:3
--r1:Es el 5 de noviembre de este año. El CREE está en el 5.º piso del Bloque K.
+-r1:De este año. El CREE está en el 5.º piso del Bloque K.
 -r2:Del año en que estés leyendo, claro.
 -r3:Gracias por señalarlo, incluiremos más detalles la próxima vez.
 -reac:SORPRENDIDO

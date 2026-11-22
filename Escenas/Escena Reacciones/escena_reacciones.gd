@@ -7,10 +7,9 @@ extends Node2D
 @export var sizePlayerImg:Vector2 = Vector2(200,200)
 @export var reaccionTextureRect:TextureRect
 @export var marcoReaccionesAnim:AnimatedSprite2D
-@export var posicionDefaultReacciones:Vector2 = Vector2(1700,190)
+@export var posicionDefaultReacciones:Vector2 = Vector2(1640,245)
 @export var duraccionReaccion:float = 2
 @export var timerReaccion:Timer
-var scaleMarco = Vector2(1.05,1.05)
 
 var corriendoReaccion =false
 

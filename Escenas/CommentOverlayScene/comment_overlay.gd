@@ -11,6 +11,11 @@ extends Control
 var commentAsignado:Comentario
 var publi:Publicacion
 
+var timerRetrasoReaccion:Timer
+@export_category("Retraso Reaccion")
+@export var duracionRetrasoReaccion:float = 0.5
+@export var escenaReaccion:Node
+
 func _inicializar(c:Comentario,p:Publicacion):
 	commentAsignado = c
 	publi = p
@@ -35,6 +40,10 @@ func salida():
 
 
 func _ready() -> void:
+	timerRetrasoReaccion = Timer.new()
+	timerRetrasoReaccion.timeout.connect(terminaTimerRetrasoReaccion)
+	timerRetrasoReaccion.set_one_shot(true)
+	self.add_child(timerRetrasoReaccion)
 	hide()
 	$PanelContainer/HBoxContainer/LadoResponder/Control/OPCION1.pressed.connect(_opcionElegida)
 	$PanelContainer/HBoxContainer/LadoResponder/Control/OPCION2.pressed.connect(_opcionElegida)
@@ -48,7 +57,28 @@ func _ready() -> void:
 	timer.timeout.connect(terminaTimer) #se;al conectada
 	timer.one_shot = true
 
+func terminaTimerRetrasoReaccion():
+	var react = commentAsignado.get_reaccion()
+	if react == "null":
+		push_error("El comentario %s no tiene reaccion valida asignada" % commentAsignado)
+		return
+	var stringReaccion:String
+	match react: #resolver despueeeeeee dddisndinaosi a sdasdas siuuuuua dsasds sid skd skd sdnlsndsn
+		"ALEGRE":
+			stringReaccion = "feliz"
+		"SORPRENDIDO":
+			stringReaccion = "sorprendido"
+		"ENOJADO":
+			stringReaccion = "enojado"
+	push_error("Checkear la forma de escribir las reacciones cuando se impolemmentes")
+	if !stringReaccion:
+		escenaReaccion.displayPlayerReaccion()
+		return
+	escenaReaccion.displayPlayerReaccion(stringReaccion)
+
 func procesarComentario():
+	timerRetrasoReaccion.start(duracionRetrasoReaccion)
+	
 	publiTextoLabel.text = publi.get_textoPubli()
 	commentTextoLabel.text = commentAsignado.get_texto()
 	respuesta1Label.text = commentAsignado.get_r1()
@@ -70,7 +100,7 @@ func buttonsClick():
 	GlobalAudioSignals.playMouseClick1()
 
 
-
+@export_category("Comentario Process")
 @export var loadBackground:Control
 @export var LoadingAnim:AnimatedSprite2D
 @export var checkImg:TextureRect

@@ -108,14 +108,15 @@ script = ExtResource("1_d7cnk")
 reaccionesNode = NodePath("CanvasReacciones/ReaccionesPlayer")
 reaccionTextureRect = NodePath("CanvasReacciones/ReaccionesPlayer/ReaccionImg")
 marcoReaccionesAnim = NodePath("CanvasReacciones/ReaccionesPlayer/MarcoReacciones")
-duraccionReaccion = 1.5
 timerReaccion = NodePath("CanvasReacciones/ReaccionesPlayer/Timer")
 
 [node name="CanvasReacciones" type="CanvasLayer" parent="." unique_id=1717084991]
 layer = 80
 
 [node name="ReaccionesPlayer" type="Node2D" parent="CanvasReacciones" unique_id=1534174718]
-position = Vector2(1689, 191)
+visible = false
+position = Vector2(1592, 245.00002)
+scale = Vector2(1.3, 1.3)
 
 [node name="MarcoReacciones" type="AnimatedSprite2D" parent="CanvasReacciones/ReaccionesPlayer" unique_id=712226432]
 z_index = 10
