@@ -71,6 +71,13 @@ func SALIR_DE_ESCENA():
 	print("COMENTARIOS RESPIONDIDOD: ", len(ProgresoPuntuacion.COMENTARIOS_CORRECTOS),"\n")
 
 
+func DEBUGreaccionPlayer(pos:Vector2 = Vector2.ZERO):
+	if !pos:
+		$EscenaReacciones.displayPlayerReaccion()
+		return
+	$EscenaReacciones.displayPlayerReaccion(pos)
+
+
 func DEBUGingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono
 	var notif = NOTIFICACION.instantiate()
 	var publi_a_asignar = Utils.PUBLICACIONES[12]

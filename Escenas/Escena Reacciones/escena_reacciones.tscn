@@ -3,6 +3,44 @@
 [ext_resource type="Script" uid="uid://c1tofmlc6wjuf" path="res://Escenas/Escena Reacciones/escena_reacciones.gd" id="1_d7cnk"]
 [ext_resource type="Shader" uid="uid://dxu7quqy4gg2b" path="res://Recursos/escena_reacciones.gdshader" id="2_a3ooo"]
 [ext_resource type="Texture2D" uid="uid://bcy2730ssnl63" path="res://Assets/bienHecho y malHecho 1.png" id="2_ll7gf"]
+[ext_resource type="Texture2D" uid="uid://c78tb1jue7grm" path="res://Assets/Ui sprites/MarcoReaccion1-Sheet.png" id="2_vxsyx"]
+[ext_resource type="Texture2D" uid="uid://bb7d7lse2xs28" path="res://NO BORRAR.jpg" id="3_1pqva"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0t0ak"]
+atlas = ExtResource("2_vxsyx")
+region = Rect2(0, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7g8w"]
+atlas = ExtResource("2_vxsyx")
+region = Rect2(240, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lexvq"]
+atlas = ExtResource("2_vxsyx")
+region = Rect2(480, 0, 240, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5reps"]
+atlas = ExtResource("2_vxsyx")
+region = Rect2(720, 0, 240, 240)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5v0uk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0t0ak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7g8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lexvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5reps")
+}],
+"loop": 1,
+"name": &"marcoAnim",
+"speed": 5.0
+}]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d7cnk"]
 shader = ExtResource("2_a3ooo")
@@ -65,10 +103,41 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="EscenaReacciones" type="Node2D" unique_id=1526037047]
+[node name="EscenaReacciones" type="Node2D" unique_id=1526037047 node_paths=PackedStringArray("reaccionesNode", "reaccionTextureRect", "marcoReaccionesAnim", "timerReaccion")]
 script = ExtResource("1_d7cnk")
+reaccionesNode = NodePath("CanvasReacciones/ReaccionesPlayer")
+reaccionTextureRect = NodePath("CanvasReacciones/ReaccionesPlayer/ReaccionImg")
+marcoReaccionesAnim = NodePath("CanvasReacciones/ReaccionesPlayer/MarcoReacciones")
+duraccionReaccion = 1.5
+timerReaccion = NodePath("CanvasReacciones/ReaccionesPlayer/Timer")
 
-[node name="Reacciones" type="AnimatedSprite2D" parent="." unique_id=712226432]
+[node name="CanvasReacciones" type="CanvasLayer" parent="." unique_id=1717084991]
+layer = 80
+
+[node name="ReaccionesPlayer" type="Node2D" parent="CanvasReacciones" unique_id=1534174718]
+position = Vector2(1689, 191)
+
+[node name="MarcoReacciones" type="AnimatedSprite2D" parent="CanvasReacciones/ReaccionesPlayer" unique_id=712226432]
+z_index = 10
+texture_filter = 1
+position = Vector2(1.9999695, 10)
+scale = Vector2(1.05, 1.05)
+sprite_frames = SubResource("SpriteFrames_5v0uk")
+animation = &"marcoAnim"
+frame_progress = 0.2610577
+
+[node name="ReaccionImg" type="TextureRect" parent="CanvasReacciones/ReaccionesPlayer" unique_id=736862400]
+z_index = -1
+offset_left = -98.999886
+offset_top = -89.99994
+offset_right = 101.000114
+offset_bottom = 110.00006
+texture = ExtResource("3_1pqva")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Timer" type="Timer" parent="CanvasReacciones/ReaccionesPlayer" unique_id=629150796]
+one_shot = true
 
 [node name="Señales" type="AnimatedSprite2D" parent="." unique_id=504390233]
 texture_filter = 1

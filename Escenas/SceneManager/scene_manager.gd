@@ -31,15 +31,11 @@ func cargarEscenaDirecto(packedScene:PackedScene):
 		await ACTUAl_SCENE.ready
 	if ACTUAl_SCENE.has_method("INICIALIZAR_ESCENA"):
 		await ACTUAl_SCENE.INICIALIZAR_ESCENA()
+	print("Escen manager ACTUAK SCENE: ",ACTUAl_SCENE)
 
+func getEscenaActual() -> Node:
+	return ACTUAl_SCENE
 
-#debuyggg --------------
-
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("espacio"):
-		if ACTUAl_SCENE and "SceneID" in ACTUAl_SCENE and ACTUAl_SCENE.SceneID == GameManager.ENUMESCENAS.GAMEPLAY:
-			
-			ACTUAl_SCENE.INICIALIZAR_ESCENA()
 
 
 var _cambiando := false
