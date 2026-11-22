@@ -1,0 +1,1259 @@
+#i
+-texto:Hey @fulanito vamos pa esa, haber si te ganas algo después de tanto viciar.
+-id:1
+-r1:Ahí los esperamos a los dos, las inscripciones siguen abiertas.
+-r2:Viciar también cuenta como entrenamiento, veremos si da resultado.
+-r3:Gracias por animar a tus amigos, entre más seamos, mejor.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Es muy bueno que se realicen estas actividades, ya que me estaba aburriendo todos los días.
+-id:1
+-r1:Nos alegra saberlo, para eso estamos. ¡Participa!
+-r2:¿Aburrido todos los días? Eso es culpa de los parciales, no nuestra.
+-r3:Gracias por tu comentario, seguiremos organizando actividades.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Por favor añadan más competiciones.
+-id:1
+-r1:Tomamos nota de tu sugerencia para las próximas ediciones.
+-r2:Claro, también añadimos un día de 48 horas, a ver si alcanza.
+-r3:Con tanto pedido ya nos tocará hacer un campeonato de peticiones.
+-reac:ALEGRE
+#f
+
+#i
+-texto:@fulanito @fulanita @sutanito.
+-id:1
+-r1:Gracias por etiquetar a tus amigos, ¡los esperamos!
+-r2:Wow, un comentario sin una sola palabra. Qué elocuencia.
+-r3:Etiquetar es gratis, inscribirse también. Anímense.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Los voy a pelar a todos en Dominó jajajaja.
+-id:1
+-r1:Esa confianza se paga en la mesa, aquí te esperamos.
+-r2:Ya veremos si las fichas opinan lo mismo que tú.
+-r3:Anótate en Bienestar y demuéstralo con fichas en mano.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Joa pero porque lo dicen asi todo raro jsjsjs, ¿no que son de la universidad?.
+-id:2
+-r1:Gracias por el comentario, tomaremos nota del tono usado.
+-r2:Sí somos de la universidad, aunque el trino parece escrito por un primo.
+-r3:Revisaremos la redacción para que sea más clara.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Cómo así que “chicos”, ¿dónde quedó la inclusividad?.
+-id:2
+-r1:Tienes razón, usaremos un lenguaje más inclusivo en próximas publicaciones.
+-r2:Ahora resulta que saludar es un delito.
+-r3:Gracias por la observación, la tendremos en cuenta.
+-reac:ENOJADO
+#f
+
+#i
+-texto:La verdad es que la universidad me decepciona dia con dia, primero hay mala atención y ahora en redes sociales no tienen profesionalidad, que pena con ustedes.
+-id:2
+-r1:Lamentamos tu experiencia. Escríbenos por los canales oficiales para mejorar.
+-r2:Qué bueno que nos sigues a pesar de tanta decepción.
+-r3:Tu opinión es válida y la compartiremos con el equipo de comunicaciones.
+-reac:ENOJADO
+#f
+
+#i
+-texto:El otro dia se me perdió la cedula y tuve que aguantarme hasta las 6pm para que habilitaran la salida sin identificador.
+-id:2
+-r1:Lamentamos lo ocurrido, recuerda reportar la pérdida en la oficina de seguridad.
+-r2:Hasta las 6 pm, qué suerte: ya casi era hora de cenar.
+-r3:Gracias por compartir tu experiencia, revisaremos ese procedimiento.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Hey y eso tiene sanción o como?.
+-id:2
+-r1:Consulta el reglamento estudiantil para conocer las consecuencias.
+-r2:Sanción no, pero sí un buen regaño de tu conciencia.
+-r3:Buena pregunta, no tenemos una respuesta clara en este momento.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"Educatiba", "ofisinas", "informácion"... ¿Quién escribe esto en la cuenta oficial? Nivel de ortografía: primaria.
+-id:3
+-r1:Tienes razón, revisaremos la ortografía antes de publicar. Gracias.
+-r2:Primaria dice, y aun así entendieron todo. Algo es algo.
+-r3:Lamentamos los errores, ya los estamos corrigiendo.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"Sol@" con arroba en pleno 2026... usen "solo/a" o "solos" y ya, @fulanito esto es de nota baja.
+-id:3
+-r1:Gracias, usaremos un lenguaje más claro en futuras publicaciones.
+-r2:La arroba estaba de adorno, pero se aceptan correcciones.
+-r3:Prometemos que la próxima vez habrá menos símbolos y más letras.
+-reac:ENOJADO
+#f
+
+#i
+-texto:¿El 5 de noviembre de qué año? Falta información básica, y encima dicen "para más información" sin dar un horario del CREE.
+-id:3
+-r1:De este año. El CREE está en el 5.º piso del Bloque K.
+-r2:Del año en que estés leyendo, claro.
+-r3:Gracias por señalarlo, incluiremos más detalles la próxima vez.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"Ofisinas" con S y "informácion" con la tilde mal puesta, y es la cuenta oficial jajaja qué vergüenza.
+-id:3
+-r1:Gracias por avisar, corregiremos el trino.
+-r2:Ofisinas con S, qué detalle. El corrector estaba de vacaciones.
+-r3:Informácion, ofisinas... el diccionario nos manda saludos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Lo de "no estás sol@" es cursi y no sirve de nada si no dicen cómo agendar una cita en el CREE.
+-id:3
+-r1:Para pedir cita en el CREE acércate al 5.º piso del Bloque K. Gracias.
+-r2:Cursi pero verdadero: aquí nadie anda solo.
+-r3:Tomamos nota, hablaremos con el equipo para ser más claros.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Gracias por avisar, ya las andaba buscando
+-id:4
+-r1:Con gusto, mucho éxito en los finales.
+-r2:Buscando, buscando... y estaban a un clic.
+-r3:Qué bueno que te sirvió, estamos para ayudarte.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Y en la app en qué sección salen? No me aparece nada todavía @fulanito
+-id:4
+-r1:Revisa el calendario académico en la app, ahí aparecen las fechas.
+-r2:Si no te aparece nada, igual aprobaste sin examen. Qué suerte.
+-r3:Si el problema continúa, escríbenos por mensaje directo.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Por fin, ya voy a organizar mi horario de estudio pa los finales
+-id:4
+-r1:Muy buena idea, organiza bien tu tiempo.
+-r2:Mejor tarde que nunca, aunque faltaban semanas.
+-r3:¡Éxitos con ese horario!
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Las fechas ya son definitivas o pueden cambiar? Pregunto pa planear mi viaje de fin de semestre.
+-id:4
+-r1:Las fechas publicadas son las oficiales; cualquier cambio se avisará por la app.
+-r2:Todo puede cambiar, hasta tu plan de viaje.
+-r3:Agradecemos tu pregunta, si cambia algo lo anunciaremos aquí.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Qué bueno que lo publiquen aquí, así no toca esperar el correo. ¡Gracias!
+-id:4
+-r1:Gracias, seguiremos usando todos los canales.
+-r2:El correo sigue ahí, esperando que lo abras como siempre.
+-r3:Nos alegra que te guste, esa es la idea.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Gracias por avisar, ojalá marquen bien las zonas pa que nadie se meta por curioso.
+-id:5
+-r1:Las zonas estarán señalizadas, pero también cuenta con tu colaboración.
+-r2:Curiosos hay muchos, listos no tanto.
+-r3:Gracias por el llamado, la seguridad es de todos.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Ese vendaval estuvo duro, se llevó hasta mi paraguas jsjs. Qué bueno que lo arreglan.
+-id:5
+-r1:Nos alegra que estés bien, ya trabajamos en las reparaciones.
+-r2:Lo del paraguas lo reportamos al viento, a ver si responde.
+-r3:Esperamos que hayas conseguido otro. Gracias por comentar.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Y las clases del bloque G se mantienen o las pasan a otro salón? @fulanito
+-id:5
+-r1:Las clases se mantienen salvo aviso de tu facultad. Revisa tu correo.
+-r2:Esto es un trino, no una bola de cristal. Pregunta a tu facultad.
+-r3:Consulta con tu programa, ellos te informarán sobre los salones.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Pilas con eso, gente, no vayan a pasar por ahí por tomar el atajo
+-id:5
+-r1:Gracias por el recordatorio. Todos a cuidarnos.
+-r2:Atajos hay muchos, hospitales también.
+-r3:Atento, comunidad, la seguridad empieza por cada uno.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Buena comunicación, se agradece que avisen con tiempo y expliquen el porqué de las obras.
+-id:5
+-r1:Gracias por tu comentario, seguiremos informando con tiempo.
+-r2:Por fin alguien nota que explicamos algo.
+-r3:Nos alegra, esa es la idea.
+-reac:ALEGRE
+#f
+
+#i
+-texto:"Vayan acostumbrándose" Qué manera tan elegante de decir que no les importamos.
+-id:6
+-r1:Lamentamos el tono de la publicación. Lo revisaremos con el equipo.
+-r2:Acostumbrarse es una habilidad universitaria, como el insomnio.
+-r3:Tu inquietud es válida, la tendremos en cuenta.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Sigan subiendo esas escaleras con lluvia a ver cuándo alguien se parte una pierna. Ah no, "acostúmbrense".
+-id:6
+-r1:Gracias por tu observación, trasladaremos el comentario a infraestructura.
+-r2:Subir escaleras es cardio gratis, aprovecha.
+-r3:Lamentamos el inconveniente, tu seguridad nos importa.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Pagamos millones de matrícula pa que nos digan que nos aguantemos. Respuesta cero profesional.
+-id:6
+-r1:Entendemos tu molestia y la tendremos en cuenta.
+-r2:Eso sí, la matrícula viene con escaleras incluidas.
+-r3:Gracias por tu comentario, lo compartiremos con la administración.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Reconocen que son incómodas y aun así no hacen nada. Eso no es empatía, es burla.
+-id:6
+-r1:Tienes razón, vamos a revisar el tema con más empatía.
+-r2:Reconocer es el primer paso. El segundo, quién sabe cuándo.
+-r3:Agradecemos tu comentario y lo tendremos en cuenta.
+-reac:ENOJADO
+#f
+
+#i
+-texto:@fulanito "acostumbrandose" sin tilde. Ni la ortografía ni las escaleras las van a arreglar jsjs
+-id:6
+-r1:Gracias por avisar, corregiremos el texto.
+-r2:Las escaleras no leen tildes, así que de ese lado vamos tranquilos.
+-r3:Tomamos nota, revisaremos la redacción antes de publicar.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Uyy me interesa, ¿habrá certificado de asistencia? @fulanito
+-id:7
+-r1:Los detalles sobre constancias se confirmarán al inscribirte.
+-r2:Certificado sí, aplausos depende de tu atención.
+-r3:Más detalles llegarán con la inscripción.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Ricardo Villa? Fue mi profe, explica brutal. ¡Ahí estaré!
+-id:7
+-r1:Qué bueno saberlo, ¡te esperamos en la conferencia!
+-r2:Ojalá no te quedes dormido en la primera fila.
+-r3:Gracias por recomendarlo.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Gracias por compartir el link, ya me inscribí. ¿Es presencial o virtual?
+-id:7
+-r1:Gracias por inscribirte. Te confirmaremos la modalidad por correo.
+-r2:Presencial o virtual, igual necesitarás internet o zapatos.
+-r3:Gracias, pronto publicaremos más información.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Hay que saber programación pa entender o es introductorio?
+-id:7
+-r1:Es abierto a todos, no se requiere experiencia previa.
+-r2:Si sabes sumar, ya vas por buen camino.
+-r3:Habrá contenido para quienes empiezan y para quienes ya saben.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Qué chévere traer gente de los Andes. ¿Van a grabar la charla por si se me cruza con clase?
+-id:7
+-r1:Lo consultaremos con los organizadores y te avisaremos.
+-r2:Si se cruza con clase, escoge: cripto o parcial.
+-r3:Mejor ven en vivo, que ahí se aprende más.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Qué buena campaña, el bosque seco tropical es un tesoro y casi nadie lo conoce
+-id:8
+-r1:Gracias, el bosque es de todos. ¡Ven a conocerlo!
+-r2:Casi nadie lo conoce: ahora tienes la excusa para llevar a todos.
+-r3:Qué bueno que lo valores, sigue compartiendo.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Dónde nos inscribimos pa la jornada de limpieza? Quiero llevar a mi combo @fulanito
+-id:8
+-r1:En la Oficina de Bienestar Universitario te darán toda la información.
+-r2:Tu combo es bienvenido, la basura no.
+-r3:Lleva a todos los que puedas, ¡gracias!
+-reac:ALEGRE
+#f
+
+#i
+-texto:Lo que más me gusta del campus es el bosque, ojalá más gente lo cuide.
+-id:8
+-r1:Totalmente de acuerdo, cuidarlo es tarea de todos.
+-r2:Ojalá, pero primero que dejen de tirar las colillas ahí.
+-r3:Gracias por apreciarlo.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Las horas de voluntariado cuentan pa algo, créditos o certificado?
+-id:8
+-r1:Pregunta en Bienestar si la actividad da constancia.
+-r2:Cuenta para el karma, que también vale.
+-r3:Buena pregunta, lo confirmaremos y avisaremos por aquí.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Ya era hora de que hablaran del bosque uninorte, ¡cuenten conmigo!
+-id:8
+-r1:¡Gracias, te esperamos!
+-r2:Qué bien, ya era hora de que alguien dijera "cuenten conmigo".
+-r3:Cuenta con nosotros también.
+-reac:ALEGRE
+#f
+
+#i
+-texto:"Holas queridos lectores" jajaja ¿esto es un trino o una carta del siglo XIX?
+-id:9
+-r1:Gracias, revisaremos el tono de nuestros comunicados.
+-r2:Lo escribió un historiador que perdió su máquina del tiempo.
+-r3:Tomamos nota, la intención era ser cercanos.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Dicen que informan las fechas y no dan ni una. ¿Qué convocatorias? ¿Pa qué? Cero información.
+-id:9
+-r1:Tienes razón, publicaremos la información detallada pronto.
+-r2:Cero información, pero muy buenos deseos.
+-r3:Las fechas están en el portal, sección de convocatorias.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"Información larga y tediosa" Pues resúmanla, pa eso trabajan en comunicaciones.
+-id:9
+-r1:Gracias, prometemos resumir mejor.
+-r2:Tediosa es tu opinión; nosotros solo la escribimos.
+-r3:Entendido, la próxima vez la resumimos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"Procesa" en vez de "proceso"... y quieren que confiemos en el portal
+-id:9
+-r1:Gracias por avisar, ya lo corregimos.
+-r2:Procesa, procesar... la ortografía está en pausa.
+-r3:Agradecemos la corrección. Recuerda que el portal tiene la información completa.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Le pasan el trabajo al portal y en el trino no dejan ni un dato. @fulanito esto es pereza pura.
+-id:9
+-r1:Lamentamos la falta de detalle, publicaremos datos más claros.
+-r2:Es un trabajo en equipo: nosotros no escribimos, el portal sí.
+-r3:Nos esforzaremos por mejorar.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"Buenos días, tardes y noches" jajaja ¿es un trino o un saludo de radio?
+-id:10
+-r1:Gracias por la observación, usaremos un saludo más sencillo.
+-r2:Es que nunca sabemos a qué hora nos leen, tranquilo.
+-r3:Fue con cariño, pero se nota que tampoco funcionó.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:¿Qué día y a qué hora estarán? Solo dicen "esta semana". Falta info básica.
+-id:10
+-r1:Publicaremos día y hora en un próximo trino.
+-r2:"Esta semana" es bastante preciso, ¿o no?
+-r3:Gracias por preguntar, publicaremos el horario completo.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"A menos que llueva" ¿y entonces dónde van a estar? Plan B no hay, parece.
+-id:10
+-r1:Si llueve nos moveremos a un lugar cubierto, te avisaremos.
+-r2:Plan B: sacar el paraguas.
+-r3:Buena observación, definiremos un plan alterno.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"Dia" sin tilde en la cuenta oficial... y son los que nos exigen ortografía en los trabajos
+-id:10
+-r1:Gracias por avisar, corregiremos el error.
+-r2:Se nos escapó una tilde, el mundo sigue girando.
+-r3:Ortografía y trabajos son cosas distintas, pero tomamos nota.
+-reac:ENOJADO
+#f
+
+#i
+-texto:¿Quién vende? ¿Emprendedores estudiantes o externos? @fulanito no lo aclaran, ni idea.
+-id:10
+-r1:Habrá emprendimientos de estudiantes y de la comunidad. Pronto más detalles.
+-r2:Es una sorpresa, como el clima.
+-r3:Gracias por preguntar, lo aclararemos.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:¡Por fin! Ya me anoto en dominó, nadie me gana @fulanito
+-id:11
+-r1:¡Te esperamos en Bienestar!
+-r2:Todos dicen lo mismo hasta que ven las fichas.
+-r3:Anótate antes del 14 de noviembre.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Gracias por poner la fecha límite de inscripción, así uno no se queda por fuera.
+-id:11
+-r1:Con gusto, no dejes pasar la fecha.
+-r2:Sí, nos esforzamos mucho en escribir una fecha.
+-r3:Gracias, inscríbete en el Bloque B.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Se puede inscribir un equipo o es solo individual? Pregunto por el parqué jsjs
+-id:11
+-r1:Pregunta en la Oficina de Bienestar por la modalidad de equipos.
+-r2:Si sabes jugar parqué, ya eres elegible, tranquilo.
+-r3:Buena pregunta, lo confirmamos pronto.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Ya me inscribí en UNO. Prepárense, que vengo con el Reversa y todo
+-id:11
+-r1:¡Qué emoción! Nos vemos en la competencia.
+-r2:Reversa y todo, a ver si no se te devuelve.
+-r3:Gracias por inscribirte.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Dicen "premios para los ganadores" pero no sabemos cuáles. ¿Nos cuentan?
+-id:11
+-r1:Los premios se anunciarán pronto.
+-r2:Si te lo decimos, ya no habría misterio.
+-r3:Gracias por tu pregunta, publicaremos los detalles.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"Empesaron" y "q" en la cuenta oficial de la universidad... ¿quién maneja esto, mi primo de 12 años?
+-id:12
+-r1:Tienes razón, revisaremos la redacción.
+-r2:Nuestro practicante de 12 años lo siente mucho.
+-r3:Gracias, corregiremos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:¿Dónde y a qué hora? Dicen "ya empezaron" pero no dan lugar ni inscripción ni nada.
+-id:12
+-r1:Las inscripciones son en la Oficina de Bienestar. Pronto publicaremos más.
+-r2:Si ya empezaron, ya vas tarde.
+-r3:Gracias, aclararemos horarios y lugar.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"Hay uno, domino, parque" jajaja ni los juegos los escriben bien. Es parqué, mano.
+-id:12
+-r1:Gracias por la corrección, es parqué.
+-r2:Parqué con tilde, UNO en mayúscula: lección aprendida.
+-r3:Tomamos nota del error.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Parece un trino mío a las 2 am, no de la oficina de Bienestar. Más seriedad, porfa.
+-id:12
+-r1:Lamentamos el tono informal.
+-r2:A las 2 a. m. salen las mejores ideas.
+-r3:Intentaremos mantener un tono más serio.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"Esta bueno jaja" no me da confianza. @fulanito ¿esto es oficial o es una broma?
+-id:12
+-r1:Es una publicación oficial de Bienestar.
+-r2:Es oficial; lo de la broma queda a criterio de cada quien.
+-r3:Gracias por avisar, corregiremos.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:¿Y esto qué tiene que ver con la universidad? Parece cuenta personal, @fulanito.
+-id:13
+-r1:Tienes razón, esta publicación no corresponde a la cuenta oficial.
+-r2:Sí, una cuenta personal se coló por aquí.
+-r3:Gracias, la eliminaremos.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Creo que se equivocaron de cuenta, ¿cierto? Eso va en su Twitter personal, no en el oficial
+-id:13
+-r1:Gracias por avisar, ya trabajamos en eso.
+-r2:Oficial, personal... en el fútbol no hay fronteras.
+-r3:Lo sentimos, fue un error.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Golazo, sí, pero seguí esta cuenta pa enterarme de cosas de la U, no pa comentar el partido.
+-id:13
+-r1:Gracias por tu comentario, volveremos a lo institucional.
+-r2:Seguimos el partido por otra cuenta, ¿te parece?
+-r3:Mil disculpas.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Alguien quítele el celular al community manager, se le olvidó con qué cuenta estaba jsjs
+-id:13
+-r1:Lamentamos el error.
+-r2:Le quitamos el celular, pero se lo devolvieron por el golazo.
+-r3:Se tomarán medidas.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Mientras comentan el partido, en Bienestar aún no responden mis correos. Prioridades
+-id:13
+-r1:Revisaremos tus correos pendientes, mil disculpas.
+-r2:Hacemos las dos cosas: comentar partidos y no responder. Multitarea.
+-r3:Escríbenos por mensaje directo con tu caso.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Gracias por el recordatorio, casi se me pasa. ¡20 de noviembre anotado!
+-id:14
+-r1:Con gusto, mucho éxito.
+-r2:Casi se te pasa, pero para eso están los recordatorios.
+-r3:Gracias por comentar.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Hay que pedir cita con el CREE o puedo llegar directo? @fulanito
+-id:14
+-r1:Puedes llegar directamente en el horario de atención, de lunes a viernes.
+-r2:Con cita o sin cita, nadie te va a mirar mal.
+-r3:Si tienes dudas escribe al CREE.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Me sirve saber el horario, el año pasado fui y estaba cerrado
+-id:14
+-r1:Está disponible de lunes a viernes, verifica el horario en el portal.
+-r2:Cerrado es el estado natural de las oficinas en vacaciones.
+-r3:Gracias por avisar, lo confirmaremos.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:¿Si retiro, me devuelven algo de la matrícula o se pierde todo?
+-id:14
+-r1:Consulta en el portal las condiciones sobre devoluciones.
+-r2:Se pierde todo, hasta las ganas... es broma. Consúltalo.
+-r3:Buena pregunta, el CREE puede orientarte.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Buenísimo que lo pongan claro: fecha, lugar y dónde ver más. Así sí.
+-id:14
+-r1:Gracias, así nos gusta comunicar.
+-r2:Fecha, lugar y portal: la receta completa.
+-r3:Nos alegra que sea útil.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Leí tres veces y no entendí nada. ¿Esto lo escribió alguien o lo tradujo un traductor malo?
+-id:15
+-r1:Lamentamos la confusión, mejoraremos la redacción.
+-r2:Fue traducido de "burocrático" a "español", con pérdidas.
+-r3:Gracias por avisar.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"El quinto del bloque" ¿cuál bloque? Falta la K y la palabra piso. Pésima redacción.
+-id:15
+-r1:El CREE queda en el 5.º piso del Bloque K.
+-r2:¿Cuál bloque? El de siempre, el que busques primero.
+-r3:Tomaremos nota.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"Si es que usted tiene como no estar de acuerdo con las materias" ¿Eso qué significa?
+-id:15
+-r1:Significa que si quieres retirar una materia puedes acercarte al CREE.
+-r2:Significa que alguien escribió con prisa.
+-r3:Perdón por la confusión.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Usan "usted" y luego "ahí sale algo de eso". Mezcla de formalidad con pereza, no cuadra.
+-id:15
+-r1:Gracias, cuidaremos más el tono.
+-r2:Es el estilo "formal-informal", muy moderno.
+-r3:Tienes razón.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"Ahí sale algo de eso" ¿en serio? Ni el proceso del portal precisan. @fulanito esto es hablar por hablar.
+-id:15
+-r1:El proceso completo está en el portal institucional.
+-r2:Algo sale, siempre sale algo.
+-r3:Lo aclararemos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Gracias por avisar con tiempo. Ojalá dejen todo bien señalizado pa que nadie se arriesgue.
+-id:16
+-r1:Gracias, las zonas estarán señalizadas.
+-r2:Con cinta amarilla, hasta los distraídos se enteran.
+-r3:Gracias por tu comentario.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Ese vendaval casi me tumba saliendo de clase, qué bueno que ya reparen la fachada.
+-id:16
+-r1:Nos alegra que estés bien.
+-r2:Qué susto, sí. Por eso pedimos no acercarse a la zona.
+-r3:Qué bueno, falta poco para terminar.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Hasta cuándo estarán las obras? Tengo clases en el bloque G @fulanito
+-id:16
+-r1:Las obras avanzan por etapas, informaremos la fecha de finalización.
+-r2:Hasta que quede bien, esa es la fecha oficial.
+-r3:Consulta con tu facultad.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Excelente que pidan seguir las indicaciones del personal de seguridad
+-id:16
+-r1:Gracias por el apoyo.
+-r2:Es lo mínimo, pero a veces cuesta.
+-r3:La seguridad es de todos.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Hay ruta alterna pa llegar al bloque H mientras reparan? Gracias de antemano.
+-id:16
+-r1:Habrá señales de ruta alterna.
+-r2:Sí, se llama "el camino más largo".
+-r3:Pronto lo comunicaremos.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"Es culpa suya" Qué manera tan amable de decir que no les importamos.
+-id:17
+-r1:Lamentamos el tono del mensaje.
+-r2:Sí, mejor culpar a alguien que mejorar.
+-r3:Tu opinión nos importa.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"No hay más que decir" ¿Y la universidad se lava las manos así de fácil? Cero empatía.
+-id:17
+-r1:Tienes razón, la seguridad es corresponsabilidad.
+-r2:Es verdad, no hay más que decir: ya dijimos lo que quisimos.
+-r3:Lo revisaremos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:¿Por qué reparan el Bloque I? ¿Cuándo empiezan? ¿Qué zonas? Ni un dato y ya culpan a los estudiantes.
+-id:17
+-r1:Gracias por señalarlo, publicaremos fechas y zonas.
+-r2:Datos hay, falta que los pidan con otro tono.
+-r3:Lamentamos la falta de información.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Si de verdad avisaron varias veces, que lo demuestren. Esto es una sentencia, no un aviso.
+-id:17
+-r1:Compartiremos las evidencias en próximos comunicados.
+-r2:Las pruebas están, pero hoy no las trajimos.
+-r3:Gracias.
+-reac:ENOJADO
+#f
+
+#i
+-texto:@fulanito ¿así se redacta un comunicado institucional? Suena a jefe cansado, no a universidad.
+-id:17
+-r1:Tomamos nota del tono.
+-r2:Lo redactó el jefe cansado, confirmado.
+-r3:Gracias por tu observación.
+-reac:ENOJADO
+#f
+
+#i
+-texto:¡Qué buen tema! La ciberseguridad hace mucha falta en los semilleros. ¡Cuenten conmigo!
+-id:18
+-r1:Qué bueno que te interese, ¡te esperamos!
+-r2:Cuenten con ustedes, que nosotros contamos con los cupos.
+-r3:Gracias por apoyar.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Hay certificado de asistencia? Los cupos son limitados y quiero asegurar el mío @fulanito
+-id:18
+-r1:Los asistentes recibirán constancia; consulta al inscribirte.
+-r2:Primero el cupo, luego el certificado.
+-r3:Gracias.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Ojalá digan pronto quién es el invitado especial, me da curiosidad.
+-id:18
+-r1:Anunciaremos el invitado pronto.
+-r2:Es un invitado "especial", es decir, secreto.
+-r3:Gracias por tu paciencia.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Ya me inscribí, las 3 pm me vienen perfecto con mi horario. ¡Gracias!
+-id:18
+-r1:Gracias por inscribirte, nos vemos a las 3 p. m.
+-r2:Qué suerte, el horario también quiso ayudarte.
+-r3:¡Nos vemos allá!
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Será transmitida en vivo o toca ir al Auditorio sí o sí?
+-id:18
+-r1:Será presencial en el Auditorio Principal.
+-r2:Sí o sí, así sacas el cuerpo de la cama.
+-r3:Consultaremos la opción de transmisión.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"Educatiba" otra vez... ¿nadie revisa los trinos antes de publicar?
+-id:19
+-r1:Gracias por avisar, ya lo corregimos.
+-r2:Educatiba es una palabra nueva, de nada.
+-r3:Lo tendremos en cuenta.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Piden puntualidad pero no dicen la hora. ¿A qué hora empieza? @fulanito
+-id:19
+-r1:Gracias, publicaremos la hora exacta.
+-r2:Puntual desde cuándo, esa es la pregunta.
+-r3:Tomamos nota.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"Se realizara" y "habra" sin tilde. Si piden puntualidad, pidan también ortografía.
+-id:19
+-r1:Gracias por señalarlo, corregiremos las tildes.
+-r2:Las tildes se fueron a un refrigerio... que tampoco habrá.
+-r3:Revisaremos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:¿Quiénes son los profesores invitados? Ni un nombre, ni lugar, ni tema. Pésima convocatoria.
+-id:19
+-r1:Publicaremos el programa completo.
+-r2:Profesores invitados, así en general, para que sea sorpresa.
+-r3:Tienes razón.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Lo de "sin embargo no habrá refrigerios" suena a regaño, no a información
+-id:19
+-r1:Lamentamos el tono.
+-r2:Sin refrigerios, pero con mucha buena energía.
+-r3:Gracias por el comentario.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"Flojos o no les importa pasar" ¿Así le hablan a quienes les pagan la matrícula?
+-id:20
+-r1:Lamentamos el tono del trino.
+-r2:No fue nuestra intención, solo nuestra costumbre.
+-r3:Tu opinión es importante.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Gracias por avisar, pero el regaño sobraba. Un "consulta tus fechas" bastaba @fulanito
+-id:20
+-r1:Tienes razón, fue innecesario.
+-r2:Lo del regaño es de cortesía.
+-r3:Gracias.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Culpan a los estudiantes por no mirar la app... ¿y si la app se cae cada vez que hay exámenes?
+-id:20
+-r1:Reportaremos las fallas de la app.
+-r2:La app se cae para dar emoción.
+-r3:Si falla, escríbenos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Ya salieron las fechas, pero no dicen cómo verlas. ¿Solo en la app? ¿Y si no hay celular?
+-id:20
+-r1:Puedes consultarlas en la app o en el portal.
+-r2:Sin celular, pues a la antigua: preguntando.
+-r3:Revisaremos otros medios.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Qué manera de motivar a la comunidad estudiantil, de verdad. Aplausos para el community manager
+-id:20
+-r1:Gracias por el aplauso, aunque se nota la ironía.
+-r2:Gracias, estamos acostumbrados a los aplausos.
+-r3:Mejoraremos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Qué lindo que cuiden el bosque seco tropical, es de lo mejor del campus
+-id:21
+-r1:Gracias, entre todos lo cuidamos.
+-r2:Lo mejor del campus, sin duda, aparte de las vacaciones.
+-r3:Qué bueno que lo valores.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Hasta qué día puedo inscribirme como voluntario? @fulanito
+-id:21
+-r1:Escribe a Bienestar para inscribirte, ellos te darán la fecha límite.
+-r2:Hasta que dejes de preguntar y te inscribas.
+-r3:¡Gracias por tu interés!
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Me apunto a la limpieza. ¿Hay que llevar guantes o ustedes dan todo?
+-id:21
+-r1:Nosotros ponemos los guantes, tú pones las ganas.
+-r2:Ustedes traen las ganas, nosotros los guantes y las bolsas.
+-r3:Pregunta en Bienestar.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Excelente campaña. Ojalá más estudiantes conozcan la biodiversidad de la región.
+-id:21
+-r1:Gracias por el apoyo.
+-r2:Ojalá, aunque algunos pisan el bosque como si fuera pasarela.
+-r3:Contamos contigo.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Las jornadas son entre semana o fin de semana? Es pa organizar mi horario.
+-id:21
+-r1:Las jornadas se anunciarán pronto.
+-r2:Cuando menos lo esperes, como los parciales.
+-r3:Consúltalo en Bienestar.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"Quien no participe no ama su universidad" Qué presión. Me importa el planeta, pero tengo parcial.
+-id:22
+-r1:Lamentamos el tono.
+-r2:Amar la universidad también implica madrugar.
+-r3:Entendemos, los parciales primero.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"Van a quedar muy mal ante todos" suena a amenaza, no a invitación.
+-id:22
+-r1:No fue una amenaza, perdón por la mala redacción.
+-r2:Mucho dramatismo. Es una jornada, no un juicio.
+-r3:Tomamos nota.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Muchas opiniones y cero información: ¿fecha, hora, lugar? Más campaña y menos regaño.
+-id:22
+-r1:Publicaremos los detalles.
+-r2:¿Información? Eso no, nosotros solo opinamos.
+-r3:Gracias.
+-reac:ENOJADO
+#f
+
+#i
+-texto:¿Quién dijo que es "la mejor campaña"? Eso lo decide la comunidad, no ustedes mismos jsjs
+-id:22
+-r1:Tienes razón, la comunidad es quien opina.
+-r2:La modestia no entró en la planeación.
+-r3:Gracias.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Mucho "opinamos" y poca información. @fulanito esto es propaganda, no comunicación institucional.
+-id:22
+-r1:Lo revisaremos.
+-r2:Propaganda con presupuesto de trino.
+-r3:Gracias por tu comentario.
+-reac:ENOJADO
+#f
+
+#i
+-texto:¡Qué bueno! Llevaba meses esperando esta convocatoria. ¿Cuál es el promedio mínimo?
+-id:23
+-r1:El promedio mínimo está en el portal institucional.
+-r2:Meses esperando y no miraste el portal.
+-r3:Gracias, ¡éxitos!
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿El intercambio nacional incluye ayuda económica? @fulanito
+-id:23
+-r1:Depende de cada convocatoria, revisa el portal.
+-r2:Dependerá de qué tan bien llenes los formularios.
+-r3:Gracias por preguntar.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Gracias por recordar lo de los documentos con tiempo. Siempre me quedo a última hora
+-id:23
+-r1:Buena idea, hazlo con tiempo.
+-r2:Los documentos nunca se reúnen solos.
+-r3:Gracias por comentar.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Hay universidades de la Costa o solo del interior? Pregunto por cercanía.
+-id:23
+-r1:Hay opciones en varias regiones del país.
+-r2:La Costa no se mueve, tú sí.
+-r3:Revisa la lista en el portal.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Ya me puse a revisar los requisitos en el portal. ¡Ojalá salga mi cupo!
+-id:23
+-r1:¡Mucho éxito!
+-r2:Los cupos son pocos y las ganas muchas.
+-r3:Gracias.
+-reac:ALEGRE
+#f
+
+#i
+-texto:"Pregunten por ahí a alguien" ¿Eso es lo que responde una oficina de movilidad?
+-id:24
+-r1:Tienes razón, la respuesta fue poco profesional.
+-r2:Preguntar por ahí es nuestra política oficial de atención.
+-r3:Lamentamos la confusión.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Entonces... ¿abren o no abren? ¿Este semestre o el otro? Cero planeación.
+-id:24
+-r1:Publicaremos fechas confirmadas.
+-r2:Abrimos cuando abramos, no nos presione.
+-r3:Disculpa.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"No sabemos bien cuándo ni cómo se postula" ¿y por qué publican entonces? @fulanito
+-id:24
+-r1:Lamentamos la imprecisión.
+-r2:Publicar es gratis, saber qué publicamos no tanto.
+-r3:Gracias.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Información tan vaga que parece chisme de pasillo. Una universidad seria precisa fechas.
+-id:24
+-r1:Gracias por señalarlo.
+-r2:Chisme con sello institucional.
+-r3:Mejoraremos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Que me avisen cuando sepan, porque con "algo saldrá" no puedo planear mi semestre.
+-id:24
+-r1:Te avisaremos apenas haya fechas.
+-r2:"Algo saldrá" suena a poesía.
+-r3:Gracias.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Muy importante este aviso. Ya me pasó que un amigo me pidió prestado el carné
+-id:25
+-r1:Gracias por compartirlo.
+-r2:Prestar el carné es el primer paso de un mal capítulo.
+-r3:Recomendamos no hacerlo.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:¿Dónde se reporta la pérdida del celular? ¿Hay un correo o una oficina? @fulanito
+-id:25
+-r1:Repórtalo por los canales oficiales.
+-r2:Una oficina, un correo... lo que encuentres primero.
+-r3:Escríbenos.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Buenísimo el consejo de cambiar la contraseña de inmediato. Gracias por cuidarnos.
+-id:25
+-r1:Gracias por tu atención.
+-r2:Es lo mínimo que esperamos.
+-r3:Así es.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Pa todos los que prestan el carné pa entrar a la biblio, lean esto
+-id:25
+-r1:Gracias por difundir.
+-r2:Que lean, aunque sea por obligación.
+-r3:Cuidémonos entre todos.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Y si me roban el cel con la app abierta? ¿La universidad puede bloquear el acceso?
+-id:25
+-r1:Reporta de inmediato.
+-r2:La app solo se bloquea si te dejas.
+-r3:Contacta soporte.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:¿Ingeniería más comprometida que Humanidades? Eso es un sesgo enorme, y desde la cuenta oficial
+-id:26
+-r1:Tienes razón, retiraremos la comparación.
+-r2:Sesgo es una palabra fuerte, hablemos de "énfasis".
+-r3:Lamentamos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:"Ojalá aprendan de ellos" ¿Y los de Humanidades que organizan las jornadas culturales? No generalicen.
+-id:26
+-r1:Ofrecemos disculpas a Humanidades.
+-r2:Cada facultad tiene su día, el de Humanidades fue ayer.
+-r3:Lo revisaremos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:@fulanito mira esto, ya hay comparaciones entre facultades desde la cuenta oficial
+-id:26
+-r1:Gracias por señalarlo.
+-r2:Comparar es gratis.
+-r3:Lo corregiremos.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:¿Con qué datos dicen que Humanidades casi nunca asiste? Eso es una acusación sin fuentes.
+-id:26
+-r1:No tenemos datos, fue una opinión inapropiada.
+-r2:Las fuentes son de nuestra imaginación.
+-r3:Retiraremos el trino.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Cuenta oficial promoviendo rivalidad entre carreras. Muy poco profesional.
+-id:26
+-r1:Lamentamos.
+-r2:Rivalidad sana, algunos la llaman marketing.
+-r3:Gracias.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Salvavidas pa los finales. ¡Gracias por ampliar el horario!
+-id:27
+-r1:¡Con gusto!
+-r2:Gracias por el salvavidas, aunque falta estudiar.
+-r3:Mucho éxito.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Con cuánta anticipación se reservan los cubículos? @fulanito
+-id:27
+-r1:Se pueden reservar desde la app con la anticipación indicada allí.
+-r2:Antes de que se acaben, obviamente.
+-r3:Consúltalo en la app.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Hasta las 11 pm, ya saben dónde me van a encontrar toda la semana
+-id:27
+-r1:Te esperamos.
+-r2:Ya sabemos dónde buscarte cuando haya alguna queja.
+-r3:Éxitos.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿El sábado hasta las 6 también aplica pa la sala de computadores?
+-id:27
+-r1:Sí, aplica para todas las salas.
+-r2:Computadores sí, enchufes... depende.
+-r3:Confirmaremos.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Muy buena info, clara y completa. Gracias, y mucho éxito a todos con los exámenes.
+-id:27
+-r1:Gracias.
+-r2:Qué amable.
+-r3:Éxitos.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Qué bueno que escuchen a los estudiantes. Esas escaleras son un resbalón cuando llueve.
+-id:28
+-r1:Gracias por avisar.
+-r2:Resbalosa hasta que mejoren.
+-r3:Estamos evaluando.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Hay fecha estimada pa las mejoras? @fulanito
+-id:28
+-r1:Aún no hay fecha, informaremos.
+-r2:Pronto... pero con calma.
+-r3:Gracias.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Ya envié mi sugerencia por el portal, espero que la tengan en cuenta. Gracias.
+-id:28
+-r1:Gracias, tu sugerencia llegó.
+-r2:Esperamos que sí; estamos leyendo todo.
+-r3:Revisaremos.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Pasamanos y antideslizante, justo lo que hacía falta. Se agradece la respuesta.
+-id:28
+-r1:Gracias.
+-r2:Faltaba que alguien se resbalara.
+-r3:Nos alegra.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Me parece bien el enfoque. Ojalá lo hagan antes de que alguien se lastime.
+-id:28
+-r1:Es nuestra intención.
+-r2:Ojalá, pero primero hay que evaluar.
+-r3:Gracias.
+-reac:ALEGRE
+#f

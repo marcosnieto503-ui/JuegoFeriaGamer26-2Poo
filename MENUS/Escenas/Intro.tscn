@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://ba3w67u3v1wx4"]
+
+[ext_resource type="Script" uid="uid://bedgut8fiuvfu" path="res://MENUS/Scripts/intro.gd" id="1_pmpsv"]
+
+[node name="Intro" type="Control" unique_id=1259290166]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pmpsv")
+
+[node name="DemoraInicio" type="Timer" parent="." unique_id=157565244]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="FondoNegro" type="ColorRect" parent="." unique_id=532078194]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LogoTeamMandarina" type="TextureRect" parent="." unique_id=1567577415]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -19.5
+offset_right = 72.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(6, 6)
+pivot_offset = Vector2(79, 21.5)
+
+[connection signal="timeout" from="DemoraInicio" to="." method="_on_timer_timeout"]

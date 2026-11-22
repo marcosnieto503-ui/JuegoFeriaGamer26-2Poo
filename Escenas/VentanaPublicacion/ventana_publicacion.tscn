@@ -1,0 +1,483 @@
+[gd_scene format=3 uid="uid://bvgsatc1wjt5q"]
+
+[ext_resource type="Texture2D" uid="uid://b4w2cfhpx7sjd" path="res://Escenas/VentanaPublicacion/CompressedResources/new_compressed_texture_2d.tres" id="1_31bn8"]
+[ext_resource type="Texture2D" uid="uid://7y0s6suehsi6" path="res://Assets/Ui sprites/containers 3 small.png" id="1_iganq"]
+[ext_resource type="Script" uid="uid://b50xcutj57ggf" path="res://Escenas/VentanaPublicacion/ventana_publicacion.gd" id="1_u0uem"]
+[ext_resource type="Texture2D" uid="uid://6d4ypl61ufxr" path="res://Assets/Ui sprites/containers 6 small.png" id="3_7ckg3"]
+[ext_resource type="FontFile" uid="uid://c0yidekyi80p3" path="res://Recursos/FONTS/m6x11plus.ttf" id="4_31bn8"]
+[ext_resource type="Texture2D" uid="uid://cly73souu28e2" path="res://Assets/Ui sprites/containers 8.png" id="5_iganq"]
+[ext_resource type="Texture2D" uid="uid://bpmv1qocklqkd" path="res://Assets/Publis/NoIMAGEN.png" id="8_piko8"]
+[ext_resource type="Script" uid="uid://d2cy23y3wb24u" path="res://Escenas/VentanaPublicacion/animacion_procesando_publicacion.gd" id="8_r081i"]
+[ext_resource type="Texture2D" uid="uid://4bp0erv2dbr7" path="res://Assets/Ui sprites/loading anim 2-Sheet 1.png" id="9_j750j"]
+[ext_resource type="Texture2D" uid="uid://hcjbwb05ty6n" path="res://Assets/Ui sprites/red x 1.png" id="10_j750j"]
+[ext_resource type="Texture2D" uid="uid://cv6fkcxrubu7o" path="res://Assets/Ui sprites/green check 2.png" id="10_pnjfu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iganq"]
+texture = ExtResource("1_31bn8")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(0.8822558, 0.8822558, 0.8822558, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hpw1e"]
+texture = ExtResource("1_iganq")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8a6s"]
+texture = ExtResource("3_7ckg3")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(0.9079417, 0.9079417, 0.90794164, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_31bn8"]
+base_font = ExtResource("4_31bn8")
+spacing_glyph = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_537yg"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+texture = ExtResource("5_iganq")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+modulate_color = Color(0.7615889, 0.7907858, 0.8089352, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_pnjfu"]
+base_font = ExtResource("4_31bn8")
+spacing_glyph = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_31bn8"]
+texture = ExtResource("3_7ckg3")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(0.21282518, 0.6616196, 0.32893896, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j750j"]
+texture = ExtResource("3_7ckg3")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(0.615782, 1.7466872, 0.9173567, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pnjfu"]
+texture = ExtResource("3_7ckg3")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(0.22430713, 0.69099766, 0.34875795, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_05ie2"]
+base_font = ExtResource("4_31bn8")
+spacing_glyph = 2
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iganq"]
+load_path = "res://.godot/imported/containers 6 small.png-5051ef6d7b1a69169eddd52cc458b1cf.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_piko8"]
+texture = SubResource("CompressedTexture2D_iganq")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(0.7928193, 0.13681847, 0.10581603, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r081i"]
+texture = SubResource("CompressedTexture2D_iganq")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(2.9562378, 0.6294418, 0.50697887, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a2o01"]
+texture = SubResource("CompressedTexture2D_iganq")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(0.8492183, 0.14898476, 0.11213037, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kugx0"]
+content_margin_left = 4.0
+content_margin_top = 2.0
+content_margin_right = 4.0
+content_margin_bottom = 2.0
+bg_color = Color(0.37036446, 0.37036452, 0.37036437, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_iganq"]
+base_font = ExtResource("4_31bn8")
+spacing_glyph = 1
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05ie2"]
+texture = SubResource("CompressedTexture2D_iganq")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(0.73674154, 0.31770626, 0.24162084, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_itk26"]
+texture = SubResource("CompressedTexture2D_iganq")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(1.2237577, 0.54377365, 0.42377654, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hvniv"]
+texture = SubResource("CompressedTexture2D_iganq")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+modulate_color = Color(1.0413129, 0.45834455, 0.35546786, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_hvniv"]
+base_font = ExtResource("4_31bn8")
+spacing_glyph = 1
+
+[sub_resource type="FontVariation" id="FontVariation_itk26"]
+base_font = ExtResource("4_31bn8")
+spacing_glyph = 1
+
+[sub_resource type="FontVariation" id="FontVariation_hpw1e"]
+base_font = ExtResource("4_31bn8")
+spacing_glyph = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_htq6i"]
+atlas = ExtResource("9_j750j")
+region = Rect2(0, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76qrl"]
+atlas = ExtResource("9_j750j")
+region = Rect2(120, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0b31"]
+atlas = ExtResource("9_j750j")
+region = Rect2(240, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djajs"]
+atlas = ExtResource("9_j750j")
+region = Rect2(360, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrnqv"]
+atlas = ExtResource("9_j750j")
+region = Rect2(480, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuw8i"]
+atlas = ExtResource("9_j750j")
+region = Rect2(600, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhrmn"]
+atlas = ExtResource("9_j750j")
+region = Rect2(720, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thxoa"]
+atlas = ExtResource("9_j750j")
+region = Rect2(840, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbvq8"]
+atlas = ExtResource("9_j750j")
+region = Rect2(960, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33aif"]
+atlas = ExtResource("9_j750j")
+region = Rect2(1080, 0, 120, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_05ie2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_htq6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76qrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0b31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djajs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrnqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kuw8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhrmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thxoa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbvq8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33aif")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="FontVariation" id="FontVariation_r081i"]
+base_font = ExtResource("4_31bn8")
+spacing_glyph = 2
+
+[node name="VentanaPublicacion" type="PanelContainer" unique_id=1207312424 node_paths=PackedStringArray("processAnimator")]
+texture_filter = 1
+offset_right = 850.0
+offset_bottom = 450.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_iganq")
+script = ExtResource("1_u0uem")
+processAnimator = NodePath("ProcesandoPubliAnim")
+metadata/_tab_index = 0
+
+[node name="Control" type="Control" parent="." unique_id=812791036]
+layout_mode = 2
+focus_mode = 1
+
+[node name="RectanguloFondoDebajo" type="PanelContainer" parent="Control" unique_id=588617156]
+z_as_relative = false
+layout_mode = 0
+offset_left = -7.0
+offset_top = 230.0
+offset_right = 837.0
+offset_bottom = 437.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_hpw1e")
+
+[node name="FondoTextoTipoPubli" type="PanelContainer" parent="Control" unique_id=614809724]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 236.0
+offset_right = 251.0
+offset_bottom = 270.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_o8a6s")
+
+[node name="TextoPublicacion" type="RichTextLabel" parent="Control" unique_id=1223590045]
+texture_filter = 1
+layout_mode = 0
+offset_left = 255.0
+offset_top = 20.0
+offset_right = 805.0
+offset_bottom = 215.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/normal_font = SubResource("FontVariation_31bn8")
+theme_override_font_sizes/normal_font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_537yg")
+bbcode_enabled = true
+text = "Saludos a todos los integrantes de la comunidad universitaria, desde la oficina de bienestar universitario tenemos el placer de anunciar la apertura de las olimpiadas recreativas, se realizarán competiciones de:[br][br]UNO, Dominó, Carrera de colores, Parqué !Y otros más¡[br][br]En estas olimpiadas los participantes podrán competir por increíbles premios, ¡Te estamos esperando!."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="B_Publicar" type="Button" parent="Control" unique_id=1480995469]
+layout_mode = 0
+offset_left = 513.0
+offset_top = 321.0
+offset_right = 724.0
+offset_bottom = 386.0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = SubResource("FontVariation_pnjfu")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_31bn8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_j750j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pnjfu")
+text = "PUBLICAR"
+
+[node name="B_Descartar" type="Button" parent="Control" unique_id=1988598455]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 321.0
+offset_right = 499.0
+offset_bottom = 386.0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = SubResource("FontVariation_05ie2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_piko8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_r081i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_a2o01")
+text = "DESCARTAR"
+
+[node name="RecursoMultimedia" type="TextureRect" parent="Control" unique_id=1965921488]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 16.0
+offset_right = 234.0
+offset_bottom = 215.0
+texture = ExtResource("8_piko8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LabelTipoPubli" type="Label" parent="Control" unique_id=515649404]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 241.0
+offset_right = 254.0
+offset_bottom = 276.0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("4_31bn8")
+theme_override_font_sizes/font_size = 22
+text = "tipo de Publicacion: IMAGEN"
+
+[node name="ControlOpsDescartar" type="Control" parent="." unique_id=541326613]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+focus_mode = 1
+
+[node name="OpcionesDescartar" type="PanelContainer" parent="ControlOpsDescartar" unique_id=1333567926]
+modulate = Color(1, 1, 1, 0.8039216)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 293.0
+offset_right = 497.0
+offset_bottom = 421.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kugx0")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlOpsDescartar/OpcionesDescartar" unique_id=444917671]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer" unique_id=2064405137]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Inapropiado" type="Button" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2" unique_id=2031408935]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = SubResource("FontVariation_iganq")
+theme_override_font_sizes/font_size = 23
+theme_override_styles/normal = SubResource("StyleBoxTexture_05ie2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_itk26")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hvniv")
+text = "INAPROPIADO"
+
+[node name="FormatoInvalido" type="Button" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2" unique_id=1481136723]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = SubResource("FontVariation_hvniv")
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxTexture_05ie2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_itk26")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hvniv")
+text = "Formato Invalido"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer" unique_id=1743228052]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="PubliNoRelacionada" type="Button" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3" unique_id=1539618419]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = SubResource("FontVariation_itk26")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_05ie2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_itk26")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hvniv")
+text = "Publicacion no relacionada"
+
+[node name="InfoErronea" type="Button" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer3" unique_id=1140329308]
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = SubResource("FontVariation_hpw1e")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxTexture_05ie2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_itk26")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hvniv")
+text = "Informacion Incorrecta"
+
+[node name="ProcesandoPubliAnim" type="NinePatchRect" parent="." unique_id=868708878 node_paths=PackedStringArray("LoadingAnim", "simbolImg", "optionLabel", "timer")]
+visible = false
+modulate = Color(1, 1, 1, 0.9411765)
+z_index = 1
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("3_7ckg3")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+script = ExtResource("8_r081i")
+LoadingAnim = NodePath("LoadingAnim")
+simbolImg = NodePath("Simbol")
+optionLabel = NodePath("OpcionLabel")
+processDuracion = 1.0
+timer = NodePath("Timer")
+checkTexture = ExtResource("10_pnjfu")
+crossTexture = ExtResource("10_j750j")
+
+[node name="LoadingAnim" type="AnimatedSprite2D" parent="ProcesandoPubliAnim" unique_id=185032125]
+modulate = Color(0.8901961, 0.91764706, 0.9411765, 0.5254902)
+position = Vector2(409, 195.00002)
+scale = Vector2(1.1833333, 1.1833333)
+sprite_frames = SubResource("SpriteFrames_05ie2")
+
+[node name="Label" type="Label" parent="ProcesandoPubliAnim/LoadingAnim" unique_id=1561074094]
+offset_left = -48.169018
+offset_top = -95.49297
+offset_right = 57.830982
+offset_bottom = -52.3944
+theme_override_fonts/font = ExtResource("4_31bn8")
+theme_override_font_sizes/font_size = 24
+text = "PROCESANDO..."
+
+[node name="Simbol" type="TextureRect" parent="ProcesandoPubliAnim" unique_id=1895901213]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 139.0
+offset_right = 574.0
+offset_bottom = 259.0
+texture = ExtResource("10_pnjfu")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Timer" type="Timer" parent="ProcesandoPubliAnim" unique_id=1716919747]
+one_shot = true
+
+[node name="OpcionLabel" type="Label" parent="ProcesandoPubliAnim" unique_id=1194579399]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 182.0
+offset_right = 414.0
+offset_bottom = 239.0
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = SubResource("FontVariation_r081i")
+theme_override_font_sizes/font_size = 45
+text = "PUBLICADO"
+horizontal_alignment = 2
+
+[connection signal="meta_clicked" from="Control/TextoPublicacion" to="." method="_link_clickeado"]
+[connection signal="meta_hover_ended" from="Control/TextoPublicacion" to="." method="_mouse_fuera_del_link"]
+[connection signal="meta_hover_started" from="Control/TextoPublicacion" to="." method="_mouse_sobre_link"]
+[connection signal="button_up" from="Control/B_Publicar" to="." method="_on_b_publicar_button_up"]
+[connection signal="button_up" from="Control/B_Descartar" to="." method="_on_b_descartar_button_up"]
+[connection signal="focus_entered" from="ControlOpsDescartar" to="." method="_on_controlOpsDescartar_focus_entered"]
+[connection signal="focus_exited" from="ControlOpsDescartar" to="." method="_on_controlOpsDescartar_focus_exited"]

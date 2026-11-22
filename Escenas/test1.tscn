@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://0ptx565etvmb"]
+
+[ext_resource type="Script" uid="uid://wua5mfj345gy" path="res://Escenas/test_1.gd" id="1_ud31v"]
+
+[node name="Test1" type="Node2D" unique_id=1431907804]
+script = ExtResource("1_ud31v")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2038695741]
+offset_left = 114.0
+offset_top = 30.0
+offset_right = 336.0
+offset_bottom = 154.0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=1978480954]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 186.0
+offset_right = 730.0
+offset_bottom = 310.0
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect/ColorRect" unique_id=43218921]
+layout_mode = 0
+offset_left = -253.0
+offset_top = 185.0
+offset_right = -31.0
+offset_bottom = 309.0
