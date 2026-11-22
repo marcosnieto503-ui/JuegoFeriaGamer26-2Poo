@@ -121,7 +121,6 @@ corner_radius_bottom_left = 8
 script = ExtResource("1_1axsk")
 Gameplay_Visuals = NodePath("Visuales")
 logicaJugable = NodePath("logicaJugable")
-DURACION_DE_LA_PARTIDA = 30.0
 recursosTxtManager = NodePath("RecursosTXTManager")
 
 [node name="PAUSA_MANAGER" type="Node" parent="." unique_id=84963242 node_paths=PackedStringArray("GameplayNode", "visualsNode", "logicaJugableNode", "AUDIONode", "efectoNotiRecibidaNode", "camaraNode", "pantallaPausa")]
