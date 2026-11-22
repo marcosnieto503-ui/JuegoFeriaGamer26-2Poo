@@ -1,22 +1,21 @@
 extends Node
 
 var GameplayScene = preload("res://Escenas/Gameplay/gameplay.tscn")
+var testScene = preload("res://Escenas/test1.tscn")
 
+var Scene_Manager:Node
 
-var ACTUAl_SCENE:Node
 
 
 enum ENUMESCENAS {
 	GAMEPLAY,
 	MAINMENU,
 	CHARACTERCREATION,
-	GAMEFINALRESULTS
-}
-
-var Dict_SCENES:Dictionary[ENUMESCENAS,PackedScene] = {
-	ENUMESCENAS.GAMEPLAY:GameplayScene
+	GAMEFINALRESULTS,
+	TEST1
 }
 
 
-func _ready() -> void:
-	pass
+
+func CAMBIAR_DE_ESCENA(nextScene:GameManager.ENUMESCENAS):
+	Scene_Manager.SWITCH_SCENE(nextScene)

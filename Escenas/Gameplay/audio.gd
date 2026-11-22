@@ -65,7 +65,7 @@ func pausarSonidos():
 	if MUSICAFONDO.stream_paused:
 		return
 	MUSICAFONDO.stream_paused = true
-	for samp:AudioStreamPlayer2D in SAMPLES.values():
+	for samp in SAMPLES.values():
 		if samp.stream_paused:
 			continue
 		samp.stream_paused = true
@@ -74,10 +74,19 @@ func reanudarSonidos():
 	if !MUSICAFONDO.stream_paused:
 		return
 	MUSICAFONDO.stream_paused = false
-	for samp:AudioStreamPlayer2D in SAMPLES.values():
+	for samp in SAMPLES.values():
 		if !samp.stream_paused:
 			continue
 		samp.stream_paused = false
+
+
+
+#sonidoi alarmaaaaaaa
+@onready var sonidoAlarma:AudioStreamPlayer = $SonidoAlarma
+func playSonidoAlarma():
+	sonidoAlarma.play()
+func stopSonidoAlarma():
+	sonidoAlarma.stop()
 
 
 

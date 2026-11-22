@@ -73,6 +73,7 @@ func leerArchivoComentarios():
 	var r1 = "NULL"
 	var r2 = "NULL"
 	var r3 = "NULL"
+	var reaccion = null
 	
 	var estadoLectura = "noLeyendo"
 	
@@ -90,7 +91,7 @@ func leerArchivoComentarios():
 			if id == null:
 				push_error("Id null en el articulo : ",texto)
 			
-			var comentario = Comentario.new(texto,id,r1,r2,r3)
+			var comentario = Comentario.new(texto,id,r1,r2,r3,reaccion)
 			
 			texto = "NULL" 
 			id = null
@@ -104,7 +105,7 @@ func leerArchivoComentarios():
 				push_error("NO EXISTE PUBLICACION CON ESTE ID PARA SIGNARLE COMENTARIO: ",id)
 				continue
 			Utils.PUBLICACIONES.get(comentario._id).addComentario(comentario)
-			print("-------COMENTARIO LEIDO: ",comentario.get_id(),"\n")
+			print("-------COMENTARIO LEIDO: ",comentario.get_id(), "REACCION: ",reaccion,"\n")
 		
 		if estadoLectura == "noLeyendo":
 			continue
@@ -128,3 +129,7 @@ func leerArchivoComentarios():
 			"r3":
 				if linea.begins_with("-r3:"):
 					r3 = linea.trim_prefix("-r3:")
+					estadoLectura = "react"
+			"react":
+				if linea.begins_with("-reac:"):
+					reaccion = linea.trim_prefix("_reac:")

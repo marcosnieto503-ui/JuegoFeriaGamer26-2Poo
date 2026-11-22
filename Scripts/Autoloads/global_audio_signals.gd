@@ -12,6 +12,11 @@ func play_musica_fondo():
 	print("play_musica_fondo, AUDIO = ", AUDIO, " | instancia: ", get_path())
 	AUDIO.playMusicaFondo()
 
+func playSonidoAlarma():
+	AUDIO.playSonidoAlarma()
+func stopSonidoAlarma():
+	AUDIO.stopSonidoAlarma()
+
 
 func playNotiRecibida():
 	AUDIO.playNotiRecibida()

@@ -30,9 +30,11 @@ func procesarPubli(publi:Publicacion, playerAccion :String):
 	if playerAccion == accionEsperada:
 		animBienHecho()
 		GlobalAudioSignals.playCorrectAnswer()
+		ProgresoPuntuacion.PUBLIS_CORRECTAS.append(publi)
 	else:
 		animMalHecho()
 		GlobalAudioSignals.playWrongAnswer()
+		ProgresoPuntuacion.PUBLIS_INCORRECTAS.append(publi)
 	
 	if playerAccion == "PUBLICAR":
 		PUBLIS_PUBLICADAS.append(publi)

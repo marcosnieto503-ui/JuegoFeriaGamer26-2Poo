@@ -7,7 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://cly73souu28e2" path="res://Assets/Ui sprites/containers 8.png" id="3_ikyia"]
 [ext_resource type="Texture2D" uid="uid://kptnfdn5y6po" path="res://Assets/Ui sprites/Principal tab.png" id="4_41hg1"]
 [ext_resource type="FontFile" uid="uid://c0yidekyi80p3" path="res://Recursos/FONTS/m6x11plus.ttf" id="4_snssx"]
+[ext_resource type="Script" uid="uid://dqbyghwg1hyi5" path="res://Escenas/Gameplay/fin_partida_manager.gd" id="5_h6dqy"]
+[ext_resource type="Texture2D" uid="uid://hahaohkfkuff" path="res://Assets/Ui sprites/Sprite BOTON to laptop 1.png" id="7_xgr08"]
 [ext_resource type="PackedScene" uid="uid://7obfqhwcbt7y" path="res://Escenas/CommentOverlayScene/comment_overlay.tscn" id="8_4rj03"]
+[ext_resource type="Texture2D" uid="uid://btwxdpmtg1mxf" path="res://Assets/Ui sprites/Sprite BOTONES 1.png" id="8_fvrgq"]
 [ext_resource type="Script" uid="uid://cr3gocffrm0vn" path="res://Escenas/Gameplay/recursos_txt_manager.gd" id="8_iuhs4"]
 [ext_resource type="Script" uid="uid://ds4dtwidfvvoq" path="res://Scripts/BOTON_TESTING.gd" id="9_bmyfo"]
 [ext_resource type="Script" uid="uid://cxgkofysrd71j" path="res://Escenas/Gameplay/utils_vars_inicializador.gd" id="9_iuhs4"]
@@ -23,14 +26,22 @@
 [ext_resource type="Script" uid="uid://b2cpmmq3843mu" path="res://Escenas/Gameplay/control_comentarios.gd" id="17_h6dqy"]
 [ext_resource type="Script" uid="uid://b4bgg2bpr16ap" path="res://Scripts/Autoloads/data_partida.gd" id="18_0xetr"]
 [ext_resource type="Script" uid="uid://casf0e2bdda7q" path="res://Escenas/Gameplay/control_notificaciones.gd" id="18_hnngx"]
+[ext_resource type="Texture2D" uid="uid://dgys1qlmj2rfr" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id1.png" id="19_dttl8"]
 [ext_resource type="Script" uid="uid://ws0xqqk2cgk2" path="res://Escenas/Gameplay/progreso_puntuacion.gd" id="19_t1fop"]
+[ext_resource type="Texture2D" uid="uid://o5l2vnip1kyk" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id3.png" id="20_oe4qr"]
 [ext_resource type="Script" uid="uid://bf2ypnr80b0h0" path="res://Escenas/Gameplay/logica_jugable.gd" id="20_y72yj"]
+[ext_resource type="Texture2D" uid="uid://cff7d1pelgqs3" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id5.png" id="21_ifkcu"]
 [ext_resource type="Script" uid="uid://dpaqa0w2eiil" path="res://Escenas/Gameplay/logica_jugable_comentarios.gd" id="21_mkab6"]
 [ext_resource type="Script" uid="uid://2rbrftqv6ngb" path="res://Scripts/Autoloads/global_efectos.gd" id="22_emyhf"]
+[ext_resource type="Texture2D" uid="uid://blqdkbyj8xm1" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id8.png" id="22_kh51r"]
 [ext_resource type="Script" uid="uid://0msxj0xopgw2" path="res://Escenas/Gameplay/factory_escenas.gd" id="23_d8hpo"]
 [ext_resource type="Script" uid="uid://6r46l1ad1la5" path="res://Escenas/Gameplay/audio.gd" id="23_ii64q"]
+[ext_resource type="Texture2D" uid="uid://br0vgflqoop4" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id18.png" id="23_v5hjs"]
+[ext_resource type="Texture2D" uid="uid://duhktbcy6jbcm" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id25.png" id="24_8pah4"]
 [ext_resource type="Script" uid="uid://b7x6e8xvjlx71" path="res://Scripts/Autoloads/global_audio_signals.gd" id="24_y261h"]
 [ext_resource type="AudioStream" uid="uid://i3euymyj4xw6" path="res://SFX/Tender Meal.wav" id="25_dttl8"]
+[ext_resource type="Texture2D" uid="uid://pxgyfc07kcsl" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id27.png" id="25_sl4if"]
+[ext_resource type="Texture2D" uid="uid://24q87o18pg2e" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id28.png" id="26_gq0m8"]
 [ext_resource type="AudioStream" uid="uid://dcxiuuoekwr8y" path="res://SFX/noti_recibida_sfx.wav" id="26_oe4qr"]
 [ext_resource type="AudioStream" uid="uid://5xbbc6o5ercx" path="res://SFX/__basic-mouse-click-ui.wav" id="27_4rj03"]
 [ext_resource type="AudioStream" uid="uid://blj7gx8dewyuv" path="res://SFX/noti_recibida2_sfx.wav" id="27_ifkcu"]
@@ -43,6 +54,7 @@
 [ext_resource type="AudioStream" uid="uid://crf5xrcqjp76u" path="res://SFX/pick up sfx 9.wav" id="31_l1d1x"]
 [ext_resource type="AudioStream" uid="uid://c7e8dwqmhqal3" path="res://SFX/correcto1.wav" id="31_sl4if"]
 [ext_resource type="AudioStream" uid="uid://bxg8i2l6un834" path="res://SFX/incorrecto1.wav" id="32_gq0m8"]
+[ext_resource type="AudioStream" uid="uid://dnvfoq5hu7gcd" path="res://SFX/digital-clock-alarm1.wav" id="33_fvrgq"]
 [ext_resource type="AudioStream" uid="uid://bvsytiku7mh3u" path="res://SFX/ui pop 1.wav" id="33_wltkd"]
 [ext_resource type="AudioStream" uid="uid://dch74rvg12ldi" path="res://SFX/ui pop 2.wav" id="34_2tpyu"]
 [ext_resource type="AudioStream" uid="uid://834lon0tid8e" path="res://SFX/hover hint3.wav" id="35_3hk8v"]
@@ -51,6 +63,28 @@
 [sub_resource type="FontVariation" id="FontVariation_wcwtv"]
 base_font = ExtResource("4_snssx")
 spacing_glyph = 3
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_snssx"]
+texture = ExtResource("7_xgr08")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h6dqy"]
+texture = ExtResource("7_xgr08")
+modulate_color = Color(1.8989718, 1.8989718, 1.8989718, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0xetr"]
+texture = ExtResource("7_xgr08")
+modulate_color = Color(1.3262677, 1.3262677, 1.3262677, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikyia"]
+texture = ExtResource("8_fvrgq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t1fop"]
+texture = ExtResource("8_fvrgq")
+modulate_color = Color(1.8984075, 1.8984075, 1.8984075, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y72yj"]
+texture = ExtResource("8_fvrgq")
+modulate_color = Color(1.4369954, 1.4369954, 1.4369954, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2slyb"]
 bg_color = Color(0.90186185, 0.90186185, 0.90186185, 1)
@@ -87,6 +121,7 @@ corner_radius_bottom_left = 8
 script = ExtResource("1_1axsk")
 Gameplay_Visuals = NodePath("Visuales")
 logicaJugable = NodePath("logicaJugable")
+DURACION_DE_LA_PARTIDA = 30.0
 recursosTxtManager = NodePath("RecursosTXTManager")
 
 [node name="PAUSA_MANAGER" type="Node" parent="." unique_id=84963242 node_paths=PackedStringArray("GameplayNode", "visualsNode", "logicaJugableNode", "AUDIONode", "efectoNotiRecibidaNode", "camaraNode", "pantallaPausa")]
@@ -101,6 +136,7 @@ pantallaPausa = NodePath("PantallaPausa")
 
 [node name="PantallaPausa" type="CanvasLayer" parent="PAUSA_MANAGER" unique_id=1529545318]
 layer = 50
+visible = false
 
 [node name="BloqueaInput" type="ColorRect" parent="PAUSA_MANAGER/PantallaPausa" unique_id=21864811]
 anchors_preset = 15
@@ -133,6 +169,31 @@ theme_override_fonts/font = SubResource("FontVariation_wcwtv")
 theme_override_font_sizes/font_size = 100
 text = "PAUSA!"
 
+[node name="FIN_PARTIDA_MANAGER" type="Node" parent="." unique_id=1096677436 node_paths=PackedStringArray("visualsNode", "logicaJugableNode", "camaraNode", "pausaManager", "AUDIONode", "GameplayNode", "timer")]
+script = ExtResource("5_h6dqy")
+visualsNode = NodePath("../Visuales")
+logicaJugableNode = NodePath("../logicaJugable")
+camaraNode = NodePath("../Camara")
+pausaManager = NodePath("../PAUSA_MANAGER")
+AUDIONode = NodePath("../AUDIO")
+GameplayNode = NodePath("..")
+timer = NodePath("Timer")
+
+[node name="BloqueoBotones" type="CanvasLayer" parent="FIN_PARTIDA_MANAGER" unique_id=2068500784]
+layer = 60
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="FIN_PARTIDA_MANAGER/BloqueoBotones" unique_id=858181116]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Timer" type="Timer" parent="FIN_PARTIDA_MANAGER" unique_id=413455330]
+one_shot = true
+
 [node name="Camara" type="Camera2D" parent="." unique_id=1807535392]
 anchor_mode = 0
 limit_left = 0
@@ -144,7 +205,6 @@ script = ExtResource("2_41hg1")
 
 [node name="Visuales" parent="." unique_id=422829186 instance=ExtResource("3_7a7ai")]
 position = Vector2(960, 540)
-duracionHastaAtardecer = 15.0
 DEBUG_atardecer_automatico = false
 
 [node name="Celular" type="Control" parent="." unique_id=197617991]
@@ -156,14 +216,17 @@ offset_right = 1709.0
 offset_bottom = 798.0
 
 [node name="ToLaptop" type="Button" parent="Celular" unique_id=1312275084]
+z_index = 10
 layout_mode = 0
-offset_left = -393.0
-offset_top = 333.0
-offset_right = -142.0
-offset_bottom = 502.0
+offset_left = -332.0
+offset_top = 280.0
+offset_right = -81.0
+offset_bottom = 449.0
 focus_mode = 0
 theme_override_font_sizes/font_size = 31
-text = "Pillar Laptop"
+theme_override_styles/normal = SubResource("StyleBoxTexture_snssx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_h6dqy")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0xetr")
 
 [node name="ScrollNotificaciones" type="ScrollContainer" parent="Celular" unique_id=1411844302]
 layout_mode = 0
@@ -190,14 +253,17 @@ offset_right = 1912.0
 offset_bottom = 1076.0
 
 [node name="ToCelular" type="Button" parent="Laptop" unique_id=2092675695]
+texture_filter = 1
 layout_mode = 0
-offset_left = 1333.0
-offset_top = 683.0
-offset_right = 1591.0
-offset_bottom = 857.0
+offset_left = 1265.0
+offset_top = 631.0
+offset_right = 1523.0
+offset_bottom = 805.0
 focus_mode = 0
 theme_override_font_sizes/font_size = 31
-text = "Agarrar CElular"
+theme_override_styles/normal = SubResource("StyleBoxTexture_ikyia")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_t1fop")
+theme_override_styles/hover = SubResource("StyleBoxTexture_y72yj")
 
 [node name="Pestañas" type="TabContainer" parent="Laptop" unique_id=1293557002]
 clip_contents = true
@@ -265,6 +331,17 @@ script = ExtResource("12_l1d1x")
 
 [node name="ManejoTXT publis-articulos" type="Node" parent="Utils" unique_id=1006329781]
 script = ExtResource("13_ikyia")
+RECURSOS_PUBLIS = Dictionary[int, Texture2D]({
+0: ExtResource("14_snssx"),
+1: ExtResource("19_dttl8"),
+3: ExtResource("20_oe4qr"),
+5: ExtResource("21_ifkcu"),
+8: ExtResource("22_kh51r"),
+18: ExtResource("23_v5hjs"),
+25: ExtResource("24_8pah4"),
+27: ExtResource("25_sl4if"),
+28: ExtResource("26_gq0m8")
+})
 RECURSOS_ARTICULOS = Dictionary[int, Texture2D]({
 0: ExtResource("14_snssx"),
 11: ExtResource("15_xgr08")
@@ -322,6 +399,10 @@ script = ExtResource("24_y261h")
 stream = ExtResource("25_dttl8")
 volume_db = -2.188
 bus = &"MusicaFondo"
+playback_type = 1
+
+[node name="SonidoAlarma" type="AudioStreamPlayer" parent="AUDIO" unique_id=1893612044]
+stream = ExtResource("33_fvrgq")
 playback_type = 1
 
 [node name="entra_publi" type="AudioStreamPlayer2D" parent="AUDIO" unique_id=25147320]
@@ -411,6 +492,7 @@ position = Vector2(730, 430)
 current = true
 
 [node name="BOTONES DEBUG" type="CanvasLayer" parent="." unique_id=766556016]
+visible = false
 
 [node name="METE PUBLII ELEGIDA" type="Button" parent="BOTONES DEBUG" unique_id=938050882]
 offset_left = 36.0

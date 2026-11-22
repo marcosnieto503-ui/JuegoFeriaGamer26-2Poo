@@ -215,7 +215,7 @@ stretch_mode = 4
 layout_mode = 0
 offset_left = 18.0
 offset_top = 78.0
-offset_right = 364.0
+offset_right = 340.0
 offset_bottom = 383.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_o8a6s")
 
@@ -231,12 +231,11 @@ theme_override_font_sizes/font_size = 25
 text = "Universidad del Norte"
 
 [node name="PubliText" type="Label" parent="PanelContainer/HBoxContainer/LadoPubli/Control" unique_id=1808832819]
-custom_minimum_size = Vector2(330, 0)
 layout_mode = 0
 offset_left = 26.0
 offset_top = 86.0
-offset_right = 356.0
-offset_bottom = 238.0
+offset_right = 327.0
+offset_bottom = 293.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_526rk")
 theme_override_font_sizes/font_size = 20
@@ -245,7 +244,7 @@ autowrap_mode = 3
 text_overrun_behavior = 3
 
 [node name="LadoResponder" type="PanelContainer" parent="PanelContainer/HBoxContainer" unique_id=587595810]
-custom_minimum_size = Vector2(420, 0)
+custom_minimum_size = Vector2(460, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_m3jo5")
@@ -314,7 +313,7 @@ autowrap_mode = 3
 layout_mode = 0
 offset_left = 15.0
 offset_top = 145.0
-offset_right = 410.0
+offset_right = 452.0
 offset_bottom = 354.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_qekex")
 
@@ -354,9 +353,9 @@ text = "RESPONDER
 
 [node name="OPCION1" type="Button" parent="PanelContainer/HBoxContainer/LadoResponder/Control" unique_id=824007581]
 layout_mode = 0
-offset_left = 43.0
+offset_left = 35.0
 offset_top = 201.0
-offset_right = 380.0
+offset_right = 431.0
 offset_bottom = 241.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_g4cw3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_537yg")
@@ -366,20 +365,20 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_kugx0")
 layout_mode = 0
 offset_left = 8.0
 offset_top = 9.0
-offset_right = 329.0
+offset_right = 386.0
 offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_526rk")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o8a6s")
 text = "[respuesta 1]"
 horizontal_alignment = 1
 
 [node name="OPCION2" type="Button" parent="PanelContainer/HBoxContainer/LadoResponder/Control" unique_id=628306312]
 layout_mode = 0
-offset_left = 43.0
+offset_left = 35.0
 offset_top = 249.0
-offset_right = 380.0
+offset_right = 430.0
 offset_bottom = 289.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_g4cw3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_537yg")
@@ -389,20 +388,20 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_kugx0")
 layout_mode = 0
 offset_left = 8.0
 offset_top = 9.0
-offset_right = 329.0
+offset_right = 386.0
 offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_526rk")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o8a6s")
 text = "[respuesta 2]"
 horizontal_alignment = 1
 
 [node name="OPCION3" type="Button" parent="PanelContainer/HBoxContainer/LadoResponder/Control" unique_id=137703562]
 layout_mode = 0
-offset_left = 43.0
+offset_left = 35.0
 offset_top = 298.0
-offset_right = 380.0
+offset_right = 431.0
 offset_bottom = 338.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_g4cw3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_537yg")
@@ -412,11 +411,11 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_kugx0")
 layout_mode = 0
 offset_left = 8.0
 offset_top = 9.0
-offset_right = 329.0
+offset_right = 386.0
 offset_bottom = 32.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_526rk")
-theme_override_font_sizes/font_size = 19
+theme_override_font_sizes/font_size = 17
 theme_override_styles/normal = SubResource("StyleBoxEmpty_o8a6s")
 text = "[respuesta 3]"
 horizontal_alignment = 1
@@ -426,7 +425,7 @@ modulate = Color(0.96024394, 0.96024394, 0.96024394, 1)
 layout_mode = 0
 offset_left = 225.0
 offset_top = 363.0
-offset_right = 387.0
+offset_right = 417.0
 offset_bottom = 403.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_g4cw3")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_537yg")
@@ -434,10 +433,10 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_kugx0")
 
 [node name="No responder" type="Label" parent="PanelContainer/HBoxContainer/LadoResponder/Control/NoResponder" unique_id=219491481]
 layout_mode = 0
-offset_left = 27.0
-offset_top = 8.0
-offset_right = 141.0
-offset_bottom = 33.0
+offset_left = 44.0
+offset_top = 7.0
+offset_right = 158.0
+offset_bottom = 32.0
 theme_override_colors/font_color = Color(0.1584723, 0.15847233, 0.15847224, 1)
 theme_override_fonts/font = ExtResource("6_526rk")
 theme_override_font_sizes/font_size = 23
@@ -446,6 +445,7 @@ text = "No Responder"
 horizontal_alignment = 1
 
 [node name="BackgroundProcessAnim" type="NinePatchRect" parent="." unique_id=1331090477]
+visible = false
 modulate = Color(1, 1, 1, 0.9411765)
 z_index = 1
 texture_filter = 1

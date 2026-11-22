@@ -24,7 +24,6 @@ var anim_Escritorio_Soleado:AnimatedSprite2D
 @export_range(0, 23) var hora_fin: int = 18
 @export_range(0, 59) var minuto_fin: int = 45
 
-@onready var duracionReloj: float = duracionHastaAtardecer
 
 @onready var nodeFiltroAtardecer:ColorRect = $FiltroCieloAtardecer
 var shaderAtardecer:ShaderMaterial
@@ -60,13 +59,14 @@ func _ready() -> void:
 	nubesGrandes.autoscroll = Vector2.ZERO
 
 
-func iniciar_transicion_atardecer():
+func iniciar_transicion_atardecer(duracion:float = duracionHastaAtardecer):
+	duracionHastaAtardecer = duracion
 	nubesGrandes.autoscroll = scrollG
 	nubesGrandes.autoscroll = scrollS
 	iniciarTweenFiltroAtardecer()
 	iniciarTweenEscritorioAtardecer()
 	iniciarRecorridoSol()
-	correr_reloj(hora_inicio,minuto_inicio,hora_fin,minuto_fin,duracionReloj,saltos_de_diez)
+	correr_reloj(hora_inicio,minuto_inicio,hora_fin,minuto_fin,duracionHastaAtardecer,saltos_de_diez)
 	en_pausa = false
 
 func pausarTransicion():
@@ -105,7 +105,8 @@ func reanudaNubeScroll():
 	scrollG = nubesGrandes.autoscroll
 	scrollS = nubesSmall.autoscroll
 
-
+func detenerReloj():
+	labelRELOJ.detener_reloj()
 
 func correr_reloj(h_ini: int, m_ini: int, h_fin: int, m_fin: int, duracion: float, saltosDeDiez:bool = false):
 	labelRELOJ.correr_reloj(h_ini,m_ini,h_fin,m_fin,duracion,saltosDeDiez)
@@ -119,9 +120,11 @@ func select_frame_telefono_arriba():
 	anim_Escritorio_Atardecer.frame = frame_telefono_arriba
 	$pantallaCel.show()
 
-func transicion_terminada():
+
+func transicion_terminada(): #termina la transicion -------------------
 	print("(visuales) EL SOL SE HA PUESTO")
 	_transicion_terminada.emit()
+
 
 func iniciarRecorridoSol():
 	if tweenSol:

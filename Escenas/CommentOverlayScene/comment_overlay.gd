@@ -22,8 +22,12 @@ func _inicializar(c:Comentario,p:Publicacion):
 	entrada()
 
 func entrada():
+	Utils.bloquear_cambio_tabs()
 	show()
 func salida():
+	Utils.bloquear_cambio_tabs()
+	ProgresoPuntuacion.COMENTARIOS_CORRECTOS.append(commentAsignado)
+	commentAsignado = null
 	loadBackground.hide()
 	LoadingAnim.hide()
 	checkImg.hide()

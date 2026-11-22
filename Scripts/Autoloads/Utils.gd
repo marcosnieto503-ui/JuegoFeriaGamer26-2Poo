@@ -10,7 +10,6 @@ var RECURSOS : Dictionary[int,Texture2D] = {}#------ las imagenes se ven y asign
 
 
 
-
 var cajaNotis:Control
 var tabsContainer:Control
 var tabPublicacion = preload("res://Escenas/VentanaPublicacion/ventana_publicacion.tscn")

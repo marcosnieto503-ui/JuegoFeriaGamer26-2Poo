@@ -10,8 +10,10 @@ extends Node2D
 @onready var camara = $"Camara"
 
 @export var Gameplay_Visuals:AnimatedSprite2D 
-@export var logicaJugable:Node
 #este nodo se encarga de todo lo relacionado a los sprites del gameplay
+@export var logicaJugable:Node
+##Duracion de la partida en segundos
+@export var DURACION_DE_LA_PARTIDA:float = 120
 
 var SceneID = GameManager.ENUMESCENAS.GAMEPLAY
 
@@ -41,7 +43,7 @@ func INICIALIZAR_ESCENA():
 		return
 	await leer_recursos_txt()
 	BotonToCelular.show()
-	Gameplay_Visuals.iniciar_transicion_atardecer()
+	Gameplay_Visuals.iniciar_transicion_atardecer(DURACION_DE_LA_PARTIDA)
 	GlobalAudioSignals.play_musica_fondo()
 	logicaJugable.iniciarCicloGameplay()
 	toLaptop()
@@ -53,6 +55,20 @@ func leer_recursos_txt():
 
 func SALIR_DE_ESCENA():
 	pass
+	print("(GAMEPLAY) saliendo de escena/.......")
+	Utils.PUBLICACIONES.clear()
+	Utils.ARTICULO_ACTIVO = false
+	Utils.PUBLIS_EXCLUIDAS.clear()
+	for v in Utils.TabIndexes.values():
+		v = false
+	DataPartida.PUBLIS_DESCARTADAS.clear()
+	DataPartida.PUBLIS_PUBLICADAS.clear()
+	DataPartida.PUBLIS_PARA_COMENTARIOS.clear()
+	ControlArticulos.ARTICULOS.clear()
+	
+	print("\nGAMEPLAR PUNTIAUCION:m  , PUBLIS CORRECTAS: ",len(ProgresoPuntuacion.PUBLIS_CORRECTAS))
+	print("PUBLIS INCORRECTAS: ",len(ProgresoPuntuacion.PUBLIS_INCORRECTAS))
+	print("COMENTARIOS RESPIONDIDOD: ", len(ProgresoPuntuacion.COMENTARIOS_CORRECTOS),"\n")
 
 
 func DEBUGingresarNotiRandom(): #fuap funcion pa meter notificacion a el telefono

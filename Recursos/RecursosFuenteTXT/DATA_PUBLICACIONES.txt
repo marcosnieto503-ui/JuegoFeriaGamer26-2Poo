@@ -1,87 +1,223 @@
 #i
--tn:Hey, ¿podrías publicar esto? Empieza la temporada de deportes
+-tn:Oye, sube esto cuando puedas
 -id:1
 -tipo:IMAGEN
--A:INAPROPIADO
-Comienza el torneo deportivo interfacultades, con disciplinas como fútbol, baloncesto y voleibol. Los equipos representarán a sus respectivas facultades en busca del título de campeón institucional.
+-A:PUBLICAR
+Saludos a todos los integrantes de la comunidad universitaria, desde la oficina de bienestar universitario tenemos el placer de anunciar la apertura de las olimpiadas recreativas, se realizarán competiciones de:[br][br]UNO, Dominó, Carrera de colores, Parqué !Y otros más¡[br][br]En estas olimpiadas los participantes podrán competir por increíbles premios, ¡Te estamos esperando!.
 #f
 
 #i
--tn:Oye, subí esto cuando puedas, es sobre la beca nueva
+-tn:Listo el texto, revísalo antes de publicar
 -id:2
 -tipo:TEXTO
--A:PUBLICAR
-La universidad abrió las postulaciones para la Beca de [color={clr}][url=n]Excelencia Academica 2026[/url][/color]. Podrán postularse estudiantes con promedio superior a 4.5 que estén cursando al menos el tercer semestre de su carrera.
+-A:FORMATO
+Hey chicos tengan en cuenta que les pueden robar la identidad si les pillan el celular por ahí, recuerden que es necesario tener en cuenta que tu identidad como miembro de la comunidad universitaria es solo tuya, así que mejor no le prestes tu celular a tu amigo para que pueda entrar porque se le perdió el celular.
 #f
 
 #i
--tn:Che, ¿lo publicás? Inauguraron el laboratorio nuevo
+-tn:Aquí te dejo el trino del retiro de materias
 -id:3
 -tipo:IMAGEN
--A:PUBLICAR
-La Facultad de Ingeniería inauguró un laboratorio de robótica equipado con brazos mecánicos, impresoras 3D y estaciones de programación para proyectos de estudiantes e investigación aplicada.
-#f
-
-#i
--tn:Necesito que subas esto antes del mediodía, es importante
--id:4
--tipo:VIDEO
 -A:FORMATO
-Reconocidos investigadores de distintas universidades del mundo participarán en la conferencia internacional sobre inteligencia artificial que se realizará en el auditorio principal la próxima semana.
+Estimados miembros de la comunidad educatiba, es importante tener en cuenta que la fecha de limíte para el retiro de materias es el 5 de noviembre. Recuerda que no estas sol@, las oficinas del CREE están disponibles para ayudarte, para mas informácion puedes acercarte a nuestras ofisinas en el 5to piso del Bloque K, ¡Te esperamos!.
 #f
 
 #i
--tn:Avisale a todos de esto, se viene el cierre de la biblioteca
--id:5
+-tn:Necesito que esto salga hoy mismo
+-id:4
 -tipo:TEXTO
 -A:PUBLICAR
-La biblioteca central permanecerá cerrada el próximo fin de semana por labores de mantenimiento en su sistema de climatización. Se recomienda a los estudiantes planificar sus actividades de estudio con anticipación.
+Saludos a todos los estudiantes de la comunidad universitaria, les queremos avisar que pueden consultar las fechas de los próximos exámenes finales en la aplicación oficial de la universidad.
 #f
 
 #i
--tn:¿Podés publicar esto hoy? Es sobre la charla de bienestar
+-tn:Avisa lo de la fachada apenas puedas
+-id:5
+-tipo:IMAGEN
+-A:PUBLICAR
+Saludos a todos los miembros de la comunidad educativa, el dia de hoy 15 de noviembre se dará inicio a las reparaciones a la fachada del bloque G que surgieron a partir del fuerte vendaval que hubo la semana pasada, le pedimos encarecidamente a todos no ingresar a las zonas demarcadas como alto riesgo para evitar cualquier tipo de accidente. Recuerda que estamos trabajando para ti asegurando que tu experiencia universitaria sea la más segura.
+#f
+
+#i
+-tn:Mira este comunicado y dime qué te parece
 -id:6
 -tipo:TEXTO
--A:NO_RELACIONADA
-El departamento de bienestar universitario organizará una charla abierta sobre manejo del estrés académico y salud mental, dirigida a todos los estudiantes interesados en asistir.
+-A:INAPROPIADO
+Durante esta semana varios estudiantes manifestaron su preocupación y frustración con el diseño de las escaleras del bloque J, la verdad es que si podemos entender sus sentimientos acerca de estas, ya que no son muy cómodas, pero es importante entender que ya se van a quedar así, por favor vayan acostumbrandose.
 #f
 
 #i
--tn:Hey, actualizaron la plataforma, ¿lo subís?
+-tn:Publica esto cuando tengas un momento
 -id:7
--tipo:VIDEO
--A:FORMATO
-La plataforma virtual de la universidad fue actualizada con una nueva interfaz y mejoras en la velocidad de carga. Se recomienda revisar el tutorial disponible para conocer los cambios.
+-tipo:TEXTO
+-A:PUBLICAR
+Este dia 18 de noviembre se realizará una conferencia que invita a todos los interesados en el mundo crypto a participar, si estas dentro del mundo de la criptografía o quieres entrar a este la conferencia Crypto del norte es para ti, tendremos la participación de nuestro profesor Ricardo Villa, experto en criptografía y un invitado especial de la Universidad de los Andes.[br]Puedes inscribirte aqui:[br][br]¡Te esperamos en este encuentro!
 #f
 
 #i
--tn:Che, esto es para los que se gradúan pronto, subilo
+-tn:Ya está el texto de la campaña ecológica
 -id:8
 -tipo:IMAGEN
 -A:PUBLICAR
-Empresas aliadas de distintos sectores participarán en la Feria de Empleo Universitaria, donde los estudiantes de últimos semestres podrán conocer oportunidades laborales y de prácticas profesionales.
+Saludos uninorteños, la próxima semana empieza una de las campañas más importantes de este semestre, en “#YoCuidoEcoCampus” podrás conocer fascinante información acerca del bosque seco tropical y el bosque uninorte. Finalmente cualquier persona voluntaria será capaz de participar en una actividad de limpieza de las inmediaciones del bosque uninorte para proteger el bosque uninorte.[br][br]Para más información visita la oficina de bienestar universitario, ¡Te esperamos!.
 #f
 
 #i
--tn:Mirá esto que salió publicado, ¿lo compartís en la app?
+-tn:Te paso el comunicado de las convocatorias
 -id:9
 -tipo:TEXTO
--A:INFORMACION_ERRONEA
-Un grupo de investigadores de la universidad publicó los resultados de un estudio sobre energías renovables en una revista científica internacional, destacando el trabajo realizado en los últimos dos años.
+-A:FORMATO
+Holas queridos lectores, este comunicado tiene como misión informarles acerca de las próximas fechas de las siguientes convocatorias que serán empezadas desde el dia de hoy, la información acerca de este procesa puede ser muy larga e incluso tediosa, así que por favor ingresa a la sección de nuestro portal que habla acerca de ello, que tengan un buen resto de dia.
 #f
 
 #i
--tn:Última, ¿subís esto? Es para las familias que vienen a la jornada
+-tn:Súbelo a la hora que prefieras
 -id:10
--tipo:VIDEO
--A:PUBLICAR
-La universidad invita a futuros estudiantes y sus familias a la Jornada de Puertas Abiertas, donde podrán recorrer las instalaciones, conocer las carreras ofrecidas y resolver sus dudas sobre el proceso de admisión.
+-tipo:TEXTO
+-A:FORMATO
+Buenos días, tardes y noches, en este lindo dia les vengo a presentar los nuevos stands que estarán abiertos durante esta semana donde todos los miembros de la comunidad universitaria podrán adquirir todo tipo de sticker, pines y demás accesorios que les guste comprar, estaremos en la plaza los inmigrantes a menos de que se ponga a llover, ¡Los esperamos!.
 #f
 
 #i
--tn:Che, ¿lo subís? Es lo del café, salió hoy
+-tn:Esta es la versión final de las olimpiadas
 -id:11
 -tipo:TEXTO
+-A:PUBLICAR
+Comunidad universitaria: la Oficina de Bienestar Universitario anuncia la apertura de las olimpiadas recreativas. Habrá competencias de UNO, dominó, parqué y carrera de colores, con premios para los ganadores. Las inscripciones están abiertas hasta el 14 de noviembre en la oficina de Bienestar, en el Bloque B. Participa con tus compañeros. ¡Los esperamos! #BienestarUniversitario
+#f
+
+#i
+-tn:Sube esto rápido, es para ya
+-id:12
+-tipo:TEXTO
+-A:FORMATO
+holaa a todos!! les cuento q ya empesaron las olimpiadas recreativas, hay uno, domino, parque y otras cosas mas. vengan q hay premios y esta bueno jaja, no se pierdan q se va a poner divertido, ya los veremos por ahi
+#f
+
+#i
+-tn:Escribí esto ayer, súbelo cuando puedas
+-id:13
+-tipo:TEXTO
+-A:NO_RELACIONADA
+Anoche vi el partido de la selección y qué golazo, la verdad estuvo buenísimo y el ambiente en mi casa fue increíble. ¿Ustedes también lo vieron? Cuéntenme qué les pareció y quién creen que fue el mejor jugador de la noche. #Fútbol #Selección
+#f
+
+#i
+-tn:Recordatorio listo para publicar
+-id:14
+-tipo:TEXTO
+-A:PUBLICAR
+Recordatorio: la fecha límite para el retiro de materias es el 20 de noviembre. Si necesitas orientación antes de tomar la decisión, las oficinas del CREE, en el 5.º piso del Bloque K, están disponibles de lunes a viernes para acompañarte. Encuentra más información sobre el proceso en el portal institucional. #CREE
+#f
+
+#i
+-tn:Revisa esto y súbelo si te parece
+-id:15
+-tipo:TEXTO
+-A:FORMATO
+El retiro de materias que son hasta el 20 de noviembre se pueden hacer pero por la oficina del CREE que queda en el quinto del bloque, si es que usted tiene como no estar de acuerdo con las materias que ve, tambien puede mirar en el portal que ahi sale algo de eso.
+#f
+
+#i
+-tn:Aviso de las obras listo para salir
+-id:16
+-tipo:TEXTO
+-A:PUBLICAR
+A partir del 12 de noviembre inician las reparaciones en la fachada del Bloque G, afectada por los fuertes vientos de la semana pasada. Solicitamos a toda la comunidad no ingresar a las zonas demarcadas como de alto riesgo y seguir las indicaciones del personal de seguridad. Trabajamos para que tu experiencia en el campus sea segura. #CampusSeguro
+#f
+
+#i
+-tn:Publica esto cuando puedas, por favor
+-id:17
+-tipo:TEXTO
+-A:INAPROPIADO
+Las reparaciones del Bloque I empiezan pronto. Si alguien se accidenta por entrar a las zonas marcadas, es culpa suya, ya se avisó varias veces y no hay más que decir. La universidad no se hace responsable de quienes ignoren las señales.
+#f
+
+#i
+-tn:Ya quedó el anuncio de la conferencia
+-id:18
+-tipo:IMAGEN
+-A:PUBLICAR
+El 18 de noviembre, a las 3:00 p. m., se realizará la Conferencia de Ciberseguridad en el Auditorio Principal, abierta a toda la comunidad. Contaremos con la profesora Marta Rojas, experta en seguridad digital, y con un invitado especial de otra universidad. Los cupos son limitados. Inscríbete aquí: ¡Te esperamos! #Ciberseguridad
+#f
+
+#i
+-tn:Anuncio de la conferencia, súbelo hoy
+-id:19
+-tipo:TEXTO
+-A:FORMATO
+Estimados miembros de la comunidad educatiba: les informamos que la conferencia sobre blockchain se realizara el 18 de noviembre y que contaremos con profesores invitados. Pueden inscribirse en el siguiente enlace: Se agradece la asistencia puntual, sin embargo no habra refrigerios para los asistentes.
+#f
+
+#i
+-tn:Sube esto antes de que acabe el día
+-id:20
+-tipo:TEXTO
+-A:INAPROPIADO
+Ya salieron las fechas de los finales en la app. Si todavía no las han mirado es porque son flojos o no les importa pasar, así que dejen de quejarse después cuando se les crucen los exámenes. Nosotros ya avisamos, lo demás es problema de ustedes.
+#f
+
+#i
+-tn:Texto de la campaña listo
+-id:21
+-tipo:TEXTO
+-A:PUBLICAR
+Inicia la campaña #CuidamosElCampus. Durante la próxima semana conocerás datos sobre el bosque seco tropical del campus y su importancia para la biodiversidad de la región. Además, podrás sumarte como voluntario a una jornada de limpieza de las zonas aledañas. Inscríbete y obtén más información en la Oficina de Bienestar Universitario.
+#f
+
+#i
+-tn:Opinión sobre la campaña, publícala
+-id:22
+-tipo:TEXTO
+-A:INAPROPIADO
+Opinamos que #CuidamosElCampus es la mejor campaña de todo el semestre y que quien no participe es porque no ama su universidad ni le importa el planeta. Los que no vayan a la jornada de limpieza van a quedar muy mal ante todos. Más info en Bienestar.
+#f
+
+#i
+-tn:Convocatoria de intercambio lista
+-id:23
+-tipo:TEXTO
+-A:PUBLICAR
+Se abren las convocatorias de intercambio nacional para el próximo semestre. Consulta requisitos, fechas, cupos y proceso de postulación en la sección de movilidad del portal institucional: Recuerda reunir tus documentos con tiempo y revisar tu promedio académico. ¡Anímate a vivir una experiencia académica distinta! #Intercambio.
+#f
+
+#i
+-tn:Sube esto cuando tengas chance
+-id:24
+-tipo:TEXTO
 -A:INFORMACION_ERRONEA
-Un estudio de la Universidad de Lund demostró que tomar cinco cafés al día reduce a la mitad el riesgo de enfermedades del corazón. Puedes leer [color={clr}][url=n]la noticia completa aquí[/url][/color].
+Pronto abrirán convocatorias de intercambio, en algún momento de este semestre o del próximo, todavía no tenemos claro. Estén atentos a ver si sale algo, aunque la verdad no sabemos bien cuándo ni cómo se postula. Si tienen dudas pregunten por ahí a alguien, seguro les cuentan.
+#f
+
+#i
+-tn:Consejo de seguridad digital listo
+-id:25
+-tipo:IMAGEN
+-A:PUBLICAR
+Tu identidad institucional es personal e intransferible. Evita prestar tu carné o tu celular con acceso a la aplicación universitaria, incluso a personas de confianza. Si pierdes tu dispositivo, cambia tu contraseña de inmediato y repórtalo por los canales oficiales de la universidad para proteger tus datos. #SeguridadDigital
+#f
+
+#i
+-tn:Publica esto cuando puedas
+-id:26
+-tipo:TEXTO
+-A:INAPROPIADO
+Los estudiantes de Ingeniería son sin duda los más comprometidos de la universidad, siempre están en todo; en cambio los de Humanidades casi nunca asisten a las jornadas del campus y se nota. ¡Ojalá aprendan de ellos y se pongan las pilas!.
+#f
+
+#i
+-tn:Aviso de la biblioteca listo para subir
+-id:27
+-tipo:IMAGEN
+-A:PUBLICAR
+Durante la semana de exámenes finales, la biblioteca ampliará su horario de atención hasta las 11:00 p. m., de lunes a viernes, y hasta las 6:00 p. m. los sábados. Recuerda presentar tu carné al ingresar y mantener el silencio en las salas de estudio. Puedes reservar cubículos grupales desde la aplicación institucional. ¡Mucho éxito!
+#f
+
+#i
+-tn:Respuesta a lo de las escaleras, súbela
+-id:28
+-tipo:IMAGEN
+-A:PUBLICAR
+Frente a las inquietudes de varios estudiantes sobre las escaleras del Bloque J, la universidad evaluará mejoras en señalización, pasamanos y superficies antideslizantes. Valoramos tus comentarios: puedes enviarlos por el canal de sugerencias del portal institucional para que sean tenidos en cuenta en el análisis. #EscuchamosTuVoz
 #f

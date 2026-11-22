@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c3oiihhn7blwa" path="res://Assets/FondoGameplay/AMANECER 2 pared oscura GameplayFondo1 laptop 1 cel 1 NO VENTANA -export.png" id="11_y83e2"]
 [ext_resource type="FontFile" uid="uid://bhat6647j6w2x" path="res://Recursos/FONTS/Fuente despertador/static/dseg7-classic-latin-700-normal.ttf" id="12_p5k6d"]
 [ext_resource type="Script" uid="uid://w1ajmx3ao4av" path="res://Escenas/Visuales/reloj.gd" id="13_m3jo5"]
+[ext_resource type="AudioStream" uid="uid://dnvfoq5hu7gcd" path="res://SFX/digital-clock-alarm1.wav" id="14_y83e2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o8a6s"]
 animations = [{
@@ -133,7 +134,7 @@ sprite_frames = SubResource("SpriteFrames_10djs")
 animation = &"gameplay_anim"
 frame = 1
 
-[node name="RELOJ" type="RichTextLabel" parent="." unique_id=2129263211]
+[node name="RELOJ" type="RichTextLabel" parent="." unique_id=2129263211 node_paths=PackedStringArray("sonido_alarma")]
 offset_left = -943.0
 offset_top = 28.0
 offset_right = -701.0
@@ -147,7 +148,10 @@ scroll_active = false
 autowrap_mode = 2
 vertical_alignment = 1
 script = ExtResource("13_m3jo5")
-intervalo_parpadeo = 0.4
+sonido_alarma = NodePath("AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="RELOJ" unique_id=1284802550]
+stream = ExtResource("14_y83e2")
 
 [node name="pantallaLaptop" type="ColorRect" parent="." unique_id=1301189642]
 visible = false

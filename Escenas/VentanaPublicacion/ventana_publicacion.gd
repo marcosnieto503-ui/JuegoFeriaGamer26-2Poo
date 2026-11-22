@@ -9,11 +9,11 @@ var PUBLICACION_ASIGNADA : Publicacion = null
 var recurso : Texture2D = null
 var textoPubli : String
 
-const pos_CON_IMAGEN =Vector2(275,35)
-const pos_SIN_IMAGEN =Vector2(70,35)
+const pos_CON_IMAGEN =Vector2(255,20)
+const pos_SIN_IMAGEN =Vector2(60,20)
 
-const size_CON_IMAGEN = Vector2(495,180)
-const size_SIN_IMAGEN = Vector2(690,180)
+const size_CON_IMAGEN = Vector2(550,195)
+const size_SIN_IMAGEN = Vector2(710,195)
 
 @onready var botonInapropiado = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2/Inapropiado
 @onready var botonFormatoInvalido = $ControlOpsDescartar/OpcionesDescartar/HBoxContainer/VBoxContainer2/FormatoInvalido

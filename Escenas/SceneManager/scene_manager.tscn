@@ -2,18 +2,27 @@
 
 [ext_resource type="Script" uid="uid://cf4ksxf06kb52" path="res://Escenas/SceneManager/scene_manager.gd" id="1_td87b"]
 [ext_resource type="Shader" uid="uid://w4m11k3e50l" path="res://Escenas/SceneManager/filtro_daltonismo.gdshader" id="2_dvq8a"]
+[ext_resource type="Script" uid="uid://oxm25ebgsp7r" path="res://Escenas/SceneManager/game_settings.gd" id="3_dvq8a"]
 [ext_resource type="Script" uid="uid://bkr0lwb1440or" path="res://Escenas/SceneManager/debugnode.gd" id="3_x083j"]
-[ext_resource type="PackedScene" uid="uid://bna2gcijngbas" path="res://Escenas/Gameplay/gameplay.tscn" id="4_0jw4g"]
 [ext_resource type="Script" uid="uid://di5h61vmcc5sh" path="res://Scripts/Autoloads/game_manager.gd" id="5_td87b"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_o8a6s"]
 shader = ExtResource("2_dvq8a")
-shader_parameter/modo = 3
+shader_parameter/modo = 0
 shader_parameter/intensidad = 1.0
 
-[node name="SceneManager" type="Node" unique_id=1940478822 node_paths=PackedStringArray("gameplayTest")]
+[node name="SceneManager" type="Node" unique_id=1940478822 node_paths=PackedStringArray("pantallaNegra", "gameplayTest")]
 script = ExtResource("1_td87b")
-gameplayTest = NodePath("Gameplay")
+pantallaNegra = NodePath("CanvasLayer/PantallaNegra")
+duracionFundidoANegro = 2.0
+EscenaInicial = null
+gameplayTest = NodePath("")
+
+[node name="GameManager - AUTOLOAD" type="Node" parent="." unique_id=1365764873]
+script = ExtResource("5_td87b")
+
+[node name="GameSettings" type="Node" parent="." unique_id=1639613594]
+script = ExtResource("3_dvq8a")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=182340271]
 layer = 100
@@ -38,8 +47,3 @@ color = Color(0, 0, 0, 1)
 
 [node name="DEBUGNODE" type="Node" parent="." unique_id=1347398813]
 script = ExtResource("3_x083j")
-
-[node name="Gameplay" parent="." unique_id=1380733400 instance=ExtResource("4_0jw4g")]
-
-[node name="GameManager" type="Node" parent="." unique_id=1365764873]
-script = ExtResource("5_td87b")
