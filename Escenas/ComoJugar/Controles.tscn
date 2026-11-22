@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://hr7dqge8p5rt"]
+
+[ext_resource type="Script" uid="uid://bjreak26gb7bq" path="res://Scripts/ComoJugar/ComoJugar.gd" id="1_sh8ee"]
+[ext_resource type="Shader" uid="uid://4r8kk61m3sje" path="res://Escenas/ComoJugar/Controles.gdshader" id="2_e0rdr"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="3_5xnvg"]
+[ext_resource type="PackedScene" uid="uid://gnopc0s56py2" path="res://Escenas/Menu/UI/BotonEscritorio.tscn" id="4_gnsv2"]
+[ext_resource type="Texture2D" uid="uid://c6d6t4e84nmfg" path="res://Assets/Menu/UI/flecha/flecha.png" id="5_hah77"]
+[ext_resource type="Texture2D" uid="uid://bpqp0vy718ern" path="res://Assets/Menu/UI/flecha/flecha-hover.png" id="6_jbs4o"]
+[ext_resource type="Texture2D" uid="uid://xm1u6wiuf82g" path="res://Assets/Creditos/UI/exit_credits.png" id="7_pbvey"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xi26p"]
+shader = ExtResource("2_e0rdr")
+shader_parameter/centro = Vector2(0.5, 0.5)
+shader_parameter/radio = 0.15
+shader_parameter/suavidad = 0.1
+shader_parameter/oscuridad = 0.95
+shader_parameter/aspecto = 1.7778
+
+[sub_resource type="LabelSettings" id="LabelSettings_ukse2"]
+font = ExtResource("3_5xnvg")
+font_size = 36
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Controles" type="Control" unique_id=418160113]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sh8ee")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=420691879]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 5.0
+offset_right = 1931.0
+offset_bottom = 1080.0
+expand_mode = 3
+
+[node name="oscuro" type="ColorRect" parent="." unique_id=2009535272]
+material = SubResource("ShaderMaterial_xi26p")
+layout_mode = 0
+offset_right = 1923.0
+offset_bottom = 1088.0
+
+[node name="texto" type="Label" parent="." unique_id=1490356323]
+layout_mode = 0
+offset_right = 342.0
+offset_bottom = 59.0
+label_settings = SubResource("LabelSettings_ukse2")
+horizontal_alignment = 1
+
+[node name="Alante" parent="." unique_id=473791498 instance=ExtResource("4_gnsv2")]
+layout_mode = 0
+offset_left = 1615.0
+offset_top = 450.0
+offset_right = 1665.0
+offset_bottom = 500.0
+rotation = -0.38397244
+scale = Vector2(5, 5)
+offset_transform_rotation = 0.34906584
+texture_normal = ExtResource("5_hah77")
+texture_hover = ExtResource("6_jbs4o")
+texture_click_mask = null
+
+[node name="Atras" parent="." unique_id=318909413 instance=ExtResource("4_gnsv2")]
+layout_mode = 0
+offset_top = 450.0
+offset_right = 50.0
+offset_bottom = 500.0
+rotation = -0.38397244
+scale = Vector2(5, 5)
+offset_transform_rotation = 0.34906584
+texture_normal = ExtResource("5_hah77")
+texture_hover = ExtResource("6_jbs4o")
+texture_click_mask = null
+flip_h = true
+
+[node name="Salir" parent="." unique_id=484097181 instance=ExtResource("4_gnsv2")]
+layout_mode = 0
+offset_right = 50.0
+offset_bottom = 50.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("7_pbvey")
+texture_hover = ExtResource("7_pbvey")
+texture_click_mask = null
+
+[connection signal="pressed" from="Alante" to="." method="_on_alante_pressed"]
+[connection signal="pressed" from="Atras" to="." method="_on_atras_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
