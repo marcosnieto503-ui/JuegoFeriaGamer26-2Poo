@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c6iidwarlm0ax" path="res://Scripts/Creditos/creditos.gd" id="1_6xmto"]
 [ext_resource type="Texture2D" uid="uid://bwx600e5wyt5g" path="res://Assets/Creditos/fondo.png" id="1_g6uwm"]
 [ext_resource type="Texture2D" uid="uid://c1gyxjl5dawbk" path="res://Assets/Creditos/notas.png" id="2_4bbef"]
-[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://Assets/selPersonaje/Fuentes/Redaction35-Bold.ttf" id="2_6xmto"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="2_6xmto"]
 [ext_resource type="Texture2D" uid="uid://cv6hei2j150mg" path="res://Assets/Creditos/Avatares/marcos.jpg" id="4_4bbef"]
 [ext_resource type="PackedScene" uid="uid://gnopc0s56py2" path="res://Escenas/Menu/UI/BotonEscritorio.tscn" id="5_747sr"]
 [ext_resource type="Texture2D" uid="uid://c6d6t4e84nmfg" path="res://Assets/Menu/UI/flecha/flecha.png" id="6_swo4t"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dsw2ks8848d4h"
-path="res://.godot/imported/feliz_otro_blanco_corbata.png-6b1d41734fab33a283fe66baf0ab81a4.ctex"
+path="res://.godot/imported/feliz_otro_blanco_corbata.png-3010676bcef03afd50162caae379da80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/Personajes/feliz_otro_blanco_corbata.png"
-dest_files=["res://.godot/imported/feliz_otro_blanco_corbata.png-6b1d41734fab33a283fe66baf0ab81a4.ctex"]
+source_file="res://Assets/selPersonaje/personajes/feliz_otro_blanco_corbata.png"
+dest_files=["res://.godot/imported/feliz_otro_blanco_corbata.png-3010676bcef03afd50162caae379da80.ctex"]
 
 [params]
 

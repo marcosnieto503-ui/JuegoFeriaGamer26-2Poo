@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ct516tqufpgi3"
-path="res://.godot/imported/piel_hombre_negro.png-365188ad1a45fdd7b7c1b7bfa00f4e17.ctex"
+path="res://.godot/imported/piel_hombre_negro.png-aec97e7aef1a03b9236ffea4ec51c823.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/Personajes/piel_hombre_negro.png"
-dest_files=["res://.godot/imported/piel_hombre_negro.png-365188ad1a45fdd7b7c1b7bfa00f4e17.ctex"]
+source_file="res://Assets/selPersonaje/personajes/piel_hombre_negro.png"
+dest_files=["res://.godot/imported/piel_hombre_negro.png-aec97e7aef1a03b9236ffea4ec51c823.ctex"]
 
 [params]
 

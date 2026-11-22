@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dutiirkwckxoc"]
 
 [ext_resource type="Script" uid="uid://co1rhunlp0b8" path="res://Scripts/selPersonaje/introduccion.gd" id="1_6w8v7"]
-[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://Assets/selPersonaje/Fuentes/Redaction35-Bold.ttf" id="2_mxt3b"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="2_mxt3b"]
 [ext_resource type="AudioStream" uid="uid://bgsi6eso6mnhq" path="res://Audio/sel_personaje/efectosonido.mp3" id="2_nvurl"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_aav8t"]

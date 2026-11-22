@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ba3w67u3v1wx4"]
 
 [ext_resource type="Script" uid="uid://bedgut8fiuvfu" path="res://Scripts/intro.gd" id="1_f2b3h"]
-[ext_resource type="Texture2D" uid="uid://c4dwy67ef51e5" path="res://Assets/Intro/logo.png" id="2_w8r5c"]
+[ext_resource type="Texture2D" uid="uid://c4dwy67ef51e5" path="res://Assets/Menu/Intro/logo.png" id="2_w8r5c"]
 
 [node name="Intro" type="Control" unique_id=1259290166]
 layout_mode = 3

@@ -1,6 +1,6 @@
 extends Node
 
-const CARPETA := "res://Assets/selPersonaje/Personajes/"
+const CARPETA := "res://Assets/selPersonaje/personajes/"
 
 # Mapeo a los nombres de tus archivos .png
 const GENEROS := {"Hombre": "hombre", "Mujer": "mujer", "Otro": "otro"}

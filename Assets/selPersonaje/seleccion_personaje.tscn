@@ -1,0 +1,422 @@
+[gd_scene format=3 uid="uid://di6k0t46ceoj0"]
+
+[ext_resource type="Script" uid="uid://docr12bvnbs3v" path="res://Scripts/selPersonaje/seleccion_personaje.gd" id="1_kqmg5"]
+[ext_resource type="Texture2D" uid="uid://curdl1fxvkuru" path="res://Assets/selPersonaje/Fondo/fondo.png" id="2_3h5up"]
+[ext_resource type="Texture2D" uid="uid://ct0txauw62xqe" path="res://Assets/selPersonaje/Fondo/fondo_final.png" id="4_0c8wy"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="5_ha88c"]
+[ext_resource type="AudioStream" uid="uid://6yr2btc86jmh" path="res://Audio/sel_personaje/musica_fondo.mp3" id="6_23fga"]
+[ext_resource type="Script" uid="uid://bchrbp1gq0753" path="res://Scripts/selPersonaje/botonprueba.gd" id="7_e6ra7"]
+
+[sub_resource type="Animation" id="Animation_ojrew"]
+resource_name = "RESET"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Nota:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FondoFinal:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FondoFinal:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mensaje:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mensaje:offset_transform_scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Piel:offset_transform_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.1, 1.1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Opcion1:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Opcion2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Opcion3:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Accesorio:offset_transform_scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_34gqj"]
+resource_name = "cambio_paso"
+length = 0.15
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Piel:offset_transform_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Accesorio:offset_transform_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_28ixv"]
+resource_name = "mostrar_final"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Nota:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FondoFinal:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FondoFinal:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_aplicar_pose_final"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Mensaje:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Mensaje:offset_transform_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.3, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1.1, 1.1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Opcion1:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Opcion2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Opcion3:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_34gqj"]
+_data = {
+&"RESET": SubResource("Animation_ojrew"),
+&"cambio_paso": SubResource("Animation_34gqj"),
+&"mostrar_final": SubResource("Animation_28ixv")
+}
+
+[node name="SeleccionPersonaje" type="Control" unique_id=909038432]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kqmg5")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1939612832]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_3h5up")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="FondoFinal" type="TextureRect" parent="." unique_id=2084676470]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_0c8wy")
+
+[node name="Piel" type="TextureRect" parent="." unique_id=364926912]
+texture_filter = 3
+layout_mode = 1
+offset_left = 900.0
+offset_top = 200.0
+offset_right = 1800.0
+offset_bottom = 1100.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(1.1, 1.1)
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Accesorio" type="TextureRect" parent="." unique_id=97395063]
+texture_filter = 3
+layout_mode = 1
+offset_left = 900.0
+offset_top = 200.0
+offset_right = 1800.0
+offset_bottom = 1100.0
+offset_transform_enabled = true
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Opcion1" type="Button" parent="." unique_id=2016104367]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 390.0
+offset_right = 650.0
+offset_bottom = 555.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0, 1)
+theme_override_fonts/font = ExtResource("5_ha88c")
+theme_override_font_sizes/font_size = 64
+flat = true
+
+[node name="Opcion2" type="Button" parent="." unique_id=1757850490]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 594.0
+offset_right = 650.0
+offset_bottom = 759.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0, 1)
+theme_override_fonts/font = ExtResource("5_ha88c")
+theme_override_font_sizes/font_size = 64
+flat = true
+
+[node name="Opcion3" type="Button" parent="." unique_id=604771817]
+layout_mode = 0
+offset_left = 110.0
+offset_top = 804.0
+offset_right = 650.0
+offset_bottom = 969.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0, 1)
+theme_override_fonts/font = ExtResource("5_ha88c")
+theme_override_font_sizes/font_size = 64
+flat = true
+
+[node name="Nota" type="Label" parent="." unique_id=742608807]
+layout_mode = 1
+offset_left = 870.0
+offset_top = 40.0
+offset_right = 1870.0
+offset_bottom = 140.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("5_ha88c")
+theme_override_font_sizes/font_size = 36
+text = "Pasa el cursor sobre una opción para ver cómo luce, 
+y haz clic cuando quieras elegir."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Mensaje" type="Label" parent="." unique_id=845578384]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.069000006
+offset_left = -404.0
+offset_top = 89.0
+offset_right = 396.0
+offset_bottom = 164.48
+grow_horizontal = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0, 0)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("5_ha88c")
+theme_override_font_sizes/font_size = 96
+text = "¡Gran Eleccion!"
+horizontal_alignment = 1
+
+[node name="Musica" type="AudioStreamPlayer" parent="." unique_id=1080781748]
+stream = ExtResource("6_23fga")
+volume_db = -10.335
+autoplay = true
+
+[node name="Button" type="Button" parent="." unique_id=1742844514]
+layout_mode = 0
+offset_left = 1475.0
+offset_top = 679.0
+offset_right = 1915.0
+offset_bottom = 1080.0
+script = ExtResource("7_e6ra7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1850456922]
+libraries/ = SubResource("AnimationLibrary_34gqj")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

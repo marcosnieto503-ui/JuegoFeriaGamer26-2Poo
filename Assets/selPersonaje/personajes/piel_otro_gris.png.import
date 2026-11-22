@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://mul6nb2pwxmf"
-path="res://.godot/imported/piel_otro_gris.png-6d827d9a6c0ec7773b4536a26ab12fa8.ctex"
+path="res://.godot/imported/piel_otro_gris.png-0ba640844fd2ce051a615b8a15ebeb62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/selPersonaje/Personajes/piel_otro_gris.png"
-dest_files=["res://.godot/imported/piel_otro_gris.png-6d827d9a6c0ec7773b4536a26ab12fa8.ctex"]
+source_file="res://Assets/selPersonaje/personajes/piel_otro_gris.png"
+dest_files=["res://.godot/imported/piel_otro_gris.png-0ba640844fd2ce051a615b8a15ebeb62.ctex"]
 
 [params]
 
