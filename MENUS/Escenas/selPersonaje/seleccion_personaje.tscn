@@ -1,0 +1,317 @@
+[gd_scene format=3 uid="uid://d2p5u0wa1yjv8"]
+
+[ext_resource type="Script" uid="uid://docr12bvnbs3v" path="res://MENUS/Scripts/selPersonaje/seleccion_personaje.gd" id="1_jxhxg"]
+[ext_resource type="Texture2D" uid="uid://curdl1fxvkuru" path="res://MENUS/Assets/selPersonaje/Fondo/fondo.png" id="1_p54kw"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://MENUS/Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="2_jxhxg"]
+[ext_resource type="PackedScene" uid="uid://bscbfb76kruqv" path="res://MENUS/Escenas/selPersonaje/UI/opciones_selp.tscn" id="3_xlygr"]
+[ext_resource type="AudioStream" uid="uid://6yr2btc86jmh" path="res://MENUS/Audio/sel_personaje/musica_fondo.mp3" id="4_aoipj"]
+[ext_resource type="Script" uid="uid://bchrbp1gq0753" path="res://MENUS/Scripts/selPersonaje/botonprueba.gd" id="5_ja68q"]
+[ext_resource type="AudioStream" uid="uid://dr7kc8d4in2es" path="res://MENUS/Audio/sel_personaje/floraphonic-arcade-ui-18-229517.mp3" id="6_34gqj"]
+[ext_resource type="Texture2D" uid="uid://ct0txauw62xqe" path="res://MENUS/Assets/selPersonaje/Fondo/fondo_final.png" id="6_ojrew"]
+
+[sub_resource type="Animation" id="Animation_xlygr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContenedoresOpciones:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Nota:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Personaje/Piel:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Personaje/Accesorio:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0009999999),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Personaje:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Fondo:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_p54kw")]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Mensaje:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_70yvt"]
+resource_name = "final"
+length = 3.0000000000000004
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ContenedoresOpciones:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Nota:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Personaje/Accesorio:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Mensaje:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Personaje:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-390, 0), Vector2(-390, 30), Vector2(-390, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Fondo:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_ojrew")]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Musica")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SonidoFinal")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xlygr"]
+_data = {
+&"RESET": SubResource("Animation_xlygr"),
+&"final": SubResource("Animation_70yvt")
+}
+
+[node name="SeleccionPersonaje" type="Control" unique_id=909038432]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jxhxg")
+
+[node name="Fondo" type="TextureRect" parent="." unique_id=1939612832]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_p54kw")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Personaje" type="Control" parent="." unique_id=627232947]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Piel" type="TextureRect" parent="Personaje" unique_id=364926912]
+layout_mode = 1
+offset_left = 900.0
+offset_top = 200.0
+offset_right = 1800.0
+offset_bottom = 1100.0
+expand_mode = 1
+
+[node name="Accesorio" type="TextureRect" parent="Personaje" unique_id=97395063]
+layout_mode = 1
+offset_left = 900.0
+offset_top = 200.0
+offset_right = 1800.0
+offset_bottom = 1100.0
+expand_mode = 1
+
+[node name="ContenedoresOpciones" type="VBoxContainer" parent="." unique_id=815226380]
+custom_minimum_size = Vector2(540, 165)
+layout_mode = 0
+offset_left = 110.0
+offset_top = 350.0
+offset_right = 650.0
+offset_bottom = 970.0
+theme_override_constants/separation = 30
+
+[node name="Opcion1" parent="ContenedoresOpciones" unique_id=74148202 instance=ExtResource("3_xlygr")]
+layout_mode = 2
+
+[node name="Opcion2" parent="ContenedoresOpciones" unique_id=2005082986 instance=ExtResource("3_xlygr")]
+layout_mode = 2
+
+[node name="Opcion3" parent="ContenedoresOpciones" unique_id=1349458729 instance=ExtResource("3_xlygr")]
+layout_mode = 2
+
+[node name="Nota" type="Label" parent="." unique_id=742608807]
+layout_mode = 1
+offset_left = 870.0
+offset_top = 40.0
+offset_right = 1870.0
+offset_bottom = 140.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_jxhxg")
+theme_override_font_sizes/font_size = 36
+text = "Pasa el cursor sobre una opción para ver cómo luce, 
+y haz clic cuando quieras elegir."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Mensaje" type="Label" parent="." unique_id=845578384]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_right = 400.0
+offset_bottom = 150.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("2_jxhxg")
+theme_override_font_sizes/font_size = 96
+text = "¡Gran Elección!"
+horizontal_alignment = 1
+
+[node name="Musica" type="AudioStreamPlayer" parent="." unique_id=1080781748]
+stream = ExtResource("4_aoipj")
+volume_db = -10.335
+autoplay = true
+bus = &"Music"
+
+[node name="SonidoFinal" type="AudioStreamPlayer" parent="." unique_id=1440233850]
+stream = ExtResource("6_34gqj")
+volume_db = -10.335
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=137331958]
+libraries/ = SubResource("AnimationLibrary_xlygr")
+
+[node name="Button" type="Button" parent="." unique_id=1742844514]
+layout_mode = 0
+offset_left = 1475.0
+offset_top = 679.0
+offset_right = 1915.0
+offset_bottom = 1080.0
+script = ExtResource("5_ja68q")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

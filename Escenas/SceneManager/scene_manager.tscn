@@ -12,10 +12,11 @@ shader = ExtResource("2_dvq8a")
 shader_parameter/modo = 0
 shader_parameter/intensidad = 1.0
 
-[node name="SceneManager" type="Node" unique_id=1940478822 node_paths=PackedStringArray("pantallaNegra")]
+[node name="SceneManager" type="Node" unique_id=1940478822 node_paths=PackedStringArray("pantallaNegra") groups=["sonido_menu"]]
 script = ExtResource("1_td87b")
 pantallaNegra = NodePath("CanvasLayer/PantallaNegra")
-duracionFundidoANegro = 2.0
+duracionFundidoANegro = 0.5
+EscenaInicial = 1
 
 [node name="GameManager - AUTOLOAD" type="Node" parent="." unique_id=1365764873]
 script = ExtResource("5_td87b")

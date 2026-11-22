@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://bv0aki5s32cgu"]
+
+[ext_resource type="Script" uid="uid://c6iidwarlm0ax" path="res://Scripts/Creditos/creditos.gd" id="1_6xmto"]
+[ext_resource type="Texture2D" uid="uid://bwx600e5wyt5g" path="res://Assets/Creditos/fondo.png" id="1_g6uwm"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://Assets/selPersonaje/Fuentes/Redaction35-Bold.ttf" id="2_6xmto"]
+
+[node name="Creditos" type="Control" unique_id=573700510]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6xmto")
+
+[node name="Papel" type="TextureRect" parent="." unique_id=1093251704]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_g6uwm")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1780916463]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -542.0
+offset_right = 543.0
+offset_bottom = 244.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=198390162]
+layout_mode = 2
+
+[node name="Titulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2028018897]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6xmto")
+theme_override_font_sizes/font_size = 200
+text = "CREDITOS"
+
+[node name="Lista" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1571973399]
+layout_mode = 2
+theme_override_constants/separation = 100

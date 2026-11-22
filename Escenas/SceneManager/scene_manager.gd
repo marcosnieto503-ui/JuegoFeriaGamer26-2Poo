@@ -1,11 +1,24 @@
 extends Node
 
-var GameplayScene = preload("res://Escenas/Gameplay/gameplay.tscn")
-var testScene = preload("res://Escenas/test1.tscn")
+var GameplayScene:PackedScene = preload("res://Escenas/Gameplay/gameplay.tscn")
+var testScene:PackedScene = preload("res://Escenas/test1.tscn")
+
+var menuPrincipalScene:PackedScene = preload("res://MENUS/Escenas/Menu/Menu.tscn")
+var entrarAlJuegoScene:PackedScene = preload("res://MENUS/Escenas/Intro.tscn")
+var menuCreditosScene:PackedScene = preload("res://MENUS/Escenas/Menu/Creditos/Creditos.tscn")
+var introduccionScene:PackedScene  = preload("res://MENUS/Escenas/selPersonaje/introduccion.tscn")
+var menuComoJugarScene:PackedScene = preload("res://MENUS/Escenas/Menu/ComoJugar/Controles.tscn")
+var seleccionPersonajeScene:PackedScene = preload("res://MENUS/Escenas/selPersonaje/seleccion_personaje.tscn")
 
 var Dict_SCENES:Dictionary[GameManager.ENUMESCENAS,PackedScene] = {
 	GameManager.ENUMESCENAS.GAMEPLAY:GameplayScene,
-	GameManager.ENUMESCENAS.TEST1:testScene
+	GameManager.ENUMESCENAS.TEST1:testScene,
+	GameManager.ENUMESCENAS.MAINMENU:menuPrincipalScene,
+	GameManager.ENUMESCENAS.ENTRARALJUEGO:entrarAlJuegoScene,
+	GameManager.ENUMESCENAS.INTRODUCCION:introduccionScene,
+	GameManager.ENUMESCENAS.COMOJUGAR:menuComoJugarScene,
+	GameManager.ENUMESCENAS.MENUCREDITOS:menuCreditosScene,
+	GameManager.ENUMESCENAS.SELECCIONPERSONAJE:seleccionPersonajeScene
 	}
 
 
@@ -32,6 +45,14 @@ func cargarEscenaDirecto(packedScene:PackedScene):
 	if ACTUAl_SCENE.has_method("INICIALIZAR_ESCENA"):
 		await ACTUAl_SCENE.INICIALIZAR_ESCENA()
 	print("Escen manager ACTUAK SCENE: ",ACTUAl_SCENE)
+	
+	
+	var vp := get_viewport()
+	var cam := vp.get_camera_2d()
+	print("Viewport: ", vp.get_visible_rect().size)
+	print("Camara activa: ", cam, " pos: ", cam.global_position if cam else "ninguna")
+	if ACTUAl_SCENE is Control:
+		print("Escena pos: ", ACTUAl_SCENE.position, " size: ", ACTUAl_SCENE.size)
 
 func getEscenaActual() -> Node:
 	return ACTUAl_SCENE
@@ -39,7 +60,7 @@ func getEscenaActual() -> Node:
 
 
 var _cambiando := false
-func SWITCH_SCENE(nextScene:GameManager.ENUMESCENAS):
+func SWITCH_SCENE(nextScene:GameManager.ENUMESCENAS,fundido:bool): #fundido no hace naodraaaaaa hace que fundoine
 	if _cambiando:
 		return    # evita dos cambios a la vez
 	if !Dict_SCENES.has(nextScene):
@@ -58,8 +79,18 @@ func SWITCH_SCENE(nextScene:GameManager.ENUMESCENAS):
 	add_child(ACTUAl_SCENE)
 	if not ACTUAl_SCENE.is_node_ready():
 		await ACTUAl_SCENE.ready
+	
 	if ACTUAl_SCENE.has_method("INICIALIZAR_ESCENA"):
 		await ACTUAl_SCENE.INICIALIZAR_ESCENA()
+	
+	
+	var vp := get_viewport()
+	var cam := vp.get_camera_2d()
+	print("Viewport: ", vp.get_visible_rect().size)
+	print("Camara activa: ", cam, " pos: ", cam.global_position if cam else "ninguna")
+	if ACTUAl_SCENE is Control:
+		print("Escena pos: ", ACTUAl_SCENE.position, " size: ", ACTUAl_SCENE.size)
+	
 	desfundido_negro()
 	await tweenDesfundido.finished
 	_cambiando = false

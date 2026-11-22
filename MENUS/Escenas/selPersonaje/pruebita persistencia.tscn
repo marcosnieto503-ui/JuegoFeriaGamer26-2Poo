@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cc4s1advfr6ig"]
+
+[ext_resource type="Script" path="res://Scripts/selPersonaje/persistencia.gd" id="1_x033g"]
+
+[node name="PruebitaPersistencia" type="Node2D" unique_id=2047230487]
+script = ExtResource("1_x033g")
+
+[node name="Avatar" type="Sprite2D" parent="." unique_id=1530637874]
+position = Vector2(111, 125)
+
+[node name="Button" type="Button" parent="." unique_id=1944730607]
+offset_left = 252.0
+offset_top = 42.0
+offset_right = 313.0
+offset_bottom = 91.0
+
+[node name="Button2" type="Button" parent="." unique_id=1953307491]
+offset_left = 260.0
+offset_top = 167.0
+offset_right = 321.0
+offset_bottom = 216.0
+
+[node name="Button3" type="Button" parent="." unique_id=1933733906]
+offset_left = 334.0
+offset_top = 97.0
+offset_right = 395.0
+offset_bottom = 146.0
+
+[node name="Button4" type="Button" parent="." unique_id=1567632688]
+offset_left = 177.0
+offset_top = 107.0
+offset_right = 238.0
+offset_bottom = 156.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

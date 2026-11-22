@@ -18,6 +18,7 @@ func _input(event: InputEvent) -> void:
 	if !funcionesTeclasActivadas:
 		return
 	if event.is_action_pressed("espacio"):
+		
 		print("(DEGUG BNODE)",sceneManager.getEscenaActual())
 		var gameplay = sceneManager.getEscenaActual()
 		gameplay.DEBUGreaccionPlayer()
