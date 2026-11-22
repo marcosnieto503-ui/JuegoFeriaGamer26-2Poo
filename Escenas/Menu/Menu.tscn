@@ -25,8 +25,12 @@
 [ext_resource type="Texture2D" uid="uid://cub4as0lrwpes" path="res://Assets/Menu/partes/celular/Sprite/celular_9.png" id="18_elans"]
 [ext_resource type="Texture2D" uid="uid://lalwqgjrd5lg" path="res://Assets/Menu/UI/titulo.png" id="18_r6grw"]
 [ext_resource type="PackedScene" uid="uid://gnopc0s56py2" path="res://Escenas/Menu/UI/BotonEscritorio.tscn" id="19_31pwh"]
+[ext_resource type="Texture2D" uid="uid://uqqcwh7dboho" path="res://Assets/Menu/partes/celular/Iconos/ajustes.png" id="19_pnty1"]
+[ext_resource type="Texture2D" uid="uid://cehdmkq5kbg1y" path="res://Assets/Menu/partes/celular/Iconos/titulo.png" id="19_uoexe"]
+[ext_resource type="Texture2D" uid="uid://b0hk46xx28ckm" path="res://Assets/Menu/partes/celular/Iconos/musica.png" id="20_f1xpc"]
 [ext_resource type="BitMap" uid="uid://cm52wbna32vsc" path="res://Assets/Menu/partes/hojas/hojas-bitmap.png" id="22_bsrxh"]
 [ext_resource type="Texture2D" uid="uid://dnvdanlcmodyh" path="res://Assets/Menu/partes/llaves/llaves-hover.png" id="24_bsrxh"]
+[ext_resource type="AudioStream" uid="uid://cjr1cs7wierqg" path="res://Audio/Menu/MenuMEN.mp3" id="31_ggxna"]
 
 [sub_resource type="Environment" id="Environment_qphp1"]
 background_mode = 3
@@ -144,6 +148,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Contenido:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_rdxvi"]
 resource_name = "acercar"
@@ -219,6 +235,66 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [2, 0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Contenido/General:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Contenido/Musica:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Contenido/General:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Contenido/Musica:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Contenido:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hmem7"]
@@ -351,6 +427,43 @@ texture_normal = ExtResource("5_nyrvb")
 texture_hover = SubResource("AnimatedTexture_6lob0")
 texture_click_mask = null
 
+[node name="PuntoCamara" parent="Escritorio/Botones/Celular" index="1" unique_id=247039056]
+offset_left = -19.88842
+offset_top = -5.136368
+offset_right = 20.11158
+offset_bottom = 34.863632
+
+[node name="Contenido" type="VBoxContainer" parent="Escritorio/Botones/Celular" unique_id=1585329613]
+visible = false
+texture_filter = 3
+layout_mode = 0
+offset_left = 7.933914
+offset_top = 12.107433
+offset_right = 64.933914
+offset_bottom = 103.10744
+theme_override_constants/separation = 10
+
+[node name="TextureRect" type="TextureRect" parent="Escritorio/Botones/Celular/Contenido" unique_id=223875647]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("19_uoexe")
+stretch_mode = 2
+
+[node name="General" parent="Escritorio/Botones/Celular/Contenido" unique_id=443796167 instance=ExtResource("19_31pwh")]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("19_pnty1")
+texture_hover = null
+texture_click_mask = null
+
+[node name="Musica" parent="Escritorio/Botones/Celular/Contenido" unique_id=2136775973 instance=ExtResource("19_31pwh")]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("20_f1xpc")
+texture_hover = null
+texture_click_mask = null
+
 [node name="AnimationCelular" type="AnimationPlayer" parent="Escritorio/Botones/Celular" unique_id=84957444]
 libraries/ = SubResource("AnimationLibrary_hmem7")
 
@@ -415,8 +528,16 @@ texture_hover = ExtResource("16_bphf3")
 texture_click_mask = null
 flip_h = true
 
+[node name="Musica" type="AudioStreamPlayer" parent="." unique_id=2086981598]
+stream = ExtResource("31_ggxna")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
 [connection signal="pressed" from="Escritorio/Botones/Laptop" to="." method="_on_laptop_pressed"]
 [connection signal="pressed" from="Escritorio/Botones/Celular" to="." method="_on_celular_pressed"]
 [connection signal="pressed" from="Escritorio/Botones/Hojas" to="." method="_on_hojas_pressed"]
 [connection signal="pressed" from="Escritorio/Botones/Llaves" to="." method="_on_llaves_pressed"]
 [connection signal="pressed" from="UI/Atras" to="." method="_on_atras_pressed"]
+
+[editable path="Escritorio/Botones/Celular"]

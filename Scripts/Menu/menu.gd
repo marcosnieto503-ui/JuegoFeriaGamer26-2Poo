@@ -6,10 +6,12 @@ extends Control
 @export_file("*.tscn") var escena_juego: String = "res://Escenas/selPersonaje/introduccion.tscn"
 
 @onready var camara: Camera2D = $CameraEnfoque
+@onready var musica: AudioStreamPlayer = $AudioStreamPlayer
 @onready var escritorio: Control = $Escritorio
 @onready var anim: AnimationPlayer = $Escritorio/Botones/Celular/AnimationCelular
 
 #No se coloca tipo de nodo a boton para que quede dinamico boton_escritorio .-,
+
 func _ir_a_escena(boton, ruta: String) -> void:
 	await camara.enfocar(boton.obtener_punto_camara())
 	Transicion.cambiarEscena(ruta)

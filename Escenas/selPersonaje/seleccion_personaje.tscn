@@ -296,6 +296,7 @@ horizontal_alignment = 1
 stream = ExtResource("4_aoipj")
 volume_db = -10.335
 autoplay = true
+bus = &"Music"
 
 [node name="SonidoFinal" type="AudioStreamPlayer" parent="." unique_id=1440233850]
 stream = ExtResource("6_34gqj")
