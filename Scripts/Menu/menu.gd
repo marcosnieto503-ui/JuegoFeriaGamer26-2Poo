@@ -34,3 +34,6 @@ func _on_atras_pressed() -> void:
 
 func _on_llaves_pressed() -> void:
 	get_tree().quit()
+
+func _on_mouse_pressed() -> void:
+	Transicion.cambiarEscena("res://Escenas/Menu/ComoJugar/Controles.tscn")

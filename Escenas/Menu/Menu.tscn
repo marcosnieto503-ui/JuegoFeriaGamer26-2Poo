@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bym8ce3fpwbo0" path="res://Assets/Menu/partes/fondo.png" id="3_kp2x1"]
 [ext_resource type="Texture2D" uid="uid://dmy6ipbwk4hoi" path="res://Assets/Menu/partes/mouse/mouse.png" id="4_rffgm"]
 [ext_resource type="Texture2D" uid="uid://cdxotwoc84map" path="res://Assets/Menu/partes/clips.png" id="5_hmem7"]
+[ext_resource type="Texture2D" uid="uid://3fnnuvvesa37" path="res://Assets/Menu/partes/mouse/mouse-hover.png" id="8_31pwh"]
 [ext_resource type="PackedScene" uid="uid://7y7cngpeelk8" path="res://Escenas/Menu/Ajustes/Ajustes.tscn" id="8_mtxq6"]
 [ext_resource type="Texture2D" uid="uid://cy7hjd1xr0oe" path="res://Assets/Menu/partes/hojas/hojas-hover.png" id="11_rdxvi"]
 [ext_resource type="Texture2D" uid="uid://2kw3e2pwxw26" path="res://Assets/Menu/partes/hojas/hojas.png" id="12_f1xpc"]
@@ -377,19 +378,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Mouse" type="TextureRect" parent="Escritorio/Decoracion" unique_id=49931325]
-texture_filter = 3
-layout_mode = 0
-offset_left = 1997.0
-offset_top = -183.0
-offset_right = 2637.0
-offset_bottom = 177.0
-offset_transform_enabled = true
-offset_transform_scale = Vector2(3, 3)
-offset_transform_rotation = 0.13962634
-mouse_filter = 2
-texture = ExtResource("4_rffgm")
-
 [node name="Clips" type="TextureRect" parent="Escritorio/Decoracion" unique_id=1102372781]
 texture_filter = 3
 layout_mode = 1
@@ -406,7 +394,18 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Laptop" parent="Escritorio/Botones" unique_id=473791498 instance=ExtResource("19_31pwh")]
+[node name="Mouse" parent="Escritorio/Botones" unique_id=473791498 instance=ExtResource("19_31pwh")]
+layout_mode = 0
+offset_left = 1569.9999
+offset_top = 91.81818
+offset_right = 1647.9999
+offset_bottom = 206.81818
+scale = Vector2(3, 3)
+texture_normal = ExtResource("4_rffgm")
+texture_hover = ExtResource("8_31pwh")
+texture_click_mask = null
+
+[node name="Laptop" parent="Escritorio/Botones" unique_id=803409365 instance=ExtResource("19_31pwh")]
 layout_mode = 0
 offset_left = 619.9999
 offset_top = 401.81815
@@ -434,7 +433,7 @@ visible = false
 [node name="Musica" parent="Escritorio/Botones/Celular/Contenido" index="2" unique_id=860071802]
 visible = false
 
-[node name="ColorRect" parent="Escritorio/Botones/Celular" index="3" unique_id=1123373324]
+[node name="ColorRect" parent="Escritorio/Botones/Celular/Contenido" index="3" unique_id=1123373324]
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationCelular" type="AnimationPlayer" parent="Escritorio/Botones/Celular" unique_id=577020467]
@@ -507,6 +506,7 @@ autoplay = true
 bus = &"Music"
 parameters/looping = true
 
+[connection signal="pressed" from="Escritorio/Botones/Mouse" to="." method="_on_mouse_pressed"]
 [connection signal="pressed" from="Escritorio/Botones/Laptop" to="." method="_on_laptop_pressed"]
 [connection signal="pressed" from="Escritorio/Botones/Celular" to="." method="_on_celular_pressed"]
 [connection signal="pressed" from="Escritorio/Botones/Hojas" to="." method="_on_hojas_pressed"]
