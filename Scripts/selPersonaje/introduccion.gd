@@ -6,6 +6,12 @@ extends Control
 @onready var timer_tecleo: Timer = $TimerTecleo
 @onready var boton: Button = $MarginContainer/VBoxContainer/BotonContinuar
 
+func _ready() -> void:
+	Volumen.ocultar()
+
+func _exit_tree() -> void:
+	Volumen.mostrar()
+
 func _on_boton_continuar_pressed() -> void:
 	Transicion.cambiarEscena(siguiente_escena)
 

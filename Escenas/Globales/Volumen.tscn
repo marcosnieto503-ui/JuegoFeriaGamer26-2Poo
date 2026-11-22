@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://brttp4si3x2l8"]
+
+[ext_resource type="Script" uid="uid://qkh7jsyjpawd" path="res://Scripts/Globales/volumenHUD.gd" id="1_fsjsb"]
+[ext_resource type="Texture2D" uid="uid://cd8fu8eskagk0" path="res://Assets/Volumen/VolumenMenu.png" id="1_ilcfs"]
+[ext_resource type="Texture2D" uid="uid://4dcqdd8q6ynv" path="res://Assets/Volumen/barras.png" id="2_6qmnk"]
+[ext_resource type="Texture2D" uid="uid://crrqsoqcopn7x" path="res://Assets/Volumen/barras-llenas.png" id="3_fsjsb"]
+[ext_resource type="AudioStream" uid="uid://cf10jmw1uwow6" path="res://Audio/Globales/VolumenHUD/juniorsoundays-ui-sound-70-527837.mp3" id="5_fsjsb"]
+
+[node name="MusicaHUD" type="CanvasLayer" unique_id=797880096]
+layer = 1000
+scale = Vector2(3, 3)
+transform = Transform2D(3, 0, 0, 3, 0, 0)
+script = ExtResource("1_fsjsb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=622889708]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.031425495, 0.020431986)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.11764706, 0.11764706, 0.11764706, 0.79607844)
+
+[node name="MusicaColumna" type="HBoxContainer" parent="." unique_id=658063351]
+offset_right = 13.0
+offset_bottom = 18.0
+
+[node name="IconoMusica" type="TextureRect" parent="MusicaColumna" unique_id=186087326]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 2
+texture = ExtResource("1_ilcfs")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="MusicaColumna/IconoMusica" unique_id=1153070112]
+layout_mode = 0
+offset_left = 25.0
+offset_right = 57.0
+offset_bottom = 19.0
+max_value = 4.0
+texture_under = ExtResource("2_6qmnk")
+texture_progress = ExtResource("3_fsjsb")
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1296768026]
+stream = ExtResource("5_fsjsb")
