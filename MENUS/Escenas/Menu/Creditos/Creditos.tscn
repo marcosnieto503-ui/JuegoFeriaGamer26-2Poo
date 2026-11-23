@@ -4,11 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://bwx600e5wyt5g" path="res://MENUS/Assets/Creditos/fondo.png" id="1_g6uwm"]
 [ext_resource type="Texture2D" uid="uid://c1gyxjl5dawbk" path="res://MENUS/Assets/Creditos/notas.png" id="2_4bbef"]
 [ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://MENUS/Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="2_6xmto"]
-[ext_resource type="Texture2D" uid="uid://cv6hei2j150mg" path="res://MENUS/Assets/Creditos/Avatares/marcos.jpg" id="4_4bbef"]
 [ext_resource type="PackedScene" uid="uid://gnopc0s56py2" path="res://MENUS/Escenas/Menu/UI/BotonEscritorio.tscn" id="5_747sr"]
 [ext_resource type="Texture2D" uid="uid://c6d6t4e84nmfg" path="res://MENUS/Assets/Menu/UI/flecha/flecha.png" id="6_swo4t"]
 [ext_resource type="Texture2D" uid="uid://bpqp0vy718ern" path="res://MENUS/Assets/Menu/UI/flecha/flecha-hover.png" id="7_baxbq"]
 [ext_resource type="Texture2D" uid="uid://xm1u6wiuf82g" path="res://MENUS/Assets/Creditos/UI/exit_credits.png" id="9_baxbq"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qlb8o"]
+load_path = "res://.godot/imported/marcos.jpg-eaf6c970e51747be27b6733dd926df55.ctex"
 
 [node name="Creditos" type="Control" unique_id=573700510 groups=["sonido_menu"]]
 layout_mode = 3
@@ -18,7 +20,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6xmto")
-escena_anterior = "uid://c7cvvbol3wrd8"
 
 [node name="Papel" type="TextureRect" parent="." unique_id=1093251704]
 texture_filter = 3
@@ -77,7 +78,7 @@ theme_override_constants/separation = 20
 [node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/Fila" unique_id=954422150]
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
-texture = ExtResource("4_4bbef")
+texture = SubResource("CompressedTexture2D_qlb8o")
 expand_mode = 1
 stretch_mode = 4
 

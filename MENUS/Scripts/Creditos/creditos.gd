@@ -6,11 +6,11 @@ extends Control
 @onready var rol: Label = $MarginContainer/VBoxContainer/Fila/Textos/Rol
 
 var integrantes := [
-	{"nombre": "Marcos Escorcia", "rol": "Programador", "foto": "res://MENUS/Assets/Creditos/Avatares/marcos.jpg"},
-	{"nombre": "Kevin Pacheco", "rol": "Artista", "foto": "res://MENUS/Assets/Creditos/Avatares/kevin.jpeg"},
-	{"nombre": "Karol Bono", "rol": "Música", "foto": "res://MENUS/Assets/Creditos/Avatares/karol.jpg"},
-	{"nombre": "Sebastian Perez", "rol": "Música", "foto": "res://Assets/Creditos/Avatares/karol.jpg"},
-	{"nombre": "Martin Vergara", "rol": "Música", "foto": "res://Assets/Creditos/Avatares/karol.jpg"},
+	{"nombre": "Marcos Escorcia", "rol": "Director de Interfaz Usuario", "foto": "res://MENUS/Assets/Creditos/Avatares/marcos.jpg"},
+	{"nombre": "Kevin Pacheco", "rol": "Gerente de Diseño", "foto": "res://MENUS/Assets/Creditos/Avatares/kevin.jpeg"},
+	{"nombre": "Karol Bono", "rol": "Gerente de Pruebas", "foto": "res://MENUS/Assets/Creditos/Avatares/karol.jpeg"},
+	{"nombre": "Sebastian Perez", "rol": "Gerente del Proyecto", "foto": "res://MENUS/Assets/Creditos/Avatares/sebastian.jpeg"},
+	{"nombre": "Martin Vergara", "rol": "Director de documentacion", "foto": "res://MENUS/Assets/Creditos/Avatares/martin.jpeg"},
 ]
 
 var indice := 0
