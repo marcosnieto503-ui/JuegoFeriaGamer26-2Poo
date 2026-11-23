@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b7qj48v3gcjpy" path="res://MENUS/Assets/Menu/partes/llaves/llaves.png" id="15_qhlqc"]
 [ext_resource type="Script" uid="uid://dbr4q8rumbbww" path="res://MENUS/Escenas/Menu/telefono.gd" id="15_u4r8h"]
 [ext_resource type="Texture2D" uid="uid://bpqp0vy718ern" path="res://MENUS/Assets/Menu/UI/flecha/flecha-hover.png" id="16_bphf3"]
-[ext_resource type="Texture2D" uid="uid://dalr2wn7jhouy" path="res://MENUS/Assets/Menu/partes/celular/celular-hover2.png" id="16_u4r8h"]
+[ext_resource type="Texture2D" uid="uid://jqcak5kwlgec" path="res://MENUS/Assets/Menu/partes/celular/celular-hover.png" id="17_6s5ln"]
 [ext_resource type="Texture2D" uid="uid://lalwqgjrd5lg" path="res://MENUS/Assets/Menu/UI/titulo.png" id="18_r6grw"]
 [ext_resource type="PackedScene" uid="uid://gnopc0s56py2" path="res://MENUS/Escenas/Menu/UI/BotonEscritorio.tscn" id="19_31pwh"]
 [ext_resource type="Texture2D" uid="uid://b0hk46xx28ckm" path="res://MENUS/Assets/Menu/partes/celular/Iconos/musica.png" id="20_35mh0"]
@@ -36,9 +36,17 @@ glow_hdr_threshold = 0.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5v0uk"]
 texture = ExtResource("15_docae")
+expand_margin_left = 46.0
+expand_margin_top = 65.0
+expand_margin_right = 45.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rc6kr"]
-texture = ExtResource("16_u4r8h")
+texture = ExtResource("17_6s5ln")
+expand_margin_left = 46.0
+expand_margin_top = 65.0
+expand_margin_right = 45.0
+expand_margin_bottom = 10.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iduf5"]
 texture = ExtResource("15_hmem7")
@@ -263,16 +271,17 @@ color = Color(0.2128407, 0.4399231, 1, 1)
 
 [node name="Telefono" type="Button" parent="Escritorio/Telefono/Sprites" unique_id=567487960 groups=["sonido_menu"]]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_5v0uk")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_rc6kr")
 theme_override_styles/hover = SubResource("StyleBoxTexture_rc6kr")
 
 [node name="BloqueaInput" type="ColorRect" parent="Escritorio/Telefono" unique_id=901849186]
 layout_mode = 0
-offset_left = 1013.6362
-offset_top = 249.09091
-offset_right = 1599.9999
-offset_bottom = 711.8181
+offset_left = 1197.2727
+offset_top = 303.63635
+offset_right = 1398.1819
+offset_bottom = 649.99994
 color = Color(1, 1, 1, 0)
 
 [node name="botonAtras" type="CanvasLayer" parent="Escritorio/Telefono" unique_id=1868018204]
@@ -284,6 +293,7 @@ offset_top = 264.0
 offset_right = 645.0
 offset_bottom = 506.0
 rotation = 3.1415927
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_iduf5")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_2aaak")
 theme_override_styles/hover = SubResource("StyleBoxTexture_605h1")
@@ -300,6 +310,7 @@ offset_left = 1251.8181
 offset_top = 479.99997
 offset_right = 1342.7272
 offset_bottom = 542.7273
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_ua2ei")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_0cgun")
 theme_override_styles/hover = SubResource("StyleBoxTexture_6s5ln")
@@ -311,6 +322,7 @@ offset_left = 1250.909
 offset_top = 374.54547
 offset_right = 1344.5454
 offset_bottom = 443.63638
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_35mh0")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ipuul")
 theme_override_styles/hover = SubResource("StyleBoxTexture_rwusi")
@@ -334,6 +346,7 @@ offset_left = 1243.6364
 offset_top = 455.45453
 offset_right = 1352.6364
 offset_bottom = 481.45453
+mouse_default_cursor_shape = 2
 theme_override_fonts/font = ExtResource("22_6s5ln")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_5v0uk")
@@ -373,6 +386,7 @@ offset_left = 1233.6364
 offset_top = 444.54544
 offset_right = 1365.4546
 offset_bottom = 452.54544
+mouse_default_cursor_shape = 2
 theme_override_styles/scroll = SubResource("StyleBoxFlat_apgvg")
 max_value = 2.0
 step = 0.04

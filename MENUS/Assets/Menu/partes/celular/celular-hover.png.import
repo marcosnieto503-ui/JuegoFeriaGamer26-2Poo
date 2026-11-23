@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chhuak7b88ldw"
-path="res://.godot/imported/Bajar.png-e6e261b3986a83722b1287158af2a89f.ctex"
+uid="uid://jqcak5kwlgec"
+path="res://.godot/imported/celular-hover.png-d126d868aff7c3f0fc5e22f00dcfb86a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MENUS/Assets/Menu/partes/celular/Bajar.png"
-dest_files=["res://.godot/imported/Bajar.png-e6e261b3986a83722b1287158af2a89f.ctex"]
+source_file="res://MENUS/Assets/Menu/partes/celular/celular-hover.png"
+dest_files=["res://.godot/imported/celular-hover.png-d126d868aff7c3f0fc5e22f00dcfb86a.ctex"]
 
 [params]
 
