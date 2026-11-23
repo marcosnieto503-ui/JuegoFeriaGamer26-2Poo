@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bscbfb76kruqv"]
+
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://MENUS/Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="1_hpsbs"]
+[ext_resource type="Texture2D" uid="uid://dih4tgm346n7" path="res://MENUS/Assets/selPersonaje/Fondo/Tablon/Tablon.png" id="2_ypogd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5v0uk"]
+texture = ExtResource("2_ypogd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rc6kr"]
+texture = ExtResource("2_ypogd")
+
+[node name="BotonTablon" type="Button" unique_id=74148202 groups=["sonido_menu"]]
+custom_minimum_size = Vector2(540, 175)
+offset_right = 8.0
+offset_bottom = 8.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0, 1)
+theme_override_fonts/font = ExtResource("1_hpsbs")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxTexture_5v0uk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rc6kr")

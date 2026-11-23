@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://bv0aki5s32cgu"]
+
+[ext_resource type="Script" uid="uid://c6iidwarlm0ax" path="res://MENUS/Scripts/Creditos/creditos.gd" id="1_6xmto"]
+[ext_resource type="Texture2D" uid="uid://bwx600e5wyt5g" path="res://MENUS/Assets/Creditos/fondo.png" id="1_g6uwm"]
+[ext_resource type="Texture2D" uid="uid://c1gyxjl5dawbk" path="res://MENUS/Assets/Creditos/notas.png" id="2_4bbef"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://MENUS/Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="2_6xmto"]
+[ext_resource type="PackedScene" uid="uid://gnopc0s56py2" path="res://MENUS/Escenas/Menu/UI/BotonEscritorio.tscn" id="5_747sr"]
+[ext_resource type="Texture2D" uid="uid://c6d6t4e84nmfg" path="res://MENUS/Assets/Menu/UI/flecha/flecha.png" id="6_swo4t"]
+[ext_resource type="Texture2D" uid="uid://bpqp0vy718ern" path="res://MENUS/Assets/Menu/UI/flecha/flecha-hover.png" id="7_baxbq"]
+[ext_resource type="Texture2D" uid="uid://xm1u6wiuf82g" path="res://MENUS/Assets/Creditos/UI/exit_credits.png" id="9_baxbq"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qlb8o"]
+load_path = "res://.godot/imported/marcos.jpg-eaf6c970e51747be27b6733dd926df55.ctex"
+
+[node name="Creditos" type="Control" unique_id=573700510 groups=["sonido_menu"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6xmto")
+
+[node name="Papel" type="TextureRect" parent="." unique_id=1093251704]
+texture_filter = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_g6uwm")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1780916463]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -708.0
+offset_top = 414.99997
+offset_right = 377.0
+offset_bottom = 1086.0
+grow_horizontal = 2
+rotation = -0.38397244
+
+[node name="nota" type="TextureRect" parent="MarginContainer" unique_id=530639705]
+layout_mode = 2
+texture = ExtResource("2_4bbef")
+
+[node name="sombra" type="TextureRect" parent="MarginContainer/nota" unique_id=2115950326]
+modulate = Color(0, 0, 0, 0.27058825)
+show_behind_parent = true
+layout_mode = 0
+offset_left = 0.048606873
+offset_top = 146.7004
+offset_right = 1085.0486
+offset_bottom = 817.7004
+texture = ExtResource("2_4bbef")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=198390162]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Titulo" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2028018897]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6xmto")
+theme_override_font_sizes/font_size = 150
+text = "CREDITOS"
+
+[node name="Fila" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=483406949]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/Fila" unique_id=954422150]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_qlb8o")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Textos" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Fila" unique_id=586605276]
+layout_mode = 2
+alignment = 1
+
+[node name="Nombre" type="Label" parent="MarginContainer/VBoxContainer/Fila/Textos" unique_id=1405608028]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6xmto")
+theme_override_font_sizes/font_size = 80
+text = "MARCOS ESCORCIA"
+autowrap_mode = 2
+
+[node name="Rol" type="Label" parent="MarginContainer/VBoxContainer/Fila/Textos" unique_id=430837153]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6xmto")
+theme_override_font_sizes/font_size = 20
+text = "Programador"
+
+[node name="Alante" parent="." unique_id=473791498 instance=ExtResource("5_747sr")]
+layout_mode = 0
+offset_left = 1247.0
+offset_top = 276.00003
+offset_right = 1297.0
+offset_bottom = 326.00003
+rotation = -0.38397244
+scale = Vector2(5, 5)
+texture_normal = ExtResource("6_swo4t")
+texture_hover = ExtResource("7_baxbq")
+texture_click_mask = null
+
+[node name="Atras" parent="." unique_id=220875105 instance=ExtResource("5_747sr")]
+layout_mode = 0
+offset_left = 202.00002
+offset_top = 662.0
+offset_right = 252.00002
+offset_bottom = 712.0
+rotation = -0.38397244
+scale = Vector2(5, 5)
+texture_normal = ExtResource("6_swo4t")
+texture_hover = ExtResource("7_baxbq")
+texture_click_mask = null
+flip_h = true
+
+[node name="Salir" parent="." unique_id=322097859 instance=ExtResource("5_747sr")]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 10.0
+offset_right = 88.0
+offset_bottom = 60.0
+scale = Vector2(3, 3)
+texture_normal = ExtResource("9_baxbq")
+texture_hover = ExtResource("9_baxbq")
+texture_click_mask = null
+
+[connection signal="pressed" from="Alante" to="." method="_on_alante_pressed"]
+[connection signal="pressed" from="Atras" to="." method="_on_atras_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

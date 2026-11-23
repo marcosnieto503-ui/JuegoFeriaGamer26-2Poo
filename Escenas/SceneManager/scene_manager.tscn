@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c2aodhmmsrd1f"]
+
+[ext_resource type="Script" uid="uid://cf4ksxf06kb52" path="res://Escenas/SceneManager/scene_manager.gd" id="1_td87b"]
+[ext_resource type="Shader" uid="uid://w4m11k3e50l" path="res://Escenas/SceneManager/filtro_daltonismo.gdshader" id="2_dvq8a"]
+[ext_resource type="Script" uid="uid://bfju2hdubmjh5" path="res://Scripts/Autoloads/GameSettings.gd" id="3_dvq8a"]
+[ext_resource type="Script" uid="uid://bkr0lwb1440or" path="res://Escenas/SceneManager/debugnode.gd" id="3_x083j"]
+[ext_resource type="Script" uid="uid://di5h61vmcc5sh" path="res://Scripts/Autoloads/game_manager.gd" id="5_td87b"]
+[ext_resource type="Script" uid="uid://bntqxhrtgk6eg" path="res://Escenas/SceneManager/filtro_daltonismo.gd" id="5_x083j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_o8a6s"]
+shader = ExtResource("2_dvq8a")
+shader_parameter/modo = 0
+shader_parameter/intensidad = 1.0
+
+[node name="SceneManager" type="Node" unique_id=1940478822 node_paths=PackedStringArray("pantallaNegra")]
+script = ExtResource("1_td87b")
+pantallaNegra = NodePath("CanvasLayer/PantallaNegra")
+duracionFundidoANegro = 0.4
+EscenaInicial = 4
+
+[node name="GameManager - AUTOLOAD" type="Node" parent="." unique_id=1365764873]
+script = ExtResource("5_td87b")
+
+[node name="GameSettings" type="Node" parent="." unique_id=723531085]
+script = ExtResource("3_dvq8a")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=182340271]
+layer = 100
+
+[node name="FiltroDaltonismo" type="ColorRect" parent="CanvasLayer" unique_id=354969340]
+material = SubResource("ShaderMaterial_o8a6s")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("5_x083j")
+
+[node name="PantallaNegra" type="ColorRect" parent="CanvasLayer" unique_id=1758643254]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="DEBUGNODE" type="Node" parent="." unique_id=1347398813 node_paths=PackedStringArray("sceneManager")]
+script = ExtResource("3_x083j")
+sceneManager = NodePath("..")
+filtroAaplicar = 3
+posReaccionPlayer = Vector2(1300, 350)
