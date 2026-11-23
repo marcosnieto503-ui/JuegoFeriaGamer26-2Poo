@@ -4,6 +4,18 @@
 [ext_resource type="Script" uid="uid://bxbap1le5gaps" path="res://MENUS/Scripts/Final/final.gd" id="1_pkc5l"]
 [ext_resource type="Texture2D" uid="uid://c7qupoypfl56s" path="res://MENUS/Assets/Final/Hoja.png" id="2_csv8v"]
 [ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://MENUS/Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="3_vm64g"]
+[ext_resource type="Texture2D" uid="uid://c6d6t4e84nmfg" path="res://MENUS/Assets/Menu/UI/flecha/flecha.png" id="5_3tjse"]
+[ext_resource type="Texture2D" uid="uid://bpqp0vy718ern" path="res://MENUS/Assets/Menu/UI/flecha/flecha-hover.png" id="6_5bkxa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8a6s"]
+texture = ExtResource("5_3tjse")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wcwtv"]
+texture = ExtResource("6_5bkxa")
+modulate_color = Color(1.4958686, 1.4958686, 1.4958686, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qekex"]
+texture = ExtResource("6_5bkxa")
 
 [node name="Final" type="Node2D" unique_id=679332291]
 script = ExtResource("1_pkc5l")
@@ -264,3 +276,14 @@ theme_override_font_sizes/font_size = 90
 text = "#"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BOTONREGRESAR" type="Button" parent="." unique_id=1319207726]
+offset_left = 1478.0
+offset_top = 66.0
+offset_right = 1761.4775
+offset_bottom = 288.12793
+theme_override_styles/normal = SubResource("StyleBoxTexture_o8a6s")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wcwtv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qekex")
+
+[connection signal="pressed" from="BOTONREGRESAR" to="." method="_on_botonregresar_pressed"]
