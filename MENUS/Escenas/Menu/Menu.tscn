@@ -10,11 +10,17 @@
 [ext_resource type="Texture2D" uid="uid://cy7hjd1xr0oe" path="res://MENUS/Assets/Menu/partes/hojas/hojas-hover.png" id="11_rdxvi"]
 [ext_resource type="Texture2D" uid="uid://2kw3e2pwxw26" path="res://MENUS/Assets/Menu/partes/hojas/hojas.png" id="12_f1xpc"]
 [ext_resource type="BitMap" uid="uid://dx3tp8s3qkpg5" path="res://MENUS/Assets/Menu/partes/llaves/llaves-bitmap.png" id="14_rdxvi"]
+[ext_resource type="Texture2D" uid="uid://cppe0f1iksrpb" path="res://MENUS/Assets/Menu/partes/celular/celular.png" id="15_docae"]
 [ext_resource type="Texture2D" uid="uid://c6d6t4e84nmfg" path="res://MENUS/Assets/Menu/UI/flecha/flecha.png" id="15_hmem7"]
 [ext_resource type="Texture2D" uid="uid://b7qj48v3gcjpy" path="res://MENUS/Assets/Menu/partes/llaves/llaves.png" id="15_qhlqc"]
+[ext_resource type="Script" uid="uid://dbr4q8rumbbww" path="res://MENUS/Escenas/Menu/telefono.gd" id="15_u4r8h"]
 [ext_resource type="Texture2D" uid="uid://bpqp0vy718ern" path="res://MENUS/Assets/Menu/UI/flecha/flecha-hover.png" id="16_bphf3"]
+[ext_resource type="Texture2D" uid="uid://dalr2wn7jhouy" path="res://MENUS/Assets/Menu/partes/celular/celular-hover2.png" id="16_u4r8h"]
 [ext_resource type="Texture2D" uid="uid://lalwqgjrd5lg" path="res://MENUS/Assets/Menu/UI/titulo.png" id="18_r6grw"]
 [ext_resource type="PackedScene" uid="uid://gnopc0s56py2" path="res://MENUS/Escenas/Menu/UI/BotonEscritorio.tscn" id="19_31pwh"]
+[ext_resource type="Texture2D" uid="uid://b0hk46xx28ckm" path="res://MENUS/Assets/Menu/partes/celular/Iconos/musica.png" id="20_35mh0"]
+[ext_resource type="Texture2D" uid="uid://uqqcwh7dboho" path="res://MENUS/Assets/Menu/partes/celular/Iconos/ajustes.png" id="21_0cgun"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://MENUS/Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="22_6s5ln"]
 [ext_resource type="BitMap" uid="uid://cm52wbna32vsc" path="res://MENUS/Assets/Menu/partes/hojas/hojas-bitmap.png" id="22_bsrxh"]
 [ext_resource type="Texture2D" uid="uid://dnvdanlcmodyh" path="res://MENUS/Assets/Menu/partes/llaves/llaves-hover.png" id="24_bsrxh"]
 [ext_resource type="AudioStream" uid="uid://cjr1cs7wierqg" path="res://MENUS/Audio/Menu/MenuMEN.mp3" id="31_ggxna"]
@@ -25,6 +31,76 @@ glow_enabled = true
 glow_intensity = 0.5
 glow_strength = 0.8
 glow_hdr_threshold = 0.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_35mh0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5v0uk"]
+texture = ExtResource("15_docae")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rc6kr"]
+texture = ExtResource("16_u4r8h")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iduf5"]
+texture = ExtResource("15_hmem7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2aaak"]
+texture = ExtResource("16_bphf3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_605h1"]
+texture = ExtResource("16_bphf3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ua2ei"]
+texture = ExtResource("20_35mh0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cgun"]
+texture = ExtResource("20_35mh0")
+modulate_color = Color(1.1291975, 1.1291975, 1.1291975, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6s5ln"]
+texture = ExtResource("20_35mh0")
+modulate_color = Color(1.0413129, 1.0413129, 1.0413129, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35mh0"]
+texture = ExtResource("21_0cgun")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ipuul"]
+texture = ExtResource("21_0cgun")
+modulate_color = Color(1.224127, 1.224127, 1.224127, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rwusi"]
+texture = ExtResource("21_0cgun")
+modulate_color = Color(1.0845727, 1.0845727, 1.0845727, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5v0uk"]
+content_margin_left = 4.0
+bg_color = Color(0, 0.22316027, 0.44671535, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6s5ln"]
+content_margin_left = 4.0
+bg_color = Color(0, 0.38730386, 0.7439047, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ipuul"]
+content_margin_left = 4.0
+bg_color = Color(0, 0.3097723, 0.6025147, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apgvg"]
+bg_color = Color(0.13641843, 0.22307137, 0.5596125, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="Gradient" id="Gradient_hmem7"]
 offsets = PackedFloat32Array(0.48214287, 1)
@@ -157,7 +233,171 @@ texture_normal = ExtResource("15_qhlqc")
 texture_hover = ExtResource("24_bsrxh")
 texture_click_mask = ExtResource("14_rdxvi")
 
+[node name="Telefono" type="Control" parent="Escritorio" unique_id=588608240 node_paths=PackedStringArray("CelCamara", "colorRectBlockeador", "canvaLayer", "fondoColor")]
+anchors_preset = 0
+offset_left = 112.72727
+offset_top = -58.181816
+offset_right = 152.72726
+offset_bottom = -18.181816
+script = ExtResource("15_u4r8h")
+CelCamara = NodePath("../../CameraEnfoque")
+colorRectBlockeador = NodePath("BloqueaInput")
+canvaLayer = NodePath("botonAtras")
+fondoColor = NodePath("Sprites/FondoTelefono")
+duracionZoom = 0.2
+
+[node name="Sprites" type="PanelContainer" parent="Escritorio/Telefono" unique_id=1900721531]
+layout_mode = 0
+offset_left = 1191.8181
+offset_top = 315.45453
+offset_right = 1400.9089
+offset_bottom = 636.3636
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_35mh0")
+
+[node name="FondoTelefono" type="ColorRect" parent="Escritorio/Telefono/Sprites" unique_id=494475849]
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.8, 1)
+color = Color(0.2128407, 0.4399231, 1, 1)
+
+[node name="Telefono" type="Button" parent="Escritorio/Telefono/Sprites" unique_id=567487960 groups=["sonido_menu"]]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_5v0uk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rc6kr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rc6kr")
+
+[node name="BloqueaInput" type="ColorRect" parent="Escritorio/Telefono" unique_id=901849186]
+layout_mode = 0
+offset_left = 1013.6362
+offset_top = 249.09091
+offset_right = 1599.9999
+offset_bottom = 711.8181
+color = Color(1, 1, 1, 0)
+
+[node name="botonAtras" type="CanvasLayer" parent="Escritorio/Telefono" unique_id=1868018204]
+layer = 20
+
+[node name="ATRAS" type="Button" parent="Escritorio/Telefono/botonAtras" unique_id=369983496]
+offset_left = 344.0
+offset_top = 264.0
+offset_right = 645.0
+offset_bottom = 506.0
+rotation = 3.1415927
+theme_override_styles/normal = SubResource("StyleBoxTexture_iduf5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2aaak")
+theme_override_styles/hover = SubResource("StyleBoxTexture_605h1")
+
+[node name="PanelContainer" type="PanelContainer" parent="Escritorio/Telefono" unique_id=2023073211]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="botonSonido" type="Button" parent="Escritorio/Telefono" unique_id=1922599026]
+visible = false
+layout_mode = 0
+offset_left = 1251.8181
+offset_top = 479.99997
+offset_right = 1342.7272
+offset_bottom = 542.7273
+theme_override_styles/normal = SubResource("StyleBoxTexture_ua2ei")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0cgun")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6s5ln")
+
+[node name="botonFiltros" type="Button" parent="Escritorio/Telefono" unique_id=1365470827]
+visible = false
+layout_mode = 0
+offset_left = 1250.909
+offset_top = 374.54547
+offset_right = 1344.5454
+offset_bottom = 443.63638
+theme_override_styles/normal = SubResource("StyleBoxTexture_35mh0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ipuul")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rwusi")
+
+[node name="OpcionesFiltroSeccion" type="Control" parent="Escritorio/Telefono" unique_id=1908680871]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="fondolabel" type="Panel" parent="Escritorio/Telefono/OpcionesFiltroSeccion" unique_id=948018506]
+layout_mode = 0
+offset_left = 1233.6364
+offset_top = 377.2727
+offset_right = 1364.5454
+offset_bottom = 417.2727
+
+[node name="OpcionesDaltonismo" type="OptionButton" parent="Escritorio/Telefono/OpcionesFiltroSeccion" unique_id=235303380]
+layout_mode = 0
+offset_left = 1243.6364
+offset_top = 455.45453
+offset_right = 1352.6364
+offset_bottom = 481.45453
+theme_override_fonts/font = ExtResource("22_6s5ln")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_5v0uk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6s5ln")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ipuul")
+selected = 0
+fit_to_longest_item = false
+item_count = 4
+popup/item_0/text = "DESACTIVADO"
+popup/item_0/id = 0
+popup/item_1/text = "PROTANOPIA"
+popup/item_1/id = 1
+popup/item_2/text = "DEUTERANOPIA"
+popup/item_2/id = 2
+popup/item_3/text = "TRITANOPIA"
+popup/item_3/id = 3
+
+[node name="labelFiltro" type="Label" parent="Escritorio/Telefono/OpcionesFiltroSeccion" unique_id=327905818]
+layout_mode = 0
+offset_left = 1239.091
+offset_top = 389.09088
+offset_right = 1362.7273
+offset_bottom = 408.75754
+theme_override_fonts/font = ExtResource("22_6s5ln")
+theme_override_font_sizes/font_size = 12
+text = "Filtro de Daltonismo"
+
+[node name="OpcionesSonido" type="Control" parent="Escritorio/Telefono" unique_id=1654885394]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HScrollBar" type="HScrollBar" parent="Escritorio/Telefono/OpcionesSonido" unique_id=1030967838]
+layout_mode = 0
+offset_left = 1233.6364
+offset_top = 444.54544
+offset_right = 1365.4546
+offset_bottom = 452.54544
+theme_override_styles/scroll = SubResource("StyleBoxFlat_apgvg")
+max_value = 2.0
+step = 0.04
+value = 1.0
+custom_step = 0.02
+
+[node name="fondolabel" type="Panel" parent="Escritorio/Telefono/OpcionesSonido" unique_id=749009939]
+layout_mode = 0
+offset_left = 1232.7273
+offset_top = 380.9091
+offset_right = 1363.6364
+offset_bottom = 420.9091
+
+[node name="labelSonido" type="Label" parent="Escritorio/Telefono/OpcionesSonido" unique_id=1421712043]
+layout_mode = 0
+offset_left = 1250.909
+offset_top = 393.63635
+offset_right = 1374.5454
+offset_bottom = 413.303
+theme_override_fonts/font = ExtResource("22_6s5ln")
+theme_override_font_sizes/font_size = 12
+text = "Volumen Global"
+
 [node name="UI" type="CanvasLayer" parent="." unique_id=82277253]
+follow_viewport_enabled = true
 
 [node name="Titulo" type="TextureRect" parent="UI" unique_id=1155382083]
 modulate = Color(1.3, 1.3, 1.3, 1)
@@ -207,4 +447,10 @@ parameters/looping = true
 [connection signal="pressed" from="Escritorio/Botones/Laptop" to="." method="_on_laptop_pressed"]
 [connection signal="pressed" from="Escritorio/Botones/Hojas" to="." method="_on_hojas_pressed"]
 [connection signal="pressed" from="Escritorio/Botones/Llaves" to="." method="_on_llaves_pressed"]
+[connection signal="pressed" from="Escritorio/Telefono/Sprites/Telefono" to="Escritorio/Telefono" method="_on_telefono_pressed"]
+[connection signal="pressed" from="Escritorio/Telefono/botonAtras/ATRAS" to="Escritorio/Telefono" method="_on_atras_pressed"]
+[connection signal="pressed" from="Escritorio/Telefono/botonSonido" to="Escritorio/Telefono" method="_on_boton_sonido_pressed"]
+[connection signal="pressed" from="Escritorio/Telefono/botonFiltros" to="Escritorio/Telefono" method="_on_boton_filtros_pressed"]
+[connection signal="item_selected" from="Escritorio/Telefono/OpcionesFiltroSeccion/OpcionesDaltonismo" to="Escritorio/Telefono" method="_on_opciones_daltonismo_item_selected"]
+[connection signal="value_changed" from="Escritorio/Telefono/OpcionesSonido/HScrollBar" to="Escritorio/Telefono" method="_on_h_scroll_bar_value_changed"]
 [connection signal="pressed" from="UI/Atras" to="." method="_on_atras_pressed"]
