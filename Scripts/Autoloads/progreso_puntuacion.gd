@@ -14,6 +14,8 @@ func _ready() -> void:
 	PUBLIS_INCORRECTAS = []
 	COMENTARIOS_CORRECTOS = []
 	COMENTARIOS_INCORRECTOS = []
+	PUBLIS_DESCARTADAS = []
+	PUBLIS_PUBLICADAS = []
 
 
 func ingresar_Publi_Descartada(p:Publicacion):

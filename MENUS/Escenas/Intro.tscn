@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ba3w67u3v1wx4"]
 
 [ext_resource type="Script" uid="uid://bedgut8fiuvfu" path="res://MENUS/Scripts/intro.gd" id="1_pmpsv"]
+[ext_resource type="Texture2D" uid="uid://b25dqbsdbe5g3" path="res://MENUS/logo.png" id="2_g16w7"]
 
 [node name="Intro" type="Control" unique_id=1259290166]
 layout_mode = 3
@@ -12,7 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_pmpsv")
 
 [node name="DemoraInicio" type="Timer" parent="." unique_id=157565244]
-wait_time = 1.5
+wait_time = 2.0
 one_shot = true
 autostart = true
 
@@ -41,5 +42,8 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(6, 6)
 pivot_offset = Vector2(79, 21.5)
+texture = ExtResource("2_g16w7")
+expand_mode = 1
+stretch_mode = 4
 
 [connection signal="timeout" from="DemoraInicio" to="." method="_on_timer_timeout"]

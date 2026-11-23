@@ -278,11 +278,11 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_rc6kr")
 
 [node name="BloqueaInput" type="ColorRect" parent="Escritorio/Telefono" unique_id=901849186]
 layout_mode = 0
-offset_left = 1197.2727
-offset_top = 303.63635
-offset_right = 1398.1819
-offset_bottom = 649.99994
-color = Color(1, 1, 1, 0)
+offset_left = 1184.5455
+offset_top = 291.81818
+offset_right = 1405.4545
+offset_bottom = 663.63635
+color = Color(0.96, 0.96, 0.96, 0)
 
 [node name="botonAtras" type="CanvasLayer" parent="Escritorio/Telefono" unique_id=1868018204]
 layer = 20

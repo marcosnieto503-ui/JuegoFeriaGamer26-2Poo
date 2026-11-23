@@ -6,6 +6,7 @@
 [ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://MENUS/Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="3_vm64g"]
 [ext_resource type="Texture2D" uid="uid://c6d6t4e84nmfg" path="res://MENUS/Assets/Menu/UI/flecha/flecha.png" id="5_3tjse"]
 [ext_resource type="Texture2D" uid="uid://bpqp0vy718ern" path="res://MENUS/Assets/Menu/UI/flecha/flecha-hover.png" id="6_5bkxa"]
+[ext_resource type="AudioStream" uid="uid://c6l0rigfp63sg" path="res://SFX/831993__akkaittou__dreamyambientsoundtrack.wav" id="7_5bkxa"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8a6s"]
 texture = ExtResource("5_3tjse")
@@ -285,5 +286,9 @@ offset_bottom = 288.12793
 theme_override_styles/normal = SubResource("StyleBoxTexture_o8a6s")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_wcwtv")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qekex")
+
+[node name="FONDO" type="AudioStreamPlayer" parent="." unique_id=49885943]
+stream = ExtResource("7_5bkxa")
+volume_db = -9.152
 
 [connection signal="pressed" from="BOTONREGRESAR" to="." method="_on_botonregresar_pressed"]

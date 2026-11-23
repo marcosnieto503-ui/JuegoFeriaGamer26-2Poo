@@ -121,7 +121,6 @@ corner_radius_bottom_left = 8
 script = ExtResource("1_1axsk")
 Gameplay_Visuals = NodePath("Visuales")
 logicaJugable = NodePath("logicaJugable")
-DURACION_DE_LA_PARTIDA = 15.0
 recursosTxtManager = NodePath("RecursosTXTManager")
 
 [node name="PAUSA_MANAGER" type="Node" parent="." unique_id=84963242 node_paths=PackedStringArray("GameplayNode", "visualsNode", "logicaJugableNode", "AUDIONode", "efectoNotiRecibidaNode", "camaraNode", "pantallaPausa")]
@@ -388,8 +387,8 @@ script = ExtResource("19_t1fop")
 [node name="logicaJugable" type="Node" parent="." unique_id=2062534461]
 script = ExtResource("20_y72yj")
 NOTIS_MANUAL = false
-ciclosDeTiempo = 2.0
-probabilidad = 6.0
+ciclosDeTiempo = 3.0
+probabilidad = 5.6
 
 [node name="logicaJugableComentarios" type="Node" parent="logicaJugable" unique_id=480453090]
 script = ExtResource("21_mkab6")

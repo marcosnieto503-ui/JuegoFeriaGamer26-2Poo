@@ -7,7 +7,9 @@ func _ready() -> void:
 
 func INICIALIZAR_ESCENA():
 	asignarResultados()
+	$FONDO.play()
 	await get_tree().create_timer(2).timeout
+
 
 
 func asignarResultados():
@@ -25,7 +27,16 @@ func asignarResultados():
 	$Hojas/ContenidoHoja/Divisiones/ComentarioResp/Content/Texto2.text =str(numComentarios)
 	$Hojas/ContenidoHoja/Divisiones/PuntuacionFinal/Content/Texto2.text =str(puntos)
 	
+	ProgresoPuntuacion.PUBLIS_CORRECTAS = []
+	ProgresoPuntuacion.PUBLIS_INCORRECTAS = []
+	ProgresoPuntuacion.COMENTARIOS_CORRECTOS = []
+	ProgresoPuntuacion.COMENTARIOS_INCORRECTOS = []
+	ProgresoPuntuacion.PUBLIS_DESCARTADAS = []
+	ProgresoPuntuacion.PUBLIS_PUBLICADAS = []
+
+
 func SALIR_DE_ESCENA():
+	$FONDO.stop()
 	await get_tree().create_timer(2).timeout
 
 func _on_botonregresar_pressed() -> void:

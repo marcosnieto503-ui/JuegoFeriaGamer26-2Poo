@@ -16,7 +16,7 @@ shader_parameter/intensidad = 1.0
 script = ExtResource("1_td87b")
 pantallaNegra = NodePath("CanvasLayer/PantallaNegra")
 duracionFundidoANegro = 0.4
-EscenaInicial = 1
+EscenaInicial = 4
 
 [node name="GameManager - AUTOLOAD" type="Node" parent="." unique_id=1365764873]
 script = ExtResource("5_td87b")

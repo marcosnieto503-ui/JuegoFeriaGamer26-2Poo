@@ -21,6 +21,8 @@ func _ready() -> void:
 func iniciarCicloGameplay():
 	iniciarTimer()
 	logicaComments.iniciarTimer()
+	await  get_tree().create_timer(1).timeout
+	ingresarNotiRandom()
 func terminarCicloGameplay():
 	timer.stop()
 	logicaComments.timer.stop()
