@@ -132,4 +132,4 @@ func leerArchivoComentarios():
 					estadoLectura = "react"
 			"react":
 				if linea.begins_with("-reac:"):
-					reaccion = linea.trim_prefix("_reac:")
+					reaccion = linea.trim_prefix("-reac:")
