@@ -9,7 +9,7 @@ var menuCreditosScene:PackedScene = preload("res://MENUS/Escenas/Menu/Creditos/C
 var introduccionScene:PackedScene  = preload("res://MENUS/Escenas/selPersonaje/introduccion.tscn")
 var menuComoJugarScene:PackedScene = preload("res://MENUS/Escenas/Menu/ComoJugar/Controles.tscn")
 var seleccionPersonajeScene:PackedScene = preload("res://MENUS/Escenas/selPersonaje/seleccion_personaje.tscn")
-#var pantallResultadosScene:PackedScene = preload()
+var pantallaResultadosScene:PackedScene = preload("res://MENUS/Escenas/Final/Final.tscn")
  
 var Dict_SCENES:Dictionary[GameManager.ENUMESCENAS,PackedScene] = {
 	GameManager.ENUMESCENAS.GAMEPLAY:GameplayScene,
@@ -20,7 +20,7 @@ var Dict_SCENES:Dictionary[GameManager.ENUMESCENAS,PackedScene] = {
 	GameManager.ENUMESCENAS.COMOJUGAR:menuComoJugarScene,
 	GameManager.ENUMESCENAS.MENUCREDITOS:menuCreditosScene,
 	GameManager.ENUMESCENAS.SELECCIONPERSONAJE:seleccionPersonajeScene,
-	#GameManager.ENUMESCENAS.GAMEFINALRESULTS:
+	GameManager.ENUMESCENAS.GAMEFINALRESULTS:pantallaResultadosScene
 	}
 
 
@@ -49,14 +49,6 @@ func cargarEscenaDirecto(packedScene:PackedScene):
 	if ACTUAl_SCENE.has_method("INICIALIZAR_ESCENA"):
 		await ACTUAl_SCENE.INICIALIZAR_ESCENA()
 	print("Escen manager ACTUAK SCENE: ",ACTUAl_SCENE)
-	
-	
-	var vp := get_viewport()
-	var cam := vp.get_camera_2d()
-	print("Viewport: ", vp.get_visible_rect().size)
-	print("Camara activa: ", cam, " pos: ", cam.global_position if cam else "ninguna")
-	if ACTUAl_SCENE is Control:
-		print("Escena pos: ", ACTUAl_SCENE.position, " size: ", ACTUAl_SCENE.size)
 
 func getEscenaActual() -> Node:
 	return ACTUAl_SCENE
@@ -86,14 +78,6 @@ func SWITCH_SCENE(nextScene:GameManager.ENUMESCENAS,duracionFundido:float =durac
 	
 	if ACTUAl_SCENE.has_method("INICIALIZAR_ESCENA"):
 		await ACTUAl_SCENE.INICIALIZAR_ESCENA()
-	
-	
-	var vp := get_viewport()
-	var cam := vp.get_camera_2d()
-	print("Viewport: ", vp.get_visible_rect().size)
-	print("Camara activa: ", cam, " pos: ", cam.global_position if cam else "ninguna")
-	if ACTUAl_SCENE is Control:
-		print("Escena pos: ", ACTUAl_SCENE.position, " size: ", ACTUAl_SCENE.size)
 	
 	desfundido_negro()
 	await tweenDesfundido.finished

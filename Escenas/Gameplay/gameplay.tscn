@@ -27,7 +27,7 @@
 [ext_resource type="Script" uid="uid://b4bgg2bpr16ap" path="res://Scripts/Autoloads/data_partida.gd" id="18_0xetr"]
 [ext_resource type="Script" uid="uid://casf0e2bdda7q" path="res://Escenas/Gameplay/control_notificaciones.gd" id="18_hnngx"]
 [ext_resource type="Texture2D" uid="uid://dgys1qlmj2rfr" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id1.png" id="19_dttl8"]
-[ext_resource type="Script" uid="uid://ws0xqqk2cgk2" path="res://Escenas/Gameplay/progreso_puntuacion.gd" id="19_t1fop"]
+[ext_resource type="Script" uid="uid://ws0xqqk2cgk2" path="res://Scripts/Autoloads/progreso_puntuacion.gd" id="19_t1fop"]
 [ext_resource type="Texture2D" uid="uid://o5l2vnip1kyk" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id3.png" id="20_oe4qr"]
 [ext_resource type="Script" uid="uid://bf2ypnr80b0h0" path="res://Escenas/Gameplay/logica_jugable.gd" id="20_y72yj"]
 [ext_resource type="Texture2D" uid="uid://cff7d1pelgqs3" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id5.png" id="21_ifkcu"]
@@ -121,6 +121,7 @@ corner_radius_bottom_left = 8
 script = ExtResource("1_1axsk")
 Gameplay_Visuals = NodePath("Visuales")
 logicaJugable = NodePath("logicaJugable")
+DURACION_DE_LA_PARTIDA = 15.0
 recursosTxtManager = NodePath("RecursosTXTManager")
 
 [node name="PAUSA_MANAGER" type="Node" parent="." unique_id=84963242 node_paths=PackedStringArray("GameplayNode", "visualsNode", "logicaJugableNode", "AUDIONode", "efectoNotiRecibidaNode", "camaraNode", "pantallaPausa")]

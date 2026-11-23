@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bym8ce3fpwbo0" path="res://MENUS/Assets/Menu/partes/fondo.png" id="1_csv8v"]
 [ext_resource type="Script" uid="uid://bxbap1le5gaps" path="res://MENUS/Scripts/Final/final.gd" id="1_pkc5l"]
 [ext_resource type="Texture2D" uid="uid://c7qupoypfl56s" path="res://MENUS/Assets/Final/Hoja.png" id="2_csv8v"]
-[ext_resource type="FontFile" path="res://Assets/selPersonaje/Fuentes/Redaction35-Bold.ttf" id="3_vm64g"]
-[ext_resource type="Texture2D" path="res://Assets/Final/marco.png" id="5_i5n1f"]
+[ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://MENUS/Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="3_vm64g"]
 
 [node name="Final" type="Node2D" unique_id=679332291]
 script = ExtResource("1_pkc5l")
@@ -30,51 +29,59 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 339.0
-offset_top = -156.0
-offset_right = 1539.0
-offset_bottom = 1344.0
+offset_left = 435.0
+offset_top = -85.00001
+offset_right = 1635.0
+offset_bottom = 1415.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_csv8v")
 
-[node name="ContenidoHoja" type="MarginContainer" parent="Hojas" unique_id=1579710992]
+[node name="ContenidoHoja" type="Control" parent="Hojas" unique_id=700729123]
 texture_filter = 3
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -16.5
-offset_right = 16.5
-offset_bottom = 20.0
+offset_left = -329.0
+offset_top = 53.0
+offset_right = -296.0
+offset_bottom = 353.0
 grow_horizontal = 2
-theme_override_constants/margin_left = 0
-theme_override_constants/margin_top = 300
-theme_override_constants/margin_right = 0
-theme_override_constants/margin_bottom = 0
 
-[node name="Divisiones" type="VBoxContainer" parent="Hojas/ContenidoHoja" unique_id=912574674]
-layout_mode = 2
-theme_override_constants/separation = 25
+[node name="Divisiones" type="Control" parent="Hojas/ContenidoHoja" unique_id=45770284]
+anchors_preset = 0
+offset_top = 300.0
+offset_right = 33.0
+offset_bottom = 300.0
 
 [node name="Titulo" type="Label" parent="Hojas/ContenidoHoja/Divisiones" unique_id=205692295]
-layout_mode = 2
+layout_mode = 0
+offset_left = -31.0
+offset_top = 32.0
+offset_right = 669.0
+offset_bottom = 154.91666
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vm64g")
 theme_override_font_sizes/font_size = 100
-text = "RESULTADO"
+text = "RESULTADOS"
 
 [node name="Perfil" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones" unique_id=859361534]
-layout_mode = 2
+layout_mode = 0
+offset_top = 148.0
+offset_right = 637.0
+offset_bottom = 348.0
 
 [node name="Retrato" type="TextureRect" parent="Hojas/ContenidoHoja/Divisiones/Perfil" unique_id=567534439]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-texture = ExtResource("5_i5n1f")
+expand_mode = 1
+stretch_mode = 4
 
-[node name="Personaje" type="Sprite2D" parent="Hojas/ContenidoHoja/Divisiones/Perfil/Retrato" unique_id=269105357]
+[node name="Personaje" type="TextureRect" parent="Hojas/ContenidoHoja/Divisiones/Perfil/Retrato" unique_id=1220563528]
+layout_mode = 0
 scale = Vector2(2, 2)
-offset = Vector2(50, 58)
 
 [node name="Texto" type="Label" parent="Hojas/ContenidoHoja/Divisiones/Perfil" unique_id=688264760]
 texture_filter = 3
@@ -82,125 +89,178 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vm64g")
 theme_override_font_sizes/font_size = 80
-text = "basurinha"
+text = "Jugador"
 
-[node name="Publicadas" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones" unique_id=762029452]
-layout_mode = 2
+[node name="Publicadas" type="Control" parent="Hojas/ContenidoHoja/Divisiones" unique_id=1015101637]
+anchors_preset = 0
+offset_top = 373.0
+offset_right = 637.0
+offset_bottom = 437.0
 
 [node name="IconPublicadas" type="TextureRect" parent="Hojas/ContenidoHoja/Divisiones/Publicadas" unique_id=1480380]
 custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
 
-[node name="Contenido" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones/Publicadas" unique_id=1956290481]
-layout_mode = 2
-theme_override_constants/separation = 12
+[node name="Contenido" type="Control" parent="Hojas/ContenidoHoja/Divisiones/Publicadas" unique_id=1853328593]
+anchors_preset = 0
+offset_left = -13.0
+offset_top = 17.0
+offset_right = 231.0
+offset_bottom = 81.0
 
 [node name="Texto1" type="Label" parent="Hojas/ContenidoHoja/Divisiones/Publicadas/Contenido" unique_id=259307922]
 texture_filter = 3
-layout_mode = 2
+layout_mode = 0
+offset_top = 7.0
+offset_right = 209.0
+offset_bottom = 56.166668
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vm64g")
 theme_override_font_sizes/font_size = 40
-text = "Publicadas"
+text = "Decisiones Acertadas:"
 
 [node name="Texto2" type="Label" parent="Hojas/ContenidoHoja/Divisiones/Publicadas/Contenido" unique_id=1918733649]
 texture_filter = 3
-layout_mode = 2
+layout_mode = 0
+offset_left = 442.0
+offset_top = 13.0
+offset_right = 465.0
+offset_bottom = 49.875
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vm64g")
 theme_override_font_sizes/font_size = 30
 text = "#"
-horizontal_alignment = 1
 
-[node name="Descartadas" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones" unique_id=2072676769]
-layout_mode = 2
+[node name="Descartadas" type="Control" parent="Hojas/ContenidoHoja/Divisiones" unique_id=2007095871]
+anchors_preset = 0
+offset_top = 462.0
+offset_right = 637.0
+offset_bottom = 526.0
 
 [node name="IconDescartadas" type="TextureRect" parent="Hojas/ContenidoHoja/Divisiones/Descartadas" unique_id=1270887222]
 custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
 
-[node name="Contenido" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones/Descartadas" unique_id=1051581547]
-layout_mode = 2
-theme_override_constants/separation = 12
+[node name="Contenido" type="Control" parent="Hojas/ContenidoHoja/Divisiones/Descartadas" unique_id=840588062]
+anchors_preset = 0
+offset_left = 68.0
+offset_right = 341.0
+offset_bottom = 64.0
 
 [node name="Texto1" type="Label" parent="Hojas/ContenidoHoja/Divisiones/Descartadas/Contenido" unique_id=1544094371]
 texture_filter = 3
-layout_mode = 2
+layout_mode = 0
+offset_left = -87.0
+offset_top = 11.0
+offset_right = 161.0
+offset_bottom = 60.16667
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vm64g")
 theme_override_font_sizes/font_size = 40
-text = "Descartadas"
+text = "Desiciones Erroneas:"
 
 [node name="Texto2" type="Label" parent="Hojas/ContenidoHoja/Divisiones/Descartadas/Contenido" unique_id=1884294935]
 texture_filter = 3
-layout_mode = 2
+layout_mode = 0
+offset_left = 339.0
+offset_top = 14.0
+offset_right = 362.0
+offset_bottom = 50.875
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vm64g")
 theme_override_font_sizes/font_size = 30
 text = "#"
-horizontal_alignment = 1
 
-[node name="ComentarioResp" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones" unique_id=700439461]
-layout_mode = 2
+[node name="ComentarioResp" type="Control" parent="Hojas/ContenidoHoja/Divisiones" unique_id=49488540]
+anchors_preset = 0
+offset_left = -52.0
+offset_top = 561.0
+offset_right = 562.0
+offset_bottom = 625.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="IconRespondidos" type="TextureRect" parent="Hojas/ContenidoHoja/Divisiones/ComentarioResp" unique_id=568662377]
 custom_minimum_size = Vector2(64, 64)
-layout_mode = 2
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
 
-[node name="Content" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones/ComentarioResp" unique_id=162933595]
-layout_mode = 2
-theme_override_constants/separation = 12
-alignment = 1
+[node name="Content" type="Control" parent="Hojas/ContenidoHoja/Divisiones/ComentarioResp" unique_id=1985615360]
+anchors_preset = 0
+offset_left = 68.0
+offset_right = 68.0
+offset_bottom = 64.0
 
 [node name="Texto1" type="Label" parent="Hojas/ContenidoHoja/Divisiones/ComentarioResp/Content" unique_id=1930439027]
 texture_filter = 3
-layout_mode = 2
+layout_mode = 0
+offset_left = -37.0
+offset_top = 3.0
+offset_right = 460.0
+offset_bottom = 52.166668
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vm64g")
-theme_override_font_sizes/font_size = 40
-text = "Comentarios Respondidos"
+theme_override_font_sizes/font_size = 38
+text = "Comentarios Respondidos:"
 
 [node name="Texto2" type="Label" parent="Hojas/ContenidoHoja/Divisiones/ComentarioResp/Content" unique_id=238266902]
 texture_filter = 3
-layout_mode = 2
+layout_mode = 0
+offset_left = 476.0
+offset_top = 2.0
+offset_right = 513.0
+offset_bottom = 63.458336
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_vm64g")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 44
 text = "#"
 horizontal_alignment = 1
 
-[node name="PuntuacionFinal" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones" unique_id=1528282802]
+[node name="PuntuacionFinal" type="Control" parent="Hojas/ContenidoHoja/Divisiones" unique_id=67644386]
 custom_minimum_size = Vector2(0, 300)
-layout_mode = 2
+anchors_preset = 0
+offset_left = 13.0
+offset_top = 640.0
+offset_right = 623.0
+offset_bottom = 940.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Content" type="HBoxContainer" parent="Hojas/ContenidoHoja/Divisiones/PuntuacionFinal" unique_id=1362766885]
-layout_mode = 2
-theme_override_constants/separation = 10
-alignment = 1
+[node name="Content" type="Control" parent="Hojas/ContenidoHoja/Divisiones/PuntuacionFinal" unique_id=989135726]
+anchors_preset = 0
+offset_right = 1044.0
+offset_bottom = 300.0
 
 [node name="Texto1" type="Label" parent="Hojas/ContenidoHoja/Divisiones/PuntuacionFinal/Content" unique_id=1130790409]
 texture_filter = 3
 custom_minimum_size = Vector2(400, 0)
-layout_mode = 2
+layout_mode = 0
+offset_left = -30.0
+offset_top = 2.0
+offset_right = 634.0
+offset_bottom = 100.33334
 theme_override_colors/font_color = Color(0.98274976, 6.08854e-06, 1.540184e-06, 1)
 theme_override_fonts/font = ExtResource("3_vm64g")
 theme_override_font_sizes/font_size = 80
-text = "Puntuacion Final"
+text = "Puntuacion Final:"
 horizontal_alignment = 1
-autowrap_mode = 2
 
 [node name="Texto2" type="Label" parent="Hojas/ContenidoHoja/Divisiones/PuntuacionFinal/Content" unique_id=1463140885]
 texture_filter = 3
 custom_minimum_size = Vector2(200, 100)
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 136.0
+offset_top = 143.0
+offset_right = 489.0
+offset_bottom = 254.0
+theme_override_colors/font_color = Color(0.15473777, 0.022518113, 0.0014020668, 1)
 theme_override_fonts/font = ExtResource("3_vm64g")
 theme_override_font_sizes/font_size = 90
 text = "#"
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2

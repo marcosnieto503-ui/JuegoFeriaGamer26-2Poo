@@ -127,6 +127,6 @@ func salirTelefono():
 	enMenu = false
 	colorRectBlockeador.hide()
 	ocultarOpciones()
-	fondoColor.color = Color(0.0, 0.157, 0.29, 1.0)
+	fondoColor.color = Color(0.0, 0.0, 0.0, 1.0)
 	canvaLayer.hide()
 	await alejarCamara()
