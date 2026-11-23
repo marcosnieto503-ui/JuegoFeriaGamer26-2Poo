@@ -9,7 +9,8 @@ var menuCreditosScene:PackedScene = preload("res://MENUS/Escenas/Menu/Creditos/C
 var introduccionScene:PackedScene  = preload("res://MENUS/Escenas/selPersonaje/introduccion.tscn")
 var menuComoJugarScene:PackedScene = preload("res://MENUS/Escenas/Menu/ComoJugar/Controles.tscn")
 var seleccionPersonajeScene:PackedScene = preload("res://MENUS/Escenas/selPersonaje/seleccion_personaje.tscn")
-
+var pantallResultadosScene:PackedScene = preload()
+ 
 var Dict_SCENES:Dictionary[GameManager.ENUMESCENAS,PackedScene] = {
 	GameManager.ENUMESCENAS.GAMEPLAY:GameplayScene,
 	GameManager.ENUMESCENAS.TEST1:testScene,
@@ -18,7 +19,8 @@ var Dict_SCENES:Dictionary[GameManager.ENUMESCENAS,PackedScene] = {
 	GameManager.ENUMESCENAS.INTRODUCCION:introduccionScene,
 	GameManager.ENUMESCENAS.COMOJUGAR:menuComoJugarScene,
 	GameManager.ENUMESCENAS.MENUCREDITOS:menuCreditosScene,
-	GameManager.ENUMESCENAS.SELECCIONPERSONAJE:seleccionPersonajeScene
+	GameManager.ENUMESCENAS.SELECCIONPERSONAJE:seleccionPersonajeScene,
+	GameManager.ENUMESCENAS.GAMEFINALRESULTS:
 	}
 
 

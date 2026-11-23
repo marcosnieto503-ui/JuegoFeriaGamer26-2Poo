@@ -77,6 +77,7 @@ func terminaTimerRetrasoReaccion():
 			print("--------------- pillao enojado")
 		_:
 			push_warning("Reaccion desconocida: '%s'" % react)
+			return
 	escenaReaccion.displayPlayerReaccion(reactEnum)
 
 func procesarComentario():

@@ -29,5 +29,4 @@ func terminaLaPartida():
 	timer.start(duracionAlarmaSonando)
 
 func terminaTimer():
-	GameManager.CAMBIAR_DE_ESCENA(GameManager.ENUMESCENAS.TEST1)
-	pass
+	GameManager.CAMBIAR_DE_ESCENA(GameManager.ENUMESCENAS.GAMEFINALRESULTS,3)

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://3ftf3bnax30w"]
 
-[ext_resource type="Texture2D" path="res://Assets/Menu/partes/fondo.png" id="1_csv8v"]
-[ext_resource type="Script" path="res://Scripts/Final/final.gd" id="1_pkc5l"]
-[ext_resource type="Texture2D" path="res://Assets/Final/Hoja.png" id="2_csv8v"]
+[ext_resource type="Texture2D" uid="uid://bym8ce3fpwbo0" path="res://MENUS/Assets/Menu/partes/fondo.png" id="1_csv8v"]
+[ext_resource type="Script" uid="uid://bxbap1le5gaps" path="res://MENUS/Scripts/Final/final.gd" id="1_pkc5l"]
+[ext_resource type="Texture2D" uid="uid://c7qupoypfl56s" path="res://MENUS/Assets/Final/Hoja.png" id="2_csv8v"]
 [ext_resource type="FontFile" path="res://Assets/selPersonaje/Fuentes/Redaction35-Bold.ttf" id="3_vm64g"]
 [ext_resource type="Texture2D" path="res://Assets/Final/marco.png" id="5_i5n1f"]
 
