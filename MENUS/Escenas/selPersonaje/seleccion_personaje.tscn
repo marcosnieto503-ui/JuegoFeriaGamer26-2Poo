@@ -5,7 +5,6 @@
 [ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://MENUS/Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="2_jxhxg"]
 [ext_resource type="PackedScene" uid="uid://bscbfb76kruqv" path="res://MENUS/Escenas/selPersonaje/UI/opciones_selp.tscn" id="3_xlygr"]
 [ext_resource type="AudioStream" uid="uid://6yr2btc86jmh" path="res://MENUS/Audio/sel_personaje/musica_fondo.mp3" id="4_aoipj"]
-[ext_resource type="Script" uid="uid://bchrbp1gq0753" path="res://MENUS/Scripts/selPersonaje/botonprueba.gd" id="5_ja68q"]
 [ext_resource type="AudioStream" uid="uid://dr7kc8d4in2es" path="res://MENUS/Audio/sel_personaje/floraphonic-arcade-ui-18-229517.mp3" id="6_34gqj"]
 [ext_resource type="Texture2D" uid="uid://ct0txauw62xqe" path="res://MENUS/Assets/selPersonaje/Fondo/fondo_final.png" id="6_ojrew"]
 
@@ -296,7 +295,6 @@ horizontal_alignment = 1
 stream = ExtResource("4_aoipj")
 volume_db = -10.335
 autoplay = true
-bus = &"Music"
 
 [node name="SonidoFinal" type="AudioStreamPlayer" parent="." unique_id=1440233850]
 stream = ExtResource("6_34gqj")
@@ -305,13 +303,4 @@ volume_db = -10.335
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=137331958]
 libraries/ = SubResource("AnimationLibrary_xlygr")
 
-[node name="Button" type="Button" parent="." unique_id=1742844514]
-layout_mode = 0
-offset_left = 1475.0
-offset_top = 679.0
-offset_right = 1915.0
-offset_bottom = 1080.0
-script = ExtResource("5_ja68q")
-
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

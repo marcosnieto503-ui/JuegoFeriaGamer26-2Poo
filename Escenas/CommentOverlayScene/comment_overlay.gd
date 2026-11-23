@@ -59,22 +59,20 @@ func _ready() -> void:
 
 func terminaTimerRetrasoReaccion():
 	var react = commentAsignado.get_reaccion()
+	push_error("VALOR COMENTARIO NREACCIONE :",react)
 	if react == "null":
 		push_error("El comentario %s no tiene reaccion valida asignada" % commentAsignado)
 		return
-	var stringReaccion:String
-	match react: #resolver despueeeeeee dddisndinaosi a sdasdas siuuuuua dsasds sid skd skd sdnlsndsn
-		"ALEGRE":
-			stringReaccion = "feliz"
-		"SORPRENDIDO":
-			stringReaccion = "sorprendido"
-		"ENOJADO":
-			stringReaccion = "enojado"
-	push_error("Checkear la forma de escribir las reacciones cuando se impolemmentes")
-	if !stringReaccion:
+	var reactEnum:PersistenciaPersonaje.REACCIONESDISPONIBLES
+	
+	react = str(react).strip_edges().to_upper()
+	push_error(react)
+	
+	
+	if !reactEnum:
 		escenaReaccion.displayPlayerReaccion()
 		return
-	escenaReaccion.displayPlayerReaccion(stringReaccion)
+	escenaReaccion.displayPlayerReaccion(reactEnum)
 
 func procesarComentario():
 	timerRetrasoReaccion.start(duracionRetrasoReaccion)

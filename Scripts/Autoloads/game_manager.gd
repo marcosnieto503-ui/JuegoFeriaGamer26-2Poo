@@ -19,8 +19,11 @@ enum ENUMESCENAS {
 }
 
 
-func CAMBIAR_DE_ESCENA(nextScene:GameManager.ENUMESCENAS,fundido:bool = false):
+func CAMBIAR_DE_ESCENA(nextScene:GameManager.ENUMESCENAS,duracion:float = -1):
 	if !Scene_Manager:
 		push_error("No hay scene manager po")
 		return
-	Scene_Manager.SWITCH_SCENE(nextScene,fundido)
+	if duracion < 0:
+		Scene_Manager.SWITCH_SCENE(nextScene)
+		return
+	Scene_Manager.SWITCH_SCENE(nextScene,duracion)

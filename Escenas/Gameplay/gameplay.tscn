@@ -413,7 +413,6 @@ script = ExtResource("24_y261h")
 [node name="MusicaDeFondo" type="AudioStreamPlayer" parent="AUDIO" unique_id=2072398419]
 stream = ExtResource("25_dttl8")
 volume_db = -2.188
-bus = &"MusicaFondo"
 playback_type = 1
 
 [node name="SonidoAlarma" type="AudioStreamPlayer" parent="AUDIO" unique_id=1893612044]
@@ -507,7 +506,6 @@ position = Vector2(730, 430)
 current = true
 
 [node name="BOTONES DEBUG" type="CanvasLayer" parent="." unique_id=766556016]
-visible = false
 
 [node name="METE PUBLII ELEGIDA" type="Button" parent="BOTONES DEBUG" unique_id=938050882]
 offset_left = 36.0

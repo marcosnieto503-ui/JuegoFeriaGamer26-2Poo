@@ -32,27 +32,19 @@ func displayAnimFeedback(anim:String,posicion:Vector2, duracion:float):
 	animFeedback.stop()
 
 
-var posiblesReacciones:Array[String] = [
-	"feliz",
-	"enojado",
-	"sorprendido"
-]
-
-func displayPlayerReaccion(pos:Vector2 = posicionDefaultReacciones,reaccion:String = "feliz"):
+func displayPlayerReaccion(reaccion:PersistenciaPersonaje.REACCIONESDISPONIBLES = PersistenciaPersonaje.REACCIONESDISPONIBLES.NEUTRAL,pos:Vector2 = posicionDefaultReacciones):
+	print("\n(esceha reacchioes) Reaccion ESCOGIDA : ",reaccion)
 	if corriendoReaccion:
 		return
 	print("REACCIONES PLAICADA")
 	if !pos:
 		push_error("(Escenma reacciones) nmo se ingreso una posicion para la reaccion")
 		return
-	if !posiblesReacciones.has(reaccion):
-		push_error("(Escena reacicones) no existe la reaccion %s" % reaccion)
+	var texturaReaccion:Texture2D = PersistenciaPersonaje.obtener_reaccion(reaccion)
+	if !texturaReaccion:
+		push_error("(Escena reacciones) no existe textura para la reaccion: ",reaccion)
 		return
-	#var texturaReaccion = PersistenciaJugador.get_reaccion(reaccion).get_texture()
-	#if !texturaReaccion:
-	#	push_error("(Escena reacciones) no existe textura para la reaccion: ",reaccion)
-	#	return
-	#reaccionTextureRect.set_texture(texturaReaccion)
+	reaccionTextureRect.set_texture(texturaReaccion)
 	reaccionesNode.show()
 	reaccionesNode.position = pos
 	marcoReaccionesAnim.play()

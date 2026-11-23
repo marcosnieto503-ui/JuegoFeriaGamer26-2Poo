@@ -39,6 +39,8 @@ PersistenciaPersonaje="*uid://dqhosc6vv74so"
 window/size/viewport_width=1536
 window/size/viewport_height=864
 window/size/borderless=true
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/stretch/scale=0.8
 
 [dotnet]

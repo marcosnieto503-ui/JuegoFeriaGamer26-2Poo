@@ -19,7 +19,7 @@ func _on_hojas_pressed() -> void:
 	
 func _on_laptop_pressed() -> void:
 	#_ir_a_escena($Escritorio/Botones/Laptop, escena_juego)
-	GameManager.CAMBIAR_DE_ESCENA(GameManager.ENUMESCENAS.INTRODUCCION)
+	GameManager.CAMBIAR_DE_ESCENA(GameManager.ENUMESCENAS.INTRODUCCION,1)
 
 
 

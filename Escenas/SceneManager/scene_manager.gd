@@ -32,6 +32,8 @@ var ACTUAl_SCENE:Node
 
 func _ready() -> void:
 	GameManager.Scene_Manager = self
+	
+	duracionDesfundidoLocal = duracionFundidoANegro
 	if Dict_SCENES.has(EscenaInicial):
 		cargarEscenaDirecto(Dict_SCENES.get(EscenaInicial))
 	else:
@@ -60,14 +62,14 @@ func getEscenaActual() -> Node:
 
 
 var _cambiando := false
-func SWITCH_SCENE(nextScene:GameManager.ENUMESCENAS,fundido:bool): #fundido no hace naodraaaaaa hace que fundoine
+func SWITCH_SCENE(nextScene:GameManager.ENUMESCENAS,duracionFundido:float =duracionFundidoANegro): #fundido no hace naodraaaaaa hace que fundoine
 	if _cambiando:
 		return    # evita dos cambios a la vez
 	if !Dict_SCENES.has(nextScene):
 		push_error("(SCENE MANAEGR) NO EXISTE LA ESCENA CORERSPONDIENTE A: %" % nextScene)
 		return
 	_cambiando = true
-	fundido_negro()
+	fundido_negro(duracionFundido)
 	await tweenFundido.finished
 	
 	if is_instance_valid(ACTUAl_SCENE):
@@ -96,8 +98,12 @@ func SWITCH_SCENE(nextScene:GameManager.ENUMESCENAS,fundido:bool): #fundido no h
 	_cambiando = false
 
 
+
+var duracionDesfundidoLocal:float
+
 var tweenFundido:Tween
-func fundido_negro():
+func fundido_negro(time:float):
+	duracionDesfundidoLocal = time
 	pantallaNegra.color.a = 0
 	pantallaNegra.show()
 	
@@ -105,7 +111,7 @@ func fundido_negro():
 		tweenFundido.kill()
 	tweenFundido = create_tween()
 	tweenFundido.finished.connect(fundidoCompleto)
-	tweenFundido.tween_property(pantallaNegra,"color:a",1,duracionFundidoANegro)
+	tweenFundido.tween_property(pantallaNegra,"color:a",1,time)
 
 func fundidoCompleto():
 	print("(SCENe manager) fundido cokmpoleto wiiiiii-")
@@ -119,7 +125,7 @@ func desfundido_negro():
 		tweenDesfundido.kill()
 	tweenDesfundido = create_tween()
 	tweenDesfundido.finished.connect(desfundidoCompleto)
-	await tweenDesfundido.tween_property(pantallaNegra,"color:a",0,duracionFundidoANegro)
+	await tweenDesfundido.tween_property(pantallaNegra,"color:a",0,duracionDesfundidoLocal)
 
 func desfundidoCompleto():
 	pantallaNegra.hide()

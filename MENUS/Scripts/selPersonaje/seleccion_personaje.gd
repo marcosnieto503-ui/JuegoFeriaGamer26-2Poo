@@ -1,7 +1,7 @@
 extends Control
 
 
-const CARPETA := "res://Assets/SelPersonaje/Personajes/"
+const CARPETA := "res://MENUS/Assets/SelPersonaje/Personajes/"
 const CLAVES_PASOS := ["genero", "piel", "accesorio"]
 const LISTA_GENEROS := ["Hombre", "Mujer", "Otro"]
 const LISTA_PIELES := ["Blanco", "Negro"]
@@ -81,8 +81,13 @@ func _on_opcion_click(indice: int) -> void:
 func _finalizar() -> void:
 	terminado = true
 	PersistenciaPersonaje.guardar(eleccion["genero"], eleccion["piel"], eleccion["accesorio"])
-	piel.texture = PersistenciaPersonaje.obtener_reaccion("feliz")
+	piel.texture = PersistenciaPersonaje.obtener_reaccion(PersistenciaPersonaje.REACCIONESDISPONIBLES.FELIZ)
 	anim.play("final")
+	print(PersistenciaPersonaje.DEBUGobtenerDatos())
+	print(PersistenciaPersonaje.obtener_reaccion(PersistenciaPersonaje.REACCIONESDISPONIBLES.SORPRENDIDO))
+	await get_tree().create_timer(2).timeout
+	GameManager.CAMBIAR_DE_ESCENA(GameManager.ENUMESCENAS.GAMEPLAY)
+
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == &"final":
