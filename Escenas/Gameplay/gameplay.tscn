@@ -506,6 +506,7 @@ position = Vector2(730, 430)
 current = true
 
 [node name="BOTONES DEBUG" type="CanvasLayer" parent="." unique_id=766556016]
+visible = false
 
 [node name="METE PUBLII ELEGIDA" type="Button" parent="BOTONES DEBUG" unique_id=938050882]
 offset_left = 36.0
