@@ -328,7 +328,6 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_ipuul")
 theme_override_styles/hover = SubResource("StyleBoxTexture_rwusi")
 
 [node name="OpcionesFiltroSeccion" type="Control" parent="Escritorio/Telefono" unique_id=1908680871]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0

@@ -100,7 +100,8 @@ func fundido_negro(time:float):
 	tweenFundido.tween_property(pantallaNegra,"color:a",1,time)
 
 func fundidoCompleto():
-	print("(SCENe manager) fundido cokmpoleto wiiiiii-")
+	pass
+	#print("(SCENe manager) fundido cokmpoleto wiiiiii-")
 
 var tweenDesfundido:Tween
 func desfundido_negro():
@@ -115,4 +116,4 @@ func desfundido_negro():
 
 func desfundidoCompleto():
 	pantallaNegra.hide()
-	print("(SCENE MANAGER) Dedfundidp compolemto siuuu asdasd")
+	#print("(SCENE MANAGER) Dedfundidp compolemto siuuu asdasd")

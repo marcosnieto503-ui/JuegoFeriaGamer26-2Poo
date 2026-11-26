@@ -5,8 +5,18 @@
 [ext_resource type="FontFile" uid="uid://bfv3kqrvw1shw" path="res://MENUS/Assets/selPersonaje/fuentes/Redaction35-Bold.ttf" id="2_jxhxg"]
 [ext_resource type="PackedScene" uid="uid://bscbfb76kruqv" path="res://MENUS/Escenas/selPersonaje/UI/opciones_selp.tscn" id="3_xlygr"]
 [ext_resource type="AudioStream" uid="uid://6yr2btc86jmh" path="res://MENUS/Audio/sel_personaje/musica_fondo.mp3" id="4_aoipj"]
+[ext_resource type="Texture2D" uid="uid://dih4tgm346n7" path="res://MENUS/Assets/selPersonaje/Fondo/Tablon/Tablon.png" id="4_mfbaw"]
 [ext_resource type="AudioStream" uid="uid://dr7kc8d4in2es" path="res://MENUS/Audio/sel_personaje/floraphonic-arcade-ui-18-229517.mp3" id="6_34gqj"]
 [ext_resource type="Texture2D" uid="uid://ct0txauw62xqe" path="res://MENUS/Assets/selPersonaje/Fondo/fondo_final.png" id="6_ojrew"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vmn1i"]
+texture = ExtResource("4_mfbaw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y4ybo"]
+texture = ExtResource("4_mfbaw")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8mmrv"]
+texture = ExtResource("4_mfbaw")
 
 [sub_resource type="Animation" id="Animation_xlygr"]
 length = 0.001
@@ -254,12 +264,15 @@ theme_override_constants/separation = 30
 
 [node name="Opcion1" parent="ContenedoresOpciones" unique_id=74148202 instance=ExtResource("3_xlygr")]
 layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vmn1i")
 
 [node name="Opcion2" parent="ContenedoresOpciones" unique_id=2005082986 instance=ExtResource("3_xlygr")]
 layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxTexture_y4ybo")
 
 [node name="Opcion3" parent="ContenedoresOpciones" unique_id=1349458729 instance=ExtResource("3_xlygr")]
 layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8mmrv")
 
 [node name="Nota" type="Label" parent="." unique_id=742608807]
 layout_mode = 1
