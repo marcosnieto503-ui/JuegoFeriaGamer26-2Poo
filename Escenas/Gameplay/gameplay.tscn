@@ -45,6 +45,7 @@
 [ext_resource type="AudioStream" uid="uid://dcxiuuoekwr8y" path="res://SFX/noti_recibida_sfx.wav" id="26_oe4qr"]
 [ext_resource type="AudioStream" uid="uid://5xbbc6o5ercx" path="res://SFX/__basic-mouse-click-ui.wav" id="27_4rj03"]
 [ext_resource type="AudioStream" uid="uid://blj7gx8dewyuv" path="res://SFX/noti_recibida2_sfx.wav" id="27_ifkcu"]
+[ext_resource type="Texture2D" uid="uid://b65cqfsnk5jyx" path="res://Recursos/RecursosFuenteTXT/ImagenesPublis/id 32.png" id="27_oe4qr"]
 [ext_resource type="AudioStream" uid="uid://q0672khetsp" path="res://SFX/__ui_click.wav" id="28_bmyfo"]
 [ext_resource type="AudioStream" uid="uid://oadpa45o5my8" path="res://SFX/hover hint4.wav" id="28_kh51r"]
 [ext_resource type="AudioStream" uid="uid://18l3nm07onpr" path="res://SFX/253168__suntemple__sfx-ui-button-click.wav" id="29_iuhs4"]
@@ -121,6 +122,8 @@ corner_radius_bottom_left = 8
 script = ExtResource("1_1axsk")
 Gameplay_Visuals = NodePath("Visuales")
 logicaJugable = NodePath("logicaJugable")
+DURACION_DE_LA_PARTIDA = 360.0
+duracionPantallaNegraSalidaEscena = 2.0
 recursosTxtManager = NodePath("RecursosTXTManager")
 
 [node name="PAUSA_MANAGER" type="Node" parent="." unique_id=84963242 node_paths=PackedStringArray("GameplayNode", "visualsNode", "logicaJugableNode", "AUDIONode", "efectoNotiRecibidaNode", "camaraNode", "pantallaPausa")]
@@ -177,6 +180,7 @@ pausaManager = NodePath("../PAUSA_MANAGER")
 AUDIONode = NodePath("../AUDIO")
 GameplayNode = NodePath("..")
 timer = NodePath("Timer")
+duracionAlarmaSonando = 5.0
 
 [node name="BloqueoBotones" type="CanvasLayer" parent="FIN_PARTIDA_MANAGER" unique_id=2068500784]
 layer = 60
@@ -204,7 +208,6 @@ script = ExtResource("2_41hg1")
 
 [node name="Visuales" parent="." unique_id=422829186 instance=ExtResource("3_7a7ai")]
 position = Vector2(960, 540)
-DEBUG_atardecer_automatico = false
 
 [node name="Celular" type="Control" parent="." unique_id=197617991]
 layout_mode = 3
@@ -355,7 +358,8 @@ RECURSOS_PUBLIS = Dictionary[int, Texture2D]({
 18: ExtResource("23_v5hjs"),
 25: ExtResource("24_8pah4"),
 27: ExtResource("25_sl4if"),
-28: ExtResource("26_gq0m8")
+28: ExtResource("26_gq0m8"),
+32: ExtResource("27_oe4qr")
 })
 RECURSOS_ARTICULOS = Dictionary[int, Texture2D]({
 0: ExtResource("14_snssx"),
@@ -516,7 +520,7 @@ offset_bottom = 167.0
 focus_mode = 0
 text = "INGRESAR PUBLICACION !"
 script = ExtResource("9_bmyfo")
-IDpubliAMeter = 2
+IDpubliAMeter = 35
 
 [node name="CheckHayPublisExcluidas" type="Button" parent="BOTONES DEBUG/METE PUBLII ELEGIDA" unique_id=1180289113]
 layout_mode = 0

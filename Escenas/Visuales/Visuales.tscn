@@ -65,14 +65,15 @@ animation = &"gameplay_anim"
 script = ExtResource("3_n2hin")
 anim_Escritorio_Atardecer = NodePath("EscritorioAtardecer")
 SOL = NodePath("SOL")
+pixelesRecorridosPorElSol = 220
 duracionHastaAtardecer = 12.0
-DEBUG_atardecer_automatico = true
+maximaIntensidadFiltroAtardecer = 0.755
 labelRELOJ = NodePath("RELOJ")
 saltos_de_diez = false
 hora_inicio = 2
 minuto_inicio = 0
-hora_fin = 5
-minuto_fin = 30
+hora_fin = 6
+minuto_fin = 0
 
 [node name="Cielo" type="Sprite2D" parent="." unique_id=1507781969]
 z_index = -9
@@ -89,7 +90,7 @@ texture = ExtResource("6_p5k6d")
 [node name="NubesGrandes" type="Parallax2D" parent="." unique_id=1541945404]
 scroll_offset = Vector2(-6000, 0)
 repeat_size = Vector2(3840, 0)
-autoscroll = Vector2(6, 0)
+autoscroll = Vector2(8, 0)
 repeat_times = 2
 follow_viewport = false
 ignore_camera_scroll = true

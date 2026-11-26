@@ -10,7 +10,8 @@ extends Control
 #No se coloca tipo de nodo a boton para que quede dinamico boton_escritorio .-,
 
 func _ir_a_escena(boton, ruta: String) -> void:
-	await camara.enfocar(boton.obtener_punto_camara())
+	pass
+	#await camara.enfocar(boton.obtener_punto_camara())
 	#Transicion.cambiarEscena(ruta)
 
 func _on_hojas_pressed() -> void:

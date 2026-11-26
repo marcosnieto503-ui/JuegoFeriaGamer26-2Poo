@@ -48,6 +48,7 @@ var en_pausa:bool = true
 func _ready() -> void:
 	anim_Escritorio_Soleado = self
 	shaderAtardecer = nodeFiltroAtardecer.material
+	#shaderAtardecer.set_shader_parameter("intensity",0)
 	anim_Escritorio_Atardecer.modulate.a = 0
 	
 	if DEBUG_atardecer_automatico:
@@ -62,7 +63,7 @@ func _ready() -> void:
 func iniciar_transicion_atardecer(duracion:float = duracionHastaAtardecer):
 	duracionHastaAtardecer = duracion
 	nubesGrandes.autoscroll = scrollG
-	nubesGrandes.autoscroll = scrollS
+	nubesSmall.autoscroll = scrollS
 	iniciarTweenFiltroAtardecer()
 	iniciarTweenEscritorioAtardecer()
 	iniciarRecorridoSol()

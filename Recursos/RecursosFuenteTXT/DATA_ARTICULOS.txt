@@ -1,0 +1,78 @@
+#i
+-name:noticia_musica
+-tipo:NOTICIA
+-id:29
+-cat:Educación
+-titular:Un estudio sobre música y estudio encuentra mejoras pequeñas y de corta duración
+Redacción Educación. Un equipo de investigadores evaluó a 120 estudiantes universitarios que resolvieron ejercicios de razonamiento con música clásica de fondo y en silencio. El grupo con música mejoró su rendimiento un 4% en promedio.
+[LINEAVACIA]
+Los autores advirtieron que el efecto duró menos de una hora y no se observó en estudiantes que prefieren estudiar en silencio. Concluyeron que no hay evidencia de que la música mejore las notas finales.
+#f
+
+#i
+-name:noticia_biblioteca
+-tipo:NOTICIA
+-id:30
+-cat:Barranquilla
+-titular:La biblioteca no abrirá 24 horas: solo amplía su horario en finales
+Barranquilla. Por: Redacción Educación. La biblioteca atenderá hasta la medianoche de lunes a viernes durante la semana de exámenes finales, y no las 24 horas, como circuló en redes.
+[LINEAVACIA]
+"El horario especial es temporal", explicó la dirección de Bienestar. Los sábados el cierre será a las 6:00 p. m. y el servicio normal se retoma la semana siguiente.
+#f
+
+#i
+-name:noticia_buses
+-tipo:NOTICIA
+-id:31
+-cat:Barranquilla
+-titular:Nueva ruta universitaria tendrá tarifa rebajada, pero no será gratuita
+Barranquilla. Por: Redacción Movilidad. La nueva ruta de buses hacia el campus tendrá un descuento del 50% en el pasaje, y solo para estudiantes con carné vigente. Para el resto de la comunidad, la tarifa no cambia.
+[LINEAVACIA]
+"El subsidio busca facilitar el acceso, no eliminar el costo", explicó un vocero de la empresa operadora. La ruta empezará a operar el 1 de diciembre con salidas cada 20 minutos.
+#f
+
+#i
+-name:noticia_cortos
+-tipo:NOTICIA
+-id:32
+-cat:Cultura
+-titular:El Festival de Cortometrajes Universitarios llega al Auditorio Principal el 4 de diciembre
+Barranquilla. Por: Redacción Cultura. Doce cortos realizados por estudiantes de la región competirán en el festival, que será gratuito y abierto al público desde las 6:00 p. m.
+[LINEAVACIA]
+Entre los invitados estarán dos directores egresados de la universidad, quienes dirigirán un conversatorio al final de la jornada. El aforo es de 300 personas.
+#f
+
+
+#i
+-name:noticia_reciclaje
+-tipo:NOTICIA
+-id:33
+-cat:Medio Ambiente
+-titular:Instalan 40 puntos de reciclaje en los bloques del campus
+Barranquilla. Por: Redacción Medio Ambiente. La universidad instaló 40 puntos de reciclaje con tres canecas, para papel, plástico y residuos orgánicos, en los pasillos y cafeterías de todos los bloques.
+[LINEAVACIA]
+Los residuos serán recogidos a diario por una cooperativa de recicladores de la ciudad. Habrá jornadas de capacitación durante diciembre.
+#f
+
+
+#i
+-name:noticia_salud
+-tipo:NOTICIA
+-id:34
+-cat:Salud
+-titular:Jornada de salud gratuita llega al Bloque F con vacunación y chequeos
+Barranquilla. Por: Redacción Salud. Del martes al jueves, de 8:00 a. m. a 4:00 p. m., estudiantes y funcionarios podrán vacunarse contra la influenza y recibir chequeos médicos sin costo en el Bloque F.
+[LINEAVACIA]
+También habrá orientación psicológica sin cita previa. Solo se requiere presentar el carné institucional.
+#f
+
+#i
+-name:noticia_tiquetes
+-tipo:NOTICIA
+-id:35
+-cat:Economía
+-titular:Tiquetes aéreos nacionales para diciembre suben hasta un 18%
+Bogotá. Por: Redacción Economía. Los precios de los tiquetes nacionales para la temporada de fin de año aumentaron hasta un 18% frente al año pasado, según un informe del gremio de agencias de viajes.
+[LINEAVACIA]
+Las rutas más afectadas son las que conectan las ciudades de la costa con el interior del país. El gremio recomienda comprar con al menos dos meses de anticipación.
+#f

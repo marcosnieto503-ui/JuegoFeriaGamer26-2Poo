@@ -20,13 +20,13 @@ func _on_check_hay_publis_excluidas_pressed() -> void:
 
 @export var IDpubliAMeter:int
 func _on_mete_comentario_11_pressed() -> void:
-	if !Utils.PUBLICACIONES.has(11):
+	if !Utils.PUBLICACIONES.has(29):
 		print("(BOTON METER COMENTARIO) La publi 11 no essta en el array pulicaciones")
 		return
-	var publi = Utils.PUBLICACIONES.get(11)
+	var publi = Utils.PUBLICACIONES.get(29)
 	Utils.excluirPublicacion(publi)
 	
-	var c = cComentarios.DEBUG_get_comment_from_publi(11)
+	var c = cComentarios.DEBUG_get_comment_from_publi(29)
 	if !c:
 		push_error("- NO HAY COMENTARIO PA PILLAR")
 		return

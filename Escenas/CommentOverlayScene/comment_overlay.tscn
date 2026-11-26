@@ -232,18 +232,17 @@ theme_override_fonts/font = ExtResource("6_526rk")
 theme_override_font_sizes/font_size = 25
 text = "Universidad del Norte"
 
-[node name="PubliText" type="Label" parent="PanelContainer/HBoxContainer/LadoPubli/Control" unique_id=1808832819]
+[node name="PubliText" type="RichTextLabel" parent="PanelContainer/HBoxContainer/LadoPubli/Control" unique_id=1993086972]
 layout_mode = 0
 offset_left = 26.0
 offset_top = 86.0
 offset_right = 327.0
 offset_bottom = 293.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_526rk")
-theme_override_font_sizes/font_size = 20
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_526rk")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
 text = "[Publi Text ]"
-autowrap_mode = 3
-text_overrun_behavior = 3
 
 [node name="LadoResponder" type="PanelContainer" parent="PanelContainer/HBoxContainer" unique_id=587595810]
 custom_minimum_size = Vector2(460, 0)

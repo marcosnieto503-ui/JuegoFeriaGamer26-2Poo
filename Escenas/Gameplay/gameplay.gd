@@ -16,6 +16,7 @@ extends Node2D
 @export var logicaJugable:Node
 ##Duracion de la partida en segundos
 @export var DURACION_DE_LA_PARTIDA:float = 120
+@export var duracionPantallaNegraSalidaEscena:float = 3
 
 var SceneID = GameManager.ENUMESCENAS.GAMEPLAY
 
@@ -73,6 +74,8 @@ func SALIR_DE_ESCENA():
 	print("\nGAMEPLAR PUNTIAUCION:m  , PUBLIS CORRECTAS: ",len(ProgresoPuntuacion.PUBLIS_CORRECTAS))
 	print("PUBLIS INCORRECTAS: ",len(ProgresoPuntuacion.PUBLIS_INCORRECTAS))
 	print("COMENTARIOS RESPIONDIDOD: ", len(ProgresoPuntuacion.COMENTARIOS_CORRECTOS),"\n")
+	
+	await get_tree().create_timer(duracionPantallaNegraSalidaEscena).timeout
 
 
 func DEBUGreaccionPlayer(pos:Vector2 = Vector2.ZERO):

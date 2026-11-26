@@ -15,8 +15,8 @@ func reproducirEfecto(pos:Vector2,times:int):
 	tween = create_tween().set_loops(times)
 	
 	position = pos
-	tween.tween_property(self,"modulate",Color(0.125, 0.286, 0.792),0.2)
-	tween.tween_property(self,"modulate",Color(0.125, 0.286, 0.792,0.0),0.2)
+	tween.tween_property(self,"modulate:a",1,0.2)
+	tween.tween_property(self,"modulate:a",0,0.2)
 
 
 func pausarEfecto():

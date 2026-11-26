@@ -383,7 +383,7 @@ theme_override_font_sizes/font_size = 26
 theme_override_styles/normal = SubResource("StyleBoxTexture_05ie2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_itk26")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hvniv")
-text = "Formato Invalido"
+text = "Formato Inadecuado"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="ControlOpsDescartar/OpcionesDescartar/HBoxContainer" unique_id=1743228052]
 layout_mode = 2

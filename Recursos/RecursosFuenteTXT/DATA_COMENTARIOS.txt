@@ -1257,3 +1257,284 @@
 -r3:Gracias.
 -reac:ALEGRE
 #f
+
+#i
+-texto:Pongo un poquito de bethoven y voy fresco pal parcial entonces.
+-id:29
+-r1:Estudiar siempre es lo escencial.
+-r2:No te tomes el estudio a la ligera!.
+-r3:Jaja aver tampoco asi.
+-reac:NADA
+#f
+
+
+#i
+-texto:¿24 horas todos los días del año? Qué bueno... ¿o la noticia dice otra cosa? @fulanito
+-id:30
+-r1:Revisa la noticia, el horario ampliado es solo en finales.
+-r2:24 horas, sí, pero solo en tus sueños.
+-r3:Gracias por comentar.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:En la noticia dice hasta la medianoche y solo en finales. Ni para copiar bien el horario sirven.
+-id:30
+-r1:Tienes razón, corregiremos la publicación.
+-r2:Medianoche, 24 horas, todo es cuestión de perspectiva.
+-r3:Lamentamos la confusión.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Ya me estaba imaginando durmiendo en la biblioteca en vez de en mi casa jaja
+-id:30
+-r1:Lamentablemente no habrá servicio las 24 horas.
+-r2:La biblioteca no tiene cama, pero sí silencio obligatorio.
+-r3:Gracias por tu comentario.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Fui a las 2 de la mañana por lo que dijeron y estaba cerrada. Gracias por la caminata.
+-id:30
+-r1:Lamentamos mucho el error y la molestia.
+-r2:Cerrada, pero ejercitaste las piernas.
+-r3:Disculpa.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Aunque sea hasta medianoche en finales ya ayuda bastante. Lástima la publicación tan confusa.
+-id:30
+-r1:Gracias, tendremos más cuidado al redactar.
+-r2:Confusos, pero con buena intención.
+-r3:Lo revisaremos.
+-reac:SORPRENDIDO
+#f
+
+
+#i
+-texto:¿Gratis para toda la comunidad? Qué bueno... ¿o es que la noticia dice otra cosa? @fulanito
+-id:31
+-r1:Revisa la noticia, el descuento es solo para estudiantes.
+-r2:Gratis, claro, y el bus también se maneja solo.
+-r3:Gracias por comentar.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Primero dicen gratis y en la noticia es el 50%. Ni para eso se ponen de acuerdo.
+-id:31
+-r1:Tienes razón, corregiremos la publicación.
+-r2:El 50% también es "casi gratis" si uno redondea.
+-r3:Lamentamos la confusión.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Ya le avisé a toda mi familia que viajan gratis. Gracias por nada.
+-id:31
+-r1:Lamentamos el error, ya lo estamos corrigiendo.
+-r2:Dile a tu familia que lea la noticia antes de subirse.
+-r3:Disculpa.
+-reac:ENOJADO
+#f
+
+#i
+-texto:¿Cada cuánto pasa la ruta? Pregunto pa no quedarme esperando como siempre
+-id:31
+-r1:Según la noticia, salidas cada 20 minutos.
+-r2:Cada 20 minutos, o cuando el conductor se acuerde.
+-r3:Revisa la noticia.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Con descuento o sin descuento, una ruta nueva es una excelente noticia para los que vivimos lejos.
+-id:31
+-r1:Gracias, esa es la idea.
+-r2:Lejos es relativo, pero el pasaje no.
+-r3:Nos alegra.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¡Por fin un festival de cortos! Ya quiero ver qué hicieron los de comunicación.
+-id:32
+-r1:¡Te esperamos!
+-r2:Ojalá los cortos sean más cortos que la fila.
+-r3:Gracias por comentar.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Hay que inscribirse o se llega y ya? @fulanito
+-id:32
+-r1:La entrada es libre hasta completar el aforo.
+-r2:Llegando temprano, como todo en esta vida.
+-r3:Consulta la nota.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Qué bueno que inviten a egresados, así uno ve a dónde puede llegar.
+-id:32
+-r1:Esa es la intención del conversatorio.
+-r2:Hasta dirigir cortos, o hasta pagar la matrícula.
+-r3:Gracias.
+-reac:ALEGRE
+#f
+
+#i
+-texto:Solo 300 personas... ya me veo haciendo fila desde las 3 de la tarde.
+-id:32
+-r1:Te recomendamos llegar con anticipación.
+-r2:Trae silla, y comida también.
+-r3:Gracias por tu interés.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Me emociona ver trabajos de estudiantes de la región en el Auditorio Principal. Allá nos vemos.
+-id:32
+-r1:Te esperamos.
+-r2:Pantalla grande y palomitas, solo falta que alcancen.
+-r3:Gracias.
+-reac:ALEGRE
+#f
+
+#i
+-texto:"Cochinos" y "no merecen estar en la universidad" desde la cuenta oficial. Muy elegante.
+-id:33
+-r1:Tienes razón, el tono fue inadecuado.
+-r2:Cochinos con diploma, en el peor de los casos.
+-r3:Lamentamos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Primero instalen las canecas y después hablamos. Insultar no es educar. @fulanito
+-id:33
+-r1:Las canecas ya están instaladas. Ofrecemos disculpas por el tono.
+-r2:Las canecas están, la paciencia se nos acabó.
+-r3:Gracias por tu comentario.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Me parece bien lo del reciclaje, pero la forma de decirlo deja mucho que desear.
+-id:33
+-r1:Gracias, tendremos más cuidado con el lenguaje.
+-r2:La intención era buena, la redacción tuvo un mal día.
+-r3:Lo revisaremos.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:¿Y si botamos basura en el lugar equivocado nos expulsan? Pregunto por si acaso.
+-id:33
+-r1:No, y retiraremos esa frase del comunicado.
+-r2:Primero advertencia, luego telenovela.
+-r3:Disculpa.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Qué bueno lo de los recicladores de la ciudad, esa parte sí me gustó.
+-id:33
+-r1:Gracias, es un trabajo conjunto.
+-r2:Esa parte nos quedó bien, la otra no tanto.
+-r3:Nos alegra.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¡Vacunas gratis en el campus! Eso sí es bienestar de verdad.
+-id:34
+-r1:Te esperamos en el Bloque F.
+-r2:Ojalá no te dé miedo la aguja.
+-r3:Gracias.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Hay que llevar algo o solo el carné? @fulanito
+-id:34
+-r1:Solo el carné institucional.
+-r2:El carné y la valentía.
+-r3:Revisa la noticia.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"Abra una jornada" y "influensa" en un aviso oficial. Revisen la ortografía, por favor.
+-id:34
+-r1:Tienes razón, lo corregiremos.
+-r2:Influenza o influensa, el virus igual te encuentra.
+-r3:Gracias por avisar.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Qué bueno que haya atención psicológica sin cita. A veces uno no aguanta esperar.
+-id:34
+-r1:Gracias, está pensada para eso.
+-r2:Sin cita pero con fila, ya sabes cómo es.
+-r3:Estamos para ayudarte.
+-reac:ALEGRE
+#f
+
+#i
+-texto:¿Hasta qué hora atienden el jueves? Salgo tarde de clase.
+-id:34
+-r1:Hasta las 4:00 p. m., como indica la noticia.
+-r2:Hasta que se acaben las vacunas o la paciencia.
+-r3:Consulta la nota.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:¿Y esto qué tiene que ver con la universidad? Parece cuenta de chismes de aeropuerto.
+-id:35
+-r1:Tienes razón, esta publicación no corresponde a nuestros temas.
+-r2:Aeropuerto, universidad, todo es campus si uno viaja.
+-r3:Gracias por tu comentario.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Sí, los tiquetes están carísimos, pero no es el tema de esta cuenta. @fulanito
+-id:35
+-r1:Lo tendremos en cuenta.
+-r2:Si el tiquete es caro, caminen.
+-r3:Gracias.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:"Qué tristeza cómo está todo" ¿Eso va en un comunicado institucional?
+-id:35
+-r1:No, fue un error y lo retiraremos.
+-r2:La tristeza nos ganó el redactor.
+-r3:Lamentamos.
+-reac:ENOJADO
+#f
+
+#i
+-texto:Lo de los tiquetes sí me afecta, pero prefiero enterarme por un periódico y no por la universidad.
+-id:35
+-r1:Tienes razón, no es información institucional.
+-r2:El periódico lo escribe alguien, la universidad lo comparte.
+-r3:Gracias por la observación.
+-reac:SORPRENDIDO
+#f
+
+#i
+-texto:Compré el mío hace un mes y me salvé. Mejor planear con tiempo.
+-id:35
+-r1:Buen consejo, gracias por compartirlo.
+-r2:Quién diría que planear sirve de algo.
+-r3:Gracias.
+-reac:NADA
+#f

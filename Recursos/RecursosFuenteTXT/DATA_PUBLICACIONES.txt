@@ -221,3 +221,61 @@ Durante la semana de exámenes finales, la biblioteca ampliará su horario de at
 -A:PUBLICAR
 Frente a las inquietudes de varios estudiantes sobre las escaleras del Bloque J, la universidad evaluará mejoras en señalización, pasamanos y superficies antideslizantes. Valoramos tus comentarios: puedes enviarlos por el canal de sugerencias del portal institucional para que sean tenidos en cuenta en el análisis. #EscuchamosTuVoz
 #f
+
+
+#i
+-tn:Súbelo, esto le sirve a todo el mundo en parciales
+-id:29
+-tipo:TEXTO
+-A:INFORMACION_ERRONEA
+Un estudio de la Universidad de Stanford demostró que estudiar[br] con música clásica sube las notas de los estudiantes un 40%. Puedes leer [color={clr}][url=n,]la noticia completa aquí[/url][/color].
+#f
+
+#i
+-tn:Avisa esto ya, la gente lo está pidiendo
+-id:30
+-tipo:TEXTO
+-A:INFORMACION_ERRONEA
+Buenas noticias: la biblioteca ahora abre las 24 horas, todos los días del año. Puedes leer [color={clr}][url=n,]la noticia completa aquí[/url][/color].
+#f
+
+#i
+-tn:Esto es urgente, la gente se va a volver loca
+-id:31
+-tipo:TEXTO
+-A:INFORMACION_ERRONEA
+Desde el 1 de diciembre el transporte hacia la universidad será completamente gratis para toda la comunidad. Lee [color={clr}][url=n,]la noticia completa aquí[/url][/color].
+#f
+
+#i
+-tn:Cartel del festival listo, sube cuando quieras
+-id:32
+-tipo:IMAGEN
+-A:PUBLICAR
+El Festival de Cortometrajes Universitarios se realizará el 4 de diciembre, a las 6:00 p. m., en el Auditorio Principal. La entrada es libre hasta completar el aforo. Conoce a los directores invitados en [color={clr}][url=n,]esta nota[/url][/color]. ¡Te esperamos! #FestivalDeCortos
+#f
+
+
+#i
+-tn:Comunicado sobre el reciclaje, publícalo ya
+-id:33
+-tipo:TEXTO
+-A:INAPROPIADO
+Ya instalaron puntos de reciclaje en todos los bloques. Si después de esto siguen tirando la basura donde no es, son unos cochinos y no merecen estar en esta universidad. Más información en [color={clr}][url=n,]esta noticia[/url][/color].
+#f
+
+#i
+-tn:Jornada de salud, súbela cuando puedas
+-id:34
+-tipo:TEXTO
+-A:FORMATO
+Estimados estudiantes, les cuento q esta semana abra una jornada de salud en el bloque F donde pueden hacerse chequeos gratis y vacunarse contra la influensa, tambien hay atencion psicologica, mas detalles en [color={clr}][url=n,]esta noticia[/url][/color], los esperamos.
+#f
+
+#i
+-tn:Mira esto, está interesante, súbelo
+-id:35
+-tipo:TEXTO
+-A:NO_RELACIONADA
+Los tiquetes de avión para diciembre subieron otra vez y ya casi nadie puede viajar a ver a su familia. Qué tristeza cómo está todo. Lean [color={clr}][url=n,]esta noticia[/url][/color] y cuéntenme qué opinan. #Diciembre
+#f
